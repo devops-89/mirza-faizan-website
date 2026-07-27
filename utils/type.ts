@@ -74,3 +74,8 @@ export interface SocialLinkItem {
   url: string;
   type: "facebook" | "x" | "instagram" | "linkedin" | "google" | "youtube";
 }
+
+export interface HeaderLinkItem {
+  label: string;
+  url: string;
+}

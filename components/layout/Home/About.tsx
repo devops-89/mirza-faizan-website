@@ -9,7 +9,7 @@ const About = () => {
   return (
     <Box
       sx={{
-        py: { xs: 5, md: 9 },
+        py: { xs: 6, md: 10 },
         backgroundColor: "#FFFFFF",
         position: "relative",
       }}
