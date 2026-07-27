@@ -1,5 +1,5 @@
 import { COLORS } from "@/utils/enum";
-import { roboto } from "@/utils/fonts";
+import { outfit } from "@/utils/fonts";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
@@ -47,7 +47,7 @@ const CounterCard = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: roboto.style.fontFamily,
+                      fontFamily: outfit.style.fontFamily,
                       fontSize: { xs: 38, sm: 48, lg: 58 },
                       lineHeight: 1,
                       letterSpacing: "-1.5px",
@@ -63,7 +63,7 @@ const CounterCard = () => {
                     <Typography
                       component="span"
                       sx={{
-                        fontFamily: roboto.style.fontFamily,
+                        fontFamily: outfit.style.fontFamily,
                         fontSize: "inherit",
                         lineHeight: "inherit",
                         letterSpacing: "inherit",
@@ -76,7 +76,7 @@ const CounterCard = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontFamily: roboto.style.fontFamily,
+                      fontFamily: outfit.style.fontFamily,
                       fontSize: { xs: 12, sm: 13.5, lg: 15 },
                       fontWeight: 400,
                       lineHeight: "22px",

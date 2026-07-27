@@ -35,9 +35,9 @@ const HeroSection = () => {
               <Typography
                 sx={{
                   fontFamily: bella.style.fontFamily,
-                  fontSize: 288,
+                  fontSize: { xs: 120, sm: 170, md: 210 },
                   color: COLORS.WHITE,
-                  lineHeight: "200px",
+                  lineHeight: { xs: "100px", md: "150px" },
                 }}
               >
                 Hello there,
@@ -45,8 +45,8 @@ const HeroSection = () => {
               <Typography
                 sx={{
                   fontFamily: signika.style.fontFamily,
-                  lineHeight: "109px",
-                  fontSize: 129,
+                  lineHeight: { xs: "70px", md: "100px" },
+                  fontSize: { xs: 60, sm: 85, md: 110 },
                   fontWeight: 700,
                   color: COLORS.WHITE,
                 }}
@@ -56,8 +56,8 @@ const HeroSection = () => {
               <Typography
                 sx={{
                   fontFamily: signika.style.fontFamily,
-                  lineHeight: "109px",
-                  fontSize: 129,
+                  lineHeight: { xs: "70px", md: "100px" },
+                  fontSize: { xs: 60, sm: 85, md: 110 },
                   fontWeight: 700,
                   color: COLORS.WHITE,
                 }}
@@ -68,7 +68,7 @@ const HeroSection = () => {
                 sx={{
                   fontFamily: roboto.style.fontFamily,
                   fontWeight: 700,
-                  fontSize: 22,
+                  fontSize: { xs: 15, md: 18 },
                   color: COLORS.WHITE,
                   mb: 3,
                 }}

@@ -139,6 +139,7 @@ const WhatWorldSays: React.FC = () => {
                   src="/images/worldsays/Vector.png"
                   alt="Decorative Arrow"
                   fill
+                  sizes="85px"
                   style={{ objectFit: "contain" }}
                 />
               </Box>
@@ -270,6 +271,7 @@ const WhatWorldSays: React.FC = () => {
                                 src="/images/worldsays/quote.png"
                                 alt="Quote mark"
                                 fill
+                                sizes="32px"
                                 style={{ objectFit: "contain" }}
                               />
                             </Box>

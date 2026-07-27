@@ -207,6 +207,7 @@ const Footer: React.FC = () => {
             src="/images/footer.png"
             alt="Globe Pattern Art"
             fill
+            sizes="(max-width: 1200px) 100vw, 820px"
             style={{ objectFit: "cover", objectPosition: "bottom center" }}
           />
         </Box>
