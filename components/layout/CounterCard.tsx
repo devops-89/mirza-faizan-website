@@ -48,9 +48,9 @@ const CounterCard = () => {
                   <Typography
                     sx={{
                       fontFamily: roboto.style.fontFamily,
-                      fontSize: { xs: 48, sm: 64, lg: 78 },
+                      fontSize: { xs: 38, sm: 48, lg: 58 },
                       lineHeight: 1,
-                      letterSpacing: "-1.95px",
+                      letterSpacing: "-1.5px",
                       fontWeight: 400,
                       color: COLORS.WHITE,
                       whiteSpace: "nowrap",
@@ -77,9 +77,9 @@ const CounterCard = () => {
                   <Typography
                     sx={{
                       fontFamily: roboto.style.fontFamily,
-                      fontSize: { xs: 14, sm: 16, lg: 18 },
+                      fontSize: { xs: 12, sm: 13.5, lg: 15 },
                       fontWeight: 400,
-                      lineHeight: "24px",
+                      lineHeight: "22px",
                       color: COLORS.WHITE,
                       whiteSpace: "nowrap",
                     }}
