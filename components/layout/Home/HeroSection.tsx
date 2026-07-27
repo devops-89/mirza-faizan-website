@@ -1,9 +1,11 @@
-import { Box, colors, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import hero from "@/images/hero.jpg";
 import { bella, roboto, signika } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
+import { HERO_INFO } from "@/utils/generic";
 import CounterCard from "./CounterCard";
+
 const HeroSection = () => {
   return (
     <Box>
@@ -47,7 +49,7 @@ const HeroSection = () => {
                   lineHeight: { xs: "70px", sm: "110px", md: "150px" },
                 }}
               >
-                Hello there,
+                {HERO_INFO.greeting}
               </Typography>
               <Typography
                 sx={{
@@ -58,7 +60,7 @@ const HeroSection = () => {
                   color: COLORS.WHITE,
                 }}
               >
-                Meet
+                {HERO_INFO.meetTitle}
               </Typography>
               <Typography
                 sx={{
@@ -69,7 +71,7 @@ const HeroSection = () => {
                   color: COLORS.WHITE,
                 }}
               >
-                Mr.Mirza Faizan.
+                {HERO_INFO.nameTitle}
               </Typography>
               <Typography
                 sx={{
@@ -82,8 +84,7 @@ const HeroSection = () => {
                   ml: "auto",
                 }}
               >
-                Aerospace Scientist | Inventor | Technology Visionary shaping
-                the future of aviation safety and AI in aerospace.
+                {HERO_INFO.subtitle}
               </Typography>
             </Container>
             <CounterCard />

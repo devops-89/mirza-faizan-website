@@ -66,9 +66,7 @@ const WhatWorldSays: React.FC = () => {
                 textAlign: "justify",
               }}
             >
-              World has praised <strong>Mr.Mirza Faizan</strong> for his
-              exceptional creativity, clear vision, and ability to transform
-              ideas into impactful, user-focused digital experiences.
+              {WORLD_SAYS_DESCRIPTION}
             </Typography>
           </Grid>
         </Grid>

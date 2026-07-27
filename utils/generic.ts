@@ -3,6 +3,12 @@ import {
   RecognitionLogo,
   ExperienceItem,
   TestimonialItem,
+  AboutInfo,
+  CounterItem,
+  HeroInfo,
+  PatentHeroInfo,
+  PatentSectionMetadata,
+  SocialLinkItem,
 } from "./type";
 
 export const COLUMN_1_PROJECTS: ProjectItem[] = [
@@ -101,9 +107,9 @@ export const TALKS_DESCRIPTION =
   "Mirza Faizan regularly mentors young engineers, guiding them on ideation, research methodologies, and socially responsible technology. His guest lectures and public sessions inspire the next generation of scientists to innovate fearlessly.";
 
 export const TALKS_BULLETS = [
-  "Featured Talks (TEDx, University Lectures, Panels)",
-  "Innovation Mentorship Initiative",
-  "Advisory Roles & Collaborations",
+  "Featured Talks (TEDx, University Lectures,\nPanels)",
+  "Innovation Mentorship\nInitiative",
+  "Advisory Roles &\nCollaborations",
 ];
 
 export const EXPERIENCE_HEADING = "Experience & Collaborations";
@@ -173,14 +179,7 @@ export const GET_IN_TOUCH_DESCRIPTION =
 export const FOOTER_QUOTE =
   "An idea becomes powerful only when it serves a purpose greater than oneself.";
 
-export const SOCIAL_LINKS = [
-  { id: "facebook", name: "Facebook", href: "https://facebook.com" },
-  { id: "x", name: "X", href: "https://x.com" },
-  { id: "instagram", name: "Instagram", href: "https://instagram.com" },
-  { id: "linkedin", name: "LinkedIn", href: "https://linkedin.com" },
-  { id: "google", name: "Google", href: "https://google.com" },
-  { id: "youtube", name: "YouTube", href: "https://youtube.com" },
-];
+
 
 export const US_PATENTS_GRANTED = [
   { id: "us-1", patentNo: "U.S. patent 20210269998A1", title: "Apparatus and method to clean garbage from water bodies", region: "US", status: "Granted" },
@@ -242,3 +241,78 @@ export const PATENTS_PENDING = [
   { id: "pen-8", patentNo: "U.S. patent 20250057488A1", title: "System and method for alerting users based on brain signals", region: "Pending", status: "Pending" },
   { id: "pen-9", patentNo: "U.S. patent 20250121490A1", title: "Exoskeleton apparatus to assist movement of user using brain signals", region: "Pending", status: "Pending" },
 ];
+
+export const ABOUT_INFO: AboutInfo = {
+  name: "Mirza Faizan",
+  designation: "Founder & Chief Innovation Facilitator, DiscoverSTEM-USA",
+  paragraphs: [
+    "Mirza Faizan is an internationally recognized aerospace scientist, inventor and innovation educator with extensive experience in aerospace, defence and mission-critical systems.",
+    "He is the inventor of the Ground Reality Information Processing System (GRIPS), an advanced runway safety technology designed to prevent runway incursions, runway excursions and detect foreign object debris in real time.",
+    "His work has been recognized by experts from NASA, the U.S. Army Missile Research, Development & Engineering Center, and the U.S. Air Force. He has also been invited to evaluate research outcomes from leading global research and innovation labs such as NASA, MIT Lincoln Lab, Defence Threat Reduction Agency, Sandia National Lab-USA, Lawrence Livermore National Lab-USA, Argonne National Lab-USA, Oak Ridge National Lab-USA etc. as a judge for the prestigious R&D 100 Awards.",
+    "Under his mentorship, over 1000 school students have filed patent applications, with over 450 students’ patents granted, making DiscoverSTEM one of the world’s leading school innovation ecosystems focused on intellectual property creation by young innovators.",
+    "He is a recipient of the George Washington Honor Medal, a US national award for revolutionizing education in the United States. In March 2025, Texas House of Representatives passed House Resolution HR-403 and honor and recognize his contribution in Innovation, Research and Entrepreneurship in the State of Texas.",
+    "Mr. Faizan is a serial innovator with over 50 patents granted and over 52 patents pending in the United States. He is a US citizen and resides in Dallas, Texas with his family. He will personally lead this training and mentor participating teachers.",
+  ],
+};
+
+export const HOME_COUNTERS: CounterItem[] = [
+  {
+    value: "23",
+    unit: "k",
+    label: "Social Followers",
+  },
+  {
+    value: "12",
+    unit: "m",
+    label: "Email Subscribers",
+  },
+  {
+    value: "82",
+    unit: "+",
+    label: "Patents",
+  },
+];
+
+export const HERO_INFO: HeroInfo = {
+  greeting: "Hello there,",
+  meetTitle: "Meet",
+  nameTitle: "Mr.Mirza Faizan.",
+  subtitle:
+    "Aerospace Scientist | Inventor | Technology Visionary shaping the future of aviation safety and AI in aerospace.",
+};
+
+export const PATENT_HERO_INFO: PatentHeroInfo = {
+  title: "Patents",
+  subtitle: "52 Total Patent Filings",
+  description:
+    "Mirza Faizan is a serial innovator whose mission-critical aerospace safety systems, AI analytics, biotech, and assistive technologies have produced groundbreaking patented inventions across the United States and internationally.",
+  stats: [
+    { num: "31", label: "US Patents Granted" },
+    { num: "12", label: "South Africa Granted" },
+    { num: "9", label: "US Patents Pending" },
+  ],
+};
+
+export const FILTER_PORTFOLIO_HEADING = "Filter Patent Portfolio";
+
+export const PATENT_SECTIONS_METADATA: PatentSectionMetadata[] = [
+  {
+    id: "US",
+    title: "Patents Granted \n in the United States",
+    subtitle: "United States Patent & Trademark Office (USPTO)",
+  },
+  {
+    id: "SA",
+    title: "Patents Granted \n in South Africa",
+    subtitle: "Companies and Intellectual Property Commission (CIPC)",
+  },
+  {
+    id: "PENDING",
+    title: "Patents Pending",
+    subtitle: "Under Examination & Publication Stage",
+  },
+];
+
+export const FOOTER_SUBTITLE = "DISCOVER NEXT";
+
+

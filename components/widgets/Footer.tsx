@@ -10,8 +10,41 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GoogleIcon from "@mui/icons-material/Google";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import NorthIcon from "@mui/icons-material/North";
-import { outfit, roboto } from "@/utils/fonts";
-import { FOOTER_QUOTE } from "@/utils/generic";
+import { outfit } from "@/utils/fonts";
+import { FOOTER_QUOTE, FOOTER_SUBTITLE } from "@/utils/generic";
+
+const SOCIAL_LINKS = [
+  {
+    name: "Facebook",
+    url: "https://facebook.com",
+    icon: <FacebookIcon sx={{ fontSize: { xs: 21, md: 26 } }} />,
+  },
+  {
+    name: "X",
+    url: "https://x.com",
+    icon: <XIcon sx={{ fontSize: { xs: 18, md: 22 } }} />,
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com",
+    icon: <InstagramIcon sx={{ fontSize: { xs: 21, md: 26 } }} />,
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com",
+    icon: <LinkedInIcon sx={{ fontSize: { xs: 21, md: 26 } }} />,
+  },
+  {
+    name: "Google",
+    url: "https://google.com",
+    icon: <GoogleIcon sx={{ fontSize: { xs: 18, md: 22 } }} />,
+  },
+  {
+    name: "YouTube",
+    url: "https://youtube.com",
+    icon: <YouTubeIcon sx={{ fontSize: { xs: 23, md: 28 } }} />,
+  },
+];
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -47,95 +80,23 @@ const Footer: React.FC = () => {
             mb: { xs: 3, md: 4 },
           }}
         >
-          <IconButton
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            sx={{
-              color: "#FFFFFF",
-              p: { xs: 0.8, md: 1 },
-              transition: "transform 0.2s ease, opacity 0.2s ease",
-              "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
-            }}
-          >
-            <FacebookIcon sx={{ fontSize: { xs: 21, md: 26 } }} />
-          </IconButton>
-
-          <IconButton
-            href="https://x.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X"
-            sx={{
-              color: "#FFFFFF",
-              p: { xs: 0.8, md: 1 },
-              transition: "transform 0.2s ease, opacity 0.2s ease",
-              "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
-            }}
-          >
-            <XIcon sx={{ fontSize: { xs: 18, md: 22 } }} />
-          </IconButton>
-
-          <IconButton
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            sx={{
-              color: "#FFFFFF",
-              p: { xs: 0.8, md: 1 },
-              transition: "transform 0.2s ease, opacity 0.2s ease",
-              "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
-            }}
-          >
-            <InstagramIcon sx={{ fontSize: { xs: 21, md: 26 } }} />
-          </IconButton>
-
-          <IconButton
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            sx={{
-              color: "#FFFFFF",
-              p: { xs: 0.8, md: 1 },
-              transition: "transform 0.2s ease, opacity 0.2s ease",
-              "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
-            }}
-          >
-            <LinkedInIcon sx={{ fontSize: { xs: 21, md: 26 } }} />
-          </IconButton>
-
-          <IconButton
-            href="https://google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Google"
-            sx={{
-              color: "#FFFFFF",
-              p: { xs: 0.8, md: 1 },
-              transition: "transform 0.2s ease, opacity 0.2s ease",
-              "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
-            }}
-          >
-            <GoogleIcon sx={{ fontSize: { xs: 18, md: 22 } }} />
-          </IconButton>
-
-          <IconButton
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            sx={{
-              color: "#FFFFFF",
-              p: { xs: 0.8, md: 1 },
-              transition: "transform 0.2s ease, opacity 0.2s ease",
-              "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
-            }}
-          >
-            <YouTubeIcon sx={{ fontSize: { xs: 23, md: 28 } }} />
-          </IconButton>
+          {SOCIAL_LINKS.map((item) => (
+            <IconButton
+              key={item.name}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.name}
+              sx={{
+                color: "#FFFFFF",
+                p: { xs: 0.8, md: 1 },
+                transition: "transform 0.2s ease, opacity 0.2s ease",
+                "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
+              }}
+            >
+              {item.icon}
+            </IconButton>
+          ))}
         </Box>
 
         {/* Subtitle / Category Label */}
@@ -151,7 +112,7 @@ const Footer: React.FC = () => {
             mb: { xs: 1.5, md: 2 },
           }}
         >
-          DISCOVER NEXT
+          {FOOTER_SUBTITLE}
         </Typography>
 
         {/* Main Quote Text */}
@@ -174,7 +135,13 @@ const Footer: React.FC = () => {
         </Typography>
 
         {/* Scroll To Top Button */}
-        <Box sx={{ display: "flex", justifyContent: "center", mb: { xs: 2.5, md: 3 } }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mb: { xs: 2.5, md: 3 },
+          }}
+        >
           <IconButton
             onClick={scrollToTop}
             aria-label="Scroll to top"

@@ -16,6 +16,8 @@ import {
   US_PATENTS_GRANTED,
   SOUTH_AFRICA_PATENTS_GRANTED,
   PATENTS_PENDING,
+  FILTER_PORTFOLIO_HEADING,
+  PATENT_SECTIONS_METADATA,
 } from "@/utils/generic";
 import { PatentItem } from "@/utils/type";
 
@@ -173,12 +175,17 @@ const PatentsList = () => {
   const [activeTab, setActiveTab] = useState<"ALL" | "US" | "SA" | "PENDING">(
     "ALL",
   );
-  const [searchQuery, setSearchQuery] = useState("");
 
   const totalPatentsCount =
     US_PATENTS_GRANTED.length +
     SOUTH_AFRICA_PATENTS_GRANTED.length +
     PATENTS_PENDING.length;
+
+  const patentsDataMap: Record<"US" | "SA" | "PENDING", PatentItem[]> = {
+    US: US_PATENTS_GRANTED as PatentItem[],
+    SA: SOUTH_AFRICA_PATENTS_GRANTED as PatentItem[],
+    PENDING: PATENTS_PENDING as PatentItem[],
+  };
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
@@ -198,7 +205,7 @@ const PatentsList = () => {
                 color: "#181818",
               }}
             >
-              Filter Patent Portfolio
+              {FILTER_PORTFOLIO_HEADING}
             </Typography>
           </Grid>
         </Grid>
@@ -226,7 +233,9 @@ const PatentsList = () => {
                     fontWeight: isActive ? 700 : 500,
                     color: isActive ? "#FFFFFF" : "#555555",
                     backgroundColor: isActive ? "#846A4E" : "#FAF9F6",
-                    border: isActive ? "1px solid #846A4E" : "1px solid #EBE7E1",
+                    border: isActive
+                      ? "1px solid #846A4E"
+                      : "1px solid #EBE7E1",
                     borderRadius: "12px",
                     px: { xs: 1, sm: 2.2, md: 2.8 },
                     py: { xs: 0.8, sm: 0.8, md: 1 },
@@ -253,32 +262,18 @@ const PatentsList = () => {
         </Grid>
       </Box>
 
-      {/* 1. US Patents Section */}
-      {(activeTab === "ALL" || activeTab === "US") && (
-        <PatentGridSection
-          title={"Patents Granted \n in the United States"}
-          subtitle="United States Patent & Trademark Office (USPTO)"
-          patents={US_PATENTS_GRANTED as PatentItem[]}
-        />
-      )}
-
-      {/* 2. South Africa Patents Section */}
-      {(activeTab === "ALL" || activeTab === "SA") && (
-        <PatentGridSection
-          title={"Patents Granted \n in South Africa"}
-          subtitle="Companies and Intellectual Property Commission (CIPC)"
-          patents={SOUTH_AFRICA_PATENTS_GRANTED as PatentItem[]}
-        />
-      )}
-
-      {/* 3. Pending Patents Section */}
-      {(activeTab === "ALL" || activeTab === "PENDING") && (
-        <PatentGridSection
-          title={"Patents Pending"}
-          subtitle="Under Examination & Publication Stage"
-          patents={PATENTS_PENDING as PatentItem[]}
-        />
-      )}
+      {/* Patent Sections */}
+      {PATENT_SECTIONS_METADATA.map((section) => {
+        if (activeTab !== "ALL" && activeTab !== section.id) return null;
+        return (
+          <PatentGridSection
+            key={section.id}
+            title={section.title}
+            subtitle={section.subtitle}
+            patents={patentsDataMap[section.id]}
+          />
+        );
+      })}
     </Container>
   );
 };

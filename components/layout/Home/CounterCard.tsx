@@ -1,25 +1,8 @@
 import { COLORS } from "@/utils/enum";
 import { outfit } from "@/utils/fonts";
+import { HOME_COUNTERS } from "@/utils/generic";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-
-const COUNTERS = [
-  {
-    value: "23",
-    unit: "k",
-    label: "Social Followers",
-  },
-  {
-    value: "12",
-    unit: "m",
-    label: "Email Subscribers",
-  },
-  {
-    value: "82",
-    unit: "+",
-    label: "Patents",
-  },
-];
 
 const CounterCard = () => {
   return (
@@ -38,7 +21,7 @@ const CounterCard = () => {
             spacing={{ xs: 1, sm: 2, md: 3 }}
             sx={{ alignItems: "center", justifyContent: "center" }}
           >
-            {COUNTERS.map((counter, index) => (
+            {HOME_COUNTERS.map((counter, index) => (
               <Grid size={4} key={index}>
                 <Stack
                   direction="column"

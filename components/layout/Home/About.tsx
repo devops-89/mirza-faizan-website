@@ -1,5 +1,6 @@
 import { COLORS } from "@/utils/enum";
 import { roboto } from "@/utils/fonts";
+import { ABOUT_INFO } from "@/utils/generic";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import Heading from "../../widgets/Heading";
@@ -34,7 +35,7 @@ const About = () => {
                     mb: 0.5,
                   }}
                 >
-                  Mirza Faizan
+                  {ABOUT_INFO.name}
                 </Typography>
                 <Typography
                   sx={{
@@ -45,117 +46,26 @@ const About = () => {
                     letterSpacing: "0.2px",
                   }}
                 >
-                  Founder & Chief Innovation Facilitator, DiscoverSTEM-USA
+                  {ABOUT_INFO.designation}
                 </Typography>
               </Box>
 
-              <Typography
-                sx={{
-                  color: COLORS.TEXT_COLOR || "#383838",
-                  fontSize: { xs: "14px", md: "15.5px" },
-                  textAlign: "justify",
-                  fontFamily: roboto.style.fontFamily,
-                  fontWeight: 400,
-                  lineHeight: { xs: "1.65", md: "1.75" },
-                  width: "100%",
-                }}
-              >
-                Mirza Faizan is an internationally recognized aerospace
-                scientist, inventor and innovation educator with extensive
-                experience in aerospace, defence and mission-critical systems.
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: COLORS.TEXT_COLOR || "#383838",
-                  fontSize: { xs: "14px", md: "15.5px" },
-                  textAlign: "justify",
-                  fontFamily: roboto.style.fontFamily,
-                  fontWeight: 400,
-                  lineHeight: { xs: "1.65", md: "1.75" },
-                  width: "100%",
-                }}
-              >
-                He is the inventor of the Ground Reality Information Processing
-                System (GRIPS), an advanced runway safety technology designed to
-                prevent runway incursions, runway excursions and detect foreign
-                object debris in real time.
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: COLORS.TEXT_COLOR || "#383838",
-                  fontSize: { xs: "14px", md: "15.5px" },
-                  textAlign: "justify",
-                  fontFamily: roboto.style.fontFamily,
-                  fontWeight: 400,
-                  lineHeight: { xs: "1.65", md: "1.75" },
-                  width: "100%",
-                }}
-              >
-                His work has been recognized by experts from NASA, the U.S. Army
-                Missile Research, Development & Engineering Center, and the U.S.
-                Air Force. He has also been invited to evaluate research
-                outcomes from leading global research and innovation labs such
-                as NASA, MIT Lincoln Lab, Defence Threat Reduction Agency,
-                Sandia National Lab-USA, Lawrence Livermore National Lab-USA,
-                Argonne National Lab-USA, Oak Ridge National Lab-USA etc. as a
-                judge for the prestigious R&D 100 Awards.
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: COLORS.TEXT_COLOR || "#383838",
-                  fontSize: { xs: "14px", md: "15.5px" },
-                  textAlign: "justify",
-                  fontFamily: roboto.style.fontFamily,
-                  fontWeight: 400,
-                  lineHeight: { xs: "1.65", md: "1.75" },
-                  width: "100%",
-                }}
-              >
-                Under his mentorship, over 1000 school students have filed
-                patent applications, with over 450 students’ patents granted,
-                making DiscoverSTEM one of the world’s leading school innovation
-                ecosystems focused on intellectual property creation by young
-                innovators.
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: COLORS.TEXT_COLOR || "#383838",
-                  fontSize: { xs: "14px", md: "15.5px" },
-                  textAlign: "justify",
-                  fontFamily: roboto.style.fontFamily,
-                  fontWeight: 400,
-                  lineHeight: { xs: "1.65", md: "1.75" },
-                  width: "100%",
-                }}
-              >
-                He is a recipient of the George Washington Honor Medal, a US
-                national award for revolutionizing education in the United
-                States. In March 2025, Texas House of Representatives passed
-                House Resolution HR-403 and honor and recognize his contribution
-                in Innovation, Research and Entrepreneurship in the State of
-                Texas.
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: COLORS.TEXT_COLOR || "#383838",
-                  fontSize: { xs: "14px", md: "15.5px" },
-                  textAlign: "justify",
-                  fontFamily: roboto.style.fontFamily,
-                  fontWeight: 400,
-                  lineHeight: { xs: "1.65", md: "1.75" },
-                  width: "100%",
-                }}
-              >
-                Mr. Faizan is a serial innovator with over 50 patents granted
-                and over 52 patents pending in the United States. He is a US
-                citizen and resides in Dallas, Texas with his family. He will
-                personally lead this training and mentor participating teachers.
-              </Typography>
+              {ABOUT_INFO.paragraphs.map((paragraph, index) => (
+                <Typography
+                  key={index}
+                  sx={{
+                    color: COLORS.TEXT_COLOR || "#383838",
+                    fontSize: { xs: "14px", md: "15.5px" },
+                    textAlign: "justify",
+                    fontFamily: roboto.style.fontFamily,
+                    fontWeight: 400,
+                    lineHeight: { xs: "1.65", md: "1.75" },
+                    width: "100%",
+                  }}
+                >
+                  {paragraph}
+                </Typography>
+              ))}
             </Stack>
           </Grid>
         </Grid>

@@ -4,6 +4,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { outfit, roboto, signika, bella } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
+import { PATENT_HERO_INFO } from "@/utils/generic";
 
 const PatentsHero = () => {
   return (
@@ -31,7 +32,7 @@ const PatentsHero = () => {
               mb: 1,
             }}
           >
-            Patents
+            {PATENT_HERO_INFO.title}
           </Typography>
 
           <Typography
@@ -43,7 +44,7 @@ const PatentsHero = () => {
               mb: 2,
             }}
           >
-            52 Total Patent Filings
+            {PATENT_HERO_INFO.subtitle}
           </Typography>
 
           <Typography
@@ -57,10 +58,7 @@ const PatentsHero = () => {
               px: { xs: 1.5, sm: 2 },
             }}
           >
-            Mirza Faizan is a serial innovator whose mission-critical aerospace
-            safety systems, AI analytics, biotech, and assistive technologies
-            have produced groundbreaking patented inventions across the United
-            States and internationally.
+            {PATENT_HERO_INFO.description}
           </Typography>
 
           {/* Stats Counters */}
@@ -75,11 +73,7 @@ const PatentsHero = () => {
               mx: "auto",
             }}
           >
-            {[
-              { num: "31", label: "US Patents Granted" },
-              { num: "12", label: "South Africa Granted" },
-              { num: "9", label: "US Patents Pending" },
-            ].map((stat, i) => (
+            {PATENT_HERO_INFO.stats.map((stat, i) => (
               <Grid size={{ xs: 4, sm: 4, md: 3.5 }} key={i}>
                 <Box
                   sx={{

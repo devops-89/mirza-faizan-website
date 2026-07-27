@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Container, Grid, Typography, Stack } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Heading from "../../widgets/Heading";
 import { outfit, roboto } from "@/utils/fonts";
@@ -66,32 +66,7 @@ const TalksLeadership: React.FC = () => {
           <Grid size={{ xs: 12, md: 6.5 }}>
             {/* Top Subsection: Talks Bullets */}
             <Box component="ul" sx={{ pl: 2.5, m: 0, mb: { xs: 4, md: 7 } }}>
-              {[
-                <>
-                  Featured Talks (TEDx, University Lectures,
-                  <Box
-                    component="br"
-                    sx={{ display: { xs: "none", md: "inline" } }}
-                  />{" "}
-                  Panels)
-                </>,
-                <>
-                  Innovation Mentorship
-                  <Box
-                    component="br"
-                    sx={{ display: { xs: "none", md: "inline" } }}
-                  />{" "}
-                  Initiative
-                </>,
-                <>
-                  Advisory Roles &
-                  <Box
-                    component="br"
-                    sx={{ display: { xs: "none", md: "inline" } }}
-                  />{" "}
-                  Collaborations
-                </>,
-              ].map((bullet, idx) => (
+              {TALKS_BULLETS.map((bullet, idx) => (
                 <Typography
                   component="li"
                   key={idx}
@@ -103,8 +78,9 @@ const TalksLeadership: React.FC = () => {
                     color: "#222222",
                     letterSpacing: "-0.4px",
                     mb: { xs: 2.5, md: 4 },
+                    whiteSpace: "pre-line",
                     "&::marker": {
-                      fontSize: { xs: "12px", md: "18px" },
+                      fontSize: { xs: "12px", md: "16px" },
                     },
                   }}
                 >
@@ -137,20 +113,7 @@ const TalksLeadership: React.FC = () => {
                       },
                     }}
                   >
-                    <strong>{item.role}</strong> –{" "}
-                    {item.role.includes("Inventor") ? (
-                      <>
-                        Ground Reality Information Processing System (
-                        <strong>GRIPS</strong>)
-                      </>
-                    ) : item.role.includes("Educator") ? (
-                      <>
-                        Advocating innovation and <strong>STEM</strong>{" "}
-                        education for youth.
-                      </>
-                    ) : (
-                      item.description
-                    )}
+                    <strong>{item.role}</strong> – {item.description}
                   </Typography>
                 ))}
               </Box>
