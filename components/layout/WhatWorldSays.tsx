@@ -317,6 +317,7 @@ const WhatWorldSays: React.FC = () => {
                           src="/images/worldsays/Border.png"
                           alt="Border decoration"
                           fill
+                          sizes="30px"
                           style={{ objectFit: "contain" }}
                         />
                       </Box>
