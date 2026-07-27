@@ -69,16 +69,26 @@ const TalksLeadership: React.FC = () => {
               {[
                 <>
                   Featured Talks (TEDx, University Lectures,
-                  <br />
+                  <Box
+                    component="br"
+                    sx={{ display: { xs: "none", md: "inline" } }}
+                  />{" "}
                   Panels)
                 </>,
                 <>
                   Innovation Mentorship
-                  <br />
+                  <Box
+                    component="br"
+                    sx={{ display: { xs: "none", md: "inline" } }}
+                  />{" "}
                   Initiative
                 </>,
                 <>
-                  Advisory Roles &<br />
+                  Advisory Roles &
+                  <Box
+                    component="br"
+                    sx={{ display: { xs: "none", md: "inline" } }}
+                  />{" "}
                   Collaborations
                 </>,
               ].map((bullet, idx) => (
@@ -87,14 +97,14 @@ const TalksLeadership: React.FC = () => {
                   key={idx}
                   sx={{
                     fontFamily: outfit.style.fontFamily,
-                    fontSize: { xs: "16px", md: "24px" },
+                    fontSize: { xs: "14.5px", sm: "16.5px", md: "24px" },
                     fontWeight: 400,
                     lineHeight: { xs: "1.4", md: "1.5" },
                     color: "#222222",
-                    letterSpacing: "-0.5px",
+                    letterSpacing: "-0.4px",
                     mb: { xs: 2.5, md: 4 },
                     "&::marker": {
-                      fontSize: { xs: "13px", md: "18px" },
+                      fontSize: { xs: "12px", md: "18px" },
                     },
                   }}
                 >
