@@ -2,7 +2,7 @@ export interface ProjectItem {
   id: string;
   title: string;
   image: string;
-  height: { xs: number; md: number };
+  height: { xs: number; sm?: number; md: number };
 }
 
 export interface RecognitionLogo {
