@@ -1,14 +1,22 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 import About from "./About";
-import InnovationsPatent from "./InnovationsPatent";
+import InventionResearch from "./invention-research";
+import RecognitionAwards from "./RecognitionAwards";
+import TalksLeadership from "./TalksLeadership";
+import WhatWorldSays from "./WhatWorldSays";
+import GetInTouch from "./GetInTouch";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <About />
-      <InnovationsPatent />
+      <InventionResearch />
+      <RecognitionAwards />
+      <TalksLeadership />
+      <WhatWorldSays />
+      <GetInTouch />
     </div>
   );
 };

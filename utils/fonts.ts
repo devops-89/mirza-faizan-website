@@ -7,6 +7,11 @@ export const bella = localFont({
   variable: "--font-bella",
 });
 
+export const outfit = localFont({
+  src: "../public/fonts/Outfit-Regular.ttf",
+  variable: "--font-outfit",
+});
+
 export const signika = Signika({
   weight: "variable",
   subsets: ["latin"],

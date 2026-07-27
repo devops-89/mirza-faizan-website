@@ -39,7 +39,7 @@ const About = () => {
               <Typography
                 sx={{
                   color: COLORS.TEXT_COLOR,
-                  fontSize: 20,
+                  fontSize: "15px",
                   textAlign: "justify",
                   fontFamily: roboto.style.fontFamily,
                   fontWeight: 400,
@@ -56,7 +56,7 @@ const About = () => {
               <Typography
                 sx={{
                   color: COLORS.TEXT_COLOR,
-                  fontSize: 20,
+                  fontSize: "15px",
                   textAlign: "justify",
                   fontFamily: roboto.style.fontFamily,
                   fontWeight: 400,

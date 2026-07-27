@@ -6,23 +6,25 @@ import React from "react";
 const Heading = ({ label, width }: { label: string; width?: string }) => {
   return (
     <Grid container>
-      <Grid size={4}>
+      <Grid size={12}>
         <Typography
           sx={{
-            fontSize: "45px",
-            fontWeight: 600,
-            lineHeight: "55px",
+            fontSize: { xs: "32px", md: "45px" },
+            fontWeight: 700,
+            lineHeight: { xs: "40px", md: "52px" },
             fontFamily: roboto.style.fontFamily,
-            width: width,
+            width: width || "auto",
+            color: "#1E1E1E",
           }}
         >
           {label}
         </Typography>
         <Divider
           sx={{
-            width: 100,
+            width: 75,
             borderColor: COLORS.DIVIDER_COLOR,
             borderWidth: 2,
+            mt: 2,
           }}
         />
       </Grid>
