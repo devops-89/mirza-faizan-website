@@ -2,6 +2,7 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { COLORS } from "@/utils/enum";
 import { outfit, roboto } from "@/utils/fonts";
 
@@ -14,6 +15,7 @@ const Header = () => {
     },
     {
       label: "Patents",
+      url: "/patent",
     },
   ];
 
@@ -49,7 +51,7 @@ const Header = () => {
           return (
             <Box
               key={index}
-              component="a"
+              component={Link}
               href={link.url}
               sx={{
                 color: isActive ? "#000000" : "#FFFFFF",

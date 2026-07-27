@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { Box, Container, Grid, Typography, IconButton } from "@mui/material";
 import Image from "next/image";
-import Heading from "../widgets/Heading";
+import Heading from "../../widgets/Heading";
 import { outfit, roboto } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import {

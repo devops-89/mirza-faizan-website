@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography, Stack } from "@mui/material";
 import Image from "next/image";
-import Heading from "../widgets/Heading";
+import Heading from "../../widgets/Heading";
 import { roboto } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import { ProjectItem } from "@/utils/type";

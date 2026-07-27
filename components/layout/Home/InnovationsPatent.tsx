@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { COLORS } from "@/utils/enum";
-import Heading from "../widgets/Heading";
+import Heading from "@/components/widgets/Heading";
 
 const InnovationsPatent = () => {
   return (

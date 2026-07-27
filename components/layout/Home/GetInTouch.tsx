@@ -11,7 +11,7 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import Heading from "../widgets/Heading";
+import Heading from "../../widgets/Heading";
 import { roboto } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import {

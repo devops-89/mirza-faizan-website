@@ -23,3 +23,11 @@ export interface TestimonialItem {
   daysAgo: string;
   quote: string;
 }
+
+export interface PatentItem {
+  id: string;
+  patentNo: string;
+  title: string;
+  region: "US" | "South Africa" | "Pending";
+  status: "Granted" | "Pending";
+}

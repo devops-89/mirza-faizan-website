@@ -1,4 +1,5 @@
 import React from "react";
+import { Box } from "@mui/material";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import InventionResearch from "./invention-research";
@@ -9,7 +10,7 @@ import GetInTouch from "./GetInTouch";
 
 const Home = () => {
   return (
-    <div>
+    <Box>
       <HeroSection />
       <About />
       <InventionResearch />
@@ -17,7 +18,7 @@ const Home = () => {
       <TalksLeadership />
       <WhatWorldSays />
       <GetInTouch />
-    </div>
+    </Box>
   );
 };
 

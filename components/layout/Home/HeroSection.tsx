@@ -14,7 +14,10 @@ const HeroSection = () => {
             minHeight: { xs: "580px", md: "100vh" },
             width: "100%",
             mt: { xs: 1.5, sm: 3 },
-            borderRadius: { xs: "0px 0px 45px 45px", md: "0px 0px 100px 100px" },
+            borderRadius: {
+              xs: "0px 0px 45px 45px",
+              md: "0px 0px 100px 100px",
+            },
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
