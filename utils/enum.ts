@@ -1,0 +1,9 @@
+export const COLORS = {
+  WHITE: "#FFFFFF",
+  BLACK: "#000000",
+  GREY: "#808080",
+  LIGHT_GREY: "#F5F5F5",
+  DARK_GREY: "#252525",
+  DIVIDER_COLOR: "#846A4E",
+  TEXT_COLOR: "#252525",
+};
