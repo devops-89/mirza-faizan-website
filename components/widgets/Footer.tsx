@@ -43,8 +43,8 @@ const Footer: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: { xs: 2.5, sm: 4 },
-            mb: 4,
+            gap: { xs: 1.5, sm: 3.5, md: 4 },
+            mb: { xs: 3, md: 4 },
           }}
         >
           <IconButton
@@ -54,11 +54,12 @@ const Footer: React.FC = () => {
             aria-label="Facebook"
             sx={{
               color: "#FFFFFF",
+              p: { xs: 0.8, md: 1 },
               transition: "transform 0.2s ease, opacity 0.2s ease",
               "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
             }}
           >
-            <FacebookIcon sx={{ fontSize: 26 }} />
+            <FacebookIcon sx={{ fontSize: { xs: 21, md: 26 } }} />
           </IconButton>
 
           <IconButton
@@ -68,11 +69,12 @@ const Footer: React.FC = () => {
             aria-label="X"
             sx={{
               color: "#FFFFFF",
+              p: { xs: 0.8, md: 1 },
               transition: "transform 0.2s ease, opacity 0.2s ease",
               "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
             }}
           >
-            <XIcon sx={{ fontSize: 22 }} />
+            <XIcon sx={{ fontSize: { xs: 18, md: 22 } }} />
           </IconButton>
 
           <IconButton
@@ -82,11 +84,12 @@ const Footer: React.FC = () => {
             aria-label="Instagram"
             sx={{
               color: "#FFFFFF",
+              p: { xs: 0.8, md: 1 },
               transition: "transform 0.2s ease, opacity 0.2s ease",
               "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
             }}
           >
-            <InstagramIcon sx={{ fontSize: 26 }} />
+            <InstagramIcon sx={{ fontSize: { xs: 21, md: 26 } }} />
           </IconButton>
 
           <IconButton
@@ -96,11 +99,12 @@ const Footer: React.FC = () => {
             aria-label="LinkedIn"
             sx={{
               color: "#FFFFFF",
+              p: { xs: 0.8, md: 1 },
               transition: "transform 0.2s ease, opacity 0.2s ease",
               "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
             }}
           >
-            <LinkedInIcon sx={{ fontSize: 26 }} />
+            <LinkedInIcon sx={{ fontSize: { xs: 21, md: 26 } }} />
           </IconButton>
 
           <IconButton
@@ -110,11 +114,12 @@ const Footer: React.FC = () => {
             aria-label="Google"
             sx={{
               color: "#FFFFFF",
+              p: { xs: 0.8, md: 1 },
               transition: "transform 0.2s ease, opacity 0.2s ease",
               "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
             }}
           >
-            <GoogleIcon sx={{ fontSize: 22 }} />
+            <GoogleIcon sx={{ fontSize: { xs: 18, md: 22 } }} />
           </IconButton>
 
           <IconButton
@@ -124,11 +129,12 @@ const Footer: React.FC = () => {
             aria-label="YouTube"
             sx={{
               color: "#FFFFFF",
+              p: { xs: 0.8, md: 1 },
               transition: "transform 0.2s ease, opacity 0.2s ease",
               "&:hover": { opacity: 0.8, transform: "scale(1.1)" },
             }}
           >
-            <YouTubeIcon sx={{ fontSize: 28 }} />
+            <YouTubeIcon sx={{ fontSize: { xs: 23, md: 28 } }} />
           </IconButton>
         </Box>
 
@@ -136,13 +142,13 @@ const Footer: React.FC = () => {
         <Typography
           sx={{
             fontFamily: outfit.style.fontFamily,
-            fontSize: "12px",
+            fontSize: { xs: "11px", md: "12px" },
             fontWeight: 600,
-            letterSpacing: "2.5px",
+            letterSpacing: { xs: "2px", md: "2.5px" },
             color: "rgba(255, 255, 255, 0.75)",
             textAlign: "center",
             textTransform: "uppercase",
-            mb: 2,
+            mb: { xs: 1.5, md: 2 },
           }}
         >
           DISCOVER NEXT
@@ -152,15 +158,15 @@ const Footer: React.FC = () => {
         <Typography
           sx={{
             fontFamily: outfit.style.fontFamily,
-            fontSize: { xs: "17px", sm: "21px", md: "25px" },
+            fontSize: { xs: "16px", sm: "20px", md: "25px" },
             fontWeight: 500,
             color: "#FFFFFF",
             textAlign: "center",
-            lineHeight: 1.45,
-            maxWidth: 1100,
+            lineHeight: { xs: 1.5, md: 1.45 },
+            maxWidth: { xs: "100%", md: 1100 },
             mx: "auto",
-            mb: 4,
-            px: 2,
+            mb: { xs: 3, md: 4 },
+            px: { xs: 1.5, md: 2 },
             whiteSpace: { md: "nowrap" },
           }}
         >
@@ -168,7 +174,7 @@ const Footer: React.FC = () => {
         </Typography>
 
         {/* Scroll To Top Button */}
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: { xs: 2.5, md: 3 } }}>
           <IconButton
             onClick={scrollToTop}
             aria-label="Scroll to top"
@@ -197,10 +203,14 @@ const Footer: React.FC = () => {
             position: "relative",
             width: "100%",
             maxWidth: 820,
-            height: { xs: 110, sm: 140, md: 160 },
+            height: { xs: 110, sm: 180, md: 160 },
             mx: "auto",
             mt: 1,
             pointerEvents: "none",
+            "& img": {
+              objectFit: { xs: "contain !important", md: "cover !important" },
+              objectPosition: "bottom center !important",
+            },
           }}
         >
           <Image
@@ -208,7 +218,6 @@ const Footer: React.FC = () => {
             alt="Globe Pattern Art"
             fill
             sizes="(max-width: 1200px) 100vw, 820px"
-            style={{ objectFit: "cover", objectPosition: "bottom center" }}
           />
         </Box>
       </Container>

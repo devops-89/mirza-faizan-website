@@ -62,9 +62,9 @@ const GetInTouch: React.FC = () => {
                 lineHeight: "1.7",
                 color: COLORS.TEXT_COLOR || "#4C4C4C",
                 fontWeight: 400,
-                mt: 4,
-                maxWidth: 290,
-                textAlign: "justify",
+                mt: { xs: 2.5, md: 4 },
+                maxWidth: { xs: "100%", md: 290 },
+                textAlign: { xs: "left", md: "justify" },
               }}
             >
               {GET_IN_TOUCH_DESCRIPTION}

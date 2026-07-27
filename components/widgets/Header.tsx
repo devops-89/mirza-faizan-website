@@ -14,7 +14,6 @@ const Header = () => {
     },
     {
       label: "Patents",
-      url: "/patents",
     },
   ];
 
@@ -22,23 +21,27 @@ const Header = () => {
     <Box
       sx={{
         position: "fixed",
-        top: "24px",
+        top: { xs: "16px", sm: "24px" },
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 1000,
+        width: { xs: "90%", sm: "auto" },
+        maxWidth: 380,
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          backgroundColor: "rgba(18, 18, 18, 0.45)",
+          backgroundColor: "rgba(18, 18, 18, 0.55)",
           backdropFilter: "blur(20px) saturate(180%)",
           WebkitBackdropFilter: "blur(20px) saturate(180%)",
-          border: "1px solid rgba(255, 255, 255, 0.12)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
           borderRadius: "32px",
           p: "4px",
-          boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.25)",
+          boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.3)",
         }}
       >
         {headerLinks.map((link, index) => {
@@ -52,12 +55,12 @@ const Header = () => {
                 color: isActive ? "#000000" : "#FFFFFF",
                 backgroundColor: isActive ? "#FFFFFF" : "transparent",
                 textDecoration: "none",
-                fontSize: "13px",
+                fontSize: { xs: "12px", sm: "13px" },
                 fontWeight: 700,
                 letterSpacing: "0.8px",
                 fontFamily: outfit.style.fontFamily,
                 textTransform: "uppercase",
-                padding: "8px 22px",
+                padding: { xs: "6px 16px", sm: "8px 22px" },
                 borderRadius: "24px",
                 transition: "all 0.25s ease",
                 whiteSpace: "nowrap",

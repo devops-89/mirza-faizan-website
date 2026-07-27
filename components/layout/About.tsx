@@ -1,49 +1,37 @@
 import { COLORS } from "@/utils/enum";
 import { roboto } from "@/utils/fonts";
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
+import Heading from "../widgets/Heading";
 
 const About = () => {
   return (
-    <Box sx={{ height: "auto", py: 5 }}>
+    <Box
+      sx={{
+        py: { xs: 5, md: 9 },
+        backgroundColor: "#FFFFFF",
+        position: "relative",
+      }}
+    >
       <Container maxWidth="lg">
-        <Grid container>
-          <Grid size={4}>
-            <Typography
-              sx={{
-                fontSize: "45px",
-                fontWeight: 600,
-                lineHeight: "55px",
-                fontFamily: roboto.style.fontFamily,
-              }}
-            >
-              About the Visionary Inventor
-            </Typography>
-            <Divider
-              sx={{
-                width: 100,
-                borderColor: COLORS.DIVIDER_COLOR,
-                borderWidth: 2,
-              }}
-            />
-          </Grid>
+        <Grid container spacing={{ xs: 3, md: 4 }}>
+          {/* Section Heading */}
           <Grid size={12}>
-            <Stack spacing={2} sx={{ mt: 4 }}>
+            <Heading label={"About the \n Visionary Inventor"} width="360px" />
+          </Grid>
+
+          {/* Description Paragraphs */}
+          <Grid size={12}>
+            <Stack spacing={3} sx={{ mt: { xs: 2, md: 3 } }}>
               <Typography
                 sx={{
-                  color: COLORS.TEXT_COLOR,
-                  fontSize: "15px",
+                  color: COLORS.TEXT_COLOR || "#383838",
+                  fontSize: { xs: "14px", md: "16px" },
                   textAlign: "justify",
                   fontFamily: roboto.style.fontFamily,
                   fontWeight: 400,
-                  lineHeight: "26.5px",
+                  lineHeight: { xs: "1.65", md: "1.75" },
+                  width: "100%",
                 }}
               >
                 Mirza Faizan is an Indian American aerospace scientist,
@@ -53,14 +41,16 @@ const About = () => {
                 — an advanced ground-based anti-collision system designed to
                 prevent runway accidents and save countless lives.
               </Typography>
+
               <Typography
                 sx={{
-                  color: COLORS.TEXT_COLOR,
-                  fontSize: "15px",
+                  color: COLORS.TEXT_COLOR || "#383838",
+                  fontSize: { xs: "14px", md: "16px" },
                   textAlign: "justify",
                   fontFamily: roboto.style.fontFamily,
                   fontWeight: 400,
-                  lineHeight: "26.5px",
+                  lineHeight: { xs: "1.65", md: "1.75" },
+                  width: "100%",
                 }}
               >
                 With over two decades of experience in aerospace research, AI

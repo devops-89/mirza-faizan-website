@@ -123,11 +123,15 @@ const RecognitionAwards: React.FC = () => {
             slidesPerView={5}
             breakpoints={{
               0: {
-                slidesPerView: 2,
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+              },
+              480: {
+                slidesPerView: 2.8,
                 spaceBetween: 30,
               },
               600: {
-                slidesPerView: 3,
+                slidesPerView: 3.5,
                 spaceBetween: 40,
               },
               900: {
@@ -139,7 +143,7 @@ const RecognitionAwards: React.FC = () => {
                 spaceBetween: 60,
               },
             }}
-            style={{ width: "100%", padding: "15px 0" }}
+            style={{ width: "100%", padding: "10px 0" }}
           >
             {[
               ...RECOGNITION_LOGOS,
@@ -152,7 +156,7 @@ const RecognitionAwards: React.FC = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    height: 90,
+                    height: { xs: 65, md: 90 },
                     width: "100%",
                     px: 1,
                   }}
@@ -166,10 +170,10 @@ const RecognitionAwards: React.FC = () => {
                       objectFit: "contain",
                       maxHeight:
                         logo.id === "nasa"
-                          ? "82px"
+                          ? "62px"
                           : logo.id.includes("battelle")
-                            ? "40px"
-                            : "54px",
+                            ? "32px"
+                            : "44px",
                       width: "auto",
                       maxWidth: "100%",
                     }}

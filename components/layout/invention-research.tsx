@@ -52,13 +52,13 @@ const ProjectCard: React.FC<{ project: ProjectItem }> = ({ project }) => {
       <Box
         sx={{
           position: "absolute",
-          bottom: 20,
-          left: 20,
-          maxWidth: "70%",
+          bottom: { xs: 12, md: 20 },
+          left: { xs: 12, md: 20 },
+          maxWidth: { xs: "88%", md: "70%" },
           backgroundColor: "#F2EFEA",
-          px: 3,
-          pt: 4.5,
-          pb: 2.2,
+          px: { xs: 2, md: 3 },
+          pt: { xs: 2, md: 4.5 },
+          pb: { xs: 1.5, md: 2.2 },
           boxShadow: "0 2px 12px rgba(0, 0, 0, 0.04)",
           pointerEvents: "none",
         }}
@@ -67,7 +67,7 @@ const ProjectCard: React.FC<{ project: ProjectItem }> = ({ project }) => {
           sx={{
             fontFamily: roboto.style.fontFamily,
             fontWeight: 700,
-            fontSize: { xs: "12px", md: "13px" },
+            fontSize: { xs: "11px", md: "13px" },
             lineHeight: "1.35",
             color: "#1C1C1C",
             letterSpacing: "0.4px",
@@ -110,9 +110,8 @@ const InventionResearch: React.FC = () => {
             <Box sx={{ maxWidth: 450, position: "relative" }}>
               <Box
                 sx={{
-                  //   mb: 0.5,
-                  ml: -6.5,
-                  display: "flex",
+                  ml: { xs: 0, md: -6.5 },
+                  display: { xs: "none", md: "flex" },
                   alignItems: "center",
                 }}
               >
@@ -131,6 +130,7 @@ const InventionResearch: React.FC = () => {
                   lineHeight: "1.6",
                   color: COLORS.TEXT_COLOR || "#252525",
                   fontWeight: 400,
+                  textAlign: { xs: "left", md: "justify" },
                 }}
               >
                 {INVENTION_RESEARCH_DESCRIPTION}

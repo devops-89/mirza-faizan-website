@@ -27,36 +27,40 @@ const CounterCard = () => {
       <Box
         sx={{
           backgroundColor: "rgba(25, 25, 25, 0.42)",
-          borderRadius: "0px 0px 100px 100px",
-          py: { xs: 3, md: 4 },
+          borderRadius: { xs: "0px 0px 45px 45px", md: "0px 0px 100px 100px" },
+          py: { xs: 2.5, md: 4 },
           width: "100%",
         }}
       >
         <Container maxWidth="lg">
           <Grid
             container
-            spacing={3}
-            sx={{ alignItems: "center", justifyContent: "space-between" }}
+            spacing={{ xs: 1, sm: 2, md: 3 }}
+            sx={{ alignItems: "center", justifyContent: "center" }}
           >
             {COUNTERS.map((counter, index) => (
-              <Grid size={{ xs: 12, md: 4 }} key={index}>
+              <Grid size={4} key={index}>
                 <Stack
-                  direction="row"
-                  spacing={1.5}
-                  sx={{ alignItems: "center", justifyContent: "center" }}
+                  direction="column"
+                  spacing={{ xs: 0.5, md: 1 }}
+                  sx={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                  }}
                 >
                   <Typography
                     sx={{
                       fontFamily: outfit.style.fontFamily,
-                      fontSize: { xs: 38, sm: 48, lg: 58 },
+                      fontSize: { xs: 26, sm: 42, lg: 56 },
                       lineHeight: 1,
-                      letterSpacing: "-1.5px",
-                      fontWeight: 400,
+                      letterSpacing: "-1px",
+                      fontWeight: 500,
                       color: COLORS.WHITE,
                       whiteSpace: "nowrap",
                       display: "flex",
                       alignItems: "baseline",
-                      gap: 0.5,
+                      gap: 0.2,
                     }}
                   >
                     {counter.value}
@@ -67,7 +71,7 @@ const CounterCard = () => {
                         fontSize: "inherit",
                         lineHeight: "inherit",
                         letterSpacing: "inherit",
-                        fontWeight: 400,
+                        fontWeight: 500,
                         color: COLORS.WHITE,
                       }}
                     >
@@ -77,11 +81,11 @@ const CounterCard = () => {
                   <Typography
                     sx={{
                       fontFamily: outfit.style.fontFamily,
-                      fontSize: { xs: 12, sm: 13.5, lg: 15 },
+                      fontSize: { xs: 11, sm: 13, lg: 15 },
                       fontWeight: 400,
-                      lineHeight: "22px",
-                      color: COLORS.WHITE,
-                      whiteSpace: "nowrap",
+                      lineHeight: "1.3",
+                      color: "rgba(255, 255, 255, 0.9)",
+                      textAlign: "center",
                     }}
                   >
                     {counter.label}

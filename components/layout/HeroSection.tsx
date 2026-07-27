@@ -7,14 +7,14 @@ import CounterCard from "./CounterCard";
 const HeroSection = () => {
   return (
     <Box>
-      <Container maxWidth="xl" sx={{ mb: 3 }}>
+      <Container maxWidth="xl" sx={{ mb: 3, px: { xs: 1.5, sm: 3 } }}>
         <Box
           sx={{
             backgroundImage: `url(${hero.src})`,
-            height: "100vh",
+            minHeight: { xs: "580px", md: "100vh" },
             width: "100%",
-            mt: 3,
-            borderRadius: "0px 0px 100px 100px",
+            mt: { xs: 1.5, sm: 3 },
+            borderRadius: { xs: "0px 0px 45px 45px", md: "0px 0px 100px 100px" },
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -23,21 +23,25 @@ const HeroSection = () => {
           <Box
             sx={{
               backgroundColor: "rgba(25, 25, 25, 0.42)",
-              height: "100%",
+              minHeight: { xs: "580px", md: "100vh" },
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-end",
               alignItems: "center",
-              borderRadius: "0px 0px 100px 100px",
+              borderRadius: {
+                xs: "0px 0px 45px 45px",
+                md: "0px 0px 100px 100px",
+              },
+              pt: { xs: 10, md: 0 },
             }}
           >
-            <Container sx={{ textAlign: "right" }}>
+            <Container sx={{ textAlign: "right", px: { xs: 2, sm: 3 } }}>
               <Typography
                 sx={{
                   fontFamily: bella.style.fontFamily,
-                  fontSize: { xs: 120, sm: 170, md: 210 },
+                  fontSize: { xs: 72, sm: 130, md: 170, lg: 210 },
                   color: COLORS.WHITE,
-                  lineHeight: { xs: "100px", md: "150px" },
+                  lineHeight: { xs: "70px", sm: "110px", md: "150px" },
                 }}
               >
                 Hello there,
@@ -45,8 +49,8 @@ const HeroSection = () => {
               <Typography
                 sx={{
                   fontFamily: signika.style.fontFamily,
-                  lineHeight: { xs: "70px", md: "100px" },
-                  fontSize: { xs: 60, sm: 85, md: 110 },
+                  lineHeight: { xs: "48px", sm: "75px", md: "100px" },
+                  fontSize: { xs: 38, sm: 65, md: 85, lg: 110 },
                   fontWeight: 700,
                   color: COLORS.WHITE,
                 }}
@@ -56,8 +60,8 @@ const HeroSection = () => {
               <Typography
                 sx={{
                   fontFamily: signika.style.fontFamily,
-                  lineHeight: { xs: "70px", md: "100px" },
-                  fontSize: { xs: 60, sm: 85, md: 110 },
+                  lineHeight: { xs: "48px", sm: "75px", md: "100px" },
+                  fontSize: { xs: 38, sm: 65, md: 85, lg: 110 },
                   fontWeight: 700,
                   color: COLORS.WHITE,
                 }}
@@ -68,9 +72,11 @@ const HeroSection = () => {
                 sx={{
                   fontFamily: roboto.style.fontFamily,
                   fontWeight: 700,
-                  fontSize: { xs: 15, md: 18 },
+                  fontSize: { xs: 14, sm: 16, md: 18 },
                   color: COLORS.WHITE,
                   mb: 3,
+                  maxWidth: { xs: "100%", md: "80%" },
+                  ml: "auto",
                 }}
               >
                 Aerospace Scientist | Inventor | Technology Visionary shaping

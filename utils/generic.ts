@@ -10,13 +10,13 @@ export const COLUMN_1_PROJECTS: ProjectItem[] = [
     id: "ground-reality",
     title: "GROUND REALITY INFORMATION PROCESSING SYSTEM",
     image: "/images/invention/ground-reality.jpg.png",
-    height: { xs: 360, md: 470 },
+    height: { xs: 250, sm: 360, md: 470 },
   },
   {
     id: "apparatus",
     title: "APPARATUS FOR DIFFERENTLY-ABLED USERS TO COMMUNICATE",
     image: "/images/invention/apparatus.jpg.png",
-    height: { xs: 280, md: 320 },
+    height: { xs: 220, sm: 280, md: 320 },
   },
 ];
 
@@ -25,13 +25,13 @@ export const COLUMN_2_PROJECTS: ProjectItem[] = [
     id: "aircraft",
     title: "AIRCRAFT TRACKING SYSTEM & METHOD",
     image: "/images/invention/aircraft.jpg.png",
-    height: { xs: 280, md: 320 },
+    height: { xs: 220, sm: 280, md: 320 },
   },
   {
     id: "iot-based",
     title: "IOT-BASED POOL MANAGEMENT SYSTEM",
     image: "/images/invention/Iot-based.jpg.png",
-    height: { xs: 360, md: 470 },
+    height: { xs: 250, sm: 360, md: 470 },
   },
 ];
 
@@ -40,13 +40,13 @@ export const COLUMN_3_PROJECTS: ProjectItem[] = [
     id: "smart-rescue",
     title: "SMART RESCUE SYSTEM WITH INTERACTIVE APPLICATION",
     image: "/images/invention/smart-rascue.jpg.png",
-    height: { xs: 360, md: 470 },
+    height: { xs: 250, sm: 360, md: 470 },
   },
   {
     id: "biodegradable",
     title: "BIODEGRADABLE BOTTLE CAP USING FUNGUS “PESTALOTIOPSIS MICROSPORIA”",
     image: "/images/invention/biodegradable.jpg.png",
-    height: { xs: 280, md: 320 },
+    height: { xs: 220, sm: 280, md: 320 },
   },
 ];
 

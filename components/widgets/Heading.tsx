@@ -9,12 +9,13 @@ const Heading = ({ label, width }: { label: string; width?: string }) => {
       <Grid size={12}>
         <Typography
           sx={{
-            fontSize: { xs: "32px", md: "45px" },
+            fontSize: { xs: "26px", sm: "34px", md: "42px" },
             fontWeight: 700,
-            lineHeight: { xs: "40px", md: "52px" },
+            lineHeight: { xs: "33px", sm: "42px", md: "50px" },
             fontFamily: roboto.style.fontFamily,
-            width: width || "auto",
-            color: "#1E1E1E",
+            maxWidth: { xs: "100%", sm: width || "auto" },
+            color: "#1F1F1F",
+            whiteSpace: "pre-line",
           }}
         >
           {label}
