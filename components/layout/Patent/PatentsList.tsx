@@ -10,6 +10,7 @@ import {
   Stack,
   Button,
 } from "@mui/material";
+import Link from "next/link";
 import Heading from "../../widgets/Heading";
 import { roboto, outfit } from "@/utils/fonts";
 import {
@@ -59,6 +60,7 @@ const PatentGridSection = ({
       >
         {patents.map((item) => (
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
+            <Link href={`/patent/${item.id}`} style={{ textDecoration: "none", display: "block", height: "100%" }}>
             <Box
               sx={{
                 p: { xs: 3, md: 3.5 },
@@ -163,7 +165,22 @@ const PatentGridSection = ({
                   {item.title}
                 </Typography>
               </Box>
+
+              {/* Footer: View details */}
+              <Typography
+                sx={{
+                  fontFamily: roboto.style.fontFamily,
+                  fontSize: "11px",
+                  fontWeight: 600,
+                  color: "#846A4E",
+                  letterSpacing: "0.3px",
+                  mt: 2,
+                }}
+              >
+                View Details →
+              </Typography>
             </Box>
+            </Link>
           </Grid>
         ))}
       </Grid>

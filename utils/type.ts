@@ -32,6 +32,60 @@ export interface PatentItem {
   status: "Granted" | "Pending";
 }
 
+export interface PatentImage {
+  title: string;
+  caption: string;
+  url: string;
+}
+
+export interface PatentClaim {
+  num: number;
+  isIndependent: boolean;
+  text: string;
+}
+
+export interface PatentClassification {
+  code: string;
+  description: string;
+}
+
+export interface PatentLegalEvent {
+  date: string;
+  title: string;
+  type: string;
+}
+
+export interface PatentReferenceNumeral {
+  num: string;
+  label: string;
+}
+
+export interface PatentDescriptionSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface PatentDetailData extends PatentItem {
+  abstract: string;
+  inventors: string[];
+  filingDate: string;
+  publicationDate: string;
+  priorityDate?: string;
+  applicationNumber?: string;
+  grantPublicationNo?: string;
+  keywords?: string[];
+  pdfUrl?: string;
+  googlePatentsUrl?: string;
+  imageUrl?: string;
+  images?: PatentImage[];
+  claims?: PatentClaim[];
+  classifications?: PatentClassification[];
+  legalEvents?: PatentLegalEvent[];
+  referenceNumerals?: PatentReferenceNumeral[];
+  descriptionSections?: PatentDescriptionSection[];
+  summaryHighlights?: string[];
+}
+
 export interface AboutInfo {
   name: string;
   designation: string;
