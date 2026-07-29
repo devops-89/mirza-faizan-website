@@ -59,15 +59,25 @@ const PatentGridSection = ({
         rowSpacing={{ xs: 3, sm: 3.5, md: 4 }}
       >
         {patents.map((item) => (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
-            <Link href={`/patent/${item.id}`} style={{ textDecoration: "none", display: "block", height: "100%" }}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id} sx={{ display: "flex" }}>
+            <Link
+              href={`/patent/${item.id}`}
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+                height: "100%",
+              }}
+            >
             <Box
               sx={{
                 p: { xs: 3, md: 3.5 },
                 background: "linear-gradient(145deg, #FFFFFF 0%, #FAF8F5 100%)",
                 borderRadius: "22px",
                 border: "1px solid #EBE6DF",
-                minHeight: { xs: "130px", md: "150px" },
+                height: "100%",
+                flex: 1,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -97,7 +107,7 @@ const PatentGridSection = ({
                 },
               }}
             >
-              <Box>
+              <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
                 {/* Header Row: Patent ID Badge & Status Pill */}
                 <Stack
                   direction="row"
@@ -158,12 +168,36 @@ const PatentGridSection = ({
                     fontSize: { xs: "15px", md: "16.5px" },
                     fontWeight: 600,
                     color: "#181818",
-                    lineHeight: 1.5,
+                    lineHeight: 1.4,
                     letterSpacing: "-0.1px",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
                   }}
                 >
                   {item.title}
                 </Typography>
+
+                {/* Patent Description */}
+                {item.description && (
+                  <Typography
+                    sx={{
+                      fontFamily: roboto.style.fontFamily,
+                      fontSize: { xs: "12.5px", md: "13.5px" },
+                      fontWeight: 400,
+                      color: "#666666",
+                      lineHeight: 1.5,
+                      mt: 1.5,
+                      display: "-webkit-box",
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                )}
               </Box>
 
               {/* Footer: View details */}
@@ -174,7 +208,7 @@ const PatentGridSection = ({
                   fontWeight: 600,
                   color: "#846A4E",
                   letterSpacing: "0.3px",
-                  mt: 2,
+                  mt: 2.5,
                 }}
               >
                 View Details →

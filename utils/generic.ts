@@ -14,45 +14,57 @@ import {
 export const COLUMN_1_PROJECTS: ProjectItem[] = [
   {
     id: "ground-reality",
-    title: "GROUND REALITY INFORMATION PROCESSING SYSTEM",
+    title: "Ground Reality Information Processing System (GRIPS)",
     image: "/images/invention/ground-reality.jpg.png",
-    height: { xs: 250, sm: 360, md: 470 },
+    category: "Aviation Safety",
+    description:
+      "Advanced runway safety technology preventing runway incursions, excursions, and detecting foreign object debris in real time.",
   },
   {
     id: "apparatus",
-    title: "APPARATUS FOR DIFFERENTLY-ABLED USERS TO COMMUNICATE",
+    title: "Apparatus for Differently-Abled Users to Communicate",
     image: "/images/invention/apparatus.jpg.png",
-    height: { xs: 220, sm: 280, md: 320 },
+    category: "Assistive Tech",
+    description:
+      "Tactile gesture interface translating micro-movements into synthetic speech and text for disabled users.",
   },
 ];
 
 export const COLUMN_2_PROJECTS: ProjectItem[] = [
   {
     id: "aircraft",
-    title: "AIRCRAFT TRACKING SYSTEM & METHOD",
+    title: "Aircraft Tracking System & Sensor Fusion Method",
     image: "/images/invention/aircraft.jpg.png",
-    height: { xs: 220, sm: 280, md: 320 },
+    category: "Aerospace Systems",
+    description:
+      "Ground-based sensor fusion platform monitoring aircraft movement across taxiways and active runways in real time.",
   },
   {
     id: "iot-based",
-    title: "IOT-BASED POOL MANAGEMENT SYSTEM",
+    title: "IoT-Based Aquatic Safety & Pool Management System",
     image: "/images/invention/Iot-based.jpg.png",
-    height: { xs: 250, sm: 360, md: 470 },
+    category: "Aquatic IoT Safety",
+    description:
+      "Underwater motion sensing and perimeter monitoring system alerting lifeguards to submersion hazards.",
   },
 ];
 
 export const COLUMN_3_PROJECTS: ProjectItem[] = [
   {
     id: "smart-rescue",
-    title: "SMART RESCUE SYSTEM WITH INTERACTIVE APPLICATION",
+    title: "Smart Rescue System with Interactive Application",
     image: "/images/invention/smart-rascue.jpg.png",
-    height: { xs: 250, sm: 360, md: 470 },
+    category: "Emergency Response",
+    description:
+      "Wearable emergency SOS beacons integrated with interactive mobile dispatch coordination networks.",
   },
   {
     id: "biodegradable",
-    title: "BIODEGRADABLE BOTTLE CAP USING FUNGUS “PESTALOTIOPSIS MICROSPORIA”",
+    title: "Biodegradable Bottle Cap using Fungal Decomposition",
     image: "/images/invention/biodegradable.jpg.png",
-    height: { xs: 220, sm: 280, md: 320 },
+    category: "Bio-Tech Innovation",
+    description:
+      "Eco-friendly bottle cap impregnated with Pestalotiopsis microspora fungus to accelerate plastic waste breakdown.",
   },
 ];
 
@@ -180,60 +192,454 @@ export const FOOTER_QUOTE =
   "An idea becomes powerful only when it serves a purpose greater than oneself.";
 
 export const US_PATENTS_GRANTED = [
-  { id: "US20210269998A1", patentNo: "U.S. patent 20210269998A1", title: "Apparatus and method to clean garbage from water bodies", region: "US", status: "Granted" },
-  { id: "US20210269158A1", patentNo: "U.S. patent 20210269158A1", title: "Automated Aircraft Tray Table Disinfecting System Using Ultra-Violet light", region: "US", status: "Granted" },
-  { id: "US20220034624A1", patentNo: "U.S. patent 20220034624A1", title: "Relay based system to launch a projectile", region: "US", status: "Granted" },
-  { id: "US20210269997A1", patentNo: "U.S. patent 20210269997A1", title: "Automated system for cleaning and recovering spilled oil in the ocean using hair felt rollers", region: "US", status: "Granted" },
-  { id: "US20210270240A1", patentNo: "U.S. patent 20210270240A1", title: "Wind powered system to lift water using multiple tanks", region: "US", status: "Granted" },
-  { id: "US11464462B1", patentNo: "U.S. patent 11464462B1", title: "Drug abuse prevention device and a method thereof", region: "US", status: "Granted" },
-  { id: "US11433916B1", patentNo: "U.S. patent 11433916B1", title: "System to generate an alert to wake a driver of a vehicle and a method thereof", region: "US", status: "Granted" },
-  { id: "US20230065017A1", patentNo: "U.S. patent 20230065017A1", title: "Package delivery box", region: "US", status: "Granted" },
-  { id: "US20210086970A1", patentNo: "U.S. patent 20210086970A1", title: "Biodegradable bottle cap using pestalotiopsis microsporia to biodegrade waste plastic bottle", region: "US", status: "Granted" },
-  { id: "US20230034830A1", patentNo: "U.S. patent 20230034830A1", title: "Fluid flow control unit", region: "US", status: "Granted" },
-  { id: "US20230048142A1", patentNo: "U.S. patent 20230048142A1", title: "Wearable device for managing alcohol-driven violence", region: "US", status: "Granted" },
-  { id: "US20220386914A1", patentNo: "U.S. patent 20220386914A1", title: "System and Method for Mental State Determination", region: "US", status: "Granted" },
-  { id: "US20210270793A1", patentNo: "U.S. patent 20210270793A1", title: "Handheld device to detect lead compounds and impurities in water", region: "US", status: "Granted" },
-  { id: "US20220388788A1", patentNo: "U.S. patent 20220388788A1", title: "A high-speed pressure based propulsion system for transporting resources", region: "US", status: "Granted" },
-  { id: "US20230061443A1", patentNo: "U.S. patent 20230061443A1", title: "Automatic sunvisor assembly", region: "US", status: "Granted" },
-  { id: "US20230066405A1", patentNo: "U.S. patent 20230066405A1", title: "An apparatus for sanitising products", region: "US", status: "Granted" },
-  { id: "US20220099408A1", patentNo: "U.S. patent 20220099408A1", title: "Deep sea pressure based projectile launching system", region: "US", status: "Granted" },
-  { id: "US20220389694A1", patentNo: "U.S. patent 20220389694A1", title: "Smart shower head", region: "US", status: "Granted" },
-  { id: "US20230060737A1", patentNo: "U.S. patent 20230060737A1", title: "A system for refilling of used markers", region: "US", status: "Granted" },
-  { id: "US20220388736A1", patentNo: "U.S. patent 20220388736A1", title: "Bio-Degradable Container", region: "US", status: "Granted" },
-  { id: "US20240087440A1", patentNo: "U.S. patent 20240087440A1", title: "Iot based management system and a method for assisting users around a swimming pool", region: "US", status: "Granted" },
-  { id: "US20230324680A1", patentNo: "U.S. patent 20230324680A1", title: "Apparatus to enable disabled users to communicate and a method thereof", region: "US", status: "Granted" },
-  { id: "US20240085134A1", patentNo: "U.S. patent 20240085134A1", title: "Method and system for preventing injury by friendly fire", region: "US", status: "Granted" },
-  { id: "US20240080057A1", patentNo: "U.S. patent 20240080057A1", title: "Biodegradable cover for a portable electronic device", region: "US", status: "Granted" },
-  { id: "US20240094830A1", patentNo: "U.S. patent 20240094830A1", title: "Method and system for providing a smart whiteboard cleaner", region: "US", status: "Granted" },
-  { id: "US20240138541A1", patentNo: "U.S. patent 20240138541A1", title: "Perfume dispersing device", region: "US", status: "Granted" },
-  { id: "US20220390615A1", patentNo: "U.S. patent 20220390615A1", title: "Aircraft tracking system and method", region: "US", status: "Granted" },
-  { id: "US20230069173A1", patentNo: "U.S. patent 20230069173A1", title: "Smart rescue system coordinated with an interactive application", region: "US", status: "Granted" },
-  { id: "US20240144357A1", patentNo: "U.S. patent 20240144357A1", title: "System for displaying selected clothes on a dummy human body", region: "US", status: "Granted" },
-  { id: "US20220387639A1", patentNo: "U.S. patent 20220387639A1", title: "Self sanitizing door handle with protective cover", region: "US", status: "Granted" },
-  { id: "US20230332468A1", patentNo: "U.S. patent 20230332468A1", title: "Method and system for providing a smart ladder to a user", region: "US", status: "Granted" },
+  {
+    id: "US20210269998A1",
+    patentNo: "U.S. patent 20210269998A1",
+    title: "Apparatus and method to clean garbage from water bodies",
+    region: "US",
+    status: "Granted",
+    description:
+      "An automated pontoon water vehicle with a conveyor belt assembly for collecting and extracting floating debris and plastic garbage from aquatic environments.",
+  },
+  {
+    id: "US20210269158A1",
+    patentNo: "U.S. patent 20210269158A1",
+    title:
+      "Automated Aircraft Tray Table Disinfecting System Using Ultra-Violet light",
+    region: "US",
+    status: "Granted",
+    description:
+      "An automated disinfection system using ultra-violet (UV) light emitters integrated into aircraft tray tables to eliminate surface pathogens between flights.",
+  },
+  {
+    id: "US20220034624A1",
+    patentNo: "U.S. patent 20220034624A1",
+    title: "Relay based system to launch a projectile",
+    region: "US",
+    status: "Granted",
+    description:
+      "A relay-based electromagnetic launch system using sequential magnetic acceleration rings to launch payloads and projectiles with high velocity.",
+  },
+  {
+    id: "US20210269997A1",
+    patentNo: "U.S. patent 20210269997A1",
+    title:
+      "Automated system for cleaning and recovering spilled oil in the ocean using hair felt rollers",
+    region: "US",
+    status: "Granted",
+    description:
+      "An automated pontoon vessel utilizing specialized human hair felt rollers for efficient ocean crude oil spill retrieval and containment.",
+  },
+  {
+    id: "US20210270240A1",
+    patentNo: "U.S. patent 20210270240A1",
+    title: "Wind powered system to lift water using multiple tanks",
+    region: "US",
+    status: "Granted",
+    description:
+      "A wind-powered water pumping system featuring a central rotating cylinder and multi-tank relay staging to lift water across vertical elevations.",
+  },
+  {
+    id: "US11464462B1",
+    patentNo: "U.S. patent 11464462B1",
+    title: "Drug abuse prevention device and a method thereof",
+    region: "US",
+    status: "Granted",
+    description:
+      "A wearable smart wristband combining micro-fluidic sweat analysis and ambient air sensing to detect illicit drug exposure and alert guardians.",
+  },
+  {
+    id: "US11433916B1",
+    patentNo: "U.S. patent 11433916B1",
+    title:
+      "System to generate an alert to wake a driver of a vehicle and a method thereof",
+    region: "US",
+    status: "Granted",
+    description:
+      "An intelligent driver vigilance system that monitors physiological vitals and facial posture to generate multi-sensory awakening alerts.",
+  },
+  {
+    id: "US20230065017A1",
+    patentNo: "U.S. patent 20230065017A1",
+    title: "Package delivery box",
+    region: "US",
+    status: "Granted",
+    description:
+      "A secure smart package delivery receptacle equipped with automated locking mechanisms, anti-theft sensors, and mobile notification connectivity.",
+  },
+  {
+    id: "US20210086970A1",
+    patentNo: "U.S. patent 20210086970A1",
+    title:
+      "Biodegradable bottle cap using pestalotiopsis microsporia to biodegrade waste plastic bottle",
+    region: "US",
+    status: "Granted",
+    description:
+      "A biodegradable bottle cap impregnated with Pestalotiopsis microspora fungus to accelerate plastic waste breakdown in natural environments.",
+  },
+  {
+    id: "US20230034830A1",
+    patentNo: "U.S. patent 20230034830A1",
+    title: "Fluid flow control unit",
+    region: "US",
+    status: "Granted",
+    description:
+      "A high-precision fluid flow control unit for regulating liquid dynamics and pressure in industrial and agricultural fluid distribution.",
+  },
+  {
+    id: "US20230048142A1",
+    patentNo: "U.S. patent 20230048142A1",
+    title: "Wearable device for managing alcohol-driven violence",
+    region: "US",
+    status: "Granted",
+    description:
+      "A bio-sensing wearable device that detects physiological indicators of intoxication and aggression to prevent alcohol-driven violence.",
+  },
+  {
+    id: "US20220386914A1",
+    patentNo: "U.S. patent 20220386914A1",
+    title: "System and Method for Mental State Determination",
+    region: "US",
+    status: "Granted",
+    description:
+      "A real-time physiological and neurological monitoring system that assesses cognitive load, stress, and mental states.",
+  },
+  {
+    id: "US20210270793A1",
+    patentNo: "U.S. patent 20210270793A1",
+    title: "Handheld device to detect lead compounds and impurities in water",
+    region: "US",
+    status: "Granted",
+    description:
+      "A portable handheld device using electrochemical sensors to instantly identify lead contamination and toxic heavy metal impurities in water.",
+  },
+  {
+    id: "US20220388788A1",
+    patentNo: "U.S. patent 20220388788A1",
+    title:
+      "A high-speed pressure based propulsion system for transporting resources",
+    region: "US",
+    status: "Granted",
+    description:
+      "A high-speed pressure-based pneumatic propulsion network for transporting cargo and resources through low-friction pipeline tubes.",
+  },
+  {
+    id: "US20230061443A1",
+    patentNo: "U.S. patent 20230061443A1",
+    title: "Automatic sunvisor assembly",
+    region: "US",
+    status: "Granted",
+    description:
+      "An automated vehicle sunvisor assembly that dynamically adjusts shade position based on real-time solar glare tracking and driver gaze.",
+  },
+  {
+    id: "US20230066405A1",
+    patentNo: "U.S. patent 20230066405A1",
+    title: "An apparatus for sanitising products",
+    region: "US",
+    status: "Granted",
+    description:
+      "A sanitization device using multi-wavelength ultraviolet light and ultrasonic waves to decontaminate commercial products and personal items.",
+  },
+  {
+    id: "US20220099408A1",
+    patentNo: "U.S. patent 20220099408A1",
+    title: "Deep sea pressure based projectile launching system",
+    region: "US",
+    status: "Granted",
+    description:
+      "A deep-sea hydrostatic pressure-based projectile launching system utilizing ocean water head pressure for energy-efficient underwater propulsion.",
+  },
+  {
+    id: "US20220389694A1",
+    patentNo: "U.S. patent 20220389694A1",
+    title: "Smart shower head",
+    region: "US",
+    status: "Granted",
+    description:
+      "An eco-friendly smart shower head equipped with water flow metering, temperature feedback, and automated water-saving shutoff valves.",
+  },
+  {
+    id: "US20230060737A1",
+    patentNo: "U.S. patent 20230060737A1",
+    title: "A system for refilling of used markers",
+    region: "US",
+    status: "Granted",
+    description:
+      "An automated marker ink refilling apparatus designed to recharge dry whiteboard markers cleanly and extend stationery lifespan.",
+  },
+  {
+    id: "US20220388736A1",
+    patentNo: "U.S. patent 20220388736A1",
+    title: "Bio-Degradable Container",
+    region: "US",
+    status: "Granted",
+    description:
+      "A sustainable biodegradable food and liquid container engineered from natural organic fibers to replace single-use plastics.",
+  },
+  {
+    id: "US20240087440A1",
+    patentNo: "U.S. patent 20240087440A1",
+    title:
+      "Iot based management system and a method for assisting users around a swimming pool",
+    region: "US",
+    status: "Granted",
+    description:
+      "An IoT-enabled aquatic safety monitoring system that tracks pool perimeter activity, water submersion time, and alerts lifeguards.",
+  },
+  {
+    id: "US20230324680A1",
+    patentNo: "U.S. patent 20230324680A1",
+    title:
+      "Apparatus to enable disabled users to communicate and a method thereof",
+    region: "US",
+    status: "Granted",
+    description:
+      "An assistive communication apparatus that translates tactile micro-gestures into synthetic speech and text for speech-impaired users.",
+  },
+  {
+    id: "US20240085134A1",
+    patentNo: "U.S. patent 20240085134A1",
+    title: "Method and system for preventing injury by friendly fire",
+    region: "US",
+    status: "Granted",
+    description:
+      "A military tactical system utilizing directional RFID tagging and smart targeting optics to prevent friendly fire casualties.",
+  },
+  {
+    id: "US20240080057A1",
+    patentNo: "U.S. patent 20240080057A1",
+    title: "Biodegradable cover for a portable electronic device",
+    region: "US",
+    status: "Granted",
+    description:
+      "A protective eco-friendly case for smartphones and electronic gadgets crafted from fully compostable organic materials.",
+  },
+  {
+    id: "US20240094830A1",
+    patentNo: "U.S. patent 20240094830A1",
+    title: "Method and system for providing a smart whiteboard cleaner",
+    region: "US",
+    status: "Granted",
+    description:
+      "An autonomous robotic whiteboard cleaning mechanism equipped with optical erasing sensors and uniform surface wiping.",
+  },
+  {
+    id: "US20240138541A1",
+    patentNo: "U.S. patent 20240138541A1",
+    title: "Perfume dispersing device",
+    region: "US",
+    status: "Granted",
+    description:
+      "A smart perfume dispersing apparatus featuring ambient air scent sensing, timed micro-diffusion, and personalized fragrance control.",
+  },
+  {
+    id: "US20220390615A1",
+    patentNo: "U.S. patent 20220390615A1",
+    title: "Aircraft tracking system and method",
+    region: "US",
+    status: "Granted",
+    description:
+      "A real-time aircraft tracking system using ground-based sensor fusion (GRIPS) to prevent runway incursions and detect debris.",
+  },
+  {
+    id: "US20230069173A1",
+    patentNo: "U.S. patent 20230069173A1",
+    title: "Smart rescue system coordinated with an interactive application",
+    region: "US",
+    status: "Granted",
+    description:
+      "An emergency response coordination system pairing wearable SOS beacons with interactive mobile application dispatch networks.",
+  },
+  {
+    id: "US20240144357A1",
+    patentNo: "U.S. patent 20240144357A1",
+    title: "System for displaying selected clothes on a dummy human body",
+    region: "US",
+    status: "Granted",
+    description:
+      "A smart retail apparel display system projecting 3D garment simulations and tailored outfits onto interactive dummy mannequins.",
+  },
+  {
+    id: "US20220387639A1",
+    patentNo: "U.S. patent 20220387639A1",
+    title: "Self sanitizing door handle with protective cover",
+    region: "US",
+    status: "Granted",
+    description:
+      "A self-sanitizing architectural door handle featuring continuous antimicrobial surface coating and protective sanitary covers.",
+  },
+  {
+    id: "US20230332468A1",
+    patentNo: "U.S. patent 20230332468A1",
+    title: "Method and system for providing a smart ladder to a user",
+    region: "US",
+    status: "Granted",
+    description:
+      "An intelligent telescopic ladder assembly featuring automatic level stabilization sensors, anti-slip locks, and safety indicators.",
+  },
 ];
 
 export const SOUTH_AFRICA_PATENTS_GRANTED = [
-  { id: "202209145B", patentNo: "South African Patent 202209145B", title: "Water desalination system", region: "South Africa", status: "Granted" },
-  { id: "202209147B", patentNo: "South African Patent 202209147B", title: "Method and apparatus for enabling communication of disabled users", region: "South Africa", status: "Granted" },
-  { id: "202209146B", patentNo: "South African Patent 202209146B", title: "Brick for power generation", region: "South Africa", status: "Granted" },
-  { id: "202209144B", patentNo: "South African Patent 202209144B", title: "Vehicle collision avoidance system", region: "South Africa", status: "Granted" },
-  { id: "202209154B", patentNo: "South African Patent 202209154B", title: "Stress management system", region: "South Africa", status: "Granted" },
-  { id: "202210453B", patentNo: "South African Patent 202210453B", title: "Preventing finger of a user from pinch in a door gap", region: "South Africa", status: "Granted" },
-  { id: "202303467B", patentNo: "South African Patent 202303467B", title: "Method and system for providing a smart ladder to a user", region: "South Africa", status: "Granted" },
-  { id: "202303468B", patentNo: "South African Patent 202303468B", title: "A system for monitoring water consumption of users and a method thereof", region: "South Africa", status: "Granted" },
-  { id: "202303469B", patentNo: "South African Patent 202303469B", title: "A system and a method for color-blind person to distinguish colors in a surrounding", region: "South Africa", status: "Granted" },
-  { id: "202303472B", patentNo: "South African Patent 202303472B", title: "An IOT-Based management system and a method for assisting users around a swimming pool", region: "South Africa", status: "Granted" },
-  { id: "202303517B", patentNo: "South African Patent 202303517B", title: "Method and system for preventing injury by friendly fire", region: "South Africa", status: "Granted" },
-  { id: "202402960B", patentNo: "South African Patent 202402960B", title: "Stabilizer system for controlling tipping of furniture", region: "South Africa", status: "Granted" },
+  {
+    id: "202209145B",
+    patentNo: "South African Patent 202209145B",
+    title: "Water desalination system",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An off-grid solar-thermal water desalination system designed to convert seawater and brackish water into clean drinking water.",
+  },
+  {
+    id: "202209147B",
+    patentNo: "South African Patent 202209147B",
+    title: "Method and apparatus for enabling communication of disabled users",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An innovative communication interface apparatus empowering speech and mobility impaired individuals with custom gesture input.",
+  },
+  {
+    id: "202209146B",
+    patentNo: "South African Patent 202209146B",
+    title: "Brick for power generation",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "A modular piezoelectric power generation brick that harvests kinetic impact and ambient solar thermal energy to produce electricity.",
+  },
+  {
+    id: "202209144B",
+    patentNo: "South African Patent 202209144B",
+    title: "Vehicle collision avoidance system",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An active vehicle collision avoidance system combining radar sensors, emergency braking triggers, and proximity warning alerts.",
+  },
+  {
+    id: "202209154B",
+    patentNo: "South African Patent 202209154B",
+    title: "Stress management system",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "A biofeedback stress management wearable system that monitors galvanic skin response and guides calming breathing exercises.",
+  },
+  {
+    id: "202210453B",
+    patentNo: "South African Patent 202210453B",
+    title: "Preventing finger of a user from pinch in a door gap",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "A door gap safety guard system designed to prevent finger pinch injuries, particularly protecting children around door hinges.",
+  },
+  {
+    id: "202303467B",
+    patentNo: "South African Patent 202303467B",
+    title: "Method and system for providing a smart ladder to a user",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "A smart ladder safety monitoring system equipped with tilt detection angle sensors and automatic stabilizing outriggers.",
+  },
+  {
+    id: "202303468B",
+    patentNo: "South African Patent 202303468B",
+    title:
+      "A system for monitoring water consumption of users and a method thereof",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An IoT water consumption monitoring system with real-time leak detection, usage analytics, and automated flow shutoff valves.",
+  },
+  {
+    id: "202303469B",
+    patentNo: "South African Patent 202303469B",
+    title:
+      "A system and a method for color-blind person to distinguish colors in a surrounding",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An assistive vision system featuring spectral filtering lenses and camera translation to help color-blind users distinguish colors.",
+  },
+  {
+    id: "202303472B",
+    patentNo: "South African Patent 202303472B",
+    title:
+      "An IOT-Based management system and a method for assisting users around a swimming pool",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An IoT swimming pool safety management system incorporating underwater movement sensors and perimeter alarm notifications.",
+  },
+  {
+    id: "202303517B",
+    patentNo: "South African Patent 202303517B",
+    title: "Method and system for preventing injury by friendly fire",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "A battlefield tactical safety system designed to identify friendly forces via encrypted RF transponders and eliminate friendly fire.",
+  },
+  {
+    id: "202402960B",
+    patentNo: "South African Patent 202402960B",
+    title: "Stabilizer system for controlling tipping of furniture",
+    region: "South Africa",
+    status: "Granted",
+    description:
+      "An anti-tipping furniture stabilizer mechanism that automatically deploys counter-weight supports when unbalanced loads are detected.",
+  },
 ];
 
 export const PATENTS_PENDING = [
-  { id: "US20210270050A1", patentNo: "U.S. patent 20210270050A1", title: "A system to prevent injury from stair fall", region: "Pending", status: "Pending" },
-  { id: "US20220390200A1", patentNo: "U.S. patent 20220390200A1", title: "Safety system for preventing mass shootings by Smart guns", region: "Pending", status: "Pending" },
-  { id: "US20210270830A1", patentNo: "U.S. patent 20210270830A1", title: "Sensory test system for diagnosing peripheral neuropathy", region: "Pending", status: "Pending" },
-  { id: "US20210272020A1", patentNo: "U.S. patent 20210272020A1", title: "System and method for intelligent scheduling", region: "Pending", status: "Pending" },
-  { id: "US20210270740A1", patentNo: "U.S. patent 20210270740A1", title: "Device for detecting hazardous airborne particles", region: "Pending", status: "Pending" },
+  {
+    id: "US20210270050A1",
+    patentNo: "U.S. patent 20210270050A1",
+    title: "A system to prevent injury from stair fall",
+    region: "Pending",
+    status: "Pending",
+    description:
+      "A stair fall prevention safety system featuring active impact mitigation and intelligent posture monitoring to protect elderly users.",
+  },
+  {
+    id: "US20220390200A1",
+    patentNo: "U.S. patent 20220390200A1",
+    title: "Safety system for preventing mass shootings by Smart guns",
+    region: "Pending",
+    status: "Pending",
+    description:
+      "A smart gun security architecture integrating biometric authorization and location-based geofencing to prevent mass shootings.",
+  },
+  {
+    id: "US20210270830A1",
+    patentNo: "U.S. patent 20210270830A1",
+    title: "Sensory test system for diagnosing peripheral neuropathy",
+    region: "Pending",
+    status: "Pending",
+    description:
+      "A non-invasive diagnostic sensory test device designed to detect early indicators of peripheral neuropathy in diabetic patients.",
+  },
+  {
+    id: "US20210272020A1",
+    patentNo: "U.S. patent 20210272020A1",
+    title: "System and method for intelligent scheduling",
+    region: "Pending",
+    status: "Pending",
+    description:
+      "An AI-powered intelligent scheduling system that optimizes time allocation, workflow priorities, and resource management.",
+  },
+  {
+    id: "US20210270740A1",
+    patentNo: "U.S. patent 20210270740A1",
+    title: "Device for detecting hazardous airborne particles",
+    region: "Pending",
+    status: "Pending",
+    description:
+      "A compact sensor device configured to detect hazardous airborne micro-particles, toxic gases, and industrial air pollutants.",
+  },
 ];
 
 export const ABOUT_INFO: AboutInfo = {
@@ -283,7 +689,6 @@ export const PATENT_HERO_INFO: PatentHeroInfo = {
   stats: [
     { num: "31", label: "US Patents Granted" },
     { num: "12", label: "South Africa Granted" },
-    { num: "9", label: "US Patents Pending" },
   ],
 };
 
@@ -293,17 +698,20 @@ export const PATENT_SECTIONS_METADATA: PatentSectionMetadata[] = [
   {
     id: "US",
     title: "U.S. Granted Patents",
-    subtitle: "Patents granted by the United States Patent and Trademark Office",
+    subtitle:
+      "Patents granted by the United States Patent and Trademark Office",
   },
   {
     id: "SA",
     title: "South Africa Granted Patents",
-    subtitle: "Patents granted by the Companies and Intellectual Property Commission (CIPC)",
+    subtitle:
+      "Patents granted by the Companies and Intellectual Property Commission (CIPC)",
   },
   {
     id: "PENDING",
     title: "Pending Patent Applications",
-    subtitle: "Applications currently under examination in global patent offices",
+    subtitle:
+      "Applications currently under examination in global patent offices",
   },
 ];
 
@@ -313,7 +721,7 @@ import { PatentDetailData } from "./type";
 
 // ─── Patent detail records keyed by publication number ──────────────────────
 export const PATENT_DETAILS: Record<string, PatentDetailData> = {
-  "US20210269998A1": {
+  US20210269998A1: {
     id: "US20210269998A1",
     patentNo: "US20210269998A1",
     grantPublicationNo: "US11414825B2",
@@ -432,8 +840,7 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       },
       {
         code: "E02B 15/106",
-        description:
-          "Overflow skimmers with suction heads; suction heads",
+        description: "Overflow skimmers with suction heads; suction heads",
       },
       {
         code: "C02F 1/00",
@@ -507,11 +914,12 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     ],
   },
 
-  "US20210269158A1": {
+  US20210269158A1: {
     id: "US20210269158A1",
     patentNo: "US20210269158A1",
     grantPublicationNo: "US11427326B2",
-    title: "Automated Aircraft Tray Table Disinfecting System Using Ultra-Violet light",
+    title:
+      "Automated Aircraft Tray Table Disinfecting System Using Ultra-Violet light",
     region: "US",
     status: "Granted",
     abstract:
@@ -718,7 +1126,7 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     ],
   },
 
-  "US20220034624A1": {
+  US20220034624A1: {
     id: "US20220034624A1",
     patentNo: "US20220034624A1",
     grantPublicationNo: "US11536534B2",
@@ -821,14 +1229,37 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       { code: "F41B 6/006", description: "Electromagnetic Rail Launchers" },
       { code: "B64G 1/002", description: "Cosmonautic Air Launch Systems" },
       { code: "B64G 1/417", description: "Electromagnetic Propulsion Systems" },
-      { code: "H01F 7/064", description: "Actuating Circuitry for Electromagnets" },
+      {
+        code: "H01F 7/064",
+        description: "Actuating Circuitry for Electromagnets",
+      },
     ],
     legalEvents: [
-      { date: "Feb 27, 2020", title: "Priority to US17/185,017", type: "Priority" },
-      { date: "Feb 25, 2021", title: "Application filed with USPTO", type: "Filing" },
-      { date: "Feb 03, 2022", title: "Publication of US20220034624A1", type: "Publication" },
-      { date: "Dec 27, 2022", title: "Application granted (US11536534B2)", type: "Grant" },
-      { date: "Feb 25, 2041", title: "Anticipated Expiration", type: "Expiration" },
+      {
+        date: "Feb 27, 2020",
+        title: "Priority to US17/185,017",
+        type: "Priority",
+      },
+      {
+        date: "Feb 25, 2021",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Feb 03, 2022",
+        title: "Publication of US20220034624A1",
+        type: "Publication",
+      },
+      {
+        date: "Dec 27, 2022",
+        title: "Application granted (US11536534B2)",
+        type: "Grant",
+      },
+      {
+        date: "Feb 25, 2041",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
     ],
     descriptionSections: [
       {
@@ -856,11 +1287,12 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     ],
   },
 
-  "US20210269997A1": {
+  US20210269997A1: {
     id: "US20210269997A1",
     patentNo: "US20210269997A1",
     grantPublicationNo: "US11401673B2",
-    title: "Automated system for cleaning and recovering spilled oil in the ocean using hair felt rollers",
+    title:
+      "Automated system for cleaning and recovering spilled oil in the ocean using hair felt rollers",
     region: "US",
     status: "Granted",
     abstract:
@@ -984,16 +1416,45 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       },
     ],
     classifications: [
-      { code: "E02B 15/04", description: "Cleaning surface of open water from oil spills" },
-      { code: "E02B 15/10", description: "Devices using absorbents or skimmers for floating oil" },
-      { code: "B63B 35/32", description: "Vessels specially adapted for collecting floating oil" },
+      {
+        code: "E02B 15/04",
+        description: "Cleaning surface of open water from oil spills",
+      },
+      {
+        code: "E02B 15/10",
+        description: "Devices using absorbents or skimmers for floating oil",
+      },
+      {
+        code: "B63B 35/32",
+        description: "Vessels specially adapted for collecting floating oil",
+      },
     ],
     legalEvents: [
-      { date: "Feb 27, 2020", title: "Priority to US17/185,080", type: "Priority" },
-      { date: "Feb 25, 2021", title: "Application filed with USPTO", type: "Filing" },
-      { date: "Sep 02, 2021", title: "Publication of US20210269997A1", type: "Publication" },
-      { date: "Aug 02, 2022", title: "Patent Granted (US11401673B2)", type: "Grant" },
-      { date: "Feb 25, 2041", title: "Anticipated Expiration", type: "Expiration" },
+      {
+        date: "Feb 27, 2020",
+        title: "Priority to US17/185,080",
+        type: "Priority",
+      },
+      {
+        date: "Feb 25, 2021",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Sep 02, 2021",
+        title: "Publication of US20210269997A1",
+        type: "Publication",
+      },
+      {
+        date: "Aug 02, 2022",
+        title: "Patent Granted (US11401673B2)",
+        type: "Grant",
+      },
+      {
+        date: "Feb 25, 2041",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
     ],
     descriptionSections: [
       {
@@ -1020,7 +1481,7 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     ],
   },
 
-  "US20210270240A1": {
+  US20210270240A1: {
     id: "US20210270240A1",
     patentNo: "US20210270240A1",
     grantPublicationNo: "US11408397B2",
@@ -1121,16 +1582,45 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       },
     ],
     classifications: [
-      { code: "F03D 9/28", description: "Wind motors driving water pumps or compressors" },
-      { code: "F03D 7/0276", description: "Controlling wind motor rotor speed" },
-      { code: "F05B 2250/25", description: "Helical geometry for wind fluid pumping" },
+      {
+        code: "F03D 9/28",
+        description: "Wind motors driving water pumps or compressors",
+      },
+      {
+        code: "F03D 7/0276",
+        description: "Controlling wind motor rotor speed",
+      },
+      {
+        code: "F05B 2250/25",
+        description: "Helical geometry for wind fluid pumping",
+      },
     ],
     legalEvents: [
-      { date: "Feb 27, 2020", title: "Priority to US17/185,083", type: "Priority" },
-      { date: "Feb 25, 2021", title: "Application filed with USPTO", type: "Filing" },
-      { date: "Sep 02, 2021", title: "Publication of US20210270240A1", type: "Publication" },
-      { date: "Aug 09, 2022", title: "Patent Granted (US11408397B2)", type: "Grant" },
-      { date: "Feb 25, 2041", title: "Anticipated Expiration", type: "Expiration" },
+      {
+        date: "Feb 27, 2020",
+        title: "Priority to US17/185,083",
+        type: "Priority",
+      },
+      {
+        date: "Feb 25, 2021",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Sep 02, 2021",
+        title: "Publication of US20210270240A1",
+        type: "Publication",
+      },
+      {
+        date: "Aug 09, 2022",
+        title: "Patent Granted (US11408397B2)",
+        type: "Grant",
+      },
+      {
+        date: "Feb 25, 2041",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
     ],
     descriptionSections: [
       {
@@ -1157,7 +1647,142 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     ],
   },
 
-  "US20220390615A1": {
+  US11464462B1: {
+    id: "US11464462B1",
+    patentNo: "US11464462B1",
+    grantPublicationNo: "US11464462B1",
+    title: "Drug abuse prevention device and a method thereof",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "The invention relates to a drug abuse prevention device and a method thereof, said device comprising a sweat analysis system configured to determine content of drugs from sweat of a user; an air quality determination unit configured to determine the presence of drug contents in the air, a processor configured to compare the determined content of drugs in air and sweat of user with predetermined drug levels; and an auto trigger unit configured to trigger one or more registered users regarding the presence of drugs upon violation of predetermined drug levels.",
+    inventors: [
+      "Mirza Faizan",
+      "Aalia Mohammad",
+      "Aanchal Raghuvanshi",
+      "Ridah Shaista Shanavas",
+      "Mansoor Hasan Khan",
+      "Saadia Asaf",
+      "Deepika Dandeboina",
+      "Sarah Varghese",
+      "Mirza Rizwan",
+    ],
+    filingDate: "Jun 3, 2021",
+    publicationDate: "Oct 11, 2022",
+    priorityDate: "Jun 3, 2021",
+    applicationNumber: "US17/338,153",
+    keywords: [
+      "drug abuse prevention",
+      "sweat analysis sensor",
+      "ambient air quality detector",
+      "micro-fluidic drug scanning",
+      "automated guardian alert",
+      "wearable smart wristband",
+      "real-time GPS location",
+      "substance abuse deterrence",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/a0/50/a7/7aa4865417f78d/US11464462.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US11464462B1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/c3/09/08/babc07a002ae79/US11464462-20221011-D00001.png",
+    images: [
+      {
+        title: "FIG. 1 — Wearable Drug Abuse Prevention Device Assembly",
+        caption:
+          "Perspective view of wearable wristband (104) embedding sweat analysis sensor (102), air quality detector, and level determination device (106).",
+        url: "https://patentimages.storage.googleapis.com/c3/09/08/babc07a002ae79/US11464462-20221011-D00001.png",
+      },
+      {
+        title: "FIG. 2 — System Architecture & Computing Environment",
+        caption:
+          "Block diagram showing wearable device (100) communicating with remote mobile computing device (200), processor (202), and memory (204).",
+        url: "https://patentimages.storage.googleapis.com/2f/e5/19/913a8e63f08572/US11464462-20221011-D00002.png",
+      },
+      {
+        title: "FIG. 3 — Process Flowchart for Drug Detection & Alert Trigger",
+        caption:
+          "Flowchart (300) detailing sweat scanning (304), air drug detection, threshold comparison (306), and automatic parent/guardian GPS alerting (308).",
+        url: "https://patentimages.storage.googleapis.com/74/c5/4c/dc649560794de9/US11464462-20221011-D00003.png",
+      },
+    ],
+    summaryHighlights: [
+      "Non-Invasive Sweat & Ambient Sensing: Combines micro-fluidic sweat analysis sensors (102) with ambient air quality detectors to identify illicit drug exposure.",
+      "Real-Time Threshold Comparison: Onboard processor (202) continuously evaluates detected drug biomarker concentrations against predetermined safety baselines.",
+      "Automated Parent / Guardian Alerting: Instantly dispatches encrypted wireless notifications with real-time GPS coordinates when drug thresholds are exceeded.",
+      "Wearable Form Factor: Embedded inside an ergonomic wristband (104), smart bracelet, or clothing accessory with solar-enabled charging and Bluetooth/NFC connectivity.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Wearable Drug Abuse Prevention Device" },
+      { num: "102", label: "Sweat Analysis & Air Sensor Unit" },
+      { num: "104", label: "Wrist Band / Wearable Housing" },
+      { num: "106", label: "Drug Level Determination Module" },
+      { num: "200", label: "Mobile / Remote Computing Device" },
+      { num: "202", label: "Processing Unit" },
+      { num: "204", label: "Memory Storage Unit" },
+      { num: "304", label: "Sweat Scan & Air Sensing Step" },
+      { num: "306", label: "Threshold Evaluation Step" },
+      { num: "308", label: "Automated Contact / Parent Alert Step" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A drug abuse prevention device, said device comprising a sweat analysis system configured to determine content of drugs from sweat of a user; an air quality determination unit configured to determine presence of drug contents in air; a processor configured to compare the determined content of drugs in the air and sweat of the user with predetermined drug levels; and an auto trigger unit configured to trigger one or more registered users regarding the presence of drugs upon violation of predetermined drug levels.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The drug abuse prevention device as claimed in claim 1, further comprising a memory unit configured to store historical records.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The drug abuse prevention device as claimed in claim 1, further comprising a data correlation unit.",
+      },
+      {
+        num: 8,
+        isIndependent: true,
+        text: "A method for preventing drug abuse, said method comprising steps of: determining content of drugs from sweat of a user; determining presence of drug contents in air; comparing the determined content of drugs in the air and sweat of the user with predetermined drug levels; and triggering one or more registered users regarding the presence of drugs upon violation of predetermined drug levels.",
+      },
+    ],
+    classifications: [
+      { code: "A61B 5/14517", description: "Measuring chemical compounds in sweat" },
+      { code: "A61B 5/0002", description: "Telemetry aspect of medical measurements" },
+      { code: "G16H 40/67", description: "Mobile health monitoring systems and alert delivery" },
+    ],
+    legalEvents: [
+      { date: "Jun 03, 2021", title: "Priority & Application filed with USPTO", type: "Filing" },
+      { date: "Oct 11, 2022", title: "Patent Granted (US11464462B1)", type: "Grant" },
+      { date: "Oct 11, 2022", title: "Publication of US11464462B1", type: "Publication" },
+      { date: "Jun 17, 2041", title: "Adjusted Expiration", type: "Expiration" },
+    ],
+    descriptionSections: [
+      {
+        heading: "TECHNICAL FIELD & BACKGROUND",
+        paragraphs: [
+          "The present invention relates to a wearable drug abuse prevention device and method, and more specifically to a sweat analysis and air quality monitoring wristband configured to alert parents or guardians upon detecting drug exposure.",
+          "Substance abuse among teenagers and vulnerable individuals poses severe health and social risks. Early detection is critical for intervention. Traditional urine or blood tests are invasive and reactive after consumption. The present invention provides non-invasive, continuous real-time monitoring via sweat analysis and ambient air sensing.",
+        ],
+      },
+      {
+        heading: "SWEAT & AIR ANALYSIS SENSING",
+        paragraphs: [
+          "The wearable device (100) features a sweat analysis sensor (102) embedded in a comfortable wristband (104). The micro-fluidic sensor scans microscopic sweat droplets released through pores, analyzing drug metabolite levels in real time.",
+          "Additionally, an integrated air quality determination unit scans ambient air for airborne drug particles (such as smoked or vaporized substances). The real-time readings are continuously passed to the level determination module (106).",
+        ],
+      },
+      {
+        heading: "AUTOMATED ALERTING & GPS TRACKING",
+        paragraphs: [
+          "When the determined drug concentrations in sweat or air exceed predetermined safety thresholds (306), an auto-trigger unit immediately activates.",
+          "The device dispatches encrypted wireless notifications (SMS/push alert) over Bluetooth or cellular networks to designated emergency contacts (parents/guardians). Alerts include the exact real-time GPS coordinates of the user (308), enabling immediate preventive assistance.",
+        ],
+      },
+    ],
+  },
+
+  US20220390615A1: {
     id: "US20220390615A1",
     patentNo: "US20220390615A1",
     grantPublicationNo: "US11532236B2",
@@ -1170,8 +1795,16 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     filingDate: "Jun 10, 2021",
     publicationDate: "Dec 8, 2022",
     applicationNumber: "US17/344,615",
-    keywords: ["aircraft tracking", "runway", "GRIPS", "sensor fusion", "aviation safety", "situational awareness"],
-    pdfUrl: "https://patentimages.storage.googleapis.com/00/00/00/US20220390615A1.pdf",
+    keywords: [
+      "aircraft tracking",
+      "runway",
+      "GRIPS",
+      "sensor fusion",
+      "aviation safety",
+      "situational awareness",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/00/00/00/US20220390615A1.pdf",
     googlePatentsUrl: "https://patents.google.com/patent/US20220390615A1",
   },
 };

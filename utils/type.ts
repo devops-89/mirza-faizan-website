@@ -2,7 +2,9 @@ export interface ProjectItem {
   id: string;
   title: string;
   image: string;
-  height: { xs: number; sm?: number; md: number };
+  height?: { xs: number; sm?: number; md: number };
+  category?: string;
+  description?: string;
 }
 
 export interface RecognitionLogo {
@@ -30,6 +32,7 @@ export interface PatentItem {
   title: string;
   region: "US" | "South Africa" | "Pending";
   status: "Granted" | "Pending";
+  description?: string;
 }
 
 export interface PatentImage {

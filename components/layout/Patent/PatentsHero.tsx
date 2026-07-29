@@ -69,12 +69,12 @@ const PatentsHero = () => {
               mt: { xs: 3, sm: 4.5, md: 5 },
               justifyContent: "center",
               alignItems: "stretch",
-              maxWidth: { md: "720px" },
+              maxWidth: { md: "520px" },
               mx: "auto",
             }}
           >
             {PATENT_HERO_INFO.stats.map((stat, i) => (
-              <Grid size={{ xs: 4, sm: 4, md: 3.5 }} key={i}>
+              <Grid size={{ xs: 6, sm: 5, md: 5 }} key={i}>
                 <Box
                   sx={{
                     p: { xs: 1.2, sm: 1.8, md: 2 },

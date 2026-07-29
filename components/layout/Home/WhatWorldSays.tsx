@@ -1,7 +1,15 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Box, Container, Grid, Typography, IconButton } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  IconButton,
+  Chip,
+  Stack,
+} from "@mui/material";
 import Image from "next/image";
 import Heading from "../../widgets/Heading";
 import { outfit, roboto } from "@/utils/fonts";
@@ -12,13 +20,16 @@ import {
   TESTIMONIALS,
 } from "@/utils/generic";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const WhatWorldSays: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -26,309 +37,327 @@ const WhatWorldSays: React.FC = () => {
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 10 },
-        backgroundColor: "#FFFFFF",
+        py: { xs: 8, sm: 10, md: 14 },
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 50%, #F5F0EA 100%)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      <Container maxWidth="lg">
+      {/* Background Decorative Ambient Circles */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: "-10%",
+          right: "-5%",
+          width: "450px",
+          height: "450px",
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(132, 106, 78, 0.06) 0%, rgba(255, 255, 255, 0) 70%)",
+          pointerEvents: "none",
+        }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "-10%",
+          left: "-5%",
+          width: "400px",
+          height: "400px",
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(132, 106, 78, 0.05) 0%, rgba(255, 255, 255, 0) 70%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+        {/* Category Pill Tag */}
+        <Box sx={{ mb: 1.5 }}>
+          <Box
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 1,
+              backgroundColor: "rgba(132, 106, 78, 0.08)",
+              px: 2,
+              py: 0.75,
+              borderRadius: "50px",
+              border: "1px solid rgba(132, 106, 78, 0.18)",
+            }}
+          >
+            <Box
+              sx={{
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                backgroundColor: "#846A4E",
+              }}
+            />
+            <Typography
+              sx={{
+                fontFamily: outfit.style.fontFamily,
+                fontSize: { xs: "11px", sm: "12px" },
+                fontWeight: 700,
+                color: "#846A4E",
+                letterSpacing: "1.2px",
+                textTransform: "uppercase",
+              }}
+            >
+              GLOBAL ENDORSEMENTS & ACCOLADES
+            </Typography>
+          </Box>
+        </Box>
+
         {/* Header Row */}
         <Grid
           container
           spacing={3}
           sx={{
             mb: { xs: 5, md: 7 },
-            alignItems: "flex-start",
+            alignItems: "flex-end",
             justifyContent: "space-between",
           }}
         >
-          <Grid size={{ xs: 12, md: 5 }}>
-            <Heading label={WORLD_SAYS_HEADING} width="320px" />
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Heading label={WORLD_SAYS_HEADING} width="340px" />
           </Grid>
 
           <Grid
-            size={{ xs: 12, md: 7 }}
+            size={{ xs: 12, md: 6 }}
             sx={{
               display: "flex",
-              justifyContent: { xs: "flex-start", md: "flex-end" },
-              pt: { xs: 1, md: 0 },
+              flexDirection: "column",
+              alignItems: { xs: "flex-start", md: "flex-end" },
             }}
           >
             <Typography
               sx={{
                 fontFamily: roboto.style.fontFamily,
-                fontSize: { xs: "14px", md: "15px" },
-                lineHeight: "1.65",
-                color: COLORS.TEXT_COLOR || "#252525",
+                fontSize: { xs: "14.5px", md: "16px" },
+                lineHeight: 1.7,
+                color: "#524B42",
                 fontWeight: 400,
-                maxWidth: 580,
-                textAlign: "justify",
+                maxWidth: 540,
+                textAlign: { xs: "left", md: "right" },
+                mb: { xs: 2, md: 3 },
               }}
             >
               {WORLD_SAYS_DESCRIPTION}
             </Typography>
+
+            {/* Navigation Buttons Row */}
+            <Stack direction="row" spacing={1.5}>
+              <IconButton
+                aria-label="Previous Testimonial"
+                onClick={() => swiperRef.current?.slidePrev(600)}
+                sx={{
+                  width: 50,
+                  height: 50,
+                  backgroundColor: "#FFFFFF",
+                  color: "#846A4E",
+                  border: "1.5px solid #EBE6DF",
+                  boxShadow: "0 4px 14px rgba(0, 0, 0, 0.05)",
+                  transition: "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                  "&:hover": {
+                    backgroundColor: "#846A4E",
+                    color: "#FFFFFF",
+                    borderColor: "#846A4E",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 8px 20px rgba(132, 106, 78, 0.3)",
+                  },
+                }}
+              >
+                <ArrowBackIcon fontSize="small" />
+              </IconButton>
+
+              <IconButton
+                aria-label="Next Testimonial"
+                onClick={() => swiperRef.current?.slideNext(600)}
+                sx={{
+                  width: 50,
+                  height: 50,
+                  backgroundColor: "#846A4E",
+                  color: "#FFFFFF",
+                  border: "1.5px solid #846A4E",
+                  boxShadow: "0 4px 16px rgba(132, 106, 78, 0.25)",
+                  transition: "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                  "&:hover": {
+                    backgroundColor: "#6F573E",
+                    borderColor: "#6F573E",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 8px 24px rgba(111, 87, 62, 0.35)",
+                  },
+                }}
+              >
+                <ArrowForwardIcon fontSize="small" />
+              </IconButton>
+            </Stack>
           </Grid>
         </Grid>
 
-        {/* Content Row: Navigation & Vector on Left, Swiper Carousel on Right */}
-        <Grid
-          container
-          spacing={{ xs: 3, md: 4 }}
-          sx={{ alignItems: "flex-start" }}
+        {/* Swiper Carousel Section */}
+        <Box
+          sx={{
+            position: "relative",
+            overflow: "visible",
+            "& .swiper": { overflow: "visible !important" },
+            "& .swiper-wrapper": { overflow: "visible !important" },
+          }}
         >
-          {/* Left Column: Swiper Nav Controls + Decorative Vector */}
-          <Grid size={{ xs: 12, md: 2.5 }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                pt: { xs: 0, md: 2 },
-              }}
-            >
-              {/* Navigation Arrows */}
-              <Box sx={{ display: "flex", gap: 1.5, mb: 3 }}>
-                <IconButton
-                  onClick={() => swiperRef.current?.slidePrev(600)}
-                  sx={{
-                    width: 48,
-                    height: 48,
-                    backgroundColor: "#8C6F52",
-                    color: "#FFFFFF",
-                    "&:hover": {
-                      backgroundColor: "#735A43",
-                    },
-                    boxShadow: "0 4px 12px rgba(140, 111, 82, 0.25)",
-                  }}
+          <Swiper
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            modules={[Navigation, Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={24}
+            loop={true}
+            speed={700}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1.6,
+                spaceBetween: 24,
+              },
+              960: {
+                slidesPerView: 2.3,
+                spaceBetween: 28,
+              },
+              1280: {
+                slidesPerView: 2.7,
+                spaceBetween: 32,
+              },
+            }}
+            style={{ paddingBottom: "60px", paddingTop: "16px" }}
+          >
+            {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map(
+              (item, index) => (
+                <SwiperSlide
+                  key={`${item.id}-${index}`}
+                  style={{ height: "auto" }}
                 >
-                  <ArrowBackIcon fontSize="small" />
-                </IconButton>
-
-                <IconButton
-                  onClick={() => swiperRef.current?.slideNext(600)}
-                  sx={{
-                    width: 48,
-                    height: 48,
-                    backgroundColor: "#4A3E31",
-                    color: "#FFFFFF",
-                    "&:hover": {
-                      backgroundColor: "#362D23",
-                    },
-                    boxShadow: "0 4px 12px rgba(74, 62, 49, 0.25)",
-                  }}
-                >
-                  <ArrowForwardIcon fontSize="small" />
-                </IconButton>
-              </Box>
-
-              {/* Decorative Vector Arrow */}
-              <Box
-                sx={{
-                  position: "relative",
-                  width: 85,
-                  height: 65,
-                  ml: 9,
-                  mt: 4.5,
-                  display: { xs: "none", md: "block" },
-                }}
-              >
-                <Image
-                  src="/images/worldsays/Vector.png"
-                  alt="Decorative Arrow"
-                  fill
-                  sizes="85px"
-                  style={{ objectFit: "contain" }}
-                />
-              </Box>
-            </Box>
-          </Grid>
-
-          {/* Right Column: Swiper Carousel */}
-          <Grid size={{ xs: 12, md: 9.5 }} sx={{ overflow: "hidden" }}>
-            <Swiper
-              onBeforeInit={(swiper) => {
-                swiperRef.current = swiper;
-              }}
-              modules={[Navigation, Autoplay]}
-              slidesPerView={1.1}
-              spaceBetween={20}
-              loop={true}
-              speed={600}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1.6,
-                  spaceBetween: 24,
-                },
-                900: {
-                  slidesPerView: 2.2,
-                  spaceBetween: 28,
-                },
-              }}
-              style={{ paddingBottom: "45px", paddingTop: "10px" }}
-            >
-              {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map(
-                (item, index) => (
-                  <SwiperSlide
-                    key={`${item.id}-${index}`}
-                    style={{ height: "auto" }}
-                  >
-                    <Box
-                      sx={{
-                        backgroundColor: "#FFFFFF",
-                        borderRadius: "12px",
-                        pt: 2.5,
-                        px: 3,
-                        pb: 2.8,
+                  <Box
+                    sx={{
+                      backgroundColor: "#FFFFFF",
+                      borderRadius: "20px",
+                      p: { xs: 3, md: 3.5 },
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      position: "relative",
+                      border: "1px solid #EBE6DF",
+                      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.03)",
+                      transition: "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                      "&::before": {
+                        content: '""',
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "4px",
                         height: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        position: "relative",
-                        border: "1px solid #EFEFEF",
-                        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.02)",
-                        transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                        "&:hover": {
-                          transform: "translateY(-4px)",
-                          boxShadow: "0 10px 28px rgba(0, 0, 0, 0.06)",
+                        backgroundColor: "#846A4E",
+                        opacity: 0,
+                        transition: "opacity 0.3s ease",
+                      },
+                      "&:hover": {
+                        transform: "translateY(-6px)",
+                        boxShadow: "0 16px 36px rgba(132, 106, 78, 0.12)",
+                        borderColor: "#D8CDBF",
+                        "&::before": {
+                          opacity: 1,
                         },
+                      },
+                    }}
+                  >
+                    {/* Top Quote Icon Header */}
+                    <Box sx={{ mb: 2 }}>
+                      <Box
+                        sx={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: 38,
+                          height: 38,
+                          borderRadius: "10px",
+                          backgroundColor: "rgba(132, 106, 78, 0.08)",
+                          border: "1px solid rgba(132, 106, 78, 0.16)",
+                          color: "#846A4E",
+                        }}
+                      >
+                        <FormatQuoteIcon sx={{ fontSize: "22px" }} />
+                      </Box>
+                    </Box>
+
+                    {/* Main Quote Text */}
+                    <Typography
+                      sx={{
+                        fontFamily: roboto.style.fontFamily,
+                        fontSize: { xs: "14.5px", md: "15.5px" },
+                        lineHeight: 1.65,
+                        color: "#2C2621",
+                        fontWeight: 400,
+                        flex: 1,
+                        mb: 2.5,
                       }}
                     >
-                      {/* Card Content Top + Body */}
-                      <Box>
-                        {/* Top Header Row */}
-                        <Grid
-                          container
-                          spacing={1}
-                          sx={{
-                            justifyContent: "space-between",
-                            alignItems: "flex-start",
-                          }}
-                        >
-                          <Grid size={{ xs: 12, sm: 7.5 }}>
-                            <Typography
-                              sx={{
-                                fontFamily: roboto.style.fontFamily,
-                                fontSize: { xs: "15px", md: "17px" },
-                                fontWeight: 700,
-                                color: "#1F1F1F",
-                                lineHeight: "1.3",
-                                mb: 0.8,
-                              }}
-                            >
-                              {item.title}
-                            </Typography>
-                            <Typography
-                              sx={{
-                                fontFamily: roboto.style.fontFamily,
-                                fontSize: "13.5px",
-                                fontWeight: 500,
-                                color: "#846A4E",
-                              }}
-                            >
-                              {item.location}
-                            </Typography>
-                          </Grid>
+                      &ldquo;{item.quote}&rdquo;
+                    </Typography>
 
-                          <Grid
-                            size={{ xs: 12, sm: 4.5 }}
-                            sx={{
-                              display: "flex",
-                              flexDirection: { xs: "row", sm: "column" },
-                              justifyContent: {
-                                xs: "space-between",
-                                sm: "flex-end",
-                              },
-                              alignItems: { xs: "center", sm: "flex-end" },
-                              mt: { xs: 1, sm: 0 },
-                            }}
-                          >
-                            <Typography
-                              sx={{
-                                fontFamily: roboto.style.fontFamily,
-                                fontSize: "12px",
-                                color: "#9E9E9E",
-                                mb: { xs: 0, sm: 0.8 },
-                                fontWeight: 400,
-                              }}
-                            >
-                              {item.daysAgo}
-                            </Typography>
-                            <Box
-                              sx={{
-                                position: "relative",
-                                width: 32,
-                                height: 28,
-                              }}
-                            >
-                              <Image
-                                src="/images/worldsays/quote.png"
-                                alt="Quote mark"
-                                fill
-                                sizes="32px"
-                                style={{ objectFit: "contain" }}
-                              />
-                            </Box>
-                          </Grid>
-                        </Grid>
+                    {/* Footer Row: Endorser Details */}
+                    <Box
+                      sx={{
+                        pt: 2,
+                        borderTop: "1px solid #F0EAE1",
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontFamily: outfit.style.fontFamily,
+                          fontSize: { xs: "15px", md: "16px" },
+                          fontWeight: 700,
+                          color: "#181818",
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
 
-                        {/* Divider Line */}
-                        <Box
-                          sx={{
-                            width: "100%",
-                            height: "1px",
-                            backgroundColor: "#F0F0F0",
-                            my: 1.8,
-                          }}
+                      <Stack
+                        direction="row"
+                        spacing={0.5}
+                        sx={{ alignItems: "center", mt: 0.6 }}
+                      >
+                        <LocationOnIcon
+                          sx={{ fontSize: "14px", color: "#846A4E" }}
                         />
-
-                        {/* Card Body Quote */}
                         <Typography
                           sx={{
                             fontFamily: roboto.style.fontFamily,
-                            fontSize: { xs: "13.5px", md: "14.5px" },
-                            lineHeight: "1.65",
-                            color: "#757575",
-                            fontWeight: 400,
+                            fontSize: "13px",
+                            fontWeight: 500,
+                            color: "#846A4E",
                           }}
                         >
-                          {item.quote}
+                          {item.location}
                         </Typography>
-                      </Box>
-
-                      {/* Bottom Right Decorative Border Graphic */}
-                      <Box
-                        sx={{
-                          position: "absolute",
-                          bottom: 0,
-                          right: 0,
-                          width: 30,
-                          height: 30,
-                          pointerEvents: "none",
-                        }}
-                      >
-                        <Image
-                          src="/images/worldsays/Border.png"
-                          alt="Border decoration"
-                          fill
-                          sizes="30px"
-                          style={{ objectFit: "contain" }}
-                        />
-                      </Box>
+                      </Stack>
                     </Box>
-                  </SwiperSlide>
-                ),
-              )}
-            </Swiper>
-          </Grid>
-        </Grid>
+                  </Box>
+                </SwiperSlide>
+              ),
+            )}
+          </Swiper>
+        </Box>
       </Container>
     </Box>
   );
 };
 
 export default WhatWorldSays;
+
