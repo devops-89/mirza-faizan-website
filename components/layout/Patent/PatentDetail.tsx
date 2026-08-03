@@ -57,6 +57,11 @@ const InfoRow = ({ label, value }: { label: string; value: string }) => (
 const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
   const [activeTab, setActiveTab] = useState<number>(0);
   const [activeImageIdx, setActiveImageIdx] = useState<number>(0);
+  const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
+
+  const handleImageError = (idx: number) => {
+    setFailedImages((prev) => ({ ...prev, [idx]: true }));
+  };
 
   const isGranted = patent.status === "Granted";
   const images =
@@ -645,19 +650,99 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
                   textAlign: "center",
                 }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={images[activeImageIdx].url}
-                  alt={images[activeImageIdx].title}
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "580px",
-                    objectFit: "contain",
-                    borderRadius: "10px",
-                    margin: "0 auto",
-                    display: "block",
-                  }}
-                />
+                {!failedImages[activeImageIdx] && images[activeImageIdx]?.url ? (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    src={images[activeImageIdx].url}
+                    alt=""
+                    onError={() => handleImageError(activeImageIdx)}
+                    style={{
+                      maxWidth: "100%",
+                      maxHeight: "580px",
+                      objectFit: "contain",
+                      borderRadius: "10px",
+                      margin: "0 auto",
+                      display: "block",
+                    }}
+                  />
+                ) : (
+                  <Box
+                    sx={{
+                      py: 5,
+                      px: 3,
+                      borderRadius: "14px",
+                      backgroundColor: "#161B22",
+                      color: "#FFFFFF",
+                      border: "1px dashed rgba(196,168,130,0.4)",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 2,
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: 56,
+                        height: 56,
+                        borderRadius: "50%",
+                        backgroundColor: "rgba(132,106,78,0.2)",
+                        border: "1px solid #846A4E",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#C4A882"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="9" y1="21" x2="9" y2="9" />
+                        <circle cx="15" cy="15" r="2" />
+                      </svg>
+                    </Box>
+                    <Typography
+                      sx={{
+                        fontFamily: outfit.style.fontFamily,
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        letterSpacing: "2px",
+                        textTransform: "uppercase",
+                        color: "#C4A882",
+                      }}
+                    >
+                      USPTO Official Technical Blueprint Schematic
+                    </Typography>
+                    {patent.googlePatentsUrl && (
+                      <Link href={patent.googlePatentsUrl} target="_blank" rel="noopener" style={{ textDecoration: "none" }}>
+                        <Chip
+                          label="Open Official Drawing in Google Patents ↗"
+                          clickable
+                          sx={{
+                            backgroundColor: "#846A4E",
+                            color: "#FFF",
+                            fontFamily: outfit.style.fontFamily,
+                            fontWeight: 600,
+                            fontSize: "12px",
+                            py: 1.8,
+                            px: 1,
+                            borderRadius: "8px",
+                            "&:hover": { backgroundColor: "#6F573E" },
+                          }}
+                        />
+                      </Link>
+                    )}
+                  </Box>
+                )}
+
                 <Typography
                   sx={{
                     fontFamily: roboto.style.fontFamily,
@@ -667,7 +752,7 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
                     mt: 3,
                   }}
                 >
-                  {images[activeImageIdx].title}
+                  {images[activeImageIdx]?.title}
                 </Typography>
                 <Typography
                   sx={{
@@ -680,7 +765,7 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
                     lineHeight: 1.6,
                   }}
                 >
-                  {images[activeImageIdx].caption}
+                  {images[activeImageIdx]?.caption}
                 </Typography>
               </Box>
             </Box>

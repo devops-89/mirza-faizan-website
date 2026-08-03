@@ -265,7 +265,7 @@ export const US_PATENTS_GRANTED = [
     region: "US",
     status: "Granted",
     description:
-      "A secure smart package delivery receptacle equipped with automated locking mechanisms, anti-theft sensors, and mobile notification connectivity.",
+      "A package delivery box 100 with container 101, openable lid 102, pressure plate 103 closing mechanism, and flexible rod 104 slider 109 locking mechanism.",
   },
   {
     id: "US20210086970A1",
@@ -1747,15 +1747,40 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       },
     ],
     classifications: [
-      { code: "A61B 5/14517", description: "Measuring chemical compounds in sweat" },
-      { code: "A61B 5/0002", description: "Telemetry aspect of medical measurements" },
-      { code: "G16H 40/67", description: "Mobile health monitoring systems and alert delivery" },
+      {
+        code: "A61B 5/14517",
+        description: "Measuring chemical compounds in sweat",
+      },
+      {
+        code: "A61B 5/0002",
+        description: "Telemetry aspect of medical measurements",
+      },
+      {
+        code: "G16H 40/67",
+        description: "Mobile health monitoring systems and alert delivery",
+      },
     ],
     legalEvents: [
-      { date: "Jun 03, 2021", title: "Priority & Application filed with USPTO", type: "Filing" },
-      { date: "Oct 11, 2022", title: "Patent Granted (US11464462B1)", type: "Grant" },
-      { date: "Oct 11, 2022", title: "Publication of US11464462B1", type: "Publication" },
-      { date: "Jun 17, 2041", title: "Adjusted Expiration", type: "Expiration" },
+      {
+        date: "Jun 03, 2021",
+        title: "Priority & Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Oct 11, 2022",
+        title: "Patent Granted (US11464462B1)",
+        type: "Grant",
+      },
+      {
+        date: "Oct 11, 2022",
+        title: "Publication of US11464462B1",
+        type: "Publication",
+      },
+      {
+        date: "Jun 17, 2041",
+        title: "Adjusted Expiration",
+        type: "Expiration",
+      },
     ],
     descriptionSections: [
       {
@@ -1806,6 +1831,1692 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     pdfUrl:
       "https://patentimages.storage.googleapis.com/00/00/00/US20220390615A1.pdf",
     googlePatentsUrl: "https://patents.google.com/patent/US20220390615A1",
+  },
+  US11433916B1: {
+    id: "US11433916B1",
+    patentNo: "US11433916B1",
+    grantPublicationNo: "US11433916B1",
+    title:
+      "System to generate an alert to wake a driver of a vehicle and a method thereof",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A system to generate an alert to wake up a drowsy driver of a moving vehicle comprises at least one camera configured to detect driver's facial expressions, at least one Electroencephalograph (EEG) detector configured to detect EEG signals from the driver, at least one Artificial Intelligence (AI) camera configured to detect and enhance facial expressions using artificial neural networks, and a processing module configured to analyze EEG signals and compare facial captures with pre-stored neural training data to confirm driver drowsiness and trigger multi-sensory inside and outside vehicle alerts.",
+    inventors: [
+      "Mirza Faizan",
+      "Adam Mhal",
+      "Anish Bhattacharya",
+      "Ayra Iftikhar",
+      "Manha Sadarulanam",
+      "Tanish Prasad",
+      "Vivek Maranganti",
+      "Abdullah Kabeer",
+      "Mirza Rizwan",
+    ],
+    filingDate: "Jul 12, 2021",
+    publicationDate: "Sep 6, 2022",
+    priorityDate: "Jul 12, 2021",
+    applicationNumber: "US17/373,447",
+    keywords: [
+      "driver vigilance",
+      "EEG drowsiness detection",
+      "AI facial recognition",
+      "neural network analysis",
+      "vehicle safety",
+      "alert generation system",
+      "external warning speaker",
+      "drowsy driver alert",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/7c/ed/77/c8ce3b6ffea384/US11433916.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US11433916B1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/0e/68/23/d5942848ada341/US11433916-20220906-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — System Architecture Overview",
+        caption:
+          "Block diagram illustrating the camera, EEG sensor, AI camera neural processor, and internal/external alarm notification units.",
+        url: "https://patentimages.storage.googleapis.com/0e/68/23/d5942848ada341/US11433916-20220906-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Driver Surveillance & Facial Posture Sensor Layout",
+        caption:
+          "Diagram showing vehicle interior positioning of optical camera sensors and EEG signal receiver relative to the driver.",
+        url: "https://patentimages.storage.googleapis.com/96/11/bf/b6b67ded3c7dd8/US11433916-20220906-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Multi-Stage Alert Dispatch Process",
+        caption:
+          "Flowchart detailing dual-sensor EEG + AI facial signal verification and escalating interior cabin and exterior vehicle audio-visual alarms.",
+        url: "https://patentimages.storage.googleapis.com/29/0c/ca/0b5b5585a320a6/US11433916-20220906-D00002.png",
+      },
+    ],
+    summaryHighlights: [
+      "Contactless & Dual EEG + AI Vision Sensing: Combines real-time EEG brainwave signal processing with optical AI cameras to monitor microsleeps and facial fatigue.",
+      "Neural Network Image Enhancement: Uses artificial neural networks to enhance low-light facial captures and cross-match with pre-stored driver fatigue models.",
+      "Interior Cabin Awakening Alerts: Triggers loud internal acoustic alarms immediately when driver drowsiness is verified.",
+      "External Vehicle Warning System: Activates exterior speakers and LED display screens to warn surrounding drivers and pedestrians of a fatigued driver.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Driver Drowsiness Alert System" },
+      { num: "102", label: "Electroencephalograph (EEG) Sensor Module" },
+      { num: "104", label: "Optical Camera Array" },
+      { num: "106", label: "Artificial Intelligence (AI) Camera Unit" },
+      { num: "108", label: "Central Processing & Analysis Module" },
+      { num: "110", label: "Internal Cabin Speaker / Alarm" },
+      { num: "112", label: "External Vehicle Warning Speaker & Screen" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A system to generate an alert to wake up a drowsy driver of a moving vehicle, said system comprises: at least one camera configured to detect driver's facial expressions; at least one Electroencephalograph (EEG) detector configured to detect EEG signals from the driver; at least one Artificial Intelligence (AI) camera configured to detect the driver's facial expressions and enhance the driver's facial expressions using artificial neural network; a processing module, connected to the at least one camera, at least one EEG detector and at least one AI camera; wherein the processing module is configured to process the EEG signals, wherein the at least one Camera and the at least one AI camera take pictures of driver's face and send the pictures to processing module to start comparison of driver's face with a database of pre-stored training pictures after receiving signal from EEG, and wherein the processing module is configured to compare the detections made by at least one camera and the at least one AI camera to confirm the drowsiness of the driver, wherein the system generates an alarm after receiving the confirmation of driver's drowsiness, wherein the alarms are produced inside the vehicle and/or outside the vehicle.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The system to generate the alert to wake up the driver of the vehicle as claimed in claim 1 further comprises a screen and a speaker attached outside the vehicle.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The system to generate the alert to wake up the driver of the vehicle as claimed in claim 2 wherein the screen and the speaker are connected to the processing module.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The system to generate the alert to wake the driver of the vehicle as claimed in claim 3 wherein the screen is configured to display a message and the speaker is configured to make a louder noise outside the vehicle in response to the alert generated by the processing module.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The system to generate the alert to wake the driver of the vehicle as claimed in claim 1 further comprises a speaker fixed inside the vehicle.",
+      },
+      {
+        num: 6,
+        isIndependent: false,
+        text: "The system to generate the alert to wake up the driver of the vehicle as claimed in claim 5, wherein the speaker that fixed inside the vehicle is connected to the processing module.",
+      },
+      {
+        num: 7,
+        isIndependent: false,
+        text: "The system to generate the alert to wake the driver of the vehicle as claimed in claim 6, wherein the speaker that fixed inside the vehicle is configured to generate loud sound to wake the driver in response to the alert generated by the processing module.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "TECHNICAL FIELD & BACKGROUND",
+        paragraphs: [
+          "The present invention relates to a system and method for vehicle driver safety, specifically an intelligent multi-modal monitoring system utilizing electroencephalogram (EEG) signals and AI-powered computer vision to detect drowsy drivers and generate immediate awakening alerts.",
+          "Driver fatigue and microsleep episodes account for a significant portion of traffic accidents worldwide. Conventional warning systems rely solely on steering wheel movement or single-camera eye-tracking, which often yield false positives or fail in poor lighting conditions.",
+        ],
+      },
+      {
+        heading: "DUAL-SENSOR EEG AND AI VISION DETECTION",
+        paragraphs: [
+          "The system incorporates an EEG signal receiver to monitor brainwave patterns associated with onset of sleep (theta/alpha wave shifts). Upon detecting EEG indicators of drowsiness, the processing unit triggers high-resolution optical and AI-assisted cameras.",
+          "The AI camera utilizes artificial neural networks to enhance facial images captured in sub-optimal ambient light. The processing module compares the real-time facial expressions against a pre-trained database of fatigue indicators to confirm driver drowsiness with high precision.",
+        ],
+      },
+      {
+        heading: "INTEGRATED CABIN & EXTERIOR ALARM SYSTEM",
+        paragraphs: [
+          "Once driver drowsiness is confirmed, the central module generates urgent alerts inside the cabin via high-decibel acoustic speakers to wake the driver immediately.",
+          "Simultaneously, an external warning module consisting of exterior-mounted speakers and visual warning screens alerts adjacent vehicles and surrounding traffic, minimizing collision risks caused by an incapacitated driver.",
+        ],
+      },
+    ],
+  },
+
+  US20230065017A1: {
+    id: "US20230065017A1",
+    patentNo: "US20230065017A1",
+    grantPublicationNo: "US11571079B1",
+    title: "Package delivery box",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A package delivery box 100 is disclosed. It comprises a container 101 for accommodating at least one package, an openable lid 102 attached to the container 101, a closing mechanism for closing the container 101, and a locking mechanism for locking the closed container 101. The closing mechanism comprises a pressure plate 103 at a base of the container 101, a string 105 connecting the pressure plate 103 with the lid, and at least one pull spring 106 between the lid 102 and the container 101, and the locking mechanism comprises a flexible rod 104 beneath the pressure plate 103 and directly connected to the pressure plate 103, a slider 109 connected to the flexible rod, and a hole 110 in the lid, wherein the hole 110 is adapted to accommodate insertion of the flexible rod 104 therein.",
+    inventors: ["Mirza Faizan"],
+    filingDate: "Aug 29, 2021",
+    publicationDate: "Mar 2, 2023",
+    priorityDate: "Aug 29, 2021",
+    applicationNumber: "US17/460,241",
+    keywords: [
+      "package delivery box",
+      "porch piracy prevention",
+      "automated locking receptacle",
+      "UV-C parcel sterilization",
+      "weight-activated lid closure",
+      "smart parcel compartment",
+      "anti-theft box",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/72/52/aa/04d6d8fb582f94/US20230065017A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230065017A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/97/99/3a/03761ddae8f921/US20230065017A1-20230302-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Automatic Closing Mechanism & Pressure Plate",
+        caption:
+          "Schematic view illustrating the base pressure plate, connection string, hook assembly, and tight top pull-spring for automatic lid closure upon parcel placement.",
+        url: "https://patentimages.storage.googleapis.com/97/99/3a/03761ddae8f921/US20230065017A1-20230302-D00000.png",
+      },
+      {
+        title: "FIG. 2 & 2a — Flexible Rod & Slider Locking Mechanism",
+        caption:
+          "Detail view showing the slider assembly beneath the push springs, flexible locking rod insertion into lid hole 110, push button 111, and key release mechanism.",
+        url: "https://patentimages.storage.googleapis.com/00/00/00/US20230065017A1-20230302-D00001.png",
+      },
+    ],
+    summaryHighlights: [
+      "Weight-Triggered Auto Closing: Uses a bottom pressure plate linked via string and top pull-springs to automatically pull the lid shut as soon as a parcel is deposited.",
+      "Tamper-Proof Mechanical Locking: Automatically engages a flexible rod into the lid locking aperture via a sliding locking block, preventing unauthorized external access.",
+      "Integrated UV-C Sanitization: Features built-in ultraviolet radiation emitters that sanitize parcel surfaces within 9 seconds to neutralize bacteria and viral pathogens.",
+      "Animal Escape & Safety Release: Equipped with an Arduino control module and internal motion sensors connected to a servo motor release button, allowing trapped pets or animals to escape safely.",
+      "Modular Multi-Compartment System: Supports expandable 1-to-10 compartment configurations with individual locks and custom add-on racks (umbrella holder, shoe storage).",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Package Delivery Box Assembly" },
+      { num: "101", label: "Parcel Storage Container / Cavity" },
+      { num: "102", label: "Openable Security Lid" },
+      { num: "103", label: "Weight-Sensing Pressure Plate" },
+      { num: "104", label: "Flexible Locking Rod" },
+      { num: "105", label: "Lid Actuation String" },
+      { num: "106", label: "Top Lid Pull Spring" },
+      { num: "107", label: "Lid Attachment Hook" },
+      { num: "108", label: "Base Push Springs" },
+      { num: "109", label: "Sliding Lock Assembly Block" },
+      { num: "110", label: "Lid Locking Aperture / Hole" },
+      { num: "111", label: "Servo Emergency Release Push Button" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A package delivery box comprising: a container for accommodating at least one package; an openable lid attached to the container; a closing mechanism for closing the container; and a locking mechanism for locking the closed container, wherein the closing mechanism comprises a pressure plate at a base of the container, a string connecting the pressure plate with the lid, and at least one pull spring between the lid and the container, and wherein the locking mechanism comprises a flexible rod beneath the pressure plate and directly connected to the pressure plate, a slider connected to the flexible rod, and a hole in the lid, wherein the hole is adapted to accommodate insertion of the flexible rod therein.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The package delivery box as claimed in claim 1, wherein the slider is a mechanical part slidably movable and adapted to convert straight-line motion to rotary motion and/or rotary motion to straight line motion, and wherein the slider slides towards the hole in a locking position.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The package delivery box as claimed in claim 1, further comprising an Arduino board adapted to control the lid based on movement detected inside the box.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The package delivery box as claimed in claim 1, comprising a plurality of compartments, each of the plurality of compartments accommodating one or more packages and having an individual closing and locking mechanism.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The package delivery box as claimed in claim 1, further comprising an ultraviolet sterilizer directing ultraviolet radiation on packages deposited in the box to disinfect surfaces.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & PORCH PIRACY PREVENTION",
+        paragraphs: [
+          "With over 5.5 million cases of porch piracy reported annually in the United States alone (exceeding $6 billion in stolen goods), there is a critical need for an automated, secure porch delivery box that locks incoming parcels without requiring courier access codes or keys.",
+          "The present invention provides an autonomous mechanical and electrical delivery box that automatically closes and locks upon parcel placement, protecting deliveries from theft and weather exposure.",
+        ],
+      },
+      {
+        heading: "AUTOMATED CLOSING & LOCKING MECHANISMS",
+        paragraphs: [
+          "When a delivery driver drops a parcel into container (101), the weight depresses pressure plate (103). This pulls actuation string (105) down, allowing pull spring (106) to pull lid (102) closed instantly.",
+          "Once closed, slider block (109) advances flexible locking rod (104) into lid hole (110), locking the box securely from the inside. Homeowners can easily retrieve contents using an external physical key.",
+        ],
+      },
+      {
+        heading: "UV-C DISINFECTION & SAFETY FEATURES",
+        paragraphs: [
+          "To combat surface pathogen transmission, the delivery box integrates an automated UV-C sterilization module that bathes deposited packages in germicidal ultraviolet light for approximately 9 seconds, deactivating viruses and bacteria before retrieval.",
+          "For safety, an internal motion sensor connected to an Arduino micro-controller automatically unlocks lid (102) via a servo push button if an animal or pet enters the receptacle.",
+        ],
+      },
+    ],
+  },
+
+  US20210086970A1: {
+    id: "US20210086970A1",
+    patentNo: "US20210086970A1",
+    grantPublicationNo: "US11472617B2",
+    title:
+      "Biodegradable bottle cap using pestalotiopsis microsporia to biodegrade waste plastic bottle",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A biodegradable bottle cap impregnated with plastic-eating fungus Pestalotiopsis microspora housed within a protective aluminum casing and safe food dye indicator. Upon pulling an integrated tab after consuming the beverage, the barrier breaks, releasing the fungus onto the plastic bottle to rapidly digest the bottle and cap within weeks without leaving synthetic environmental waste behind.",
+    inventors: [
+      "Mirza Faizan",
+      "Hana Ahmad",
+      "Humza Ahmad",
+      "Mohsen Ahmad",
+      "Rabiya Sayeed",
+      "Sofia Ali",
+      "Zain Ali",
+      "Sarah Nawab",
+      "Danyal Nawab",
+      "Mirza Rizwan",
+    ],
+    filingDate: "Sep 19, 2019",
+    publicationDate: "Mar 25, 2021",
+    priorityDate: "Sep 19, 2019",
+    applicationNumber: "US16/575,925",
+    keywords: [
+      "biodegradable bottle cap",
+      "Pestalotiopsis microspora",
+      "plastic eating fungus",
+      "eco friendly packaging",
+      "aluminum casing seal",
+      "food dye safety indicator",
+      "zero waste plastic",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/a4/50/a8/890f2ce57e92c2/US20210086970A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20210086970A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/4a/15/e7/c4f3bfb9db4783/US20210086970A1-20210325-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Bottle Cap Top Cover & Component Sections",
+        caption:
+          "Top view diagram showing plastic outer protector (1), pull tab (2), food dye reservoir (3), fungal spores chamber (4), aluminum casing (5), and bottom breakable plastic membrane (6).",
+        url: "https://patentimages.storage.googleapis.com/4a/15/e7/c4f3bfb9db4783/US20210086970A1-20210325-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Side Cross-Sectional Layer Assembly",
+        caption:
+          "Side elevation view depicting the multi-layered seal between the aluminum casing, food dye compartment, and fungal activation trigger.",
+        url: "https://patentimages.storage.googleapis.com/08/7f/c0/efb4374a47dd33/US20210086970A1-20210325-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Outer Shell & Bottle Interface Mechanics",
+        caption:
+          "3D schematic of the biodegradable cap outer shell showing thread alignment and permanent pull-tab locking teeth.",
+        url: "https://patentimages.storage.googleapis.com/85/9e/87/277fcd33f85049/US20210086970A1-20210325-D00002.png",
+      },
+    ],
+    summaryHighlights: [
+      "Plastic-Eating Fungal Biodegradation: Employs Pestalotiopsis microspora spores capable of consuming polyurethane and polyethylene plastic bottles within weeks instead of centuries.",
+      "Protective Aluminum & Dye Casing: Encloses fungal spores inside a zero-leakage aluminum barrier paired with natural food coloring to instantly signal accidental early seal breach.",
+      "One-Way Pull-Tab Trigger: Pulling tab (2) permanently locks the cap onto the bottle so it cannot be reopened for drinking, while simultaneously puncturing the internal seal to initiate biodegradation.",
+      "Zero Toxic Residuals: Entire assembly breaks down naturally into organic compost, eliminating plastic landfill accumulation and ocean microplastics.",
+    ],
+    referenceNumerals: [
+      { num: "1", label: "Plastic Outer Cap Protector" },
+      { num: "2", label: "Pull-Tab Barrier Actuator & Lock" },
+      { num: "3", label: "Safe Food Dye Indicator Reservoir" },
+      { num: "4", label: "Pestalotiopsis Microspora Fungal Storage Chamber" },
+      { num: "5", label: "Protective Aluminum Casing Barrier" },
+      { num: "6", label: "Breakable Bottom Cap Layer" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A biodegradable bottle cap comprising: an outer cap body formed of plastic; an aluminum casing housed within the outer cap body containing plastic-eating fungus Pestalotiopsis microspora and a safe food dye indicator; and a pull-tab mechanism configured to break a barrier of the aluminum casing when actuated, releasing the fungus onto an attached plastic bottle to initiate biodegradation.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The biodegradable bottle cap of claim 1, wherein actuation of the pull-tab permanently locks the cap to the bottle, preventing further access to the bottle interior.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The biodegradable bottle cap of claim 1, wherein the food dye indicator colors liquid within the bottle upon accidental seal rupture to signal non-potability.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "ENVIRONMENTAL IMPACT & BIODEGRADATION",
+        paragraphs: [
+          "With hundreds of millions of single-use plastic water bottles ending up in landfills and marine environments every year, traditional recycling rates remain low. Plastic bottles require hundreds of years to decompose naturally.",
+          "The present invention utilizes the rare plastic-eating fungus Pestalotiopsis microspora, which thrives on polyurethane and polyethylene plastics even in anaerobic environments, reducing plastic bottle waste to natural organic compounds in a matter of weeks.",
+        ],
+      },
+      {
+        heading: "SEAL SECURITY & VISUAL DYE SAFETY SYSTEM",
+        paragraphs: [
+          "To keep the fungal spores dormant and prevent premature plastic breakdown while the beverage is stored, spores are safely isolated inside an inert aluminum casing (5).",
+          "A food-grade dye reservoir (3) is co-stored with the fungus. In the event of an accidental seal rupture prior to consumption, the dye immediately colors the liquid, visually warning consumers not to drink.",
+        ],
+      },
+      {
+        heading: "PULL-TAB ACTIVATION METHOD",
+        paragraphs: [
+          "Once the user finishes drinking, they replace the cap and pull actuation tab (2). This permanently locks the cap onto the bottle threads and pierces bottom membrane (6), releasing Pestalotiopsis microspora directly into the empty bottle to begin rapid biodegradation.",
+        ],
+      },
+    ],
+  },
+
+  US20230034830A1: {
+    id: "US20230034830A1",
+    patentNo: "US20230034830A1",
+    grantPublicationNo: "US11753804B2",
+    title: "Fluid flow control unit",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A fluid flow control unit 100 adapted to control flow of fluid from a tap is disclosed. The fluid flow control unit comprises a vertical piece 101 extending along the length of the tap; and a horizontal piece 102 extending along a handle of the tap, wherein the vertical piece 101 and the horizontal piece 102 are sheet structures attached together at a predetermined angle, wherein one of sides 101a of the vertical piece 101 is attached to one of sides 102a of horizontal piece, and wherein a point of attachment of the vertical piece 101 and the horizontal piece is above the handle 105 of the tap.",
+    inventors: ["Ayat Faizan", "Mirza Faizan"],
+    filingDate: "Aug 1, 2021",
+    publicationDate: "Feb 2, 2023",
+    priorityDate: "Aug 1, 2021",
+    applicationNumber: "US17/391,000",
+    keywords: [
+      "fluid flow control",
+      "water conservation tap",
+      "predetermined flow rate",
+      "inverted L-shaped control unit",
+      "tap handle restrictor",
+      "plumbing flow regulator",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/f5/64/e2/665a82eb7bb2e4/US20230034830A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230034830A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/ef/8c/bf/5e00923242d3fc/US20230034830A1-20230202-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Fluid Flow Control Unit Structure",
+        caption:
+          "Schematic view showing vertical piece (101), horizontal piece (102), attachment line (103), side edges (101a & 102a), gripping extended pieces (104), and handle alignment (105).",
+        url: "https://patentimages.storage.googleapis.com/ef/8c/bf/5e00923242d3fc/US20230034830A1-20230202-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Fluid Flow Dispensing Assembly Mounted on Tap",
+        caption:
+          "Perspective view illustrating fluid control unit 100 mounted on a water faucet, demonstrating handle travel restriction to regulate output flow rate.",
+        url: "https://patentimages.storage.googleapis.com/81/c4/01/65432cabfa1302/US20230034830A1-20230202-D00001.png",
+      },
+    ],
+    summaryHighlights: [
+      "Water Conservation Mechanism: Restricts tap handle travel distance to a predetermined angle, controlling liquid discharge to essential flow levels and eliminating wasteful over-dispensing.",
+      "Inverted L-Shaped Sheet Construction: Consists of a vertical sheet (101) running longitudinally along the faucet body and a horizontal sheet (102) positioned above the handle.",
+      "Adjustable Flexible Gripping Unit: Features flexible extended pieces (104) that conform to different faucet shapes and diameters, preventing slipping during handle operation.",
+      "Universal Tap Compatibility: Easily retrofitted onto existing kitchen and bathroom faucets without requiring plumbing alterations or pipe disassemblies.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Fluid Flow Control Unit Assembly" },
+      { num: "101", label: "Vertical Sheet / Body Piece" },
+      { num: "101a", label: "Vertical Piece Attachment Edge" },
+      { num: "102", label: "Horizontal Restrictor Sheet" },
+      { num: "102a", label: "Horizontal Piece Attachment Edge" },
+      { num: "103", label: "Sheet Attachment Line / Joint" },
+      { num: "104", label: "Faucet Gripping Extended Arms" },
+      { num: "105", label: "Faucet Handle" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A fluid flow control unit adapted to control flow of fluid from a tap, the fluid flow control unit comprises: a vertical piece extending along the length of the tap; and a horizontal piece extending along a handle of the tap, wherein the vertical piece and the horizontal piece are sheet structures attached together at a predetermined angle, wherein one of sides of the vertical piece is attached to one of sides of horizontal piece, and wherein a point of attachment of the vertical piece and the horizontal piece is above the handle of the tap.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The fluid flow control unit as claimed in claim 1, wherein the fluid flow control unit is made of plastic material.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The fluid flow control unit as claimed in claim 1, wherein the vertical piece comprises one or more gripping unit to allow the vertical unit to rest on the tap.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The fluid flow control unit as claimed in claim 3, wherein the gripping unit comprises two extended pieces adapted to surround the length of the tap.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The fluid flow control unit as claimed in claim 1, wherein the predetermined angle between the vertical piece and the horizontal piece is associated with a predetermined rate of fluid flow.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "BACKGROUND & WATER CONSERVATION OBJECTIVE",
+        paragraphs: [
+          "Water scarcity and excessive domestic water waste during daily tasks (washing, rinsing) present significant environmental and economic challenges.",
+          "Conventional faucets lack easy, customizable physical limiters, leading users to open handles fully and waste gallons of clean water. The present invention provides a lightweight, easily installable flow control attachment that restricts handle opening to an optimal, water-saving angle.",
+        ],
+      },
+      {
+        heading: "MECHANICAL DESIGN & TAP MOUNTING",
+        paragraphs: [
+          "The control unit (100) comprises an inverted L-shaped sheet configuration formed by vertical piece (101) and horizontal piece (102). Extended gripping arms (104) wrap around the faucet barrel, holding the unit securely in place.",
+          "When the user lifts tap handle (105), its upward travel is stopped when it meets horizontal piece (102). By adjusting the predetermined attachment angle between pieces (101) and (102), the maximum fluid flow rate can be precisely tuned.",
+        ],
+      },
+    ],
+  },
+
+  US20230048142A1: {
+    id: "US20230048142A1",
+    patentNo: "US20230048142A1",
+    grantPublicationNo: "US11766549B2",
+    title: "Wearable device for managing alcohol-driven violence",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A wearable device 100 for managing alcohol-driven violence is disclosed. The device 100 comprises a capsule C1 adapted to sense sweat of wearer and detect a level of alcohol in the sweat, a capsule C3 adapted to convert a data detected by the capsule C1 to generate signal activating a capsule C4, a capsule C2 adapted to provide power to the capsule C3, and a capsule C5 adapted to detect a muscle activity of the wearer, wherein the capsule C4 is adapted to inject a drug into the body of the wearer, when activated, and wherein the capsule C5 alerts authorities when no muscle activity is detected.",
+    inventors: [
+      "Mirza Faizan",
+      "Reya Dawlah",
+      "Zad Ahmed",
+      "Naadira Shareef Kateeb",
+      "Tarik Syed",
+      "Rishi Kata",
+      "Lingesh Veda",
+      "Yusuf Zakiy Ali",
+      "Shreya Nair",
+      "Ahmed Malik",
+      "Mirza Rizwan",
+    ],
+    filingDate: "Aug 16, 2021",
+    publicationDate: "Feb 16, 2023",
+    priorityDate: "Aug 16, 2021",
+    applicationNumber: "US17/403,484",
+    keywords: [
+      "wearable device",
+      "alcohol driven violence",
+      "transdermal sweat alcohol sensor",
+      "microneedle drug injection",
+      "Haloperidol sedative delivery",
+      "electromyography muscle sensor",
+      "automated emergency alert",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/12/22/c3/4585649c0ac100/US20230048142A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230048142A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/76/d9/13/75202607461554/US20230048142A1-20230216-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Multi-Capsule Wearable Band System Architecture",
+        caption:
+          "Schematic illustration of the wristband device (100) showing integrated capsules C1 (sweat alcohol sensor), C2 (power supply), C3 (processing module), C4 (transdermal drug injector), and C5 (EMG muscle activity sensor).",
+        url: "https://patentimages.storage.googleapis.com/76/d9/13/75202607461554/US20230048142A1-20230216-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Microneedle Drug Delivery Capsule Assembly",
+        caption:
+          "Detailed cross-section of drug administration capsule C4 featuring Haloperidol reservoir (103), microtubes (104), micro-piston driver, and painless microneedles (106).",
+        url: "https://patentimages.storage.googleapis.com/6e/03/56/61c3d3a5f9bc5c/US20230048142A1-20230216-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Transdermal Microneedle Array Patch",
+        caption:
+          "Enlarged view showing microneedle array patch (110) with hollow microneedles (106) for rapid transdermal sedative administration upon threshold alcohol detection.",
+        url: "https://patentimages.storage.googleapis.com/7a/f2/91/29869ae546a5dd/US20230048142A1-20230216-D00002.png",
+      },
+    ],
+    summaryHighlights: [
+      "Real-Time Transdermal Alcohol Sensing: Capsule C1 continuously monitors sweat alcohol concentration levels on the wearer's skin without invasive blood sampling.",
+      "Automated Therapeutic Intervention: Capsule C4 deploys hollow microneedles (106) to painlessly inject a therapeutic dose of Haloperidol (103) into the subcutaneous layer to calm aggressive urges.",
+      "Muscular Activity & Safety Monitoring: Capsule C5 utilizes EMG sensors to detect muscle movement; if no muscle activity is registered after drug administration, an emergency alert signal is sent to medical authorities.",
+      "Modular Wristband Capsule Design: Compact, tamper-resistant wristband housing capsules C1 through C5 powered by rechargeable micro-battery unit C2.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Wearable Device Assembly / Wristband" },
+      { num: "C1", label: "Sweat Alcohol Sensing Capsule" },
+      { num: "C2", label: "Power Supply Unit / Battery Capsule" },
+      { num: "C3", label: "Signal Conversion & Microcontroller Capsule" },
+      { num: "C4", label: "Transdermal Drug Delivery Capsule" },
+      { num: "C5", label: "EMG Muscle Activity & Alert Capsule" },
+      { num: "101", label: "Adjustable Wrist Strap" },
+      { num: "103", label: "Haloperidol Drug Reservoir" },
+      { num: "104", label: "Drug Delivery Microtubes" },
+      { num: "106", label: "Transdermal Microneedles" },
+      { num: "110", label: "Microneedle Patch Assembly" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A wearable device 100 for managing alcohol-driven violence, the device 100 comprising: a capsule C1 adapted to sense sweat of wearer and detect a level of alcohol in the sweat; a capsule C3 adapted to convert a data detected by the capsule C1 to generate signal activating a capsule C4; a capsule C2 adapted to provide power to the capsule C3; and a capsule C5 adapted to detect a muscle activity of the wearer, wherein the capsule C4 is adapted to inject a drug into the body of the wearer, when activated, and wherein the capsule C5 alerts authorities when no muscle activity is detected.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The wearable device 100 as claimed in claim 1, wherein the drug injected by the capsule C4 is Haloperidol.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The wearable device 100 as claimed in claim 1, wherein the capsule C4 comprises a plurality of microtubes and microneedles to administer the drug subcutaneously.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The wearable device 100 as claimed in claim 1, wherein the capsule C5 comprises an electromyography sensor to monitor physiological muscle contractions.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The wearable device 100 as claimed in claim 1, wherein the capsule C5 comprises a wireless communication module configured to send GPS location coordinates to emergency services when zero muscle activity is detected.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & ALCOHOL-DRIVEN AGGRESSION",
+        paragraphs: [
+          "Alcohol-driven violence is a major societal concern responsible for millions of assaults, domestic abuse incidents, and public altercations annually. Excessive alcohol consumption impairs prefrontal cortex inhibitions while heightening aggressive behavioral tendencies.",
+          "The present invention provides a bio-monitoring wearable system that automatically detects rising alcohol levels via perspiration and delivers a controlled therapeutic dose of sedative before aggressive episodes escalate into violence.",
+        ],
+      },
+      {
+        heading: "CAPSULE ARCHITECTURE & TRANSDERMAL INJECTION",
+        paragraphs: [
+          "The device (100) comprises five specialized capsules (C1–C5) mounted along strap (101). Capsule C1 measures ethanol concentration in transdermal sweat. When levels cross a critical safety threshold, processing capsule C3 triggers drug delivery capsule C4.",
+          "Capsule C4 drives microtubes (104) and microneedles (106) into skin, delivering Haloperidol (103) directly into the circulatory system to reduce agitation without causing physical harm.",
+        ],
+      },
+      {
+        heading: "SAFETY & EMERGENCY RESPONDER MONITORING",
+        paragraphs: [
+          "To safeguard the wearer, capsule C5 continuously tracks electromyographic (EMG) muscle activity. If muscle movement drops to zero (indicating loss of consciousness or medical emergency), capsule C5 automatically transmits real-time location data to emergency responders and medical services.",
+        ],
+      },
+    ],
+  },
+
+  US20220386914A1: {
+    id: "US20220386914A1",
+    patentNo: "US20220386914A1",
+    grantPublicationNo: "US11751783B2",
+    title: "System and Method for Mental State Determination",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "The invention relates to mental health and using technology that can analyze and interpret hormones from drops of sweat and also a peer to peer feedback system to predict mental health issues (such as depression) in an individual. The invention further relates to the monitoring of sweat and feedback and interpreting the two in tandem to identify symptoms of mental health illnesses in an individual over a period of time (to predict and prevent that certain mental health disease). Furthermore, the records of the sweat analysis and peer to peer feedback will be utilized to provide smart suggestions and track the mental health of an individual.",
+    inventors: [
+      "Mirza Faizan",
+      "Vineet Anshuman",
+      "Sidra Ambreen",
+      "Binu Kurien Varghese",
+      "Syed Shah Ekramullah Alvi",
+      "Abdul Malik Ayam",
+      "Hunzalah Iqbal",
+      "Mustafa Qadri",
+      "Ayan Zaman",
+      "Mirza Rizwan",
+      "Ridah Shaista Shanavas",
+      "Saadia Asaf",
+      "Mansoor Hasan Khan",
+    ],
+    filingDate: "Jun 4, 2021",
+    publicationDate: "Dec 8, 2022",
+    priorityDate: "Jun 4, 2021",
+    applicationNumber: "US17/339,205",
+    keywords: [
+      "mental state determination",
+      "sweat hormone analysis",
+      "peer to peer feedback system",
+      "depression prediction",
+      "cortisol and serotonin tracking",
+      "biochemical and behavioral tandem analysis",
+      "predictive mental healthcare",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/21/ae/e2/ebaf1067518b55/US20220386914A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20220386914A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/3b/13/71/b7820963cbd101/US20220386914A1-20221208-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Tandem Sweat Hormone & Peer Feedback System Architecture",
+        caption:
+          "System schematic illustrating sweat sample collection unit (102), biochemical hormone analyzer (100A), peer-to-peer behavioral feedback interface, and central mental health predictive processor.",
+        url: "https://patentimages.storage.googleapis.com/3b/13/71/b7820963cbd101/US20220386914A1-20221208-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Dual-Track Mental Health Prediction Flowchart",
+        caption:
+          "Operational flowchart depicting real-time sweat biomarker extraction, cross-referencing with peer behavioral logs, historical trend analysis, and automated preventive therapy recommendations.",
+        url: "https://patentimages.storage.googleapis.com/41/20/3a/ef88dd688c27b1/US20220386914A1-20221208-D00001.png",
+      },
+    ],
+    summaryHighlights: [
+      "Biochemical Sweat Biomarker Analysis: Analyzes micro-droplets of sweat to measure stress and mood-regulating hormones (cortisol, dopamine, serotonin, oxytocin).",
+      "Peer-to-Peer Behavioral Feedback Loop: Combines objective hormonal data with trusted peer/family behavioral observations to build a holistic longitudinal mental health profile.",
+      "Early Predictive Disease Identification: Interprets sweat chemistry and peer logs in tandem over extended periods to catch symptoms of clinical depression and anxiety before severe clinical onset.",
+      "Smart Actionable Suggestions & AI Recommendations: Generates personalized lifestyle interventions, therapy prompts, and wellness tracking updates based on individual stress trends.",
+    ],
+    referenceNumerals: [
+      { num: "100A", label: "Sweat & Peer Mental Health Analysis System" },
+      { num: "102", label: "Hardware Housing / Micro-Fluidic Sensor Unit" },
+      { num: "104", label: "Sweat Collection Micro-Capillary Layer" },
+      { num: "106", label: "Hormone Detection Transducer Array" },
+      { num: "108", label: "Peer Feedback Application Interface" },
+      { num: "110", label: "Predictive Analytics & Recommendation Engine" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A system for determining a mental state of an individual, the system comprising: a sweat collection device configured to collect a sample of sweat from the individual; a processor; and a memory storing instructions that, when executed by the processor, cause the system to: analyze the collected sample of sweat to measure a concentration of one or more hormones associated with stress or mood; receive peer-to-peer feedback data regarding behavioral patterns of the individual; analyze the measured concentration of the one or more hormones and the received peer-to-peer feedback data in tandem to determine a mental state score; and output a predictive mental health notification based on the determined mental state score.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the one or more hormones measured from sweat comprise cortisol, serotonin, dopamine, or oxytocin.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the peer-to-peer feedback data is collected via a mobile application from designated family members, peers, or healthcare providers.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the instructions further cause the system to track sweat hormone levels over a predetermined multi-day period to establish a personal baseline for depression risk prediction.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The system of claim 1, wherein outputting the predictive notification comprises transmitting automated lifestyle recommendations and therapy prompts to a user device.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "BACKGROUND & MENTAL HEALTH CHALLENGES",
+        paragraphs: [
+          "Mental health disorders, particularly clinical depression and anxiety, affect hundreds of millions globally but are frequently diagnosed late due to reliance on subjective self-reporting.",
+          "Biochemical indicators in human sweat (such as fluctuating cortisol and serotonin levels) provide objective real-time data, but physical biomarkers alone do not capture social context. The present invention solves this by uniting sweat hormone tracking with peer-to-peer behavioral feedback.",
+        ],
+      },
+      {
+        heading: "TANDEM BIOCHEMICAL & BEHAVIORAL ANALYSIS",
+        paragraphs: [
+          "The system collects sweat via micro-capillary housing (102) and quantifies hormonal concentrations using electrochemical transducers. Simultaneously, peer feedback interface (108) receives qualitative logs from close contacts regarding mood shifts or social withdrawal.",
+          "Predictive engine (110) processes both data streams in tandem, recognizing subtle physiological and social patterns that precede depressive episodes, enabling early preventive intervention.",
+        ],
+      },
+    ],
+  },
+
+  US20210270793A1: {
+    id: "US20210270793A1",
+    patentNo: "US20210270793A1",
+    grantPublicationNo: "US11754543B2",
+    title: "Handheld device to detect lead compounds and impurities in water",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A simple, sensitive method and device for detecting the LEAD presence in the water. The test involves a sample of water from a subject; followed by determining the presence of LEAD in the water sample by using a LEAD sensitive solution used in the device.",
+    inventors: [
+      "Mirza Faizan",
+      "Rafae Qureshi",
+      "Mishaal Qureshi",
+      "Minal Ahmad",
+      "Ayaan Nauert",
+      "Ibrahim Nauert",
+      "Zakaria Shaikh",
+      "Fatima Shakeel",
+      "Yusra Ali Khan",
+      "Mirza Rizwan",
+    ],
+    filingDate: "Feb 25, 2021",
+    publicationDate: "Sep 2, 2021",
+    priorityDate: "Feb 27, 2020",
+    applicationNumber: "US17/184,930",
+    keywords: [
+      "handheld lead detector",
+      "water quality testing device",
+      "lead sensitive solution",
+      "heavy metal contamination",
+      "colorimetric lead assay",
+      "portable water purity sensor",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/d1/48/c5/34e1fee69c5a44/US20210270793A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20210270793A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/b5/bc/57/ac7614e7ef5229/US20210270793A1-20210902-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Handheld Water Lead Detection Unit Architecture",
+        caption:
+          "Exploded schematic view showing liquid sample chamber (18), chemical pod chamber (13), chemical input spout (17), seal lid (15), and keychain attachment ring (16).",
+        url: "https://patentimages.storage.googleapis.com/b5/bc/57/ac7614e7ef5229/US20210270793A1-20210902-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Portable Chemical Pod & Colorimetric Reaction Assembly",
+        caption:
+          "Detail view illustrating chemical pod (14) insertion into chamber (13) for rapid colorimetric chemical reaction upon contact with contaminated lead water samples.",
+        url: "https://patentimages.storage.googleapis.com/8a/46/d8/615561f7f40de1/US20210270793A1-20210902-D00001.png",
+      },
+    ],
+    summaryHighlights: [
+      "Rapid Point-of-Use Lead Detection: Provides immediate visual and chemical indication of toxic lead (Pb) ions in drinking water samples without expensive lab equipment.",
+      "Integrated Reagent Pod System: Uses replaceable chemical pods (14) pre-filled with a lead-sensitive reagent solution that changes color upon reacting with heavy metal contaminants.",
+      "Portable Keychain Accessory Form Factor: Features a compact, ergonomic handheld housing equipped with keychain accessory (16) for field testing by homeowners and travelers.",
+      "Dual Chamber Mixing Mechanism: Combines sample liquid chamber (18) and reagent input spout (17) to ensure safe, spill-proof chemical mixing during testing.",
+    ],
+    referenceNumerals: [
+      { num: "13", label: "Chemical Pod Reaction Chamber" },
+      { num: "14", label: "Replaceable Lead-Sensitive Chemical Pod" },
+      { num: "15", label: "Chamber Seal Lid" },
+      { num: "16", label: "Keychain Attachment Ring" },
+      { num: "17", label: "Chemical Reagent Input Spout" },
+      { num: "18", label: "Water Sample Collection Chamber" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A handheld device for detecting lead compounds and impurities in water comprising: a liquid chamber for receiving a water sample; a chemical pod chamber holding a chemical pod filled with a lead-sensitive reagent solution; an input spout connecting the chemical pod chamber to the liquid chamber; and a lid for sealing the liquid chamber, wherein mixing the water sample with the lead-sensitive reagent solution induces a visible color change indicating the presence of lead in the water sample.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The handheld device of claim 1, wherein the chemical pod is a single-use replaceable capsule.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The handheld device of claim 1, further comprising a keychain accessory attached to an outer surface of the device for portable carrying.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The handheld device of claim 1, wherein the lead-sensitive solution detects lead concentration levels down to parts-per-billion (ppb) thresholds.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & WATER CONTAMINATION",
+        paragraphs: [
+          "Lead contamination in municipal and residential drinking water poses severe neurotoxic risks, especially to children and vulnerable populations. Old lead piping and industrial discharge frequently leach lead into tap water unnoticed.",
+          "Traditional laboratory water testing is slow, expensive, and inaccessible in real time. The present invention provides an affordable, instant, handheld testing device that detects lead contamination on-site in seconds.",
+        ],
+      },
+      {
+        heading: "DEVICE MECHANICS & COLORIMETRIC TESTING",
+        paragraphs: [
+          "A water sample is poured into liquid chamber (18) and sealed with lid (15). A pre-measured chemical pod (14) is punctured through input spout (17), releasing lead-sensitive reagent into chamber (13).",
+          "The reagent rapidly reacts with heavy metal ions, producing a distinct visual color shift that alerts users to dangerous lead levels prior to water consumption.",
+        ],
+      },
+    ],
+  },
+
+  US20220388788A1: {
+    id: "US20220388788A1",
+    patentNo: "US20220388788A1",
+    grantPublicationNo: "US11858756B2",
+    title: "High-speed pressure based propulsion system for transporting resources",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A high-speed pressure based propulsion system for transporting resources is disclosed. The system comprising: a plurality of cars; an electronic track configured to carry said plurality of cars; an automatic guidance system configured to establish a route for said plurality of cars on said electronic track based on one or more pre-defined parameters; a plurality of electronically controlled stations configured to facilitate one or more task on said routed plurality of cars for transportation of resources. The disclosed system facilitates movement of food from one place to another by use of fast speed hyperloop technology and thereby tries to solves the issue of malnutrition in under developed nations.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Summan Rahman",
+      "Aiman Rahman",
+      "Daanish Sheikh",
+      "Roohie Sheikh",
+      "Ridah Shaista Shanavas",
+      "Mansoor Hasan Khan",
+      "Saadia Asaf",
+    ],
+    filingDate: "Jun 4, 2021",
+    publicationDate: "Dec 8, 2022",
+    priorityDate: "Jun 4, 2021",
+    applicationNumber: "US17/339,227",
+    keywords: [
+      "pressure based propulsion",
+      "hyperloop food transport",
+      "malnutrition relief logistics",
+      "automatic guidance track",
+      "pneumatic high speed cars",
+      "electronically controlled cargo stations",
+      "zero emission resource delivery",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/65/23/de/53f90eea9c2cfd/US20220388788A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20220388788A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/b7/eb/ed/dc0ea966431611/US20220388788A1-20221208-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Hyperloop Pressure-Based Propulsion System Architecture",
+        caption:
+          "System block diagram illustrating central computing unit (102), automatic guidance controller (104), electronic track network, autonomous cargo cars, and automated resource loading stations.",
+        url: "https://patentimages.storage.googleapis.com/b7/eb/ed/dc0ea966431611/US20220388788A1-20221208-D00000.png",
+      },
+    ],
+    summaryHighlights: [
+      "Pneumatic Hyperloop Food Logistics: Utilizes low-pressure tube propulsion technology to transport food supplies and critical medical resources across vast geographical distances at ultra-high speeds.",
+      "Global Malnutrition Relief Focus: Purpose-built to rapidly move surplus food resources to famine-affected and underdeveloped regions before perishable goods spoil.",
+      "Autonomous AI Guidance System: Features an intelligent track routing controller that establishes dynamic travel paths based on supply priority, weather conditions, and energy efficiency.",
+      "Automated Electronic Cargo Stations: Equipped with robotic loading, unloading, and climate-controlled storage pods that manage resource distribution without manual bottlenecking.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Pressure Propulsion System Assembly" },
+      { num: "102", label: "Central Master Computer / Processing Unit" },
+      { num: "104", label: "Automatic Track Guidance System Controller" },
+      { num: "106", label: "Memory Storage Unit" },
+      { num: "108", label: "Autonomous Pressure Propulsion Cargo Cars" },
+      { num: "110", label: "Electronic Guide Track Assembly" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A high-speed pressure based propulsion system for transporting resources, the system comprising: a plurality of cars; an electronic track configured to carry said plurality of cars; an automatic guidance system configured to establish a route for said plurality of cars on said electronic track based on one or more pre-defined parameters; and a plurality of electronically controlled stations configured to facilitate one or more tasks on said routed plurality of cars for transportation of resources.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the resources transported comprise food supplies, agricultural yield, and emergency medical kits.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the electronic track operates within a low-pressure pneumatic tube network to reduce aerodynamic drag.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the automatic guidance system dynamically reroutes cars based on real-time station congestion and regional food shortage severity.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "BACKGROUND & GLOBAL MALNUTRITION RELIEF",
+        paragraphs: [
+          "Malnutrition and famine claim millions of lives annually in underdeveloped nations, largely due to inefficient, slow surface transport infrastructure that causes food supplies to rot in transit.",
+          "The present invention leverages high-speed pressure-based pneumatic propulsion (hyperloop technology) to transport food and medical supplies across countries in hours rather than weeks, dramatically curbing global hunger.",
+        ],
+      },
+      {
+        heading: "SYSTEM ARCHITECTURE & AUTONOMOUS TRACK ROUTING",
+        paragraphs: [
+          "System (100) comprises a network of autonomous cargo cars (108) riding along electronic track (110). Master computer (102) and automatic guidance system (104) dynamically compute optimal speed and path profiles.",
+          "Electronically controlled stations handle automated loading, climate-controlled container sealing, and instant dispatch along low-pressure vacuum tubes.",
+        ],
+      },
+    ],
+  },
+
+  US20230061443A1: {
+    id: "US20230061443A1",
+    patentNo: "US20230061443A1",
+    grantPublicationNo: "US11858319B2",
+    title: "Automatic sunvisor assembly",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "An automatic sunvisor assembly 100 for vehicle is disclosed. The automatic sunvisor assembly 100 comprises sunvisor(s) 101 positioned over the front seats of the vehicle, ambient light sensor 102 positioned inside the vehicle adapted to sense the intensity of sunlight; a processor to collect and compare the intensity of sunlight sensed by the ambient sensors 102 in real time; and two high-torque servo motors 103 connected to each of the sunvisors 101 to move the at least one sunvisor 101. The processor identifies the ambient light sensor 102 sensing higher intensity of sunlight, generates signals, and transmits signals to the high-torque servo motor 103, and the signals received by the high-torque servo motor 103 determines a direction of movement of the sunvisor 101.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Abdullah Hasani",
+      "Mustafa Hasani",
+      "Mariam Mansoor",
+      "Rizwan Mansoor",
+      "Madhalasa Iyer",
+      "Sparsh Kamdar",
+      "Umar Kateeb",
+      "Saadia Asaf",
+      "Mansoor Hasan Khan",
+    ],
+    filingDate: "Aug 25, 2021",
+    publicationDate: "Mar 2, 2023",
+    priorityDate: "Aug 25, 2021",
+    applicationNumber: "US17/411,931",
+    keywords: [
+      "automatic sunvisor assembly",
+      "ambient light sensor",
+      "high torque servo motor",
+      "solar glare protection",
+      "vehicle safety automation",
+      "real time glare tracking",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/ac/7d/f3/40f0ef40ad6ba5/US20230061443A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230061443A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/bd/33/b2/6205e73c29b5ad/US20230061443A1-20230302-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Automatic Sunvisor Assembly System Architecture",
+        caption:
+          "Schematic view illustrating sunvisors (101) mounted over driver and front passenger seats, ambient light sensors (102) positioned around windshield perimeter, central processor, and high-torque servo motors (103).",
+        url: "https://patentimages.storage.googleapis.com/bd/33/b2/6205e73c29b5ad/US20230061443A1-20230302-D00000.png",
+      },
+    ],
+    summaryHighlights: [
+      "Automated Solar Glare Protection: Dynamically adjusts sunvisor angles to block intense direct sunlight without requiring manual driver or passenger intervention.",
+      "Real-Time Multi-Sensor Array: Employs distributed ambient light sensors (102) around cabin glass to continuously evaluate directional solar intensity.",
+      "Dual High-Torque Servo Actuation: Features high-precision servo motors (103) connected to each sunvisor (101) to perform smooth horizontal and vertical angle adjustments.",
+      "Driver Safety Enhancement: Prevents momentary blind spots and glare accidents caused by sudden sun emergence during highway driving.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Automatic Sunvisor Assembly" },
+      { num: "101", label: "Motorized Vehicle Sunvisors" },
+      { num: "102", label: "Ambient Sunlight Intensity Sensors" },
+      { num: "103", label: "High-Torque Servo Actuator Motors" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "An automatic sunvisor assembly 100 for vehicle comprising: sunvisor(s) 101 positioned over the front seats of the vehicle; ambient light sensor 102 positioned inside the vehicle adapted to sense the intensity of sunlight; a processor to collect and compare the intensity of sunlight sensed by the ambient sensors 102 in real time; and two high-torque servo motors 103 connected to each of the sunvisors 101 to move the at least one sunvisor 101, wherein the processor identifies the ambient light sensor 102 sensing higher intensity of sunlight, generates signals, and transmits signals to the high-torque servo motor 103, and the signals received by the high-torque servo motor 103 determines a direction of movement of the sunvisor 101.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The automatic sunvisor assembly of claim 1, wherein the ambient light sensors are positioned at multiple distinct angles along the windshield frame.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The automatic sunvisor assembly of claim 1, wherein the high-torque servo motors rotate the sunvisors in both horizontal and vertical axes to block localized glare.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & VEHICLE GLARE HAZARDS",
+        paragraphs: [
+          "Sudden sunlight glare through vehicle windshields causes severe temporary blindness for drivers, leading to thousands of road accidents annually. Manually adjusting sunvisors while driving distracts drivers and takes hands off the steering wheel.",
+          "The present invention provides an autonomous, sensor-driven sunvisor system that detects sunlight angle and intensity in real time and automatically deploys high-torque servo motors to block glare without driver intervention.",
+        ],
+      },
+      {
+        heading: "AUTOMATED SERVO ACTUATION & SENSOR PROCESSING",
+        paragraphs: [
+          "Ambient light sensors (102) sample solar intensity continuously. Central processing unit compares sensor readings; when glare exceeds pre-set safety thresholds, signals are dispatched to high-torque servo motors (103).",
+          "Servo motors (103) swiftly pivot sunvisors (101) into optimal shielding angles, restoring full driver visibility seamlessly.",
+        ],
+      },
+    ],
+  },
+
+  US20230066405A1: {
+    id: "US20230066405A1",
+    patentNo: "US20230066405A1",
+    grantPublicationNo: "US11857687B2",
+    title: "An apparatus for sanitising products",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "An apparatus for sanitising products comprising a housing comprising a bottom portion, interior walls an external portion and doors a pair of support beams, a plurality of internal conveyor belts, at least one UV-C light connected inside the housing, a first opening adapted to allow products to enter the housing for sanitisation and a second opening adapted to allow products to exit the housing after sanitisation.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Kayla Goodrich",
+      "Manish Rangan",
+      "Muhammad Sayed",
+      "Benjamin Stafford",
+      "Zaina Iqbal",
+      "Shayan Iqbal",
+      "Kenny Joel DeCay, Jr.",
+      "Omar Eido",
+      "Saadia Asaf",
+      "Mansoor Hasan Khan",
+    ],
+    filingDate: "Aug 28, 2021",
+    publicationDate: "Mar 2, 2023",
+    priorityDate: "Aug 28, 2021",
+    applicationNumber: "US17/460,187",
+    keywords: [
+      "product sanitising apparatus",
+      "UV-C radiation disinfection",
+      "internal conveyor belt system",
+      "automated entry exit doors",
+      "surface pathogen sterilizer",
+      "commercial parcel sanitization",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/11/e8/fd/a000f948366cf9/US20230066405A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230066405A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/b7/4b/24/3f02f6133f56ac/US20230066405A1-20230302-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Product Sanitising Chamber Front & Housing Assembly",
+        caption:
+          "Perspective view of the product sanitization apparatus housing showing main chassis, front entry door, internal support beams, and UV-C lamp placement.",
+        url: "https://patentimages.storage.googleapis.com/b7/4b/24/3f02f6133f56ac/US20230066405A1-20230302-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Internal Conveyor Belt & UV-C Sterilization Tunnel",
+        caption:
+          "Internal cross-section depicting motorized conveyor belts transporting packages through 360-degree germicidal UV-C light irradiation zone.",
+        url: "https://patentimages.storage.googleapis.com/2d/a8/35/27075e9b6f4912/US20230066405A1-20230302-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Automated Entry/Exit Door & Sensor Mechanism",
+        caption:
+          "Detailed view of automatic entry opening (first door) and exit opening (second door) equipped with motion sensors to isolate UV-C radiation inside the housing.",
+        url: "https://patentimages.storage.googleapis.com/c0/f2/91/1d129dd8ad9bf7/US20230066405A1-20230302-D00002.png",
+      },
+      {
+        title: "FIG. 4 — Structural Support Beams & Internal Reflective Lining",
+        caption:
+          "Exploded view illustrating internal reflective stainless-steel wall lining and support beam framework for maximum UV-C irradiance distribution across all parcel surfaces.",
+        url: "https://patentimages.storage.googleapis.com/9b/5f/8b/a22e3fc94722f3/US20230066405A1-20230302-D00003.png",
+      },
+    ],
+    summaryHighlights: [
+      "Continuous UV-C Surface Disinfection: Bathes commercial packages, groceries, and retail goods in high-intensity germicidal UV-C light to neutralize viruses and bacteria within seconds.",
+      "Dual Automated Conveyor System: Transports items seamlessly from input entry opening to output exit opening via motorized internal conveyor belts.",
+      "Radiation Shielding Entry/Exit Doors: Features automated door closures that prevent UV-C light leakage into the surrounding environment during operation.",
+      "360-Degree Reflective Chamber: Internal reflective walls ensure uniform UV-C exposure across all sides, top, and bottom of passing items.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Product Sanitisation Apparatus Assembly" },
+      { num: "101", label: "External Protective Housing Chassis" },
+      { num: "102", label: "Motorized Internal Conveyor Belts" },
+      { num: "103", label: "High-Output UV-C Germicidal Lamps" },
+      { num: "104", label: "First Entry Product Opening & Automated Door" },
+      { num: "105", label: "Second Exit Product Opening & Automated Door" },
+      { num: "106", label: "Internal Structural Support Beams" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "An apparatus for sanitising products comprising: a housing comprising a bottom portion, interior walls, an external portion, and doors; a pair of support beams; a plurality of internal conveyor belts; at least one UV-C light connected inside the housing; a first opening adapted to allow products to enter the housing for sanitisation; and a second opening adapted to allow products to exit the housing after sanitisation.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The apparatus of claim 1, wherein the interior walls are lined with UV-C reflective material to maximize radiation coverage.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The apparatus of claim 1, wherein the first opening and second opening feature automated doors configured to close during sanitisation to prevent UV-C leakage.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The apparatus of claim 1, wherein the conveyor belts operate at variable speeds to adjust UV-C exposure duration based on product type.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & PATHOGEN TRANSMISSION",
+        paragraphs: [
+          "Surface contamination on commercially delivered packages, luggage, and retail merchandise serves as a major vector for viral and bacterial pathogens. Manual chemical wiping is slow, inconsistent, and often damages packaging.",
+          "The present invention provides an automated, chemical-free sanitization tunnel that rapidly sterilizes all exterior surfaces of moving products using high-intensity UV-C radiation.",
+        ],
+      },
+      {
+        heading: "TUNNEL ARCHITECTURE & CONVEYOR AUTOMATION",
+        paragraphs: [
+          "Items enter through automated first opening (104) onto motorized conveyor belts (102). As items move through housing (101), high-output UV-C lamps (103) and reflective interior walls deliver 360-degree germicidal exposure.",
+          "Once sanitized, items pass through automated second opening (105) for safe retrieval, ensuring zero operator exposure to hazardous radiation.",
+        ],
+      },
+    ],
+  },
+
+  US20220099408A1: {
+    id: "US20220099408A1",
+    patentNo: "US20220099408A1",
+    grantPublicationNo: "US11959725B2",
+    title: "Deep sea pressure based projectile launching system",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A projectile launching apparatus for launching projectile with the pressure exerted by the seawater. The projectile launching apparatus includes a large barrel launch, a piston, one or more piston stoppers, plurality of hinged doors, piston locks, and a plurality of water pump is available at bottom of the barrel to generate pressure and help to launch the projectile, wherein the assembly for the projectile is less expensive than present systems, lighter in weight, and of less complexity.",
+    inventors: [
+      "Mirza Faizan",
+      "Aroush Fatima",
+      "Arifa Fatima",
+      "Ashaz Haque",
+      "Zayd Khan",
+      "Omar Farooq Khan",
+      "Wafiqah Zubair",
+      "Rida Siddiqui",
+      "Abdullah Nouiouat",
+      "Abdurraheem Sheikh",
+      "Hamza Ahmed",
+      "Mirza Rizwan",
+    ],
+    filingDate: "Feb 25, 2021",
+    publicationDate: "Mar 31, 2022",
+    priorityDate: "Feb 27, 2020",
+    applicationNumber: "US17/184,956",
+    keywords: [
+      "deep sea projectile launcher",
+      "hydrostatic pressure propulsion",
+      "underwater barrel launch",
+      "seawater pressure piston",
+      "hinged launch doors",
+      "marine defense system",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/f9/6b/d5/efb7a9c71ee046/US20220099408A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20220099408A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/ef/8e/95/0b7b7b2f4dd51b/US20220099408A1-20220331-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Subsurface Hydrostatic Pressure Launch System",
+        caption:
+          "Schematic elevation view showing launch barrel (10), drive piston (11), projectile capsule (12), piston stoppers (13), hinged doors (14), piston locks (15), and water pump inlet (16).",
+        url: "https://patentimages.storage.googleapis.com/ef/8e/95/0b7b7b2f4dd51b/US20220099408A1-20220331-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Piston Lock & High-Pressure Water Pump Assembly",
+        caption:
+          "Detailed mechanical cross-section illustrating high-pressure seawater inlet pumps (16), piston locking mechanism (15), and explosive-free hydrostatic release chamber.",
+        url: "https://patentimages.storage.googleapis.com/06/b0/29/f166905b91a65d/US20220099408A1-20220331-D00001.png",
+      },
+    ],
+    summaryHighlights: [
+      "Hydrostatic Seawater Propulsion: Harnesses deep-sea ambient water pressure to propel subsea projectiles and research capsules without reliant chemical propellants.",
+      "Explosive-Free Mechanical Piston Drive: Drives internal piston (11) using controlled differential ocean pressure, significantly reducing acoustic footprint and thermal signatures.",
+      "Hinged Barrel Doors & Pressure Locks: Features fast-acting hinged doors (14) and piston locks (15) that maintain watertight seals until peak launch pressure is triggered.",
+      "Low-Cost Lightweight Subsea Architecture: Simple, corrosion-resistant launcher barrel (10) assembly providing a cost-effective alternative to conventional submarine torpedo tubes.",
+    ],
+    referenceNumerals: [
+      { num: "10", label: "Launcher Barrel Tube" },
+      { num: "11", label: "Hydrostatic Drive Piston" },
+      { num: "12", label: "Underwater Projectile Payload" },
+      { num: "13", label: "Piston Motion Stoppers" },
+      { num: "14", label: "Hinged Barrel Exit Doors" },
+      { num: "15", label: "Mechanical Piston Release Locks" },
+      { num: "16", label: "High-Pressure Seawater Pump Inlet" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A projectile launching apparatus for launching projectile with pressure exerted by seawater comprising: a launch barrel; a piston disposed slidably within the launch barrel; one or more piston stoppers; a plurality of hinged doors at an exit of the launch barrel; piston locks; and a plurality of water pumps arranged at a bottom of the launch barrel to generate pressure and propel the projectile.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The projectile launching apparatus of claim 1, wherein the ambient hydrostatic pressure of deep ocean water acts upon the piston when the piston locks disengage.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The projectile launching apparatus of claim 1, wherein the hinged doors open automatically under internal fluid pressure as the projectile exits the launch barrel.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "BACKGROUND & UNDERWATER PROPULSION PROBLEMS",
+        paragraphs: [
+          "Conventional submarine and deep-sea projectile launchers rely heavily on chemical propellants or heavy high-pressure air tanks. These systems add immense weight, complexity, thermal signature, and risk of accidental explosion.",
+          "The present invention utilizes the immense ambient hydrostatic pressure naturally present at deep ocean depths, providing a lightweight, low-cost, silent launching system powered by seawater.",
+        ],
+      },
+      {
+        heading: "LAUNCH DYNAMICS & HYDROSTATIC PISTON DRIVE",
+        paragraphs: [
+          "Launch barrel (10) houses drive piston (11) and projectile (12). High-pressure seawater pumps (16) assist in building pressure differential. When piston locks (15) disengage, ocean water pressure forces piston (11) upward at high velocity.",
+          "Hinged doors (14) swing open cleanly as projectile (12) clears the barrel, after which piston stoppers (13) arrest piston movement safely inside the launcher.",
+        ],
+      },
+    ],
+  },
+
+  US20220389694A1: {
+    id: "US20220389694A1",
+    patentNo: "US20220389694A1",
+    grantPublicationNo: "US11933029B2",
+    title: "Smart shower head",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A smart shower head to regulate temperature of water being supplied is disclosed. The smart shower head comprises a showering section (101) for showering water, a shower head arm connecting the showering section (101) and supplying water to the showering section (101), and at least one compartmentalized nero-thermal coil 103 running through the length of the shower head arm (102) and the showering section (101).",
+    inventors: [
+      "Mirza Faizan",
+      "Ameer Syedibrahim",
+      "Amjad Syedibrahim",
+      "Syed Shah Ekramullah Alvi",
+      "Binu Varghese",
+      "Vineet ANSHUMAN",
+      "Mirza Rizwan",
+      "Sidra Ambreen",
+      "Hiba Khan",
+      "Zainab Khan",
+      "Mansoor Hasan Khan",
+      "Saadia Asaf",
+    ],
+    filingDate: "Jun 3, 2021",
+    publicationDate: "Dec 8, 2022",
+    priorityDate: "Jun 3, 2021",
+    applicationNumber: "US17/338,252",
+    keywords: [
+      "smart shower head",
+      "water temperature regulation",
+      "nero thermal heating coil",
+      "shower arm water channel",
+      "instantaneous water heating",
+      "energy efficient bathroom fixture",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/c0/b9/ba/1f73691218701a/US20220389694A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20220389694A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/10/81/e8/9343dcc79a1aa6/US20220389694A1-20221208-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Smart Shower Head Architecture & Thermal Coil Route",
+        caption:
+          "Schematic view showing showering section (101), shower head arm (102), compartmentalized nero-thermal coils (103), water spray nozzles (104), and electronic temperature controller.",
+        url: "https://patentimages.storage.googleapis.com/10/81/e8/9343dcc79a1aa6/US20220389694A1-20221208-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Compartmentalized Nero-Thermal Coil Cross-Section",
+        caption:
+          "Detailed internal view of shower arm (102) cutaway displaying parallel micro-channels and embedded thermal heating coils (103) for rapid heat exchange with flowing water.",
+        url: "https://patentimages.storage.googleapis.com/1f/f2/0c/800e52c90afdea/US20220389694A1-20221208-D00000.png",
+      },
+    ],
+    summaryHighlights: [
+      "Instantaneous Thermal Water Regulation: Uses compartmentalized nero-thermal coils (103) along the shower head arm (102) to adjust water temperature instantly without wasting water while waiting for hot water to arrive.",
+      "Compartmentalized Heating Channels: Directs incoming water through insulated thermal conduits inside showering section (101), preventing outer housing overheating.",
+      "Eco-Friendly Energy Efficiency: Eliminates pre-shower water waste by bringing water to desired user temperature right at the spray nozzle (104).",
+      "Precision Electronic Control: Integrates digital thermistors and feedback controls to maintain precise water temperature during dynamic pressure fluctuations.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Smart Shower Head System Assembly" },
+      { num: "101", label: "Showering Head Section" },
+      { num: "102", label: "Shower Head Extension Arm" },
+      { num: "103", label: "Compartmentalized Nero-Thermal Heating Coils" },
+      { num: "104", label: "Precision Water Spray Nozzles" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A smart shower head to regulate temperature of water being supplied comprising: a showering section (101) for showering water; a shower head arm (102) connecting the showering section (101) and supplying water to the showering section (101); and at least one compartmentalized nero-thermal coil (103) running through the length of the shower head arm (102) and the showering section (101).",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The smart shower head of claim 1, further comprising a temperature sensor positioned at the showering section (101) to provide real-time thermal feedback.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The smart shower head of claim 1, wherein the compartmentalized nero-thermal coil (103) dynamically modulates electrical power based on desired user target temperature.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & WATER WASTE IN BATHROOMS",
+        paragraphs: [
+          "Traditional shower systems waste tens of gallons of fresh water per shower while users wait for cold water sitting in long pipes to clear out and warm up. Central water heaters also lose significant thermal energy in plumbing lines.",
+          "The present invention provides a point-of-use smart shower head equipped with internal nero-thermal coils running along the arm and head section, instantly bringing water to the desired temperature at the nozzle.",
+        ],
+      },
+      {
+        heading: "THERMAL COIL MECHANICS & ELECTRONIC CONTROL",
+        paragraphs: [
+          "Water flows into shower head arm (102) and contacts compartmentalized nero-thermal coils (103). Micro-controller adjusts current through coils (103) instantly based on flow rate and user temperature settings.",
+          "Warmed water passes through showering section (101) and exits via nozzles (104), ensuring immediate comfortable water temperature with zero wasted runoff.",
+        ],
+      },
+    ],
+  },
+
+  US20230060737A1: {
+    id: "US20230060737A1",
+    patentNo: "US20230060737A1",
+    grantPublicationNo: "US11964508B2",
+    title: "System for refilling of used markers",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "The invention provides a system for refilling of used markers. The system comprises at least one round plate (1) mounted on a supporting platform, at least one ink reservoir (2) adapted to store ink and positioned at the center of the round plate (1) and one entry hole (3) on the ink reservoir (2) adapted to hold a nib of a marker (6). The round plate (1) of the system is mounted on a motor adapted to rotate the round plate (1) at high speed in a circular motion to dispense ink from the ink reservoir (2) by centrifugal force via the entry hole (3) to refill the marker (6) through the nib.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Maheen Rafique",
+      "Abdul Basit Piracha",
+      "Naveed Rauf",
+      "Ali Akbar Kayani",
+      "Meher Saanvi Singh",
+      "Jiya Saanvi Singh",
+      "Maya Ajlouni",
+      "Abdullah Mohiuddin",
+      "Hassan Saadi",
+      "Hiba Sheikh",
+      "Gibran Saleem",
+      "Saadia Asaf",
+      "Mansoor Hasan Khan",
+    ],
+    filingDate: "Aug 31, 2021",
+    publicationDate: "Mar 2, 2023",
+    priorityDate: "Aug 31, 2021",
+    applicationNumber: "US17/462,486",
+    keywords: [
+      "used marker refilling system",
+      "centrifugal force ink dispenser",
+      "rotating turntable platform",
+      "central ink reservoir",
+      "whiteboard marker recycling",
+      "nib capillary ink injection",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/fd/3f/68/3e27681b42a6e2/US20230060737A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230060737A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/db/2e/2e/ac3dbd89400ea6/US20230060737A1-20230302-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Centrifugal Marker Refilling Turntable Assembly",
+        caption:
+          "Top plan view of rotating round plate (1), central ink reservoir (2), marker nib entry holes (3), radial marker holding slots, and electric drive motor.",
+        url: "https://patentimages.storage.googleapis.com/db/2e/2e/ac3dbd89400ea6/US20230060737A1-20230302-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Marker Nib Insertion & Ink Reservoir Cross-Section",
+        caption:
+          "Side cross-sectional view showing dry marker (6) inserted nib-first into entry hole (3) of central ink reservoir (2) on motor-driven platform.",
+        url: "https://patentimages.storage.googleapis.com/9f/24/cb/0d95ebc1d0442c/US20230060737A1-20230302-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Centrifugal Force Ink Injection Dynamics",
+        caption:
+          "Diagram demonstrating outwards centrifugal force vector driving liquid ink from central reservoir (2) through nib micro-pores into the marker core reservoir.",
+        url: "https://patentimages.storage.googleapis.com/2b/f8/d8/2091122af357c7/US20230060737A1-20230302-D00002.png",
+      },
+    ],
+    summaryHighlights: [
+      "Centrifugal Ink Transfer System: Rotates round plate (1) at high rotational speed to use centrifugal force for forcing liquid ink into dried felt marker cores.",
+      "Nib-First Direct Ingress: Dry markers (6) insert nib-first into entry holes (3) connected to central ink reservoir (2), eliminating messy manual ink syringes.",
+      "Multi-Marker Simultaneous Refilling: Radial alignment slots allow simultaneous recharging of multiple dry whiteboard or permanent markers in under 30 seconds.",
+      "Stationery Waste Reduction: Significantly extends marker lifespan in schools, universities, and corporate offices, drastically cutting plastic stationery waste.",
+    ],
+    referenceNumerals: [
+      { num: "1", label: "Motorized Rotating Round Plate / Turntable" },
+      { num: "2", label: "Central Ink Reservoir" },
+      { num: "3", label: "Marker Nib Entry Hole" },
+      { num: "6", label: "Used Dry Marker Body & Nib" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A system for refilling of used markers comprising: at least one round plate (1) mounted on a supporting platform; at least one ink reservoir (2) adapted to store ink and positioned at the center of the round plate (1); and one entry hole (3) on the ink reservoir (2) adapted to hold a nib of a marker (6), wherein the round plate (1) is mounted on a motor adapted to rotate the round plate (1) at high speed in a circular motion to dispense ink from the ink reservoir (2) by centrifugal force via the entry hole (3) to refill the marker (6) through the nib.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the ink reservoir (2) comprises a plurality of entry holes radially spaced around its perimeter.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The system of claim 1, wherein the motor speed is variable to adjust centrifugal ink dispensing rate based on marker absorbency.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & PLASTIC STATIONERY WASTE",
+        paragraphs: [
+          "Whiteboard and permanent markers are discarded by the billions annually as soon as their internal ink reservoir dries out, generating massive plastic waste. Manual refilling with liquid ink bottles is messy, slow, and prone to spilling.",
+          "The present invention introduces an automated centrifugal refilling machine that uses rotational physics to instantly inject ink directly through marker nibs cleanly and evenly.",
+        ],
+      },
+      {
+        heading: "CENTRIFUGAL FORCE MECHANICS & REFILL OPERATION",
+        paragraphs: [
+          "Marker (6) is placed nib-first into entry hole (3) of central reservoir (2) on round plate (1). High-speed rotation of plate (1) creates strong centrifugal acceleration, driving ink outwards into the absorbent core of marker (6).",
+          "This capillary and centrifugal saturation recharges the marker to 100% capacity within seconds, completely restoring writing quality.",
+        ],
+      },
+    ],
+  },
+
+  US20220388736A1: {
+    id: "US20220388736A1",
+    patentNo: "US20220388736A1",
+    grantPublicationNo: "US11891221B2",
+    title: "Bio-Degradable Container",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "Biodegradable bottle cap is a water bottle cap containing the plastic eating fungus pestalotiopsismicrosporia. When the consumer is done drinking from the bottle, the cap has a tab that is pulled and this tab releases the fungus. The fungus consumes the plastic bottle and the cap so no trace is left behind. The cap is made of plastic and the fungus is contained in an aluminum casing. Also contain in the casing is the safe food dye which will be coloring the water in case of accidental release or opening of the casing before the use of the drinking water. Such water coloring will be an indication to avoid using the water for drinking though the fungus is safe after human galloping.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Hana Ahmad",
+      "Humza Ahmad",
+      "Mohsen Ahmad",
+      "Rabiya Sayeed",
+      "Sofia Ali",
+      "Zain Ali",
+      "Sarah Nawab",
+      "Danyal Nawab",
+    ],
+    filingDate: "Jun 4, 2021",
+    publicationDate: "Dec 8, 2022",
+    priorityDate: "Jun 4, 2021",
+    applicationNumber: "US17/339,463",
+    keywords: [
+      "biodegradable bottle cap",
+      "plastic eating fungus",
+      "pestalotiopsis microspora",
+      "aluminum fungi casing",
+      "pullable tab release",
+      "food dye safety indicator",
+      "zero plastic waste bottle",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/a9/db/45/188b7b71e46de5/US20220388736A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20220388736A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/9f/29/de/8dad49c26ab636/US20220388736A1-20221208-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Biodegradable Cap Assembly & Fungi Casing",
+        caption:
+          "Exploded view illustrating bottle cap lid (100), upper cover (101), aluminum fungi casing (first segment 103, second segment 104), and lower cover (106).",
+        url: "https://patentimages.storage.googleapis.com/9f/29/de/8dad49c26ab636/US20220388736A1-20221208-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Pullable Release Tab & Dye Safety Mechanism",
+        caption:
+          "Cross-section showing pullable tab release mechanism and food dye indicator compartment for safe consumer operation upon bottle disposal.",
+        url: "https://patentimages.storage.googleapis.com/92/1b/07/470f5859342d00/US20220388736A1-20221208-D00001.png",
+      },
+    ],
+    summaryHighlights: [
+      "Plastic-Eating Fungus Release: Encapsulates Pestalotiopsis microspora spores inside a sealed aluminum casing within the bottle cap structure.",
+      "Post-Consumer Pull-Tab Trigger: Consumers pull an outer tab after drinking, piercing the internal casing to release fungal spores directly onto the plastic bottle for rapid degradation.",
+      "Visual Safety Indicator Dye: Contains a safe food dye inside the casing that turns water bright blue/red if prematurely punctured, signaling users to refrain from drinking.",
+      "Zero Plastic Trace Behind: Fungal spores digest the polyurethane and PET polymers of both bottle cap and body, leaving zero toxic microplastics behind.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Biodegradable Cap Lid Assembly" },
+      { num: "101", label: "Upper Protective Cover" },
+      { num: "103", label: "Fungi Casing First Segment" },
+      { num: "104", label: "Fungi Casing Second Segment" },
+      { num: "106", label: "Lower Threaded Seal Cover" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A biodegradable bottle cap comprising: a lid (100); an upper cover (101); a casing holding plastic-eating fungus Pestalotiopsis microspora; a pullable tab configured to open the casing to release the fungus onto a plastic bottle; and a lower cover (106) connecting the cap to the plastic bottle.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The biodegradable bottle cap of claim 1, wherein the casing further comprises a non-toxic food dye that colors liquid inside the bottle if the casing is ruptured prematurely.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The biodegradable bottle cap of claim 1, wherein the plastic-eating fungus digests both the plastic bottle and the bottle cap completely.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "PROBLEM STATEMENT & PLASTIC POLLUTION",
+        paragraphs: [
+          "Single-use plastic water bottles take hundreds of years to decompose in landfills and oceans, leaching toxic microplastics into ecosystems globally.",
+          "The present invention provides a revolutionary self-destructing bottle cap containing plastic-eating fungus spores (*Pestalotiopsis microspora*) that completely digest the plastic bottle post-use.",
+        ],
+      },
+      {
+        heading: "FUNGI RELEASE & SAFETY DYE MECHANICS",
+        paragraphs: [
+          "Fungi spores are safely isolated inside aluminum casing segments (103, 104). When the user finishes drinking, pulling the tab releases the spores onto the container.",
+          "If the casing is accidentally damaged while full, food dye immediately colors the liquid, visually warning the consumer not to drink.",
+        ],
+      },
+    ],
+  },
+
+  US20240087440A1: {
+    id: "US20240087440A1",
+    patentNo: "US20240087440A1",
+    grantPublicationNo: "US12020553B2",
+    title:
+      "Iot based management system and a method for assisting users around a swimming pool",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "The present disclosure envisages an IOT based management system for assisting users around a swimming pool. The system comprises a plurality of sensors configured to sense a plurality of parameters corresponding to various pre-defined events associated with said swimming pool; a control unit communicatively coupled to said plurality of sensors through a communication network to receive said plurality of parameters and configured to process said plurality of parameters based on at least one machine learning algorithm to generate actionable intelligence in the form of signals associated with said pre-defined events corresponding to said plurality of parameters; and at least one IOT based actuating mechanism configured to receive said signals and perform at least one action upon reception of said signals.",
+    inventors: [
+      "Mirza Faizan",
+      "Mohammed Abdussamad Zaki",
+      "Safiyah Fatima",
+      "Afreen Fatima",
+      "Afrin Shaikh",
+      "Kemery Oparah",
+      "Maazin Saif",
+      "Mirza Rizwan",
+      "Amreen Syed",
+      "Hadiya Sameen",
+      "Aayan Chowdhury",
+      "Abdul Basit Piracha",
+      "Mishaal Qureshi",
+      "Abdullah Hasani",
+      "Zaynab Khan",
+      "Mariam Mir",
+      "Muhummed Mir",
+    ],
+    filingDate: "Sep 8, 2022",
+    publicationDate: "Mar 14, 2024",
+    priorityDate: "Sep 8, 2022",
+    applicationNumber: "US17/940,060",
+    keywords: [
+      "swimming pool safety",
+      "IoT management system",
+      "drowning prevention",
+      "machine learning data fusion",
+      "elevating pool floor",
+      "rack and pinion mechanism",
+      "underwater movement sensors",
+      "automated ring buoy delivery",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/00/91/cf/dfbba20e9c4af0/US20240087440A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20240087440A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/59/37/5d/31f0c2df2845e1/US20240087440A1-20240314-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — IoT Network & Pool Safety System Architecture",
+        caption:
+          "Exemplary network environment illustrating distributed pool sensors (102), control unit (104), communication network (106), and IoT actuating mechanism (108).",
+        url: "https://patentimages.storage.googleapis.com/99/f2/12/a2936958cb1bdf/US20240087440A1-20240314-D00001.png",
+      },
+      {
+        title: "FIG. 2 — Functional Block Diagram of Control Unit",
+        caption:
+          "Block diagram showing I/O interface (112), processor (110), memory (114), receiving module (202), ML analysis module (204), flagging module (206), and alarm generating module (208).",
+        url: "https://patentimages.storage.googleapis.com/aa/3d/e5/ccfaf91cb83139/US20240087440A1-20240314-D00002.png",
+      },
+      {
+        title: "FIG. 3 — Swimming Pool Safety Management Method Flowchart",
+        caption:
+          "Flow diagram depicting parameter sensing (302), machine learning data processing (304), event flagging (306), and automated rescue actuation.",
+        url: "https://patentimages.storage.googleapis.com/59/37/5d/31f0c2df2845e1/US20240087440A1-20240314-D00000.png",
+      },
+    ],
+    summaryHighlights: [
+      "Multi-Sensor Aquatic Monitoring: Continuously measures water level relative to pool floor, user submersion duration, swimmer height/position, and water temperature.",
+      "Machine Learning Event Classification: Uses ML data fusion to process sensor inputs and distinguish normal diving/swimming from critical drowning hazards.",
+      "Automated Physical Rescue Actuation: Features a movable fiberglass mesh pool floor driven by a rack and pinion mechanism to raise struggling swimmers out of the water.",
+      "Emergency Payload & Dispatch: Automatically deploys ring buoys and oxygen masks while transmitting real-time distress alerts to local police and emergency medical teams.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "IoT Pool Safety Management System" },
+      { num: "102", label: "Plurality of Pool Sensors" },
+      { num: "104", label: "Central Control Unit" },
+      { num: "106", label: "Communication Network (Wired/Wireless)" },
+      { num: "108", label: "IoT-Based Actuating Mechanism" },
+      { num: "110", label: "Processor" },
+      { num: "112", label: "I/O Interface" },
+      { num: "114", label: "Memory" },
+      { num: "202", label: "Sensor Data Receiving Module" },
+      { num: "204", label: "Machine Learning Analysis Module" },
+      { num: "206", label: "Emergency Event Flagging Module" },
+      { num: "208", label: "Alarm & Dispatch Generating Module" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "An IoT based management system for assisting users around a swimming pool, the system comprising: a plurality of sensors configured to sense a plurality of parameters corresponding to various pre-defined events associated with said swimming pool; a control unit communicatively coupled to said plurality of sensors through a communication network to receive said plurality of parameters and configured to process said plurality of parameters based on at least one machine learning algorithm to generate actionable intelligence in the form of signals associated with said pre-defined events corresponding to said plurality of parameters; and at least one IoT based actuating mechanism configured to receive said signals and perform at least one action upon reception of said signals.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The management system as claimed in claim 1, wherein said plurality of parameters includes water level relative to the base of the swimming pool, presence of user below water level, swimmer position and height relative to the swimming pool, submerged time duration, and water temperature.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The management system as claimed in claim 1, wherein said at least one IoT based actuating mechanism comprises a rack and pinion lifting mechanism configured to raise a fiberglass mesh base of the swimming pool to elevate a user out of the water.",
+      },
+      {
+        num: 4,
+        isIndependent: false,
+        text: "The management system as claimed in claim 1, wherein said actuating mechanism is further configured to deliver a ring buoy or an oxygen mask to a user experiencing breathing distress and transmit distress messages to emergency services.",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Safety around swimming pools is a critical concern, particularly for children, novice swimmers, and individuals facing unexpected medical emergencies in water. Conventional safety measures like perimeter ropes or manual lifeguard watching cannot guarantee instant intervention during silent drowning incidents.",
+          "The present disclosure envisages an IoT-based intelligent pool management system that combines multi-sensor tracking, machine learning algorithms, and active physical intervention mechanisms to safeguard swimmers.",
+        ],
+      },
+      {
+        heading: "MACHINE LEARNING ANALYSIS & EVENT FLAGGING",
+        paragraphs: [
+          "Sensors (102) continuously stream water depth, swimmer height, underwater duration, and movement patterns to the Control Unit (104) via communication network (106).",
+          "Analysis module (204) processes sensor signals with machine learning model to evaluate drowning risk. Flagging module (206) compares submergence time against safety thresholds, triggering alarm module (208) if an anomaly is detected.",
+        ],
+      },
+      {
+        heading: "ACTIVE RESCUE & RACK AND PINION LIFTING MECHANISM",
+        paragraphs: [
+          "Upon flagging a drowning or distress event, IoT actuating mechanism (108) triggers immediate physical rescue operations. A rack and pinion lifting assembly rapidly raises a submerged fiberglass mesh floor, lifting the struggling swimmer to the pool surface.",
+          "Simultaneously, ring buoys and oxygen masks are dispatched to the user's location, while automated emergency distress calls are placed to local medical and security teams.",
+        ],
+      },
+    ],
   },
 };
 
