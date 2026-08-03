@@ -14,6 +14,8 @@ import {
 import Link from "next/link";
 import { roboto, outfit } from "@/utils/fonts";
 import { PatentDetailData } from "@/utils/type";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
+import PatentSwiperCarousel from "./PatentSwiperCarousel";
 
 const InfoRow = ({ label, value }: { label: string; value: string }) => (
   <Box
@@ -71,7 +73,7 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
       : []);
 
   return (
-    <Box sx={{ backgroundColor: "#FAFAF8", minHeight: "100vh", pb: 12 }}>
+    <Box sx={{ backgroundColor: "#FAFAF8", minHeight: "100vh" }}>
       {/* ─── HERO BANNER ─────────────────────────────────────── */}
       <Box
         sx={{
@@ -92,51 +94,54 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
         }}
       >
         <Container maxWidth="lg">
-          {/* Breadcrumb Navigation */}
-          <Stack direction="row" spacing={1.5} sx={{ mb: 3.5, alignItems: "center" }}>
-            <Link href="/" style={{ textDecoration: "none" }}>
+          <ScrollReveal direction="up" delay={0.1}>
+            {/* Breadcrumb Navigation */}
+            <Stack direction="row" spacing={1.5} sx={{ mb: 3.5, alignItems: "center" }}>
+              <Link href="/" style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    fontFamily: roboto.style.fontFamily,
+                    fontSize: "12px",
+                    fontWeight: 500,
+                    color: "rgba(255,255,255,0.45)",
+                    "&:hover": { color: "#C4A882" },
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Home
+                </Typography>
+              </Link>
+              <Typography sx={{ color: "rgba(255,255,255,0.25)", fontSize: "12px" }}>/</Typography>
+              <Link href="/patent" style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    fontFamily: roboto.style.fontFamily,
+                    fontSize: "12px",
+                    fontWeight: 500,
+                    color: "rgba(255,255,255,0.45)",
+                    "&:hover": { color: "#C4A882" },
+                    transition: "color 0.2s",
+                  }}
+                >
+                  Patents
+                </Typography>
+              </Link>
+              <Typography sx={{ color: "rgba(255,255,255,0.25)", fontSize: "12px" }}>/</Typography>
               <Typography
                 sx={{
                   fontFamily: roboto.style.fontFamily,
                   fontSize: "12px",
-                  fontWeight: 500,
-                  color: "rgba(255,255,255,0.45)",
-                  "&:hover": { color: "#C4A882" },
-                  transition: "color 0.2s",
+                  fontWeight: 600,
+                  color: "#C4A882",
                 }}
               >
-                Home
+                {patent.patentNo}
               </Typography>
-            </Link>
-            <Typography sx={{ color: "rgba(255,255,255,0.25)", fontSize: "12px" }}>/</Typography>
-            <Link href="/patent" style={{ textDecoration: "none" }}>
-              <Typography
-                sx={{
-                  fontFamily: roboto.style.fontFamily,
-                  fontSize: "12px",
-                  fontWeight: 500,
-                  color: "rgba(255,255,255,0.45)",
-                  "&:hover": { color: "#C4A882" },
-                  transition: "color 0.2s",
-                }}
-              >
-                Patents
-              </Typography>
-            </Link>
-            <Typography sx={{ color: "rgba(255,255,255,0.25)", fontSize: "12px" }}>/</Typography>
-            <Typography
-              sx={{
-                fontFamily: roboto.style.fontFamily,
-                fontSize: "12px",
-                fontWeight: 600,
-                color: "#C4A882",
-              }}
-            >
-              {patent.patentNo}
-            </Typography>
-          </Stack>
+            </Stack>
+          </ScrollReveal>
 
           <Grid container spacing={{ xs: 3, md: 5 }} sx={{ alignItems: "flex-start" }}>
+
             <Grid size={{ xs: 12, md: 8 }}>
               {/* Status & Category Chips */}
               <Stack direction="row" spacing={1.5} sx={{ mb: 2.5, flexWrap: "wrap", gap: 1 }}>
@@ -332,7 +337,7 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
       </Box>
 
       {/* ─── MAIN CONTENT CONTAINER ────────────────────────── */}
-      <Container maxWidth="lg" sx={{ pt: { xs: 5, md: 7 } }}>
+      <Container maxWidth="lg" sx={{ pt: { xs: 5, md: 7 }, pb: { xs: 8, md: 12 } }}>
         <Stack spacing={5}>
 
           {/* TOP SECTION: ABSTRACT + INVENTORS/FILING INFO SIDE-BY-SIDE */}
@@ -1213,6 +1218,9 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
 
         </Stack>
       </Container>
+
+      {/* ─── NEXT/PREV NAVIGATION & SWIPER.JS CAROUSEL ─────────────────── */}
+      <PatentSwiperCarousel currentPatentId={patent.id} />
     </Box>
   );
 };

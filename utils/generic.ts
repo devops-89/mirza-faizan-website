@@ -11,60 +11,73 @@ import {
   SocialLinkItem,
 } from "./type";
 
+import cleanGarbage from "@/images/invention/clean_garbage.png";
+import aircraft_tray from "@/images/invention/automated_aircraft.png";
+import relay from "@/images/invention/relay_based.png";
+import cleaning_Spilled_oil from "@/images/invention/cleaning_spilledoil.png";
+import wind_powered from "@/images/invention/wind_powered.png";
+import drug_abuse from "@/images/invention/drug_abuse.png";
+
 export const COLUMN_1_PROJECTS: ProjectItem[] = [
   {
     id: "ground-reality",
+    patentId: "US20220390615A1",
+    patentNo: "U.S. patent 20220390615A1",
     title: "Ground Reality Information Processing System (GRIPS)",
-    image: "/images/invention/ground-reality.jpg.png",
     category: "Aviation Safety",
     description:
-      "Advanced runway safety technology preventing runway incursions, excursions, and detecting foreign object debris in real time.",
+      "Advanced runway safety technology preventing runway incursions, excursions, and detecting foreign object debris (FOD) in real time.",
   },
   {
     id: "apparatus",
-    title: "Apparatus for Differently-Abled Users to Communicate",
-    image: "/images/invention/apparatus.jpg.png",
+    patentId: "US20230324680A1",
+    patentNo: "U.S. patent 20230324680A1",
+    title: "Apparatus to Enable Disabled Users to Communicate",
     category: "Assistive Tech",
     description:
-      "Tactile gesture interface translating micro-movements into synthetic speech and text for disabled users.",
+      "Tactile gesture interface translating micro-movements into synthetic speech and text for speech and mobility impaired individuals.",
   },
 ];
 
 export const COLUMN_2_PROJECTS: ProjectItem[] = [
   {
-    id: "aircraft",
-    title: "Aircraft Tracking System & Sensor Fusion Method",
-    image: "/images/invention/aircraft.jpg.png",
-    category: "Aerospace Systems",
+    id: "aircraft-disinfect",
+    patentId: "US20210269158A1",
+    patentNo: "U.S. patent 20210269158A1",
+    title: "Automated Aircraft Tray Table UV Disinfecting System",
+    category: "Avionics & Sanitation",
     description:
-      "Ground-based sensor fusion platform monitoring aircraft movement across taxiways and active runways in real time.",
+      "Automated ultra-violet (UV) light disinfection system integrated into aircraft passenger tray tables to eliminate surface pathogens between flights.",
   },
   {
     id: "iot-based",
+    patentId: "US20240087440A1",
+    patentNo: "U.S. patent 20240087440A1",
     title: "IoT-Based Aquatic Safety & Pool Management System",
-    image: "/images/invention/Iot-based.jpg.png",
     category: "Aquatic IoT Safety",
     description:
-      "Underwater motion sensing and perimeter monitoring system alerting lifeguards to submersion hazards.",
+      "Underwater motion sensing and perimeter monitoring system alerting lifeguards to submersion hazards in real time.",
   },
 ];
 
 export const COLUMN_3_PROJECTS: ProjectItem[] = [
   {
-    id: "smart-rescue",
-    title: "Smart Rescue System with Interactive Application",
-    image: "/images/invention/smart-rascue.jpg.png",
-    category: "Emergency Response",
+    id: "oil-spill",
+    patentId: "US20210269997A1",
+    patentNo: "U.S. patent 20210269997A1",
+    title: "Ocean Oil Spill Cleaning & Recovery System",
+    category: "Environmental Tech",
     description:
-      "Wearable emergency SOS beacons integrated with interactive mobile dispatch coordination networks.",
+      "Automated pontoon vessel utilizing specialized human hair felt rollers for efficient ocean crude oil spill retrieval and containment.",
   },
   {
-    id: "biodegradable",
-    title: "Biodegradable Bottle Cap using Fungal Decomposition",
-    image: "/images/invention/biodegradable.jpg.png",
-    category: "Bio-Tech Innovation",
+    id: "drug-abuse-prevention",
+    patentId: "US11464462B1",
+    patentNo: "U.S. patent 11464462B1",
+    title: "Drug Abuse Prevention Wearable Device",
+    category: "Health Tech",
     description:
-      "Eco-friendly bottle cap impregnated with Pestalotiopsis microspora fungus to accelerate plastic waste breakdown.",
+      "Wearable smart wristband combining micro-fluidic sweat analysis and ambient sensing to detect illicit drug exposure.",
   },
 ];
 
@@ -75,10 +88,10 @@ export const INVENTION_RESEARCH_DESCRIPTION =
 export const RECOGNITION_HEADING = "Recognition & Awards";
 
 export const RECOGNITION_BULLETS = [
-  "Featured on BBC, The Hindu, and Times of India for aerospace innovation.",
-  "Honored by various international institutions for technological innovation.",
-  "Invited speaker at global aviation forums and technology summits.",
-  "Recognized among top innovators promoting safe air transport systems.",
+  "Recipient of the George Washington Honor Medal from the Freedoms Foundation.",
+  "Felicitation by the Texas House of Representatives via official House Resolution #403.",
+  "Nominated for the prestigious Jane's ATC Award 2014 in Madrid for GRIPS.",
+  "Evaluated and recommended by NASA scientists, FAA, and NATS (UK).",
 ];
 
 export const RECOGNITION_QUOTE =
@@ -116,32 +129,32 @@ export const RECOGNITION_LOGOS: RecognitionLogo[] = [
 
 export const TALKS_HEADING = "Talks & Thought Leadership";
 export const TALKS_DESCRIPTION =
-  "Mirza Faizan regularly mentors young engineers, guiding them on ideation, research methodologies, and socially responsible technology. His guest lectures and public sessions inspire the next generation of scientists to innovate fearlessly.";
+  "As the founder of DiscoverSTEM, Mirza Faizan regularly guides young innovators using a 5-step methodology: Think, Analyze, Ideate, Create, and Innovate. His mentorship has produced nearly 200 young inventors and $3.5M+ in elite university scholarships.";
 
 export const TALKS_BULLETS = [
-  "Featured Talks (TEDx, University Lectures,\nPanels)",
-  "Innovation Mentorship\nInitiative",
-  "Advisory Roles &\nCollaborations",
+  "DiscoverSTEM Innovation\nMentorship",
+  "AIAA & Aviation Safety\nPresentations",
+  "Keynote Talks &\nUniversity Lectures",
 ];
 
-export const EXPERIENCE_HEADING = "Experience & Collaborations";
+export const EXPERIENCE_HEADING = "Experience & Professional Journey";
 
 export const EXPERIENCE_ITEMS: ExperienceItem[] = [
   {
-    role: "Founder / Inventor",
-    description: "Ground Reality Information Processing System (GRIPS)",
+    role: "Founder & Chief Innovator",
+    description: "DiscoverSTEM Program (2016–Present)",
   },
   {
-    role: "Aerospace Scientist",
-    description: "Worked with international aviation research teams.",
+    role: "Head of Engineering Services (USA & Canada)",
+    description: "Capgemini (Resigned 2019 to focus full-time on DiscoverSTEM)",
   },
   {
-    role: "Technology Consultant",
-    description: "Guiding R&D for safety systems and AI-based analytics.",
+    role: "Aerospace Scientist & Consultant",
+    description: "Honeywell, Airbus-France & US Aerospace Projects",
   },
   {
-    role: "Mentor & Educator",
-    description: "Advocating innovation and STEM education for youth.",
+    role: "Embedded Systems & Defense Research",
+    description: "DRDO & Satyam Computers",
   },
 ];
 
@@ -200,6 +213,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An automated pontoon water vehicle with a conveyor belt assembly for collecting and extracting floating debris and plastic garbage from aquatic environments.",
+    image: cleanGarbage,
   },
   {
     id: "US20210269158A1",
@@ -210,6 +224,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An automated disinfection system using ultra-violet (UV) light emitters integrated into aircraft tray tables to eliminate surface pathogens between flights.",
+    image: aircraft_tray,
   },
   {
     id: "US20220034624A1",
@@ -219,6 +234,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A relay-based electromagnetic launch system using sequential magnetic acceleration rings to launch payloads and projectiles with high velocity.",
+    image: relay,
   },
   {
     id: "US20210269997A1",
@@ -229,6 +245,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An automated pontoon vessel utilizing specialized human hair felt rollers for efficient ocean crude oil spill retrieval and containment.",
+    image: cleaning_Spilled_oil,
   },
   {
     id: "US20210270240A1",
@@ -238,6 +255,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A wind-powered water pumping system featuring a central rotating cylinder and multi-tank relay staging to lift water across vertical elevations.",
+    image: wind_powered,
   },
   {
     id: "US11464462B1",
@@ -247,6 +265,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A wearable smart wristband combining micro-fluidic sweat analysis and ambient air sensing to detect illicit drug exposure and alert guardians.",
+    image: drug_abuse,
   },
   {
     id: "US11433916B1",
@@ -644,32 +663,32 @@ export const PATENTS_PENDING = [
 
 export const ABOUT_INFO: AboutInfo = {
   name: "Mirza Faizan",
-  designation: "Founder & Chief Innovation Facilitator, DiscoverSTEM-USA",
+  designation:
+    "Indian-American Aerospace Scientist, Aviation Safety Expert & DiscoverSTEM Founder",
   paragraphs: [
-    "Mirza Faizan is an internationally recognized aerospace scientist, inventor and innovation educator with extensive experience in aerospace, defence and mission-critical systems.",
-    "He is the inventor of the Ground Reality Information Processing System (GRIPS), an advanced runway safety technology designed to prevent runway incursions, runway excursions and detect foreign object debris in real time.",
-    "His work has been recognized by experts from NASA, the U.S. Army Missile Research, Development & Engineering Center, and the U.S. Air Force. He has also been invited to evaluate research outcomes from leading global research and innovation labs such as NASA, MIT Lincoln Lab, Defence Threat Reduction Agency, Sandia National Lab-USA, Lawrence Livermore National Lab-USA, Argonne National Lab-USA, Oak Ridge National Lab-USA etc. as a judge for the prestigious R&D 100 Awards.",
-    "Under his mentorship, over 1000 school students have filed patent applications, with over 450 students’ patents granted, making DiscoverSTEM one of the world’s leading school innovation ecosystems focused on intellectual property creation by young innovators.",
-    "He is a recipient of the George Washington Honor Medal, a US national award for revolutionizing education in the United States. In March 2025, Texas House of Representatives passed House Resolution HR-403 and honor and recognize his contribution in Innovation, Research and Entrepreneurship in the State of Texas.",
-    "Mr. Faizan is a serial innovator with over 50 patents granted and over 52 patents pending in the United States. He is a US citizen and resides in Dallas, Texas with his family. He will personally lead this training and mentor participating teachers.",
+    "Mirza Faizan is an Indian-American aerospace scientist and aviation safety expert. He attended St. Karen’s School in Patna, graduated from Patna University, completed his Master of Computer Applications at Manipal Institute of Technology, and pursued embedded systems research at the prestigious Indian Institute of Science (IISc), Bangalore.",
+    "He built his professional foundation working with renowned defense and aerospace organizations including the Defence Research and Development Organisation (DRDO), Satyam Computers, Honeywell, Airbus-France, and Capgemini (where he served as Head of Engineering Services for USA & Canada), as well as leading aerospace projects in the United States.",
+    "Faizan is the inventor of the Ground Reality Information Processing System (GRIPS), a revolutionary runway safety technology designed to prevent runway incursions and detect foreign object debris (FOD) in real-time during aircraft takeoff and landing. Evaluated and recommended by NASA scientists to National Air Traffic Services (NATS UK) and shortlisted by the Federal Aviation Administration (FAA), GRIPS was nominated for the prestigious Jane’s ATC Award in Madrid.",
+    "In 2016, he founded DiscoverSTEM to mentor the next generation of thinkers, scientists, and innovators. Utilizing a 5-step framework—Think, Analyze, Ideate, Create, and Innovate—DiscoverSTEM has produced nearly 200 young inventors (ages 10 to 18) and secured $3.5M+ in university scholarships to elite institutions including Harvard, Stanford, Princeton, and Duke.",
+    "A member of the American Institute of Aeronautics and Astronautics (AIAA), Mirza Faizan came to the US on an EB-1 visa. He is a recipient of the George Washington Honor Medal from the Freedoms Foundation and was felicitated by the Texas House of Representatives with House Resolution #403 in recognition of his transformative contributions to innovation and education.",
   ],
 };
 
 export const HOME_COUNTERS: CounterItem[] = [
   {
-    value: "23",
-    unit: "k",
-    label: "Social Followers",
-  },
-  {
-    value: "12",
-    unit: "m",
-    label: "Email Subscribers",
-  },
-  {
-    value: "82",
+    value: "50",
     unit: "+",
-    label: "Patents",
+    label: "Patents Granted",
+  },
+  {
+    value: "200",
+    unit: "+",
+    label: "Young Inventors Trained",
+  },
+  {
+    value: "3.5",
+    unit: "M+$",
+    label: "Scholarships Secured",
   },
 ];
 
@@ -683,9 +702,9 @@ export const HERO_INFO: HeroInfo = {
 
 export const PATENT_HERO_INFO: PatentHeroInfo = {
   title: "Patents",
-  subtitle: "52 Total Patent Filings",
+  subtitle: "52+ Patent Portfolio (US & International)",
   description:
-    "Mirza Faizan is a serial innovator whose mission-critical aerospace safety systems, AI analytics, biotech, and assistive technologies have produced groundbreaking patented inventions across the United States and internationally.",
+    "Mirza Faizan is a serial innovator whose mission-critical aerospace safety systems, AI analytics, biotech, and assistive technologies have produced groundbreaking patented inventions across the United States, South Africa, and internationally.",
   stats: [
     { num: "31", label: "US Patents Granted" },
     { num: "12", label: "South Africa Granted" },
@@ -2475,7 +2494,8 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       "https://patentimages.storage.googleapis.com/3b/13/71/b7820963cbd101/US20220386914A1-20221208-D00000.png",
     images: [
       {
-        title: "FIG. 1 — Tandem Sweat Hormone & Peer Feedback System Architecture",
+        title:
+          "FIG. 1 — Tandem Sweat Hormone & Peer Feedback System Architecture",
         caption:
           "System schematic illustrating sweat sample collection unit (102), biochemical hormone analyzer (100A), peer-to-peer behavioral feedback interface, and central mental health predictive processor.",
         url: "https://patentimages.storage.googleapis.com/3b/13/71/b7820963cbd101/US20220386914A1-20221208-D00000.png",
@@ -2592,7 +2612,8 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
         url: "https://patentimages.storage.googleapis.com/b5/bc/57/ac7614e7ef5229/US20210270793A1-20210902-D00000.png",
       },
       {
-        title: "FIG. 2 — Portable Chemical Pod & Colorimetric Reaction Assembly",
+        title:
+          "FIG. 2 — Portable Chemical Pod & Colorimetric Reaction Assembly",
         caption:
           "Detail view illustrating chemical pod (14) insertion into chamber (13) for rapid colorimetric chemical reaction upon contact with contaminated lead water samples.",
         url: "https://patentimages.storage.googleapis.com/8a/46/d8/615561f7f40de1/US20210270793A1-20210902-D00001.png",
@@ -2656,7 +2677,8 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
     id: "US20220388788A1",
     patentNo: "US20220388788A1",
     grantPublicationNo: "US11858756B2",
-    title: "High-speed pressure based propulsion system for transporting resources",
+    title:
+      "High-speed pressure based propulsion system for transporting resources",
     region: "US",
     status: "Granted",
     abstract:
@@ -2692,7 +2714,8 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
       "https://patentimages.storage.googleapis.com/b7/eb/ed/dc0ea966431611/US20220388788A1-20221208-D00000.png",
     images: [
       {
-        title: "FIG. 1 — Hyperloop Pressure-Based Propulsion System Architecture",
+        title:
+          "FIG. 1 — Hyperloop Pressure-Based Propulsion System Architecture",
         caption:
           "System block diagram illustrating central computing unit (102), automatic guidance controller (104), electronic track network, autonomous cargo cars, and automated resource loading stations.",
         url: "https://patentimages.storage.googleapis.com/b7/eb/ed/dc0ea966431611/US20220388788A1-20221208-D00000.png",

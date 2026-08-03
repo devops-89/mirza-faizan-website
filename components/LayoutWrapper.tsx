@@ -1,16 +1,8 @@
-import { Box } from "@mui/material";
 import React from "react";
-import Header from "./widgets/Header";
-import Footer from "./widgets/Footer";
+import FooterRevealContainer from "./animation/FooterRevealContainer";
 
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <Box>
-      <Header />
-      {children}
-      <Footer />
-    </Box>
-  );
+  return <FooterRevealContainer>{children}</FooterRevealContainer>;
 };
 
 export default LayoutWrapper;

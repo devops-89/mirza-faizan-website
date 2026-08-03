@@ -24,6 +24,8 @@ import {
   initialContactFormValues,
   ContactFormValues,
 } from "@/utils/validation";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
+import { motion } from "framer-motion";
 
 const GetInTouch: React.FC = () => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -54,185 +56,191 @@ const GetInTouch: React.FC = () => {
         >
           {/* Left Column: Heading + Description */}
           <Grid size={{ xs: 12, md: 4.5 }}>
-            <Heading label={GET_IN_TOUCH_HEADING} width="340px" />
-            <Typography
-              sx={{
-                fontFamily: roboto.style.fontFamily,
-                fontSize: { xs: "14px", md: "15px" },
-                lineHeight: "1.7",
-                color: COLORS.TEXT_COLOR || "#4C4C4C",
-                fontWeight: 400,
-                mt: { xs: 2.5, md: 4 },
-                maxWidth: { xs: "100%", md: 290 },
-                textAlign: { xs: "left", md: "justify" },
-              }}
-            >
-              {GET_IN_TOUCH_DESCRIPTION}
-            </Typography>
+            <ScrollReveal direction="right" delay={0.1}>
+              <Heading label={GET_IN_TOUCH_HEADING} width="340px" />
+              <Typography
+                sx={{
+                  fontFamily: roboto.style.fontFamily,
+                  fontSize: { xs: "14px", md: "15px" },
+                  lineHeight: "1.7",
+                  color: COLORS.TEXT_COLOR || "#4C4C4C",
+                  fontWeight: 400,
+                  mt: { xs: 2.5, md: 4 },
+                  maxWidth: { xs: "100%", md: 290 },
+                  textAlign: { xs: "left", md: "justify" },
+                }}
+              >
+                {GET_IN_TOUCH_DESCRIPTION}
+              </Typography>
+            </ScrollReveal>
           </Grid>
 
           {/* Right Column: Formik Form */}
           <Grid size={{ xs: 12, md: 7.5 }}>
-            <Box
-              component="form"
-              onSubmit={formik.handleSubmit}
-              noValidate
-              sx={{ pt: { xs: 0, md: 1 } }}
-            >
-              <Grid container spacing={{ xs: 3, md: 4 }}>
-                {/* Your Name Field */}
-                <Grid size={{ xs: 12, sm: 6 }}>
-                  <TextField
-                    fullWidth
-                    variant="standard"
-                    id="name"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formik.values.name}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.touched.name && Boolean(formik.errors.name)}
-                    helperText={formik.touched.name && formik.errors.name}
-                    slotProps={{
-                      input: {
-                        disableUnderline: false,
-                        sx: {
-                          fontFamily: roboto.style.fontFamily,
-                          fontSize: "15px",
-                          color: "#1F1F1F",
-                          py: 1,
-                          "&::placeholder": {
-                            color: "#888888",
-                            opacity: 1,
-                          },
-                          "&:before": {
-                            borderColor: "#E0E0E0",
-                          },
-                          "&:hover:not(.Mui-disabled):before": {
-                            borderColor: "#846A4E",
-                          },
-                          "&:after": {
-                            borderColor: "#846A4E",
-                          },
-                        },
-                      },
-                    }}
-                  />
-                </Grid>
-
-                {/* Email Address Field */}
-                <Grid size={{ xs: 12, sm: 6 }}>
-                  <TextField
-                    fullWidth
-                    variant="standard"
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Email Address"
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.touched.email && Boolean(formik.errors.email)}
-                    helperText={formik.touched.email && formik.errors.email}
-                    slotProps={{
-                      input: {
-                        disableUnderline: false,
-                        sx: {
-                          fontFamily: roboto.style.fontFamily,
-                          fontSize: "15px",
-                          color: "#1F1F1F",
-                          py: 1,
-                          "&::placeholder": {
-                            color: "#888888",
-                            opacity: 1,
-                          },
-                          "&:before": {
-                            borderColor: "#E0E0E0",
-                          },
-                          "&:hover:not(.Mui-disabled):before": {
-                            borderColor: "#846A4E",
-                          },
-                          "&:after": {
-                            borderColor: "#846A4E",
+            <ScrollReveal direction="left" delay={0.2}>
+              <Box
+                component="form"
+                onSubmit={formik.handleSubmit}
+                noValidate
+                sx={{ pt: { xs: 0, md: 1 } }}
+              >
+                <Grid container spacing={{ xs: 3, md: 4 }}>
+                  {/* Your Name Field */}
+                  <Grid size={{ xs: 12, sm: 6 }}>
+                    <TextField
+                      fullWidth
+                      variant="standard"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formik.values.name}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.touched.name && Boolean(formik.errors.name)}
+                      helperText={formik.touched.name && formik.errors.name}
+                      slotProps={{
+                        input: {
+                          disableUnderline: false,
+                          sx: {
+                            fontFamily: roboto.style.fontFamily,
+                            fontSize: "15px",
+                            color: "#1F1F1F",
+                            py: 1,
+                            "&::placeholder": {
+                              color: "#888888",
+                              opacity: 1,
+                            },
+                            "&:before": {
+                              borderColor: "#E0E0E0",
+                            },
+                            "&:hover:not(.Mui-disabled):before": {
+                              borderColor: "#846A4E",
+                            },
+                            "&:after": {
+                              borderColor: "#846A4E",
+                            },
                           },
                         },
-                      },
-                    }}
-                  />
-                </Grid>
+                      }}
+                    />
+                  </Grid>
 
-                {/* Message Field */}
-                <Grid size={{ xs: 12 }}>
-                  <TextField
-                    fullWidth
-                    variant="standard"
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                    multiline
-                    rows={3}
-                    value={formik.values.message}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={
-                      formik.touched.message && Boolean(formik.errors.message)
-                    }
-                    helperText={formik.touched.message && formik.errors.message}
-                    slotProps={{
-                      input: {
-                        disableUnderline: false,
-                        sx: {
-                          fontFamily: roboto.style.fontFamily,
-                          fontSize: "15px",
-                          color: "#1F1F1F",
-                          py: 1,
-                          "&::placeholder": {
-                            color: "#888888",
-                            opacity: 1,
-                          },
-                          "&:before": {
-                            borderColor: "#E0E0E0",
-                          },
-                          "&:hover:not(.Mui-disabled):before": {
-                            borderColor: "#846A4E",
-                          },
-                          "&:after": {
-                            borderColor: "#846A4E",
+                  {/* Email Address Field */}
+                  <Grid size={{ xs: 12, sm: 6 }}>
+                    <TextField
+                      fullWidth
+                      variant="standard"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Email Address"
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.touched.email && Boolean(formik.errors.email)}
+                      helperText={formik.touched.email && formik.errors.email}
+                      slotProps={{
+                        input: {
+                          disableUnderline: false,
+                          sx: {
+                            fontFamily: roboto.style.fontFamily,
+                            fontSize: "15px",
+                            color: "#1F1F1F",
+                            py: 1,
+                            "&::placeholder": {
+                              color: "#888888",
+                              opacity: 1,
+                            },
+                            "&:before": {
+                              borderColor: "#E0E0E0",
+                            },
+                            "&:hover:not(.Mui-disabled):before": {
+                              borderColor: "#846A4E",
+                            },
+                            "&:after": {
+                              borderColor: "#846A4E",
+                            },
                           },
                         },
-                      },
-                    }}
-                  />
-                </Grid>
+                      }}
+                    />
+                  </Grid>
 
-                {/* Submit Button */}
-                <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    disableElevation
-                    sx={{
-                      backgroundColor: "#846A4E",
-                      color: "#FFFFFF",
-                      borderRadius: "30px",
-                      px: 4,
-                      py: 1.5,
-                      textTransform: "none",
-                      fontWeight: 700,
-                      fontSize: "15px",
-                      fontFamily: roboto.style.fontFamily,
-                      boxShadow: "0 4px 14px rgba(132, 106, 78, 0.25)",
-                      "&:hover": {
-                        backgroundColor: "#6E563E",
-                        boxShadow: "0 6px 18px rgba(110, 86, 62, 0.35)",
-                      },
-                    }}
-                  >
-                    Leave us a Message
-                  </Button>
+                  {/* Message Field */}
+                  <Grid size={{ xs: 12 }}>
+                    <TextField
+                      fullWidth
+                      variant="standard"
+                      id="message"
+                      name="message"
+                      placeholder="Message"
+                      multiline
+                      rows={3}
+                      value={formik.values.message}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={
+                        formik.touched.message && Boolean(formik.errors.message)
+                      }
+                      helperText={formik.touched.message && formik.errors.message}
+                      slotProps={{
+                        input: {
+                          disableUnderline: false,
+                          sx: {
+                            fontFamily: roboto.style.fontFamily,
+                            fontSize: "15px",
+                            color: "#1F1F1F",
+                            py: 1,
+                            "&::placeholder": {
+                              color: "#888888",
+                              opacity: 1,
+                            },
+                            "&:before": {
+                              borderColor: "#E0E0E0",
+                            },
+                            "&:hover:not(.Mui-disabled):before": {
+                              borderColor: "#846A4E",
+                            },
+                            "&:after": {
+                              borderColor: "#846A4E",
+                            },
+                          },
+                        },
+                      }}
+                    />
+                  </Grid>
+
+                  {/* Submit Button */}
+                  <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
+                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} style={{ display: "inline-block" }}>
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        disableElevation
+                        sx={{
+                          backgroundColor: "#846A4E",
+                          color: "#FFFFFF",
+                          borderRadius: "30px",
+                          px: 4,
+                          py: 1.5,
+                          textTransform: "none",
+                          fontWeight: 700,
+                          fontSize: "15px",
+                          fontFamily: roboto.style.fontFamily,
+                          boxShadow: "0 4px 14px rgba(132, 106, 78, 0.25)",
+                          "&:hover": {
+                            backgroundColor: "#6E563E",
+                            boxShadow: "0 6px 18px rgba(110, 86, 62, 0.35)",
+                          },
+                        }}
+                      >
+                        Leave us a Message
+                      </Button>
+                    </motion.div>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Box>
+              </Box>
+            </ScrollReveal>
           </Grid>
         </Grid>
       </Container>
@@ -258,3 +266,4 @@ const GetInTouch: React.FC = () => {
 };
 
 export default GetInTouch;
+

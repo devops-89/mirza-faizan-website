@@ -1,9 +1,12 @@
-import { COLORS } from "@/utils/enum";
+"use client";
+
 import { roboto, bella } from "@/utils/fonts";
 import { ABOUT_INFO } from "@/utils/generic";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import Heading from "../../widgets/Heading";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
+import ScrollWordReveal from "@/components/animation/ScrollWordReveal";
 
 const About = () => {
   return (
@@ -16,83 +19,91 @@ const About = () => {
     >
       <Container maxWidth="lg">
         <Grid container spacing={{ xs: 4, md: 5 }}>
-
           {/* Section Heading */}
           <Grid size={12}>
-            <Heading label={"About the \n Visionary Inventor"} width="360px" />
+            <ScrollReveal direction="up" delay={0.1}>
+              <Heading label={"About the \n Visionary Inventor"} width="360px" />
+            </ScrollReveal>
           </Grid>
 
           {/* Name + Designation inline */}
           <Grid size={12}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", sm: "row" },
-                alignItems: { xs: "flex-start", sm: "center" },
-                gap: { xs: 0.5, sm: 2.5 },
-              }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: bella.style.fontFamily,
-                  fontSize: { xs: "36px", md: "44px" },
-                  color: "#1F1F1F",
-                  lineHeight: 1,
-                }}
-              >
-                {ABOUT_INFO.name}
-              </Typography>
+            <ScrollReveal direction="up" delay={0.2}>
               <Box
                 sx={{
-                  display: { xs: "none", sm: "block" },
-                  width: "1px",
-                  height: "24px",
-                  backgroundColor: "#D4BFA8",
-                  flexShrink: 0,
-                }}
-              />
-              <Typography
-                sx={{
-                  fontFamily: roboto.style.fontFamily,
-                  fontSize: { xs: "12px", md: "12.5px" },
-                  fontWeight: 500,
-                  color: "#846A4E",
-                  letterSpacing: "0.4px",
-                  textTransform: "uppercase",
-                  lineHeight: 1.5,
+                  display: "flex",
+                  flexDirection: { xs: "column", sm: "row" },
+                  alignItems: { xs: "flex-start", sm: "center" },
+                  gap: { xs: 0.5, sm: 2.5 },
                 }}
               >
-                {ABOUT_INFO.designation}
-              </Typography>
-            </Box>
+                <Typography
+                  sx={{
+                    fontFamily: bella.style.fontFamily,
+                    fontSize: { xs: "36px", md: "46px" },
+                    color: "#1F1F1F",
+                    lineHeight: 1,
+                  }}
+                >
+                  {ABOUT_INFO.name}
+                </Typography>
+                <Box
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                    width: "1px",
+                    height: "26px",
+                    backgroundColor: "#D4BFA8",
+                    flexShrink: 0,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    fontFamily: roboto.style.fontFamily,
+                    fontSize: { xs: "12.5px", md: "13.5px" },
+                    fontWeight: 600,
+                    color: "#846A4E",
+                    letterSpacing: "0.5px",
+                    textTransform: "uppercase",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {ABOUT_INFO.designation}
+                </Typography>
+              </Box>
+            </ScrollReveal>
           </Grid>
 
           {/* Divider */}
           <Grid size={12}>
-            <Box sx={{ height: "1px", backgroundColor: "rgba(132,106,78,0.18)" }} />
+            <ScrollReveal direction="scale" delay={0.25}>
+              <Box sx={{ height: "1px", backgroundColor: "rgba(132,106,78,0.18)" }} />
+            </ScrollReveal>
           </Grid>
 
           {/* Paragraphs */}
           <Grid size={12}>
-            <Stack spacing={2.5}>
+            <Stack spacing={3.5}>
               {ABOUT_INFO.paragraphs.map((paragraph, index) => (
-                <Typography
+                <ScrollWordReveal
                   key={index}
+                  text={paragraph}
                   sx={{
-                    color: index === 0 ? "#1A1A1A" : COLORS.TEXT_COLOR,
-                    fontSize: { xs: "14px", md: index === 0 ? "15.5px" : "15px" },
-                    textAlign: "justify",
+                    color: index === 0 ? "#111111" : "#282828",
+                    fontSize: {
+                      xs: "16px",
+                      sm: "17.5px",
+                      md: index === 0 ? "19.5px" : "18px",
+                    },
+                    textAlign: "left",
                     fontFamily: roboto.style.fontFamily,
                     fontWeight: index === 0 ? 500 : 400,
-                    lineHeight: { xs: "1.72", md: "1.82" },
+                    lineHeight: { xs: 1.75, md: 1.82 },
+                    letterSpacing: "-0.1px",
                   }}
-                >
-                  {paragraph}
-                </Typography>
+                />
               ))}
             </Stack>
           </Grid>
-
         </Grid>
       </Container>
     </Box>

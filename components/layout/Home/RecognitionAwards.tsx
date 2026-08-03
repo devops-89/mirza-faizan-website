@@ -17,6 +17,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/animation/ScrollReveal";
 
 const RecognitionAwards: React.FC = () => {
   return (
@@ -34,7 +35,9 @@ const RecognitionAwards: React.FC = () => {
         >
           {/* Left: Title & Brown Line */}
           <Grid size={{ xs: 12, md: 5 }}>
-            <Heading label={RECOGNITION_HEADING} width="300px" />
+            <ScrollReveal direction="right" delay={0.1}>
+              <Heading label={RECOGNITION_HEADING} width="300px" />
+            </ScrollReveal>
           </Grid>
 
           {/* Right: Quote & Cursive Signature */}
@@ -47,145 +50,153 @@ const RecognitionAwards: React.FC = () => {
               pt: { xs: 0, md: 1 },
             }}
           >
-            <Box sx={{ width: "100%", textAlign: { xs: "left", md: "right" } }}>
-              <Typography
-                sx={{
-                  fontFamily: roboto.style.fontFamily,
-                  fontStyle: "italic",
-                  fontSize: { xs: "14px", md: "16px" },
-                  lineHeight: "1.6",
-                  color: "#2B2B2B",
-                  fontWeight: 400,
-                  mb: 1,
-                  letterSpacing: "-0.2px",
-                  whiteSpace: { md: "nowrap" },
-                }}
-              >
-                {RECOGNITION_QUOTE}
-              </Typography>
-              <Typography
-                sx={{
-                  fontFamily: bella.style.fontFamily,
-                  fontSize: { xs: "34px", md: "42px" },
-                  color: "#1F1F1F",
-                  lineHeight: 1.1,
-                  pr: { xs: 0, md: 0.5 },
-                }}
-              >
-                {RECOGNITION_AUTHOR}
-              </Typography>
-            </Box>
+            <ScrollReveal direction="left" delay={0.15}>
+              <Box sx={{ width: "100%", textAlign: { xs: "left", md: "right" } }}>
+                <Typography
+                  sx={{
+                    fontFamily: roboto.style.fontFamily,
+                    fontStyle: "italic",
+                    fontSize: { xs: "14px", md: "16px" },
+                    lineHeight: "1.6",
+                    color: "#2B2B2B",
+                    fontWeight: 400,
+                    mb: 1,
+                    letterSpacing: "-0.2px",
+                    whiteSpace: { md: "nowrap" },
+                  }}
+                >
+                  {RECOGNITION_QUOTE}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: bella.style.fontFamily,
+                    fontSize: { xs: "34px", md: "42px" },
+                    color: "#1F1F1F",
+                    lineHeight: 1.1,
+                    pr: { xs: 0, md: 0.5 },
+                  }}
+                >
+                  {RECOGNITION_AUTHOR}
+                </Typography>
+              </Box>
+            </ScrollReveal>
           </Grid>
         </Grid>
 
         {/* Row 2: Bullet Points List below Header */}
-        <Box
-          component="ul"
-          sx={{ mb: { xs: 4, md: 5 }, mt: { xs: 2, md: 3 }, pl: 2, m: 0 }}
-        >
-          {RECOGNITION_BULLETS.map((bullet, idx) => (
-            <Typography
-              component="li"
-              key={idx}
-              sx={{
-                fontFamily: roboto.style.fontFamily,
-                fontSize: { xs: "14px", md: "15px" },
-                lineHeight: "1.7",
-                color: "#2C2C2C",
-                fontWeight: 400,
-                mb: 1.2,
-              }}
-            >
-              {bullet}
-            </Typography>
-          ))}
-        </Box>
-
-        {/* Brand Logos Swiper Carousel */}
-        <Box
-          sx={{
-            pt: { xs: 1, md: 2 },
-            "& .swiper-wrapper": {
-              transitionTimingFunction: "linear !important",
-            },
-          }}
-        >
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-            }}
-            loop={true}
-            speed={4000}
-            spaceBetween={60}
-            slidesPerView={5}
-            breakpoints={{
-              0: {
-                slidesPerView: 2.2,
-                spaceBetween: 20,
-              },
-              480: {
-                slidesPerView: 2.8,
-                spaceBetween: 30,
-              },
-              600: {
-                slidesPerView: 3.5,
-                spaceBetween: 40,
-              },
-              900: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              },
-              1200: {
-                slidesPerView: 5,
-                spaceBetween: 60,
-              },
-            }}
-            style={{ width: "100%", padding: "10px 0" }}
+        <StaggerContainer staggerDelay={0.1} delay={0.2}>
+          <Box
+            component="ul"
+            sx={{ mb: { xs: 4, md: 5 }, mt: { xs: 2, md: 3 }, pl: 2, m: 0 }}
           >
-            {[
-              ...RECOGNITION_LOGOS,
-              ...RECOGNITION_LOGOS,
-              ...RECOGNITION_LOGOS,
-            ].map((logo, index) => (
-              <SwiperSlide key={`${logo.id}-${index}`}>
-                <Box
+            {RECOGNITION_BULLETS.map((bullet, idx) => (
+              <StaggerItem key={idx} direction="up" distance={15}>
+                <Typography
+                  component="li"
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: { xs: 65, md: 90 },
-                    width: "100%",
-                    px: 1,
+                    fontFamily: roboto.style.fontFamily,
+                    fontSize: { xs: "14px", md: "15px" },
+                    lineHeight: "1.7",
+                    color: "#2C2C2C",
+                    fontWeight: 400,
+                    mb: 1.2,
                   }}
                 >
-                  <Image
-                    src={logo.image}
-                    alt={logo.name}
-                    width={220}
-                    height={85}
-                    style={{
-                      objectFit: "contain",
-                      maxHeight:
-                        logo.id === "nasa"
-                          ? "62px"
-                          : logo.id.includes("battelle")
-                            ? "32px"
-                            : "44px",
-                      width: "auto",
-                      maxWidth: "100%",
-                    }}
-                  />
-                </Box>
-              </SwiperSlide>
+                  {bullet}
+                </Typography>
+              </StaggerItem>
             ))}
-          </Swiper>
-        </Box>
+          </Box>
+        </StaggerContainer>
+
+        {/* Brand Logos Swiper Carousel */}
+        <ScrollReveal direction="up" delay={0.3}>
+          <Box
+            sx={{
+              pt: { xs: 1, md: 2 },
+              "& .swiper-wrapper": {
+                transitionTimingFunction: "linear !important",
+              },
+            }}
+          >
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+              }}
+              loop={true}
+              speed={4000}
+              spaceBetween={60}
+              slidesPerView={5}
+              breakpoints={{
+                0: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 20,
+                },
+                480: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 30,
+                },
+                600: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 40,
+                },
+                900: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
+                1200: {
+                  slidesPerView: 5,
+                  spaceBetween: 60,
+                },
+              }}
+              style={{ width: "100%", padding: "10px 0" }}
+            >
+              {[
+                ...RECOGNITION_LOGOS,
+                ...RECOGNITION_LOGOS,
+                ...RECOGNITION_LOGOS,
+              ].map((logo, index) => (
+                <SwiperSlide key={`${logo.id}-${index}`}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      height: { xs: 65, md: 90 },
+                      width: "100%",
+                      px: 1,
+                    }}
+                  >
+                    <Image
+                      src={logo.image}
+                      alt={logo.name}
+                      width={220}
+                      height={85}
+                      style={{
+                        objectFit: "contain",
+                        maxHeight:
+                          logo.id === "nasa"
+                            ? "62px"
+                            : logo.id.includes("battelle")
+                              ? "32px"
+                              : "44px",
+                        width: "auto",
+                        maxWidth: "100%",
+                      }}
+                    />
+                  </Box>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Box>
+        </ScrollReveal>
       </Container>
     </Box>
   );
 };
 
 export default RecognitionAwards;
+

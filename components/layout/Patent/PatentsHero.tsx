@@ -5,6 +5,10 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import { outfit, roboto, signika, bella } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import { PATENT_HERO_INFO } from "@/utils/generic";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/animation/ScrollReveal";
+import AnimatedCounter from "@/components/animation/AnimatedCounter";
+
+import BorderBeam from "@/components/animation/BorderBeam";
 
 const PatentsHero = () => {
   return (
@@ -23,100 +27,118 @@ const PatentsHero = () => {
         }}
       >
         <Container maxWidth="lg">
-          <Typography
-            sx={{
-              fontFamily: bella.style.fontFamily,
-              fontSize: { xs: 65, sm: 110, md: 160, lg: 180 },
-              color: COLORS.WHITE,
-              lineHeight: 1.05,
-              mb: 1,
-            }}
-          >
-            {PATENT_HERO_INFO.title}
-          </Typography>
+          <ScrollReveal direction="up" delay={0.1}>
+            <Typography
+              sx={{
+                fontFamily: bella.style.fontFamily,
+                fontSize: { xs: 65, sm: 110, md: 160, lg: 180 },
+                color: COLORS.WHITE,
+                lineHeight: 1.05,
+                mb: 1,
+              }}
+            >
+              {PATENT_HERO_INFO.title}
+            </Typography>
+          </ScrollReveal>
 
-          <Typography
-            sx={{
-              fontFamily: signika.style.fontFamily,
-              fontSize: { xs: 20, sm: 32, md: 46 },
-              fontWeight: 700,
-              color: "#846A4E",
-              mb: 2,
-            }}
-          >
-            {PATENT_HERO_INFO.subtitle}
-          </Typography>
+          <ScrollReveal direction="up" delay={0.2}>
+            <Typography
+              sx={{
+                fontFamily: signika.style.fontFamily,
+                fontSize: { xs: 20, sm: 32, md: 46 },
+                fontWeight: 700,
+                color: "#846A4E",
+                mb: 2,
+              }}
+            >
+              {PATENT_HERO_INFO.subtitle}
+            </Typography>
+          </ScrollReveal>
 
-          <Typography
-            sx={{
-              fontFamily: roboto.style.fontFamily,
-              fontSize: { xs: "13.5px", sm: "15px", md: "16px" },
-              color: "rgba(255, 255, 255, 0.85)",
-              maxWidth: 750,
-              mx: "auto",
-              lineHeight: 1.7,
-              px: { xs: 1.5, sm: 2 },
-            }}
-          >
-            {PATENT_HERO_INFO.description}
-          </Typography>
+          <ScrollReveal direction="up" delay={0.3}>
+            <Typography
+              sx={{
+                fontFamily: roboto.style.fontFamily,
+                fontSize: { xs: "13.5px", sm: "15px", md: "16px" },
+                color: "rgba(255, 255, 255, 0.85)",
+                maxWidth: 750,
+                mx: "auto",
+                lineHeight: 1.7,
+                px: { xs: 1.5, sm: 2 },
+              }}
+            >
+              {PATENT_HERO_INFO.description}
+            </Typography>
+          </ScrollReveal>
 
           {/* Stats Counters */}
-          <Grid
-            container
-            spacing={{ xs: 1.5, sm: 2.5, md: 3 }}
-            sx={{
-              mt: { xs: 3, sm: 4.5, md: 5 },
-              justifyContent: "center",
-              alignItems: "stretch",
-              maxWidth: { md: "520px" },
-              mx: "auto",
-            }}
-          >
-            {PATENT_HERO_INFO.stats.map((stat, i) => (
-              <Grid size={{ xs: 6, sm: 5, md: 5 }} key={i}>
-                <Box
-                  sx={{
-                    p: { xs: 1.2, sm: 1.8, md: 2 },
-                    backgroundColor: "rgba(255, 255, 255, 0.06)",
-                    borderRadius: { xs: "14px", sm: "16px", md: "18px" },
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: outfit.style.fontFamily,
-                      fontSize: { xs: "22px", sm: "28px", md: "34px" },
-                      fontWeight: 700,
-                      color: "#FFFFFF",
-                    }}
-                  >
-                    {stat.num}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: outfit.style.fontFamily,
-                      fontSize: { xs: "10px", sm: "11.5px", md: "13px" },
-                      color: "rgba(255, 255, 255, 0.75)",
-                      lineHeight: 1.25,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      textAlign: "center",
-                      minHeight: { xs: "24px", sm: "28px", md: "32px" },
-                    }}
-                  >
-                    {stat.label}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
+          <StaggerContainer staggerDelay={0.15} delay={0.4}>
+            <Grid
+              container
+              spacing={{ xs: 1.5, sm: 2.5, md: 3 }}
+              sx={{
+                mt: { xs: 3, sm: 4.5, md: 5 },
+                justifyContent: "center",
+                alignItems: "stretch",
+                maxWidth: { md: "520px" },
+                mx: "auto",
+              }}
+            >
+              {PATENT_HERO_INFO.stats.map((stat, i) => (
+                <Grid size={{ xs: 6, sm: 5, md: 5 }} key={i}>
+                  <StaggerItem direction="up" distance={20} style={{ height: "100%" }}>
+                    <Box
+                      sx={{
+                        position: "relative",
+                        p: { xs: 1.2, sm: 1.8, md: 2 },
+                        backgroundColor: "rgba(255, 255, 255, 0.06)",
+                        borderRadius: { xs: "14px", sm: "16px", md: "18px" },
+                        border: "1px solid rgba(255, 255, 255, 0.12)",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          borderColor: "rgba(255, 255, 255, 0.3)",
+                          backgroundColor: "rgba(255, 255, 255, 0.1)",
+                          transform: "translateY(-4px)",
+                        },
+                      }}
+                    >
+                      <BorderBeam duration={5} delay={i * 1.5} colorFrom="#E5D1B8" colorTo="#846A4E" borderWidth={1.8} />
+                      <Typography
+                        sx={{
+                          fontFamily: outfit.style.fontFamily,
+                          fontSize: { xs: "22px", sm: "28px", md: "34px" },
+                          fontWeight: 700,
+                          color: "#FFFFFF",
+                        }}
+                      >
+                        <AnimatedCounter value={stat.num} duration={2} />
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontFamily: outfit.style.fontFamily,
+                          fontSize: { xs: "10px", sm: "11.5px", md: "13px" },
+                          color: "rgba(255, 255, 255, 0.75)",
+                          lineHeight: 1.25,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          minHeight: { xs: "24px", sm: "28px", md: "32px" },
+                        }}
+                      >
+                        {stat.label}
+                      </Typography>
+                    </Box>
+                  </StaggerItem>
+                </Grid>
+              ))}
+            </Grid>
+          </StaggerContainer>
         </Container>
       </Box>
     </Container>
@@ -124,3 +146,4 @@ const PatentsHero = () => {
 };
 
 export default PatentsHero;
+

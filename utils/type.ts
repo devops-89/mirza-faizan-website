@@ -1,7 +1,11 @@
+import { StaticImageData } from "next/image";
+
 export interface ProjectItem {
   id: string;
+  patentId?: string;
+  patentNo?: string;
   title: string;
-  image: string;
+  image?: StaticImageData;
   height?: { xs: number; sm?: number; md: number };
   category?: string;
   description?: string;
