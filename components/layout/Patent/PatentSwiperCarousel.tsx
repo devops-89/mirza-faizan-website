@@ -399,25 +399,28 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                       }}
                     >
                       {/* Image or Card Header */}
-                      <Box
-                        sx={{
-                          position: "relative",
-                          width: "100%",
-                          height: "175px",
-                          backgroundColor: "#161616",
-                          flexShrink: 0,
-                          overflow: "hidden",
-                        }}
-                      >
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt={item.title}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                            style={{ objectFit: "cover" }}
-                          />
-                        ) : (
+                      {(() => {
+                        const cardImage = item.imageUrl || item.images?.[0]?.url;
+                        return (
+                          <Box
+                            sx={{
+                              position: "relative",
+                              width: "100%",
+                              height: "175px",
+                              backgroundColor: "#161616",
+                              flexShrink: 0,
+                              overflow: "hidden",
+                            }}
+                          >
+                            {cardImage ? (
+                              <Image
+                                src={cardImage}
+                                alt={item.title}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 33vw"
+                                style={{ objectFit: "cover" }}
+                              />
+                            ) : (
                           <Box
                             sx={{
                               width: "100%",
@@ -469,6 +472,8 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                           </Typography>
                         </Box>
                       </Box>
+                    );
+                  })()}
 
                       {/* Card Body */}
                       <Box
