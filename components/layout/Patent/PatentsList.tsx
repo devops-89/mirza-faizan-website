@@ -85,62 +85,19 @@ const PatentGridSection = ({
                 >
                   <Box
                     sx={{
-                      p: { xs: 3.2, md: 3.8 },
-                      backgroundColor: "#FFFFFF",
-                      borderRadius: "24px",
-                      border: "1px solid #EBE6DF",
+                      p: { xs: 2, md: 2.5 },
+                      backgroundColor: "transparent",
+                      borderRadius: "0px",
+                      border: "none",
+                      borderBottom: "1px solid rgba(0,0,0,0.06)",
                       height: "100%",
                       flex: 1,
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
                       position: "relative",
-                      overflow: "hidden",
-                      boxShadow: "0 8px 24px rgba(0, 0, 0, 0.03)",
-                      transition: "all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
-                      // Animated Top Gold Accent Bar on Hover
-                      "&::before": {
-                        content: '""',
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        height: "4px",
-                        background:
-                          "linear-gradient(90deg, #846A4E 0%, #D4BFA8 50%, #846A4E 100%)",
-                        opacity: 0,
-                        transition: "opacity 0.4s ease",
-                      },
-                      // Diagonal Light Sheen Beam on Hover
-                      "&::after": {
-                        content: '""',
-                        position: "absolute",
-                        top: "-50%",
-                        left: "-50%",
-                        width: "200%",
-                        height: "200%",
-                        background:
-                          "linear-gradient(60deg, transparent 40%, rgba(132, 106, 78, 0.05) 50%, transparent 60%)",
-                        opacity: 0,
-                        transition: "opacity 0.4s ease, transform 0.6s ease",
-                        pointerEvents: "none",
-                      },
+                      transition: "all 0.4s ease",
                       "&:hover": {
-                        transform: "translateY(-8px) scale(1.015)",
-                        boxShadow: "0 22px 48px rgba(132, 106, 78, 0.16)",
-                        borderColor: "#846A4E",
-                        "&::before": {
-                          opacity: 1,
-                        },
-                        "&::after": {
-                          opacity: 1,
-                          transform: "translate(20%, 20%)",
-                        },
-                        "& .patent-badge": {
-                          backgroundColor: "#846A4E",
-                          color: "#FFFFFF",
-                          borderColor: "#846A4E",
-                        },
                         "& .patent-title": {
                           color: "#846A4E",
                         },
@@ -148,90 +105,55 @@ const PatentGridSection = ({
                           transform: "translateX(6px)",
                           color: "#6F573E",
                         },
+                        "& .patent-badge": {
+                          color: "#846A4E",
+                        },
                       },
                     }}
                   >
                     <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
-                      {/* Header Row: Patent ID Badge, Country Pill & Status Pill */}
                       <Stack
                         direction="row"
                         spacing={1}
                         sx={{
                           alignItems: "center",
-                          justifyContent: "space-between",
                           mb: 2.5,
                           flexWrap: "wrap",
                           gap: 1,
                         }}
                       >
+                        <Box
+                          className="patent-badge"
+                          sx={{
+                            fontFamily: outfit.style.fontFamily,
+                            fontSize: "11px",
+                            fontWeight: 600,
+                            color: "#888",
+                            transition: "color 0.3s ease",
+                          }}
+                        >
+                          {item.patentNo}
+                        </Box>
                         <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
                           <Box
-                            className="patent-badge"
                             sx={{
-                              backgroundColor: "rgba(132, 106, 78, 0.08)",
-                              px: 1.5,
-                              py: 0.6,
-                              borderRadius: "8px",
-                              border: "1px solid rgba(132, 106, 78, 0.18)",
-                              transition: "all 0.3s ease",
+                              fontFamily: outfit.style.fontFamily,
+                              fontSize: "10px",
+                              fontWeight: 700,
+                              color: "#846A4E",
+                              letterSpacing: "1px",
+                              textTransform: "uppercase",
                             }}
                           >
-                            <Typography
-                              sx={{
-                                fontFamily: outfit.style.fontFamily,
-                                fontSize: { xs: "11.5px", md: "12.5px" },
-                                fontWeight: 700,
-                                letterSpacing: "0.4px",
-                                color: "inherit",
-                              }}
-                            >
-                              {item.patentNo}
-                            </Typography>
-                          </Box>
-
-                          <Box
-                            sx={{
-                              backgroundColor: "#FAF8F5",
-                              px: 1.2,
-                              py: 0.5,
-                              borderRadius: "6px",
-                              border: "1px solid #EBE4DA",
-                            }}
-                          >
-                            <Typography
-                              sx={{
-                                fontFamily: outfit.style.fontFamily,
-                                fontSize: "10.5px",
-                                fontWeight: 700,
-                                color: "#666666",
-                              }}
-                            >
-                              {item.region === "US"
-                                ? "🇺🇸 US"
-                                : item.region === "South Africa"
-                                ? "🇿🇦 SA"
-                                : "INTL"}
-                            </Typography>
+                            {item.region === "US"
+                              ? "🇺🇸 US GRANTED"
+                              : item.region === "South Africa"
+                              ? "🇿🇦 SA GRANTED"
+                              : item.region === "International"
+                              ? "🌍 PENDING"
+                              : "PENDING"}
                           </Box>
                         </Stack>
-
-                        <Chip
-                          label={item.status}
-                          size="small"
-                          sx={{
-                            backgroundColor:
-                              item.status === "Granted" ? "#846A4E" : "#1A1A1A",
-                            color: "#FFFFFF",
-                            fontWeight: 700,
-                            fontSize: "10px",
-                            letterSpacing: "0.6px",
-                            fontFamily: outfit.style.fontFamily,
-                            height: "22px",
-                            borderRadius: "6px",
-                            textTransform: "uppercase",
-                            px: 0.5,
-                          }}
-                        />
                       </Stack>
 
                       {/* Patent Title */}

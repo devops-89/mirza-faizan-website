@@ -11,12 +11,12 @@ import {
   SocialLinkItem,
 } from "./type";
 
-import cleanGarbage from "@/images/invention/clean_garbage.png";
-import aircraft_tray from "@/images/invention/automated_aircraft.png";
-import relay from "@/images/invention/relay_based.png";
-import cleaning_Spilled_oil from "@/images/invention/cleaning_spilledoil.png";
-import wind_powered from "@/images/invention/wind_powered.png";
-import drug_abuse from "@/images/invention/drug_abuse.png";
+import cleanGarbage from "@/images/patents/clean_garbage.png";
+import aircraft_tray from "@/images/patents/aircraft_tray.png";
+import relay from "@/images/patents/relay-based.png";
+import cleaning_Spilled_oil from "@/images/patents/oil_recovery.png";
+import wind_powered from "@/images/patents/windmill.png";
+import drug_abuse from "@/images/patents/drug_abuse.png";
 
 export const COLUMN_1_PROJECTS: ProjectItem[] = [
   {
@@ -160,7 +160,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
 
 export const WORLD_SAYS_HEADING = "What the World Says";
 export const WORLD_SAYS_DESCRIPTION =
-  "World has praised Mr.Mirza Faizan for his exceptional creativity, clear vision, and ability to transform ideas into impactful, user-focused digital experiences.";
+  "A legacy built on innovation. A reputation earned through impact. Discover what clients, collaborators, and industry leaders say about working with Mirza Faizan.";
 
 export const TESTIMONIALS: TestimonialItem[] = [
   {
@@ -1829,27 +1829,161 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
   US20220390615A1: {
     id: "US20220390615A1",
     patentNo: "US20220390615A1",
-    grantPublicationNo: "US11532236B2",
+    grantPublicationNo: "US12217616B2",
     title: "Aircraft tracking system and method",
     region: "US",
     status: "Granted",
     abstract:
-      "A system and method for tracking aircraft in real-time using advanced sensor fusion and ground-based processing. The system improves situational awareness on airport runways and taxiways, forming part of the Ground Reality Information Processing System (GRIPS) framework developed to prevent runway incursions and foreign object debris detection.",
-    inventors: ["Mirza Faizan"],
-    filingDate: "Jun 10, 2021",
+      "A Receiver and Transmitter of Enroute Aircraft Data (RATEAD) system and method for tracking enroute and missing aircraft in real time. The system comprises a network of autonomous floating ocean buoys and high-altitude atmospheric balloons equipped with solar-powered battery systems, gyroscopically stabilized motorized dish antennas, and wireless transceivers. As an aircraft flies along its flight path, nearby RATEAD nodes maintain continuous real-time wireless links with the aircraft, mirroring black box flight recorder data to cloud and ground servers. If an aircraft unexpectedly departs its route or fails to connect with the next node within an expected time window, the system automatically detects node connection loss and triggers immediate emergency missing-aircraft tracking alerts.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Danish Khan",
+      "Sidra Ambreen",
+      "Mustafa SYED",
+      "Yaseen Syed",
+      "Mehreen Syed",
+      "Vineet ANSHUMAN",
+      "Aiman Rahman",
+      "Summan Rahman",
+      "Saadia Asaf",
+      "Mansoor Hasan Khan",
+    ],
+    filingDate: "Jun 4, 2021",
     publicationDate: "Dec 8, 2022",
-    applicationNumber: "US17/344,615",
+    priorityDate: "Jun 4, 2021",
+    applicationNumber: "US17/339,280",
     keywords: [
-      "aircraft tracking",
-      "runway",
-      "GRIPS",
-      "sensor fusion",
-      "aviation safety",
-      "situational awareness",
+      "aircraft tracking system",
+      "RATEAD",
+      "enroute aircraft data",
+      "floating ocean buoys",
+      "atmospheric balloon network",
+      "real-time black box replication",
+      "gyroscopic dish antenna",
+      "missing aircraft emergency alert",
     ],
     pdfUrl:
-      "https://patentimages.storage.googleapis.com/00/00/00/US20220390615A1.pdf",
+      "https://patentimages.storage.googleapis.com/ed/b5/98/c1f4c03db3a649/US20220390615A1.pdf",
     googlePatentsUrl: "https://patents.google.com/patent/US20220390615A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/80/f9/9f/dd7714c15ff89a/US20220390615A1-20221208-D00000.png",
+    images: [
+      {
+        title:
+          "FIG. 1 — Aircraft Tracking System & Central Server Architecture",
+        caption:
+          "Central computing device (100) architecture showing processor (102), memory (104), storage (106), I/O devices (108), and position acquisition unit (110).",
+        url: "https://patentimages.storage.googleapis.com/80/f9/9f/dd7714c15ff89a/US20220390615A1-20221208-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Floating Ocean Buoy Network (RATEAD System)",
+        caption:
+          "RATEAD ocean buoy embodiment (200) featuring floating buoys (202), solar battery system (204), gyroscopic dish antenna (206), tracking motors (208), and solar panels (210).",
+        url: "https://patentimages.storage.googleapis.com/2d/22/b2/e63b65fcb8090c/US20220390615A1-20221208-D00002.png",
+      },
+      {
+        title:
+          "FIG. 3 — High-Altitude Atmospheric Balloon Network (RATEAD System)",
+        caption:
+          "RATEAD atmospheric balloon embodiment (300) featuring high-altitude balloons (302) equipped with climate sensors, solar power (304), motorized directional antenna (306), and weatherproofing (310).",
+        url: "https://patentimages.storage.googleapis.com/01/3b/a1/0ad7d6aeb2e49e/US20220390615A1-20221208-D00003.png",
+      },
+      {
+        title: "FIG. 4 — Enroute Tracking & Missing Aircraft Alert Flowchart",
+        caption:
+          "Process flowchart (400) illustrating real-time black box data replication (404), node handoff (406), node loss timeout detection (408), and automated missing aircraft alert generation (410).",
+        url: "https://patentimages.storage.googleapis.com/52/2e/3c/b58c4b01255fde/US20220390615A1-20221208-D00004.png",
+      },
+    ],
+    summaryHighlights: [
+      "RATEAD Network Mesh Infrastructure: Deployable across oceanic corridors (floating buoys 202) and remote atmospheric sectors (high-altitude balloons 302) to maintain continuous coverage where ground radar cannot reach.",
+      "Real-Time Black Box Telemetry Streaming: Establishes high-bandwidth wireless links with passing in-range aircraft, replicating black box data and flight telemetry to cloud servers in real time.",
+      "Gyroscopic Tracking Antenna: Dish antenna (206/306) mounted on a motorized gyroscopic platform that automatically aligns and tracks passing aircraft dynamically during motion.",
+      "Automated Missing Aircraft Early Alert: Monitors expected node arrival timestamps; if an aircraft fails to check into the next sequential node, the system immediately flags the exact last known location and triggers search and rescue alerts.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Central Tracking Server / Computing System" },
+      { num: "102", label: "Central Processing Unit (CPU)" },
+      { num: "104", label: "System Memory / Telemetry Storage" },
+      { num: "106", label: "Mass Storage Device" },
+      { num: "108", label: "I/O Communication Devices" },
+      { num: "110", label: "Data & Aircraft Position Acquisition Unit" },
+      { num: "200", label: "RATEAD Ocean Buoy System Embodiment" },
+      { num: "202", label: "Ocean Floating Buoys" },
+      { num: "204", label: "Solar-Powered Battery Bank" },
+      { num: "206", label: "Gyroscopic Motorized Dish Antenna" },
+      { num: "208", label: "Antenna Steering Motors" },
+      { num: "210", label: "Solar Panel & Weatherproof Housing" },
+      { num: "300", label: "RATEAD Atmospheric Balloon System Embodiment" },
+      { num: "302", label: "High-Altitude Atmospheric Balloons" },
+      { num: "304", label: "Balloon Solar Power System" },
+      { num: "306", label: "Directional Receiver Dish Antenna" },
+      { num: "310", label: "Atmospheric Weatherproofing Unit" },
+      { num: "400", label: "Missing Aircraft Tracking Method Flowchart" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A receiver and transmitter of enroute aircraft data (RATEAD) system, said system comprising: a plurality of network enabled devices at a plurality of locations; and said plurality of network enabled devices are communicatively coupled to an aircraft passing within a pre-defined range, wherein a data of said in range aircraft is communicatively transmitted in real-time to a network device of said plurality of network enabled devices with which said aircraft is connected.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The RATEAD system as claimed in claim 1, wherein the plurality of network enabled devices comprise floating ocean buoys or high-altitude atmospheric balloons equipped with solar panels and battery systems.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The RATEAD system as claimed in claim 1, wherein each network device includes a gyroscopically mounted motorized dish antenna configured to dynamically align with the direction of the passing aircraft.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Jun 04, 2021",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Dec 08, 2022",
+        title: "Publication of US20220390615A1",
+        type: "Publication",
+      },
+      {
+        date: "Feb 04, 2025",
+        title: "Patent Granted (US12217616B2)",
+        type: "Grant",
+      },
+      {
+        date: "Jun 04, 2041",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Transoceanic and remote flight tracking remains a major challenge in civil aviation. When aircraft fly over vast ocean expanses beyond ground radar reach, flight telemetry data relies on intermittent satellite pings, making early detection of in-flight emergencies or lost aircraft difficult.",
+          "The present invention introduces the Receiver and Transmitter of Enroute Aircraft Data (RATEAD) system, which establishes an autonomous mesh network of ocean buoys and atmospheric balloons to continuously capture and mirror flight data in real time.",
+        ],
+      },
+      {
+        heading: "RATEAD OCEAN BUOY & ATMOSPHERIC BALLOON NODES",
+        paragraphs: [
+          "The RATEAD system utilizes solar-powered floating ocean buoys (202) and high-altitude balloons (302) stationed along flight corridors.",
+          "Each node features a gyroscopically stabilized motorized dish antenna (206/306) that locks onto passing aircraft, maintaining continuous gigabit-speed data transfer even in rough seas or turbulent winds.",
+        ],
+      },
+      {
+        heading: "REAL-TIME BLACK BOX REPLICATION & MISSING AIRCRAFT ALERTS",
+        paragraphs: [
+          "As aircraft fly from node to node, black box telemetry and cockpit voice data are replicated to secure ground and cloud servers in real time.",
+          "If an aircraft fails to establish a wireless link with the next node along its route within an expected timeframe, the central server (100) instantly detects node loss and alerts air traffic authorities with exact coordinates.",
+        ],
+      },
+    ],
   },
   US11433916B1: {
     id: "US11433916B1",
@@ -3537,6 +3671,1422 @@ export const PATENT_DETAILS: Record<string, PatentDetailData> = {
         paragraphs: [
           "Upon flagging a drowning or distress event, IoT actuating mechanism (108) triggers immediate physical rescue operations. A rack and pinion lifting assembly rapidly raises a submerged fiberglass mesh floor, lifting the struggling swimmer to the pool surface.",
           "Simultaneously, ring buoys and oxygen masks are dispatched to the user's location, while automated emergency distress calls are placed to local medical and security teams.",
+        ],
+      },
+    ],
+  },
+  US20230324680A1: {
+    id: "US20230324680A1",
+    patentNo: "US20230324680A1",
+    grantPublicationNo: "US12032156B2",
+    title:
+      "Apparatus to enable differently abled users to communicate and a method thereof",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "An apparatus and method for communication to enable differently abled users to communicate their requirements to others. The apparatus comprises an eye wearable device adapted to emit an infrared light signal from a certain area of at least one eye of the user (such as infrared LEDs embedded in contact lenses powered via electromagnetic induction coils). A monitoring device connected via a communication network receives the transmitted infrared light signal, determines the user's point of gaze (using infrared sensors or Lidar depth differential between iris and sclera), identifies the user's requirement from an icon matrix or predictive text algorithm, and generates corresponding speech or text output.",
+    inventors: [
+      "Mirza Faizan",
+      "Yashas Vamsi Pradeep",
+      "Zayn Sohel Sachak",
+      "Gautam Rao",
+      "Hamza Ali Zakir",
+      "Sanjiv Sridharan",
+      "Sheza Asif",
+      "Mishaal Qureshi",
+      "Iliyan Ali Mithani",
+      "Vihan Yerubandi",
+      "Nihal Yerubandi",
+      "Abdullah Ali Syed",
+      "Avaneesh Jakkireddy",
+      "Raj Kusumakar",
+      "Abdullah Hasani",
+    ],
+    filingDate: "Apr 8, 2022",
+    publicationDate: "Oct 12, 2023",
+    priorityDate: "Apr 8, 2022",
+    applicationNumber: "US17/716,637",
+    keywords: [
+      "assistive communication",
+      "eye wearable device",
+      "infrared LED emission",
+      "inductive wireless power",
+      "point of gaze tracking",
+      "LIDAR eye tracking",
+      "differently abled communication",
+      "predictive text matrix",
+      "synthetic audio speech output",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/be/63/dc/20eb533699b37c/US20230324680A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230324680A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/fb/94/09/6fdcc6d38367a7/US20230324680A1-20231012-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — System Architecture Overview",
+        caption:
+          "Schematic diagram of the assistive communication system (100) comprising eye wearable device (102), wireless communication network (106), and monitoring device with optical matrix display screen (104).",
+        url: "https://patentimages.storage.googleapis.com/fb/94/09/6fdcc6d38367a7/US20230324680A1-20231012-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Monitoring Device Unit & Processing Architecture",
+        caption:
+          "Functional block diagram of monitoring device (104) showing receiving module (202), point of gaze determination module (204), user requirement identification module (206), audio output module (208), processor (110), memory (108), and I/O interface (112).",
+        url: "https://patentimages.storage.googleapis.com/1f/c2/24/e2a6af02355962/US20230324680A1-20231012-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Communication Execution Method Flowchart",
+        caption:
+          "Operational flowchart illustrating method steps (302–310) for IR signal transmission, point of gaze calculation, icon cell matching, requirement identification, and synthesized audio speech output.",
+        url: "https://patentimages.storage.googleapis.com/ab/cf/9a/89e6d7cd6d02c6/US20230324680A1-20231012-D00002.png",
+      },
+    ],
+    summaryHighlights: [
+      "Wireless Inductive Eye Wearable: Integrates micro-infrared LEDs within contact lenses powered via wireless electromagnetic induction from custom eyeglasses.",
+      "Lidar & Infrared Gaze Tracking: Determines exact point of gaze under all ambient lighting conditions by measuring depth differentials between iris and sclera.",
+      "Interactive Matrix Icon Selection: Maps user gaze onto a customizable icon and cell matrix to instantly translate user intentions into clear actions.",
+      "AI Predictive Speech Generation: Integrates machine learning predictive text algorithms to assemble phrases and synthesize crystal-clear audio output for speech-impaired individuals.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Communication Apparatus" },
+      { num: "102", label: "Eye Wearable Device (Infrared Lenses / Glasses)" },
+      { num: "104", label: "Monitoring Device Unit" },
+      { num: "106", label: "Wireless Communication Network" },
+      { num: "202", label: "Infrared Signal Receiving Module" },
+      { num: "204", label: "Point of Gaze Determination Module" },
+      { num: "206", label: "User Requirement Identification Module" },
+      { num: "208", label: "Audio Output Module & Speech Synthesizer" },
+      { num: "300", label: "Communication Execution Method" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "An apparatus for communication to enable users to communicate their requirements to others, said apparatus comprising: an eye wearable device adapted to emit an infrared light signal from a certain area of at least one eye of said user; a monitoring device connected to said eye wearable device through a communication network, wherein the monitoring device includes: a receiving module configured to receive said transmitted infrared light signal from said at least one eye of said user, wherein said receiving module includes a plurality of icons arranged in a matrix, each icon of said plurality of icons corresponds to a cell of a plurality of cells in said matrix, said plurality of icons correspond to said requirements, and each cell of said plurality of cells includes at least one infra-red sensor configured to capture a point of gaze of said user; and an identification module to identify said requirement of said user corresponding to said transmitted infrared light signal.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The apparatus as claimed in claim 1, wherein said monitoring device further comprises: a determination module configured to determine the point of gaze of said user corresponding to said transmitted infrared light signal, wherein the identification module is further configured to identify said requirement of said user based on determined said point of gaze; and an output module configured to provide an audio output corresponding to an identified icon of said cell of the matrix presented on an optical screen.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The apparatus as claimed in claim 1, wherein said at least one infra-red sensor is a LIDAR sensor.",
+      },
+      {
+        num: 6,
+        isIndependent: false,
+        text: "The apparatus as claimed in claim 1, wherein said eye wearable device includes at least one of a lens and a glass.",
+      },
+      {
+        num: 7,
+        isIndependent: false,
+        text: "The apparatus as claimed in claim 6, wherein said eye wearable device is charged via an induction device.",
+      },
+      {
+        num: 8,
+        isIndependent: false,
+        text: "The apparatus as claimed in claim 1, wherein said monitoring device is further configured to operate in at least one of a predictive word generation mode and a preset phase mode by employing at least one of machine learning techniques.",
+      },
+      {
+        num: 10,
+        isIndependent: true,
+        text: "A method for communication to enable users to communicate their requirements, said method comprising: in an apparatus, transmitting, by an eye wearable device, infrared light signal from a certain area of at least one eye of said user; receiving, by a receiving module, said transmitted infrared light signal from said at least one eye of said user, wherein said receiving module includes a plurality of icons arranged in a matrix, each icon of said plurality of icons corresponds to a cell of a plurality of cells in said matrix, said plurality of icons correspond to said requirements, and each cell of said plurality of cells includes at least one infra-red sensor configured to capture a point of gaze of said user; determining, by a determination module, a point of gaze of said user corresponding to said transmitted infrared light signal; identifying, by an identification module, said requirement of said user based on determined said point of gaze; and providing, by an output module, an audio output corresponding to said identified requirement.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Apr 08, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Oct 12, 2023",
+        title: "Publication of US20230324680A1",
+        type: "Publication",
+      },
+      {
+        date: "Jul 09, 2024",
+        title: "Patent Granted (US12032156B2)",
+        type: "Grant",
+      },
+      {
+        date: "Apr 08, 2042",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Differently abled individuals facing severe motor or vocal speech impairments often struggle to convey basic needs, feelings, and emergency requests to caregivers. Existing gaze-tracking communication boards frequently rely on ambient lighting conditions or intrusive heavy camera hardware.",
+          "The present disclosure envisages a non-intrusive, highly accurate, and continuous assistive communication apparatus. It utilizes micro-emissive contact lenses or glasses paired with an induction-powered infrared emitter system to track point-of-gaze regardless of environmental lighting.",
+        ],
+      },
+      {
+        heading: "INDUCTIVE EMISSION & EYE-WEARABLE STRUCTURE",
+        paragraphs: [
+          "The apparatus features contact lenses containing micro-infrared LEDs (102) paired with induction receiving micro-coils. Custom eyeglasses worn over the lenses house primary electromagnetic coils acting as energy transmitters.",
+          "When the user wears both, inductive coupling wirelessly powers the contact lens IR micro-LEDs without requiring onboard battery mass, ensuring maximum safety and comfort while creating constant infrared emission points across eye movements.",
+        ],
+      },
+      {
+        heading:
+          "GAZE SELECTION, PREDICTIVE MACHINE LEARNING & SPEECH SYNTHESIS",
+        paragraphs: [
+          "A monitoring unit (104) featuring an infrared or LIDAR sensor matrix (202) continuously detects the infrared light signals emitted from the user's eye, accurately calculating depth differentials between the iris and sclera.",
+          "The determination module (204) matches the calculated gaze vector to a matrix of contextual icons or text fields. Powered by machine learning predictive text algorithms, the system accelerates communication by anticipating frequent phrases and outputting natural synthetic speech via an audio speaker (208).",
+        ],
+      },
+    ],
+  },
+  US20240085134A1: {
+    id: "US20240085134A1",
+    patentNo: "US20240085134A1",
+    grantPublicationNo: "US12038245B2",
+    title: "Method and system for preventing injury by friendly fire",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A smart monitoring method and system for identifying friendly forces and preventing casualties caused by friendly fire in tactical, law enforcement, and military operations. The system comprises a thermal signature emitting unit concealed within an inner portion of a user's tactical attire or bulletproof vest, configured to emit a low-temperature thermal signature matching a pre-stored metal unit insignia. An AI-based thermal camera mounted on a firearm detects target thermal signatures in real time and compares them against a database of authorized teammate insignia patterns. Upon detecting a match, a display unit or optical eyepiece renders a red-cross 'NO SHOOT' symbol and/or triggers an electronic trigger lock to prevent accidental friendly fire engagement.",
+    inventors: [
+      "Mirza Faizan",
+      "Aarish Salman Bhojani",
+      "Nadia Anisa Sethuraman",
+      "Sofia Sethuraman",
+      "Raahi S Jogani",
+      "Zaid Marwat",
+      "Mirza Rizwan",
+      "Abdullah Hasani",
+      "Hisham Ahmad",
+    ],
+    filingDate: "Sep 12, 2022",
+    publicationDate: "Mar 14, 2024",
+    priorityDate: "Sep 12, 2022",
+    applicationNumber: "US17/942,735",
+    keywords: [
+      "friendly fire prevention",
+      "tactical IFF system",
+      "thermal signature emitting unit",
+      "metal insignia recognition",
+      "AI thermal optics camera",
+      "smart gun optics",
+      "ocular HUD eyepiece",
+      "tactical combat safety",
+      "military identification",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/3c/74/6b/8f1320fc326544/US20240085134A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20240085134A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/3d/01/b2/88d7aaf3dca39d/US20240085134A1-20240314-D00000.png",
+    images: [
+      {
+        title: "FIG. 1A — Tactical Uniform Thermal Emitter Placement",
+        caption:
+          "Diagram of tactical user uniform (102) illustrating internal placement of thermal signature emitting unit (104) producing low-temperature metal insignia profile.",
+        url: "https://patentimages.storage.googleapis.com/38/fb/b8/cccd4a7596fd73/US20240085134A1-20240314-D00001.png",
+      },
+      {
+        title: "FIG. 1B — Firearm Thermal Optics & Soldier Ocular HUD",
+        caption:
+          "Firearm assembly (106) equipped with AI thermal camera optics (108) communicatively linked to soldier eyepiece display (110) presenting TARGET / NO FIRE warnings.",
+        url: "https://patentimages.storage.googleapis.com/bb/c3/ab/6ea57443dac53b/US20240085134A1-20240314-D00002.png",
+      },
+      {
+        title: "FIG. 1C — Weapon Microprocessor & Power Electronics",
+        caption:
+          "Hardware schematic of weapon system (106) showing embedded microprocessor (112) and battery power source (114) for real-time thermal image pattern matching.",
+        url: "https://patentimages.storage.googleapis.com/20/4e/1b/e9927ad8ff8c38/US20240085134A1-20240314-D00003.png",
+      },
+      {
+        title: "FIG. 2 — Smart Monitoring Device Architecture",
+        caption:
+          "Functional block diagram of smart monitoring device (202), wireless transceiver (204), processor (206), storage module (208), and display module (210).",
+        url: "https://patentimages.storage.googleapis.com/4a/86/90/fd13540c1ddb31/US20240085134A1-20240314-D00004.png",
+      },
+      {
+        title:
+          "FIG. 3 — Teammate Identification & Threat Verification Flowchart",
+        caption:
+          "Operational flowchart showing method steps (302–312) from thermal signature emission, optic scanning, insignia pattern matching, to red-cross NO SHOOT HUD alert output.",
+        url: "https://patentimages.storage.googleapis.com/e2/76/d2/85f93672f1ee35/US20240085134A1-20240314-D00005.png",
+      },
+    ],
+    summaryHighlights: [
+      "Concealed Low-Temperature Thermal Insignia: Integrates a micro-thermal emitting unit inside bulletproof vests or uniform linings that projects a distinct metal insignia temperature signature.",
+      "AI-Powered Weapon Optics: Mounts an AI thermal camera directly onto firearms to detect and decode thermal signatures in zero-visibility or night environments.",
+      "Real-Time Pattern Matching Database: Compares scanned signatures against an encrypted onboard or cloud database of friendly unit insignia patterns.",
+      "Ocular HUD & Active No-Shoot Warnings: Renders an immediate red-cross 'NO SHOOT' overlay onto the shooter's eyepiece HUD to prevent accidental engagements.",
+    ],
+    referenceNumerals: [
+      { num: "102", label: "Tactical User / Soldier / Law Enforcement" },
+      {
+        num: "104",
+        label: "Thermal Signature Emitting Unit (Inserts in Vest)",
+      },
+      { num: "106", label: "Firearm System" },
+      { num: "108", label: "AI Thermal Camera Optics Module" },
+      { num: "110", label: "Ocular Display Eyepiece (HUD)" },
+      { num: "112", label: "Onboard Weapon Microprocessor" },
+      { num: "114", label: "Battery Power Module" },
+      { num: "202", label: "Smart Monitoring Device" },
+      { num: "204", label: "Transceiver Module" },
+      { num: "206", label: "Central Processing Module" },
+      { num: "208", label: "Storage Module (Insignia Database)" },
+      { num: "210", label: "Display Module" },
+      { num: "300", label: "Teammate Identification Process" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A method for providing a smart monitoring device to determine at least one user as a team mate, the method comprising: attaching, by a processor, a thermal signature emitting unit at one inner portion of the user's clothes, wherein the thermal signature emitting unit corresponds to a temperature signature of a metal insignia; connecting, by the processor, an AI-based thermal camera module to a gun to detect data related to the thermal signature of the metal insignia; comparing, by the processor, the data received from the AI-based thermal camera module with the patterns of the metal insignia stored in the database; and displaying, by a display unit, a red-cross symbol to the user when the data is matched by the comparison, wherein the red-cross symbol indicates the user not to shoot.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The method as claimed in claim 1, wherein the step of attaching, by the processor, the thermal signature emitting unit at one inner portion of the user's clothes further comprises inserting the thermal signature of the metal insignia inside a bulletproof vest.",
+      },
+      {
+        num: 5,
+        isIndependent: true,
+        text: "A system for providing a smart monitoring device to determine at least one user as a team mate, the system comprising: a processor configured to: attach a thermal signature emitting unit at one inner portion of the user's clothes, wherein the thermal signature emitting unit corresponds to a temperature signature of a metal insignia; connect an AI-based thermal camera module to a gun to detect data related to the thermal signature of the metal insignia; compare data received from the AI-based thermal camera module with patterns of the metal insignia stored in a database; and a display unit configured to display a red-cross symbol to the user when the data is matched by the comparison, wherein the red-cross symbol indicates the user not to shoot.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Sep 12, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Mar 14, 2024",
+        title: "Publication of US20240085134A1",
+        type: "Publication",
+      },
+      {
+        date: "Jul 16, 2024",
+        title: "Patent Granted (US12038245B2)",
+        type: "Grant",
+      },
+      {
+        date: "Sep 12, 2042",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "In high-intensity military combat and urban law enforcement operations, rapid target identification is critical. Poor visibility, smoke, nighttime operations, and high stress often lead to tragic friendly fire encounters.",
+          "Conventional Identify Friend or Foe (IFF) systems rely on radio beacons or infrared strobes that can be intercepted or targeted by opponents. The present invention introduces a passive/low-energy thermal insignia signature coupled with AI optical weapon sights to reliably identify teammates without exposing their position.",
+        ],
+      },
+      {
+        heading: "THERMAL INSIGNIA EMISSION & WEAPON SIGHT INTEGRATION",
+        paragraphs: [
+          "The system utilizes a compact thermal signature emitting unit (104) concealed inside a soldier's bulletproof vest or jacket lining. The unit generates a low-temperature thermal gradient matching a pre-defined military rank or unit metal insignia.",
+          "An AI-enabled thermal optic camera (108) mounted on a firearm (106) captures thermal target images and streams data to an integrated microprocessor (112).",
+        ],
+      },
+      {
+        heading: "AI PATTERN MATCHING & HUD NO-SHOOT INTERVENTION",
+        paragraphs: [
+          "The weapon processor (112) cross-checks scanned thermal patterns against an encrypted local database (208) of authorized friendly insignias.",
+          "If a teammate thermal pattern is confirmed, the system immediately projects a distinct red-cross 'NO SHOOT' indicator onto the shooter's HUD eyepiece (110) and can electronically disable weapon trigger firing, preventing accidental fratricide.",
+        ],
+      },
+    ],
+  },
+  US20240080057A1: {
+    id: "US20240080057A1",
+    patentNo: "US20240080057A1",
+    grantPublicationNo: "US12212355B2",
+    title: "Biodegradable cover for a portable electronic device",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A modular, universal, and eco-friendly biodegradable protective cover for portable electronic devices (such as smartphones and tablets). The cover comprises a top portion attached to the back of a portable device using an array of interlocking, magnetically connected puzzle pieces made of biodegradable hemp plastic and natural elastomer matrix. Each puzzle piece features magnetic side pieces with alternating north/south pole alignments and integrated eco-elastic expandable sections (right and left sections) that stretch and adjust to fit electronic devices of varying lengths, widths, and thicknesses. Corner bumper portions coated with protective polyurethane layers secure the cover around the device corners, absorbing drop impacts while eliminating single-use plastic waste.",
+    inventors: [
+      "Mirza Faizan",
+      "Zara Majid",
+      "Aniq Shaikh",
+      "Ali Khan",
+      "Abdullah Mommandi",
+      "Basith Abdul Syed",
+      "Aayesha Syed Ibrahim",
+      "Saanchi Gabri",
+      "Pranav Kumar",
+      "Prisha Bhat",
+      "Hadia Khatri",
+      "Sufiya Khatri",
+      "Zaynab Khan",
+      "Mirza Rizwan",
+      "Mishaal Qureshi",
+      "Abdullah Hasani",
+      "Rishika Nandigam",
+    ],
+    filingDate: "Sep 5, 2022",
+    publicationDate: "Mar 7, 2024",
+    priorityDate: "Sep 5, 2022",
+    applicationNumber: "US17/902,941",
+    keywords: [
+      "biodegradable phone cover",
+      "hemp plastic case",
+      "modular puzzle piece cover",
+      "magnetic interlocking case",
+      "expandable eco-elastic border",
+      "universal smartphone protection",
+      "sustainable electronics accessory",
+      "polyurethane corner bumpers",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/fa/24/bb/337147470789d7/US20240080057A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20240080057A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/0a/15/c4/30eff29e41f7a7/US20240080057A1-20240307-D00000.png",
+    images: [
+      {
+        title: "FIG. 1A — Biodegradable Cover Corner & Device Interface",
+        caption:
+          "Perspective view showing corner attachment portions (108) securing the protective cover around portable electronic device (102).",
+        url: "https://patentimages.storage.googleapis.com/0a/15/c4/30eff29e41f7a7/US20240080057A1-20240307-D00000.png",
+      },
+      {
+        title: "FIG. 1B — Modular Puzzle Piece Grid Assembly",
+        caption:
+          "Rear elevation view of top portion (104) comprising a grid of interlocking puzzle pieces (106-1 to 106-n) mounted to device back wall.",
+        url: "https://patentimages.storage.googleapis.com/16/bb/d4/1412be61edd9f5/US20240080057A1-20240307-D00001.png",
+      },
+      {
+        title:
+          "FIG. 2 — Interlocking Magnetic Puzzle Piece & Expandable Section Detail",
+        caption:
+          "Detailed view of individual puzzle piece (106) showing hemp plastic square piece (202), alternating magnetic side pieces (204), and eco-elastic expandable portion (206) for universal size adjustment.",
+        url: "https://patentimages.storage.googleapis.com/39/3a/0c/91f9c3d2e20955/US20240080057A1-20240307-D00002.png",
+      },
+    ],
+    summaryHighlights: [
+      "100% Biodegradable Hemp Plastic Construction: Primary structural square pieces crafted from organic hemp plastic and compostable bio-polymers to eliminate e-waste.",
+      "Modular Interlocking Magnetic Grid: Puzzle pieces utilize alternating diagonal north/south magnetic poles to snap together securely into customizable grids.",
+      "Eco-Elastic Expandable Border: Integrated elastic side sections stretch dynamically, allowing a single cover to adaptively fit smartphones and tablets of all dimensions.",
+      "Polyurethane Drop Impact Dampening: Reinforced corner caps wrapped in shock-absorbing polyurethane defend screens and glass backs from drop damage.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Biodegradable Protective Cover System" },
+      { num: "102", label: "Portable Electronic Device (Smartphone / Tablet)" },
+      { num: "104", label: "Top Cover Portion (Rear Assembly)" },
+      {
+        num: "106",
+        label: "Interlocking Puzzle Piece Unit (106-1, 106-2 ... 106-n)",
+      },
+      { num: "108", label: "Corner Protective Bumper Cap" },
+      { num: "202", label: "Hemp Plastic Square Core Piece" },
+      { num: "204", label: "Magnetic Side Piece (Alternating Poles)" },
+      { num: "205A", label: "First Magnetic Pole Unit (North)" },
+      { num: "205B", label: "Second Magnetic Pole Unit (South)" },
+      { num: "206", label: "Eco-Elastic Expandable Section" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A biodegradable cover for a portable electronic device, the cover comprising: a top portion including a plurality of adjustable puzzle pieces, wherein said top portion is attached at back wall of said portable device, wherein each puzzle piece further comprises: a square piece and at least one magnetic side piece attached to said square piece, wherein each of said magnetic side piece of first puzzle piece is connected to center of square piece to define length and width of different sizes of portable devices; and an expandable portion comprising a right section and a left section, for extending said biodegradable cover along the portable device; and at least one corner portion to attach said top portion with corners of said portable device.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The biodegradable cover as claimed in claim 1, wherein said magnetic side piece of first puzzle piece is connected to center of square piece using an eco-elastic material.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The biodegradable cover as claimed in claim 1, wherein said square piece is constructed from hemp plastic.",
+      },
+      {
+        num: 6,
+        isIndependent: false,
+        text: "The biodegradable cover as claimed in claim 1, wherein each of said puzzle piece includes two positive and two negative sides of said magnetic side pieces arranged diagonally to each other.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Sep 05, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Mar 07, 2024",
+        title: "Publication of US20240080057A1",
+        type: "Publication",
+      },
+      {
+        date: "Mar 04, 2025",
+        title: "Patent Granted (US12212355B2)",
+        type: "Grant",
+      },
+      {
+        date: "Sep 05, 2042",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Over 1.5 billion smartphone cases are sold globally each year, the vast majority made of non-biodegradable synthetic petroleum plastics that persist in landfills and oceans for centuries. Furthermore, rigid phone cases only fit single specific phone models, forcing consumers to discard them whenever upgrading devices.",
+          "The present disclosure introduces a fully compostable, universal protective cover engineered from organic hemp plastic and natural elastic polymers with a modular magnetic puzzle design.",
+        ],
+      },
+      {
+        heading: "HEMP PLASTIC CORE & MAGNETIC PUZZLE ASSEMBLY",
+        paragraphs: [
+          "The cover (100) features a matrix of interlocking puzzle pieces (106) made from high-strength hemp plastic (202). Each piece contains embedded micro-magnets (204) with diagonally arranged North (205A) and South (205B) poles.",
+          "The magnetic grid snaps together effortlessly, enabling users to create custom cover shapes or expand/contract the array to fit any device surface.",
+        ],
+      },
+      {
+        heading: "ECO-ELASTIC EXPANSION & SHOCK-ABSORBING CORNERS",
+        paragraphs: [
+          "Interlocking puzzle pieces incorporate eco-elastic expandable sections (206) that stretch radially along the device back. Polyurethane-coated corner bumpers (108) latch securely over screen edges, providing high impact resistance against drops and vibrations.",
+        ],
+      },
+    ],
+  },
+  US20240094830A1: {
+    id: "US20240094830A1",
+    patentNo: "US20240094830A1",
+    grantPublicationNo: "US12210692B2",
+    title: "Method and system for providing a smart whiteboard cleaner",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "An automated smart whiteboard cleaning method and system designed for classrooms, lecture halls, and corporate meeting rooms. The system uniformly divides a whiteboard screen into a plurality of selectable horizontal rows, each associated with row switches or remote control inputs. It features motorized dual-axis clearing assemblies—a top eraser bar moving vertically and a side eraser bar moving horizontally. An integrated transceiver receives row-specific clearing commands to selectively erase specific board sections without wiping active notes. An automated inactivity timer monitors user presence; if the board remains idle for over 15 minutes or user absence is detected, the system auto-erases and shuts down display access to protect confidential meeting contents, while an internal memory module archives board content prior to erasure for future retrieval.",
+    inventors: [
+      "Mirza Faizan",
+      "Vedanth Venkatesh",
+      "Gabriel Bashir Khatri",
+      "Iffra Mehek Pathan",
+      "Saad Master",
+      "Rehan Sahir Ali",
+      "Zahra Shifa Khatri",
+      "Mirza Rizwan",
+      "Samad Syed",
+      "Darshan Kumar",
+      "Mishaal Qureshi",
+      "Abdullah Hasani",
+      "Zaynab Khan",
+    ],
+    filingDate: "Sep 20, 2022",
+    publicationDate: "Mar 21, 2024",
+    priorityDate: "Sep 20, 2022",
+    applicationNumber: "US17/948,427",
+    keywords: [
+      "smart whiteboard cleaner",
+      "automated eraser bar",
+      "dual-axis horizontal vertical erasing",
+      "row selective clearing",
+      "remote control whiteboard",
+      "confidential content auto-shutdown",
+      "content archival memory",
+      "classroom automation",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/87/f0/4b/1df1a0d68fb9d6/US20240094830A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20240094830A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/62/49/b8/2d66ef6cc32418/US20240094830A1-20240321-D00000.png",
+    images: [
+      {
+        title:
+          "FIG. 1A — Smart Whiteboard System Environment & Dual Eraser Bars",
+        caption:
+          "Overall system environment (100) showing whiteboard (102), wireless remote control (104), vertical top eraser bar (106), and horizontal side eraser bar (108).",
+        url: "https://patentimages.storage.googleapis.com/62/49/b8/2d66ef6cc32418/US20240094830A1-20240321-D00000.png",
+      },
+      {
+        title: "FIG. 1B — Whiteboard Row Segment & Selective Erase Control",
+        caption:
+          "Front elevation view of whiteboard screen (102) divided into horizontal row segments configured with individual row erase switches.",
+        url: "https://patentimages.storage.googleapis.com/a1/03/9f/262a75acb64850/US20240094830A1-20240321-D00001.png",
+      },
+      {
+        title: "FIG. 2 — Smart Whiteboard Cleaner Architecture Block Diagram",
+        caption:
+          "Functional block diagram of smart whiteboard cleaner system (200), cleaner unit (202), transceiver (204), processor (206), memory storage (208), and I/O unit (210).",
+        url: "https://patentimages.storage.googleapis.com/6a/6c/2b/a59810b5a4bf01/US20240094830A1-20240321-D00002.png",
+      },
+      {
+        title:
+          "FIG. 3 — Selective Erase & Confidential Auto-Shutdown Flowchart",
+        caption:
+          "Operational flowchart illustrating method steps (302–312) for row division, selective command reception, motorized erasure, and idle security auto-shutdown.",
+        url: "https://patentimages.storage.googleapis.com/88/ec/4c/d52070a657ccc2/US20240094830A1-20240321-D00003.png",
+      },
+    ],
+    summaryHighlights: [
+      "Dual-Axis Motorized Erasing Assembly: Features a top eraser bar moving vertically and a side eraser bar moving horizontally across the whiteboard surface.",
+      "Row-Specific Selective Clearing: Divides the whiteboard screen into horizontal rows with corresponding switch buttons or remote controls, enabling selective section erasing.",
+      "Confidentiality Auto-Shutdown: Automatically detects user absence or 15-minute inactivity, triggering motorized full erasure and screen power-down to safeguard sensitive information.",
+      "Digital Archival Memory Unit: Digitally captures and stores board drawings/text in memory prior to erasing, allowing retrieval for absent students or meeting minutes.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Classroom / Conference Room Environment" },
+      { num: "102", label: "Smart Whiteboard Unit" },
+      { num: "104", label: "Wireless Remote Control Device" },
+      { num: "106", label: "Vertical Top Eraser Bar Assembly" },
+      { num: "108", label: "Horizontal Side Eraser Bar Assembly" },
+      { num: "200", label: "Cleaner System Control Architecture" },
+      { num: "202", label: "Whiteboard Cleaner Motorized Unit" },
+      { num: "204", label: "Wireless Transceiver Module" },
+      { num: "206", label: "Central Processor Module" },
+      { num: "208", label: "System Storage / Memory Module" },
+      { num: "210", label: "Input / Output (I/O) Control Unit" },
+      { num: "300", label: "Selective Cleaning Method Process" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A method to erase at least a certain amount of content presented on a whiteboard with a whiteboard cleaner, the method comprising: uniformly dividing whiteboard screen into a plurality of horizontal rows, wherein each row of the plurality of horizontal rows is configured with a switch button; selecting at least one switch button, by a user, to signify a certain amount of content that the user admires to erase; receiving a command, by a transceiver, to automatically erase the certain amount of content selected by the user, wherein the command corresponds to an electronic signal configured with each switch button; and determining, by a processor, absence of the user for a predetermined time period, wherein based on determination, the system shuts off the whiteboard to restrict access of unknown person to view the content of the whiteboard.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The method as claimed in claim 1, wherein the whiteboard cleaner comprises a top eraser that moves vertically to erase the whiteboard and a side eraser that moves horizontally to erase the whiteboard.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The method as claimed in claim 1, further comprising storing, in a memory module, the data presented on the whiteboard prior to erasing.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Sep 20, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Mar 21, 2024",
+        title: "Publication of US20240094830A1",
+        type: "Publication",
+      },
+      {
+        date: "Jan 28, 2025",
+        title: "Patent Granted (US12210692B2)",
+        type: "Grant",
+      },
+      {
+        date: "Sep 20, 2042",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Traditional classroom and conference room whiteboards require manual marker erasing, which wastes instructional time, creates harmful marker dust residue, and often leads to messy or incomplete cleaning.",
+          "Furthermore, sensitive corporate notes or exam solutions left on whiteboards after meetings pose confidentiality risks. The present invention introduces an automated, dual-axis smart whiteboard cleaner with selective row erasing and security auto-shutdown.",
+        ],
+      },
+      {
+        heading: "DUAL-AXIS ERASING & ROW SELECTIVE CONTROL",
+        paragraphs: [
+          "The smart whiteboard (102) is outfitted with a motorized top eraser bar (106) moving vertically and a side eraser bar (108) moving horizontally.",
+          "The board screen is divided into uniform horizontal rows, each assigned a physical switch or remote command key (104). Users can selectively trigger erasure for specific rows while preserving other regions.",
+        ],
+      },
+      {
+        heading: "DIGITAL ARCHIVING & SECURITY AUTO-SHUTDOWN",
+        paragraphs: [
+          "Before executing any erase cycle, an integrated processor (206) scans and archives board text/drawings into digital memory (208) for easy distribution to meeting participants.",
+          "An automated inactivity sensor monitors classroom presence; if the board remains untouched for over 15 minutes, the system automatically sweeps the surface clean and shuts off power to prevent unauthorized viewing.",
+        ],
+      },
+    ],
+  },
+  US20240138541A1: {
+    id: "US20240138541A1",
+    patentNo: "US20240138541A1",
+    grantPublicationNo: "US12207721B2",
+    title: "Perfume dispersing device",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A multi-fragrance smart perfume dispersing device and method for selectively dispensing a plurality of perfume scents. The device comprises a plurality of individual perfume holders, each containing a distinct perfume sample connected via a pressurized manifold pipe network to an air tank and miniature compressor. The device connects directly to a user's mobile smartphone via a standard audio jack or wireless link, drawing power directly from the mobile device to operate internal micro-valves and the compressor. A custom smartphone user interface (UI) enables users to browse a digital fragrance library, select specific scent notes, and trigger precise micro-droplet air dispersion through dedicated fragrance nozzles.",
+    inventors: ["Mirza Faizan", "Kimaya Rafiq Meherali"],
+    filingDate: "Oct 31, 2022",
+    publicationDate: "May 2, 2024",
+    priorityDate: "Oct 31, 2022",
+    applicationNumber: "US17/976,894",
+    keywords: [
+      "perfume dispersing device",
+      "multi-fragrance dispenser",
+      "smartphone connected scent diffuser",
+      "audio jack powered diffuser",
+      "air compressor fragrance tank",
+      "digital fragrance selector UI",
+      "micro-nozzle perfume holder",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/41/b8/7e/3f77980e3b380d/US20240138541A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20240138541A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/ab/94/1b/399479af23a619/US20240138541A1-20240502-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Multi-Fragrance Dispersing System & Air Tank Assembly",
+        caption:
+          "Schematic view of perfume dispersing device (100) showing compressor (102), pressurized air tank (104), multiple perfume holders (106-1 to 106-n), audio jack connector (110), and dispersion nozzles.",
+        url: "https://patentimages.storage.googleapis.com/ab/94/1b/399479af23a619/US20240138541A1-20240502-D00000.png",
+      },
+      {
+        title:
+          "FIG. 2 — Mobile Device Connection & Digital Fragrance Selector UI",
+        caption:
+          "Diagram showing perfume dispersing device (100) plugged into smartphone (202) via audio jack (110), powered by phone current and controlled through a touch UI scent menu.",
+        url: "https://patentimages.storage.googleapis.com/5e/11/f6/118490914e0f49/US20240138541A1-20240502-D00002.png",
+      },
+      {
+        title:
+          "FIG. 3 — Internal Hardware & Micro-Nozzle Controller Block Diagram",
+        caption:
+          "Functional architecture showing dispersion nozzle (302), compressor (304), controller (306), processor (308), and transceiver (310).",
+        url: "https://patentimages.storage.googleapis.com/da/29/11/cc2182507f1310/US20240138541A1-20240502-D00003.png",
+      },
+      {
+        title: "FIG. 4 — Computing Environment & Smartphone Logic Architecture",
+        caption:
+          "Computing environment (400) detailing processing unit (402), control unit (404), ALU (406), memory (412), and storage (414) executing fragrance selection logic.",
+        url: "https://patentimages.storage.googleapis.com/d0/cf/9a/57c4419b452d00/US20240138541A1-20240502-D00004.png",
+      },
+    ],
+    summaryHighlights: [
+      "Multi-Fragrance Chamber Array: Houses multiple individual scent chambers (106-1 to 106-n) within a single compact device, eliminating the need to carry separate perfume bottles.",
+      "Smartphone Power & Control Interface: Connects via a standard audio jack or wireless protocol to draw operation current directly from the mobile phone and execute app instructions.",
+      "Pressurized Micro-Nozzle Dispersion: Micro-compressor (102) builds air tank pressure (104) to release precise aerosolized scent micro-droplets through dedicated micro-nozzles.",
+      "Digital Fragrance Sampling UI: Custom mobile app UI allows users to sample digital fragrance libraries, mix scents, and test manufacturer fragrance samples prior to purchase.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Multi-Fragrance Perfume Dispersing Device" },
+      { num: "102", label: "Micro-Air Compressor Module" },
+      { num: "104", label: "Pressurized Air Tank Reservoir" },
+      { num: "106", label: "Perfume Holder Chambers (106-1 to 106-n)" },
+      {
+        num: "108",
+        label: "Fragrance Dispersion Micro-Nozzles (108-1 to 108-n)",
+      },
+      { num: "110", label: "Mobile Audio Jack / Power Connector" },
+      { num: "202", label: "Host Smartphone / Mobile Device" },
+      { num: "302", label: "Dispersion Nozzle Assembly" },
+      { num: "304", label: "Compressor Drive Unit" },
+      { num: "306", label: "System Micro-Controller" },
+      { num: "308", label: "Embedded Processor" },
+      { num: "310", label: "Communication Transceiver" },
+      { num: "400", label: "Smartphone Software Computing Environment" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A method for dispersing a plurality of flavours of perfume from a perfume dispersing device, the method comprising: receiving, from a user, an input indicating a selection of a flavour from a plurality of flavours of perfume; generating, from a compressor of the perfume dispersing device, pressure in an air tank of the perfume dispersing device, wherein the air tank is filled with air; selecting, by a processor of the perfume dispersing device, a perfume holder from a plurality of perfume holders included in the perfume dispersing device based on the input from the user, wherein each perfume holder of the plurality of perfume holders contains a specific flavour of the plurality of flavours of perfume; releasing, by the air tank, air pressure to the selected perfume holder; and dispersing, by the selected perfume holder, the flavour indicated by the input from the user.",
+      },
+      {
+        num: 9,
+        isIndependent: true,
+        text: "A perfume dispersing device for dispersing a plurality of flavours of perfume, the device comprising: an input unit configured to receive an input from a user, wherein the input indicates a selection of a flavour from a plurality of flavours of perfume; a compressor configured to generate pressure in an air tank of the perfume dispersing device, wherein the air tank is filled with air; a processor configured to select a perfume holder from a plurality of perfume holders included in the perfume dispersing device based on the input from the user, wherein each perfume holder of the plurality of perfume holders contains a specific flavour of the plurality of flavours of perfume; the air tank is configured to release air pressure to the selected perfume holder; and the perfume holder is configured to disperse the flavour indicated by the input from the user.",
+      },
+      {
+        num: 10,
+        isIndependent: false,
+        text: "The device as claimed in claim 9, further comprising an audio jack configured to connect the perfume dispersing device to a mobile device.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Oct 31, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "May 02, 2024",
+        title: "Publication of US20240138541A1",
+        type: "Publication",
+      },
+      {
+        date: "Jan 28, 2025",
+        title: "Patent Granted (US12207721B2)",
+        type: "Grant",
+      },
+      {
+        date: "Jun 13, 2043",
+        title: "Adjusted Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Fragrance enthusiasts and travelers often wish to carry multiple perfume scents for different occasions throughout the day. Carrying multiple bulky glass perfume bottles is impractical, prone to leakage, and inconvenient.",
+          "Furthermore, fragrance manufacturers struggle to provide consumers with physical scent samples efficiently. The present disclosure envisages a compact, smartphone-powered multi-fragrance dispersing accessory.",
+        ],
+      },
+      {
+        heading: "COMPRESSOR & PRESSURIZED AIR TANK OPERATION",
+        paragraphs: [
+          "The perfume dispersing device (100) incorporates a micro-compressor (102) linked to a pressurized air tank (104) and a manifold network of pipes.",
+          "The air tank feeds compressed air selectively into one of several perfume holder chambers (106-1 to 106-n), atomizing the selected liquid perfume into a delicate mist expelled through micro-nozzles (108).",
+        ],
+      },
+      {
+        heading: "SMARTPHONE UI CONTROL & AUDIO JACK POWERING",
+        paragraphs: [
+          "The device connects to a host mobile phone (202) via a standard audio jack (110) or wireless interface, drawing operating current directly from the smartphone battery.",
+          "A mobile application presents a graphical user interface (UI) displaying available fragrance profiles. Selecting a scent sends digital control signals to actuate corresponding internal valves and compressor cycles.",
+        ],
+      },
+    ],
+  },
+  US20230069173A1: {
+    id: "US20230069173A1",
+    patentNo: "US20230069173A1",
+    grantPublicationNo: "US12211384B2",
+    title: "Smart rescue system",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "An automated smart emergency rescue method and IoT server system for optimizing emergency medical response times and ambulance navigation. The system comprises a requester mobile application, a central IoT rescue server, a geo-location tracking module, an intelligent navigation system, and microchip receivers installed within urban traffic signal lights. Upon receiving an emergency ambulance request, the IoT server dispatches the nearest available unit. As the ambulance approaches traffic intersections (within a 2–5 km radius), the server or onboard vehicle transceiver overrides upcoming traffic lights to green while activating a blue auxiliary indicator light at the intersection. The blue indicator flashes at dynamic rates corresponding to ambulance proximity, informing waiting drivers of incoming emergency vehicles and preventing traffic gridlock during transit to medical centers.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Aarifa Fatima",
+      "Ayesha Fatima",
+      "Ashaz Haque",
+      "Kaushiki Mudgal",
+      "Abhudya Sharma",
+      "Zayan Tabish",
+      "Zayed Tabish",
+      "Daanya Tabish",
+      "Shayan Naiyar Taban",
+      "Mikhail Imtiaz",
+      "Sama Fatima",
+      "Mishaal Fauzan Qureshi",
+      "Aroush Fatima",
+      "Saadia Asaf",
+      "Mansoor Hasan Khan",
+      "Aiman Fatima Jamadar",
+    ],
+    filingDate: "Sep 1, 2021",
+    publicationDate: "Mar 2, 2023",
+    priorityDate: "Sep 1, 2021",
+    applicationNumber: "US17/464,237",
+    keywords: [
+      "smart rescue system",
+      "IoT emergency server",
+      "ambulance dispatch optimization",
+      "traffic light microchip override",
+      "dynamic green wave navigation",
+      "auxiliary blue indicator light",
+      "proximity flashing traffic signal",
+      "real-time medical routing",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/d5/7c/68/22e3136ee64c7e/US20230069173A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230069173A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/6e/1c/93/0433102ae5ddf5/US20230069173A1-20230302-D00001.png",
+    images: [
+      {
+        title: "FIG. 1 — Smart Rescue System & IoT Server Network Architecture",
+        caption:
+          "System environment (100) showing mobile requester (101), network (102), central IoT server (103), geo-location system (104), navigation system (105), driver notification (106), and traffic microchip (107).",
+        url: "https://patentimages.storage.googleapis.com/6e/1c/93/0433102ae5ddf5/US20230069173A1-20230302-D00001.png",
+      },
+      {
+        title:
+          "FIG. 2 — Automated Emergency Dispatch & Green Wave Traffic Routing Flow",
+        caption:
+          "Stepwise rescue workflow (FIG. 2a–2i) from patient location request to automatic ambulance selection, live GPS tracking, traffic light override, and hospital arrival.",
+        url: "https://patentimages.storage.googleapis.com/f1/69/67/d8246a7c393104/US20230069173A1-20230302-D00002.png",
+      },
+      {
+        title:
+          "FIG. 3 — Traffic Light Microchip Override & Blue Auxiliary Indicator",
+        caption:
+          "Traffic light control mechanism showing microchip module (107) and blue auxiliary pop-up light (108) flashing dynamically based on ambulance distance.",
+        url: "https://patentimages.storage.googleapis.com/bb/26/5a/98f261fdff35a1/US20230069173A1-20230302-D00003.png",
+      },
+      {
+        title: "FIG. 4 — Hospital Selection & Emergency Medical Data Sync",
+        caption:
+          "Hospital routing workflow detailing patient condition evaluation by paramedics and real-time medical data synchronization with receiving emergency rooms.",
+        url: "https://patentimages.storage.googleapis.com/25/9a/93/96570313b64da0/US20230069173A1-20230302-D00004.png",
+      },
+    ],
+    summaryHighlights: [
+      "IoT Server Proximity Dispatch: Automatically calculates geospatial distance (2–5 km) to dispatch the closest available ambulance upon receiving an emergency request.",
+      "Green Wave Traffic Signal Preemption: Microchips (107) integrated in urban traffic signals receive signals from approaching ambulances, automatically turning signals green along the navigation route.",
+      "Proximity-Controlled Blue Auxiliary Warning Light: Auxiliary blue light (108) at intersections flashes slowly when an ambulance is >0.5 km away and rapidly when <0.5 km away, informing waiting drivers of why signals are modified.",
+      "Real-Time Paramedic ER Data Sync: Paramedics enter preliminary vitals into the mobile app en route, giving destination hospital emergency rooms advance notice to prepare specialized trauma bays.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Smart Rescue System Architecture" },
+      { num: "101", label: "Mobile Requester / Driver Device" },
+      { num: "102", label: "Cellular / Wireless Communication Network" },
+      { num: "103", label: "Central IoT Emergency Rescue Server" },
+      { num: "104", label: "Geospatial Location Tracking Module" },
+      { num: "105", label: "Dynamic Navigation Routing System" },
+      { num: "106", label: "Ambulance Driver Notification System" },
+      { num: "107", label: "Traffic Light Wireless Microchip Module" },
+      { num: "108", label: "Auxiliary Blue Flashing Traffic Signal" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A smart rescue system, the system comprising: a mobile device allowing a requester to request for ambulance services; a network; and a server communicatively coupled with the mobile device through network, wherein the requester provides details including patient's address; wherein the server comprises: a geo-location system to automatically determine the ambulance available in a geo-spatial vicinity of the patient's address; a notification system to notify a driver of the ambulance available in a geo-spatial vicinity of the requested address; a navigation system to navigate the driver to a nearest medical centre in a geo-spatial vicinity of the patient's address, and recognizes upcoming traffic lights upto a certain distance in advance; and a microchip technology communicating with the traffic lights controlled by the server.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The smart rescue system as claimed in claim 1, wherein the server turns upcoming traffic lights along the navigation route green within a distance range of up to 2 km to 5 km.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The smart rescue system as claimed in claim 1, wherein the traffic lights feature an auxiliary blue light that flashes slowly when an approaching ambulance is greater than 0.5 km away and flashes rapidly when less than 0.5 km away.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Sep 01, 2021",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Mar 02, 2023",
+        title: "Publication of US20230069173A1",
+        type: "Publication",
+      },
+      {
+        date: "Feb 04, 2025",
+        title: "Patent Granted (US12211384B2)",
+        type: "Grant",
+      },
+      {
+        date: "Sep 01, 2041",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Emergency medical services (EMS) face severe delays caused by urban traffic congestion and red traffic signals. Delayed ambulance arrivals directly impact patient survival rates during critical medical emergencies like heart attacks or severe trauma.",
+          "The present invention provides an intelligent IoT-based smart rescue system that coordinates ambulance dispatch, real-time navigation, traffic signal green-wave preemption, and public awareness signals.",
+        ],
+      },
+      {
+        heading: "SMART DISPATCH & GREEN WAVE NAVIGATION",
+        paragraphs: [
+          "When a user submits an emergency call or app request (101), the central IoT server (103) uses a geospatial location module (104) to identify the nearest free ambulance.",
+          "As the ambulance travels along the optimal route, microchips (107) in traffic signals detect the vehicle's approach (up to 2–5 km away) and turn traffic lights green in advance.",
+        ],
+      },
+      {
+        heading: "AUXILIARY TRAFFIC LIGHT & HOSPITAL TELEMETRY",
+        paragraphs: [
+          "Intersections are equipped with an auxiliary blue light (108) that flashes to inform waiting drivers that signals are being held green for an incoming emergency vehicle.",
+          "Simultaneously, paramedics update patient condition and vitals on an onboard app, transmitting live medical telemetry to the destination emergency room to prepare trauma teams in advance.",
+        ],
+      },
+    ],
+  },
+  US20240144357A1: {
+    id: "US20240144357A1",
+    patentNo: "US20240144357A1",
+    grantPublicationNo: "US12327279B2",
+    title: "System for displaying selected clothes on a dummy human body",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A real-time virtual fitting and AR mannequin system for displaying selected apparel on a custom 3D human body model. The system comprises a mobile device, a 360-degree imaging camera, a 3D body scanner, and an intelligent display mirror capable of switching between standard reflection and augmented display modes. Upon receiving a user request to try on garments, the 3D scanner calculates user height, Body Mass Index (BMI), body circumference, and overall shape using volumetric camera feeds. The system renders a 3D digital mannequin tailored to the user's exact proportions, superimposes selected clothing items with realistic drape and texture physics, and optionally controls physical LED lighting arrays around smart store fitting mirrors to simulate depth, shadows, and natural ambient lighting.",
+    inventors: ["Mirza Faizan", "Kimaya Rafiq Meherali"],
+    filingDate: "Nov 23, 2022",
+    publicationDate: "May 2, 2024",
+    priorityDate: "Nov 1, 2022",
+    applicationNumber: "US17/993,091",
+    keywords: [
+      "virtual fitting room",
+      "3D body scanner mannequin",
+      "augmented reality clothing try-on",
+      "smart fitting mirror",
+      "BMI body shape prediction",
+      "digital garment superimposition",
+      "LED lighting depth control",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/c5/24/47/67ed55e580503a/US20240144357A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20240144357A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/bd/42/70/f46ba98bc0a496/US20240144357A1-20240502-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Virtual Apparel Try-On System Architecture",
+        caption:
+          "System schematic (100) showing mobile device (102) with touch UI, wireless/wired connection link, and 3D body scanner (104).",
+        url: "https://patentimages.storage.googleapis.com/bd/42/70/f46ba98bc0a496/US20240144357A1-20240502-D00000.png",
+      },
+      {
+        title: "FIG. 2 — 360-Degree Camera Body Scan & 3D Volumetric Mesh",
+        caption:
+          "Body scanner (104) capturing user rotation via 360-degree imaging camera (202) to generate a 3D volumetric avatar of user (204).",
+        url: "https://patentimages.storage.googleapis.com/4d/52/01/37e6e13f484182/US20240144357A1-20240502-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Body Scanner Measurement Modules Block Diagram",
+        caption:
+          "Functional architecture of body scanner (104), height calculator (302), BMI calculator (304), circumference calculator (306), and shape predictor (308).",
+        url: "https://patentimages.storage.googleapis.com/28/e6/ce/80edfbcc37659b/US20240144357A1-20240502-D00002.png",
+      },
+      {
+        title: "FIG. 4 — Dual-Mode Smart Mirror Fitting Room Display",
+        caption:
+          "Smart store mirror-display device (404) switching between reflective mirror mode and AR display mode with superimposed garment visualization.",
+        url: "https://patentimages.storage.googleapis.com/cf/85/cf/d7dcd5aa26bfea/US20240144357A1-20240502-D00003.png",
+      },
+      {
+        title: "FIG. 5 — LED Lighting & Shadow Depth Simulation Assembly",
+        caption:
+          "Physical mannequin system (200) with LED lighting arrays (504), controller (506), and projector (508) adding shadow depth and texture detail.",
+        url: "https://patentimages.storage.googleapis.com/6c/fe/98/3e5b6f86684104/US20240144357A1-20240502-D00004.png",
+      },
+      {
+        title: "FIG. 6 — Virtual Garment Rendering & Controller Architecture",
+        caption:
+          "Hardware controller block diagram illustrating imaging unit (602), body details unit (604), system processor (608), and wireless transceiver (610).",
+        url: "https://patentimages.storage.googleapis.com/21/05/7b/2801d580fe7816/US20240144357A1-20240502-D00005.png",
+      },
+      {
+        title: "FIG. 7 — AR Fitting Process Flowchart",
+        caption:
+          "Operational flowchart illustrating user trigger reception, 3D body scanning, personalized avatar creation, and virtual garment superimposition.",
+        url: "https://patentimages.storage.googleapis.com/bb/5e/c9/64a9d1c8100f17/US20240144357A1-20240502-D00006.png",
+      },
+    ],
+    summaryHighlights: [
+      "Volumetric 3D Avatar Generation: Utilizes a 360-degree camera (202) and body scanner (104) to calculate height (302), BMI (304), chest/waist circumference (306), and body shape (308) to create a custom digital mannequin.",
+      "AR Garment Superimposition: Real-time rendering engine drapes selected clothing items over the digital mannequin with accurate scale, texture depth, and fabric physics.",
+      "Dual-Mode Smart Store Fitting Mirror: Flat TV mirror-display device (404) switches between live reflective mirror mode and augmented display mode for trying on unstocked inventory or alternative colorways.",
+      "Dynamic LED Shadow & Lighting Control: Mannequin lighting controller (506) adjusts external LED arrays (504) and projector highlights (508) to eliminate display reflections and enhance garment depth.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Virtual Fitting & Mannequin Display System" },
+      { num: "102", label: "Mobile Device / Touch UI" },
+      { num: "104", label: "Volumetric 3D Body Scanner" },
+      { num: "202", label: "360-Degree Imaging Camera" },
+      { num: "204", label: "User / Shopper" },
+      { num: "302", label: "Height Calculator Module" },
+      { num: "304", label: "BMI Calculator Module" },
+      { num: "306", label: "Body Circumference Calculator Module" },
+      { num: "308", label: "3D Shape Predictor Module" },
+      { num: "310", label: "Body Scanner Processor" },
+      { num: "404", label: "Dual-Mode Smart Fitting Mirror Display" },
+      { num: "502", label: "Physical / Digital Mannequin Dummy" },
+      { num: "504", label: "Controlled LED Lighting Array" },
+      { num: "506", label: "Lighting & Shadow Controller" },
+      { num: "508", label: "Depth Projection Unit" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A system for displaying selected clothes on a dummy human body, the system comprising: an input unit configured to receive a choice of a cloth from a plurality of clothes available in a store; a body scanner configured to determine details of the user based on capturing an image or a video of the user; and a rendering unit configured to create a dummy user tailored to the details of the user and superimpose the selected cloth on the dummy user for display.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The system as claimed in claim 1, wherein the details of the user comprise height, Body Mass Index (BMI), circumference, and shape of the user.",
+      },
+      {
+        num: 3,
+        isIndependent: false,
+        text: "The system as claimed in claim 1, wherein the body scanner comprises a 360-degree imaging camera configured to capture video of the user from multiple angles to generate a 3D volumetric model.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Nov 23, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "May 02, 2024",
+        title: "Publication of US20240144357A1",
+        type: "Publication",
+      },
+      {
+        date: "Jun 10, 2025",
+        title: "Patent Granted (US12327279B2)",
+        type: "Grant",
+      },
+      {
+        date: "Nov 23, 2042",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Online and in-store apparel shopping often suffers from high return rates because customers cannot accurately visualize how unstocked garments, different sizes, or alternate colorways will fit their specific body proportions.",
+          "The present invention introduces an intelligent 3D body scanning and AR mannequin system that renders custom 3D avatars with superimposed apparel drape physics.",
+        ],
+      },
+      {
+        heading: "VOLUMETRIC 3D BODY SCANNING & AVATAR CREATION",
+        paragraphs: [
+          "The user interacts with a mobile app or store display (102). Upon selection of a garment, a 360-degree camera (202) feeds images to the body scanner (104).",
+          "Dedicated modules calculate height (302), BMI (304), circumference (306), and body shape (308) to build a digital mannequin reflecting the user's exact measurements.",
+        ],
+      },
+      {
+        heading: "DUAL-MODE SMART MIRROR & DYNAMIC LED LIGHTING",
+        paragraphs: [
+          "In retail stores, the system powers a smart mirror-display device (404) that switches between standard reflection mode and AR display mode.",
+          "Controlled LED arrays (504) and virtual light point controllers (506) adjust lighting temperature and shadows around the mirror to eliminate screen reflections and enhance garment depth.",
+        ],
+      },
+    ],
+  },
+  US20220387639A1: {
+    id: "US20220387639A1",
+    patentNo: "US20220387639A1",
+    grantPublicationNo: "US12415005B2",
+    title: "Self sanitizing door handle with protective cover",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "A self-sanitizing door handle assembly and kinetic power generation mechanism for sterilizing door surfaces between uses. The door handle comprises a hollow soft glass outer tube encasing a central support rod lined with high-efficiency UV-C LED arrays and mechanical interlocking shield connectors. When a user turns the door handle, an integrated spring, rail, and micro-turbine kinetic energy mechanism converts physical mechanical movement into electrical power, charging onboard lithium storage batteries. Upon release of the handle, the interlocking shield connectors enclose the UV-C LEDs during active sterilization cycles to prevent harmful ultraviolet exposure to humans. Tri-color LED indicators (Green/Yellow/Red) signal real-time sanitization progress, while an optional overhead camera captures user images for contact tracing.",
+    inventors: [
+      "Mirza Faizan",
+      "Mirza Rizwan",
+      "Maleeha Khan",
+      "Imaan Moosa",
+      "Inaya Sheikh",
+      "Mahum Rana",
+      "Laiba Mehmood",
+      "Ayaan Mehmood",
+      "Aamena Baig",
+      "Ayesha Baig",
+      "Deen Sheikh",
+    ],
+    filingDate: "Jun 4, 2021",
+    publicationDate: "Dec 8, 2022",
+    priorityDate: "Jun 4, 2021",
+    applicationNumber: "US17/339,305",
+    keywords: [
+      "self sanitizing door handle",
+      "UV-C LED sterilization",
+      "soft glass hollow handle",
+      "kinetic micro-turbine power generation",
+      "interlocking UV protective shield",
+      "tri-color LED status indicator",
+      "contact tracing camera",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/e6/1d/34/14c49528d2319a/US20220387639A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20220387639A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/65/77/7b/f9791ae1348535/US20220387639A1-20221208-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Kinetic Power Generation Spring & Turbine Assembly",
+        caption:
+          "Self-powering kinetic mechanism showing spring (502), rail guide, micro-turbine (504), and energy harvesting generator.",
+        url: "https://patentimages.storage.googleapis.com/65/77/7b/f9791ae1348535/US20220387639A1-20221208-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Self-Sanitizing Door Handle Component Overview",
+        caption:
+          "Exploded view of door handle assembly (100) detailing hollow soft glass tube (102), interlocking connectors (104), UV-C LEDs (106), central rod (108), and metallic base (110).",
+        url: "https://patentimages.storage.googleapis.com/4d/2a/a0/db538c6efdce70/US20220387639A1-20221208-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Interlocking Shield Connector Detail",
+        caption:
+          "Detailed structural view of interlocking connector (200) contracting and expanding to shield human hands from UV-C radiation during active disinfection.",
+        url: "https://patentimages.storage.googleapis.com/ba/f3/96/1e50bf2b61c650/US20220387639A1-20221208-D00002.png",
+      },
+      {
+        title: "FIG. 4 — Central Support Rod & Multi-Sided UV-C LED Layout",
+        caption:
+          "Cross-section view (300) showing 4-sided UV-C LED placement along central core rod (108) inside hollow soft glass membrane (102).",
+        url: "https://patentimages.storage.googleapis.com/da/25/13/ca97685f8ba4db/US20220387639A1-20221208-D00003.png",
+      },
+      {
+        title: "FIG. 5 — Protective Cover Shield Mechanism in Active State",
+        caption:
+          "Active sanitization state diagram (400) showing protective cover connectors enclosing UV-C rays during closed circuit operation.",
+        url: "https://patentimages.storage.googleapis.com/a3/86/b6/be91835d742650/US20220387639A1-20221208-D00004.png",
+      },
+      {
+        title: "FIG. 6 — Self-Powered Spring & Rail Turbine Generator",
+        caption:
+          "Kinetic energy generation system (500) translating door handle depression into electrical power via spring compression (502) and turbine spin (504).",
+        url: "https://patentimages.storage.googleapis.com/8e/23/b4/7f9a717e7950e1/US20220387639A1-20221208-D00005.png",
+      },
+      {
+        title:
+          "FIG. 7 — Tri-Color Status Indicator & Sanitization State Flowchart",
+        caption:
+          "Status light indicator (602) displaying Green (Sanitized/Ready), Yellow (In-Use Preparation), and Red (Disinfecting/Do Not Touch).",
+        url: "https://patentimages.storage.googleapis.com/1a/00/a1/706155b500982c/US20220387639A1-20221208-D00006.png",
+      },
+    ],
+    summaryHighlights: [
+      "Hollow Soft Glass UV-C Core: Features an unbreakable soft glass membrane (102) housing UV-C LEDs (106) mounted along a central core rod (108) to eliminate bacteria and viruses.",
+      "Kinetic Energy Micro-Turbine Generator: Harvests energy from physical door handle depression via a spring (502), rail guide, and micro-turbine (504), making the system 100% self-powered.",
+      "Interlocking Protective Radiation Shield: Connectors (104) expand to enclose UV-C radiation inside a sealed protective cover during active sanitization, protecting human skin and eyes.",
+      "Tri-Color Visual Status Indicator: Integrated LED indicator (602) communicates real-time state: Green (Sanitized & Ready), Yellow (Preparing/In-Use), and Red (Active Disinfection).",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Self-Sanitizing Door Handle Assembly" },
+      { num: "102", label: "Unbreakable Soft Glass Hollow Membrane" },
+      { num: "104", label: "Interlocking Mechanical Protective Connectors" },
+      { num: "106", label: "UV-C LED Germicidal Light Arrays" },
+      { num: "108", label: "Central Aluminum / Core Support Rod" },
+      { num: "110", label: "Metallic Mounting Base & Contact Tracing Camera" },
+      { num: "200", label: "Interlocking Shield Mechanism Assembly" },
+      { num: "300", label: "Multi-Sided UV-C Core Cross-Section" },
+      { num: "400", label: "Sealed Sanitization Enclosure State" },
+      { num: "500", label: "Kinetic Spring & Turbine Power Generator" },
+      { num: "502", label: "Mechanical Compression Spring" },
+      { num: "504", label: "Power Generating Micro-Turbine Unit" },
+      { num: "602", label: "Tri-Color (Green/Yellow/Red) Status Indicator" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A self sanitizing door handle comprising: a soft glass hollow membrane; one or more connectors; a central rod; and a plurality of lights on said central rod inside said hollow membrane protectively covered by said one or more connectors in an active state of sanitization in said self sanitizing door handle.",
+      },
+      {
+        num: 5,
+        isIndependent: false,
+        text: "The self sanitizing door handle as claimed in claim 1, further comprising a light indication unit configured to reflect a status of the plurality of lights inside said soft glass hollow membrane.",
+      },
+      {
+        num: 6,
+        isIndependent: false,
+        text: "The self sanitizing door handle as claimed in claim 1, wherein said one or more connectors are interlocking connectors configured to act as a shield cover during a working state of said plurality of lights in said soft glass hollow membrane.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Jun 04, 2021",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Dec 08, 2022",
+        title: "Publication of US20220387639A1",
+        type: "Publication",
+      },
+      {
+        date: "Sep 16, 2025",
+        title: "Patent Granted (US12415005B2)",
+        type: "Grant",
+      },
+      {
+        date: "Jun 04, 2041",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Door handles in public facilities (hospitals, schools, airports, office buildings) are high-touch surfaces that transmit pathogens rapidly between individuals.",
+          "Conventional chemical wiping is labor-intensive and unsustainable. The present invention introduces a self-powered, UV-C germicidal door handle with a protective shield cover.",
+        ],
+      },
+      {
+        heading: "KINETIC ENERGY HARVESTING & UV-C DISINFECTION",
+        paragraphs: [
+          "Depressing the door handle compresses an internal spring (502) and drives a micro-turbine (504) along a precision rail, generating electricity stored in internal batteries.",
+          "When released, the handle activates UV-C LED arrays (106) mounted on a central rod (108) inside an unbreakable soft glass membrane (102), destroying micro-organisms within seconds.",
+        ],
+      },
+      {
+        heading: "INTERLOCKING UV SHIELD & STATUS INDICATORS",
+        paragraphs: [
+          "Interlocking mechanical connectors (104) expand during sanitization to form an opaque shield cover over the glass handle, completely enclosing UV-C radiation to protect human skin.",
+          "A tri-color LED status light (602) signals handle readiness: Green (safe to touch), Yellow (in transition), and Red (active UV-C sterilization cycle in progress).",
+        ],
+      },
+    ],
+  },
+  US20230332468A1: {
+    id: "US20230332468A1",
+    patentNo: "US20230332468A1",
+    grantPublicationNo: "US12404722B2",
+    title: "Method and system for providing a smart ladder to a user",
+    region: "US",
+    status: "Granted",
+    abstract:
+      "An automated fall-prevention smart ladder system and self-rescue method for protecting climbers working at height. The smart ladder comprises step sensors embedded in ladder rungs/pedalboards, a micro-processor control unit, motorized articulation arms, and an extendable high-tensile safety net/trampoline mesh unit installed along the ladder frame. When a user steps above a predetermined height threshold (such as past the second rung), the processor automatically deploys the safety mesh unit, spreading outward like a folding hand fan around the ladder base to form a 360-degree protective landing net. If the climber slips or loses balance, the extended mesh catches the user and absorbs impact forces. Upon the user safely climbing back down past the height threshold, the system automatically retracts and folds the mesh neatly back against the ladder rails.",
+    inventors: [
+      "Mirza Faizan",
+      "Shayaan Shaik",
+      "Aqil Gudur",
+      "Zashaan T. Shaik",
+      "Gupil Mayari",
+      "Omar Mohammed",
+      "Suleman Khan Mohammed",
+      "Mirza Rizwan",
+      "Humna Fakeha Khan",
+      "Zaynab Khan",
+      "Mishaal Qureshi",
+      "Abdullah Hasani",
+    ],
+    filingDate: "Apr 14, 2022",
+    publicationDate: "Oct 19, 2023",
+    priorityDate: "Apr 14, 2022",
+    applicationNumber: "US17/720,606",
+    keywords: [
+      "smart safety ladder",
+      "automated fall protection net",
+      "extendable fan-mesh trampoline",
+      "pedalboard rung step sensor",
+      "height threshold safety deployment",
+      "motorized arm frame deployment",
+      "climber self-rescue system",
+    ],
+    pdfUrl:
+      "https://patentimages.storage.googleapis.com/36/92/44/d79144f27fc2c6/US20230332468A1.pdf",
+    googlePatentsUrl: "https://patents.google.com/patent/US20230332468A1",
+    imageUrl:
+      "https://patentimages.storage.googleapis.com/b5/b1/a3/6b8bb83354a360/US20230332468A1-20231019-D00000.png",
+    images: [
+      {
+        title: "FIG. 1 — Smart Safety Net Deployment Mechanism",
+        caption:
+          "Fan-fold safety net mesh expanding radially outward like a hand fan from the ladder frame upon step detection.",
+        url: "https://patentimages.storage.googleapis.com/b5/b1/a3/6b8bb83354a360/US20230332468A1-20231019-D00000.png",
+      },
+      {
+        title: "FIG. 2 — Climber Hazard Environment Overview",
+        caption:
+          "Safety hazard environment (100) illustrating a user (102) climbing a ladder (104) and potential fall risks addressed by the smart ladder.",
+        url: "https://patentimages.storage.googleapis.com/c9/6a/6c/36ccc7488fb755/US20230332468A1-20231019-D00001.png",
+      },
+      {
+        title: "FIG. 3 — Smart Ladder System Hardware & Sensor Block Diagram",
+        caption:
+          "System block diagram (200) showing smart ladder (202), transceiver (204), processor (206), memory (208), and display unit (210).",
+        url: "https://patentimages.storage.googleapis.com/62/5b/19/5e1ef57642a69b/US20230332468A1-20231019-D00002.png",
+      },
+      {
+        title:
+          "FIG. 4 — Automated Safety Mesh Activation & Retraction Process Flowchart",
+        caption:
+          "Operational flowchart (300) illustrating height threshold step detection, mesh fan deployment, fall protection, and automatic retraction.",
+        url: "https://patentimages.storage.googleapis.com/75/47/7b/ae607b53e8bafb/US20230332468A1-20231019-D00003.png",
+      },
+    ],
+    summaryHighlights: [
+      "Automated Step Height Detection: Pressure and proximity sensors embedded in rungs detect when a climber ascends past a threshold height (e.g., step 2) to trigger safety mechanisms.",
+      "Folding Fan Safety Net Deployment: Articulated motorized arm frames spread a high-strength trampoline or catch net radially outward like a folding hand fan around the ladder base.",
+      "Impact Absorption & Self-Rescue: Provides a 360-degree impact-absorbing perimeter that catches falling workers, preventing ground collision and catastrophic injuries.",
+      "Automatic Retraction & Stabilization: System automatically folds the mesh unit back against ladder rails when the user steps down, maintaining lateral ladder stability at all times.",
+    ],
+    referenceNumerals: [
+      { num: "100", label: "Ladder Climbing Safety Environment" },
+      { num: "102", label: "Climber / Worker" },
+      { num: "104", label: "Standard / Smart Ladder Structure" },
+      { num: "200", label: "Smart Rescue System Architecture" },
+      { num: "202", label: "Smart Safety Ladder Assembly" },
+      { num: "204", label: "Transceiver / Sensor Receiver Unit" },
+      { num: "206", label: "System Micro-Processor Controller" },
+      { num: "208", label: "Memory / Event Storage Module" },
+      { num: "210", label: "Status Display & Alarm Unit" },
+      { num: "300", label: "Safety Mesh Control Flowchart" },
+      { num: "304", label: "Threshold Height Step Activation Step" },
+      { num: "306", label: "Mesh Suspension / Release Step" },
+      { num: "308", label: "Automatic Mesh Folding Step" },
+    ],
+    claims: [
+      {
+        num: 1,
+        isIndependent: true,
+        text: "A method for self-rescuing a user climbing a smart ladder, the method comprising: activating, by a processor, a mesh unit based on a detection of the user's step above a certain height from a pedalboard of the smart ladder, wherein the mesh unit is installed along at least one side of the smart ladder, and wherein the mesh unit is extended outwardly like a folding hand fan to form a secured circular net mesh configuration along the sides of the smart ladder; suspending, by the processor, the mesh unit based on a detection of the user's step at the pedalboard of the smart ladder; and folding, by the processor, the mesh unit back along the at least one side of the smart ladder.",
+      },
+      {
+        num: 2,
+        isIndependent: false,
+        text: "The method as claimed in claim 1, wherein activating the mesh unit occurs when the user crosses at least a second step from the base of the smart ladder.",
+      },
+      {
+        num: 7,
+        isIndependent: true,
+        text: "A system for self-rescuing a user climbing a smart ladder, the system comprising: a processor configured to: activate a mesh unit based on a detection of the user's step above a certain height from a pedalboard of the smart ladder, wherein the mesh unit is installed along at least one side of the ladder, and wherein the mesh unit is extended outwardly like a folding hand fan to form a secured circular net mesh configuration along the sides of the smart ladder.",
+      },
+    ],
+    legalEvents: [
+      {
+        date: "Apr 14, 2022",
+        title: "Application filed with USPTO",
+        type: "Filing",
+      },
+      {
+        date: "Oct 19, 2023",
+        title: "Publication of US20230332468A1",
+        type: "Publication",
+      },
+      {
+        date: "Sep 02, 2025",
+        title: "Patent Granted (US12404722B2)",
+        type: "Grant",
+      },
+      {
+        date: "Apr 14, 2042",
+        title: "Anticipated Expiration",
+        type: "Expiration",
+      },
+    ],
+    descriptionSections: [
+      {
+        heading: "FIELD & BACKGROUND OF THE INVENTION",
+        paragraphs: [
+          "Ladders are widely used in construction, maintenance, and domestic settings, but working at heights presents severe risks of traumatic fall injuries, fractures, and spinal trauma.",
+          "The present invention provides an intelligent smart ladder system equipped with automated sensor-triggered safety nets that deploy like a hand fan to catch falling workers.",
+        ],
+      },
+      {
+        heading: "STEP HEIGHT SENSING & FAN-FOLD NET DEPLOYMENT",
+        paragraphs: [
+          "As a worker climbs past a safety height threshold (e.g. crossing the second rung), sensors notify the central processor (206) to activate the mesh unit.",
+          "Motorized arm frames expand a high-tensile circular catching net/trampoline mesh radially outward around the ladder perimeter, creating a cushioned landing zone.",
+        ],
+      },
+      {
+        heading: "AUTOMATIC RETraction & LATERAL STABILITY",
+        paragraphs: [
+          "When the climber descends safely back to the pedalboard base, the processor automatically retracts and folds the net mesh flush against the ladder side rails.",
+          "The articulation arm geometry provides precise lateral stability to the ladder structure in both folded and fully expanded net configurations.",
         ],
       },
     ],

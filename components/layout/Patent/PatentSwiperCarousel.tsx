@@ -74,31 +74,26 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
             >
               <Box
                 sx={{
-                  backgroundColor: "#FFFFFF",
-                  border: "1px solid #EBE6DF",
-                  borderRadius: "20px",
-                  p: { xs: 3, md: 3.5 },
-                  height: "100%",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
-                  transition: "all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)",
-                  boxShadow: "0 6px 20px rgba(0, 0, 0, 0.03)",
+                  justifyContent: "center",
+                  p: { xs: 2, md: 3 },
+                  height: "100%",
+                  transition: "all 0.3s ease",
                   cursor: "pointer",
                   "&:hover": {
-                    borderColor: "#846A4E",
-                    boxShadow: "0 18px 40px rgba(132, 106, 78, 0.14)",
-                    transform: "translateY(-4px)",
                     "& .prev-icon": {
-                      transform: "translateX(-6px)",
-                      color: "#6F573E",
+                      transform: "translateX(-8px)",
+                    },
+                    "& .nav-title": {
+                      color: "#846A4E",
                     },
                   },
                 }}
               >
                 <Stack
                   direction="row"
-                  spacing={1}
+                  spacing={1.5}
                   sx={{ alignItems: "center", mb: 1.5 }}
                 >
                   <ArrowBackIcon
@@ -106,7 +101,7 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                     sx={{
                       fontSize: "18px",
                       color: "#846A4E",
-                      transition: "all 0.3s ease",
+                      transition: "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
                     }}
                   />
                   <Typography
@@ -115,22 +110,23 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                       fontSize: "11px",
                       fontWeight: 700,
                       color: "#846A4E",
-                      letterSpacing: "1.2px",
+                      letterSpacing: "2px",
                       textTransform: "uppercase",
                     }}
                   >
-                    Previous Patent
+                    Previous
                   </Typography>
                 </Stack>
 
                 <Typography
+                  className="nav-title"
                   sx={{
                     fontFamily: roboto.style.fontFamily,
-                    fontSize: { xs: "15px", md: "17px" },
-                    fontWeight: 700,
+                    fontSize: { xs: "16px", md: "20px" },
+                    fontWeight: 600,
                     color: "#181818",
-                    lineHeight: 1.35,
-                    mb: 1,
+                    lineHeight: 1.3,
+                    transition: "color 0.3s ease",
                     display: "-webkit-box",
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: "vertical",
@@ -138,22 +134,6 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                   }}
                 >
                   {prevPatent.title}
-                </Typography>
-
-                <Typography
-                  sx={{
-                    fontFamily: outfit.style.fontFamily,
-                    fontSize: "12px",
-                    fontWeight: 600,
-                    color: "#666666",
-                  }}
-                >
-                  {prevPatent.patentNo} •{" "}
-                  {prevPatent.region === "US"
-                    ? "🇺🇸 USPTO"
-                    : prevPatent.region === "South Africa"
-                    ? "🇿🇦 South Africa CIPC"
-                    : prevPatent.region}
                 </Typography>
               </Box>
             </Link>
@@ -167,32 +147,27 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
             >
               <Box
                 sx={{
-                  backgroundColor: "#FFFFFF",
-                  border: "1px solid #EBE6DF",
-                  borderRadius: "20px",
-                  p: { xs: 3, md: 3.5 },
-                  height: "100%",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
+                  justifyContent: "center",
                   textAlign: "right",
-                  transition: "all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)",
-                  boxShadow: "0 6px 20px rgba(0, 0, 0, 0.03)",
+                  p: { xs: 2, md: 3 },
+                  height: "100%",
+                  transition: "all 0.3s ease",
                   cursor: "pointer",
                   "&:hover": {
-                    borderColor: "#846A4E",
-                    boxShadow: "0 18px 40px rgba(132, 106, 78, 0.14)",
-                    transform: "translateY(-4px)",
                     "& .next-icon": {
-                      transform: "translateX(6px)",
-                      color: "#6F573E",
+                      transform: "translateX(8px)",
+                    },
+                    "& .nav-title": {
+                      color: "#846A4E",
                     },
                   },
                 }}
               >
                 <Stack
                   direction="row"
-                  spacing={1}
+                  spacing={1.5}
                   sx={{ alignItems: "center", justifyContent: "flex-end", mb: 1.5 }}
                 >
                   <Typography
@@ -201,30 +176,31 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                       fontSize: "11px",
                       fontWeight: 700,
                       color: "#846A4E",
-                      letterSpacing: "1.2px",
+                      letterSpacing: "2px",
                       textTransform: "uppercase",
                     }}
                   >
-                    Next Patent
+                    Next
                   </Typography>
                   <ArrowForwardIcon
                     className="next-icon"
                     sx={{
                       fontSize: "18px",
                       color: "#846A4E",
-                      transition: "all 0.3s ease",
+                      transition: "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
                     }}
                   />
                 </Stack>
 
                 <Typography
+                  className="nav-title"
                   sx={{
                     fontFamily: roboto.style.fontFamily,
-                    fontSize: { xs: "15px", md: "17px" },
-                    fontWeight: 700,
+                    fontSize: { xs: "16px", md: "20px" },
+                    fontWeight: 600,
                     color: "#181818",
-                    lineHeight: 1.35,
-                    mb: 1,
+                    lineHeight: 1.3,
+                    transition: "color 0.3s ease",
                     display: "-webkit-box",
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: "vertical",
@@ -232,22 +208,6 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                   }}
                 >
                   {nextPatent.title}
-                </Typography>
-
-                <Typography
-                  sx={{
-                    fontFamily: outfit.style.fontFamily,
-                    fontSize: "12px",
-                    fontWeight: 600,
-                    color: "#666666",
-                  }}
-                >
-                  {nextPatent.patentNo} •{" "}
-                  {nextPatent.region === "US"
-                    ? "🇺🇸 USPTO"
-                    : nextPatent.region === "South Africa"
-                    ? "🇿🇦 South Africa CIPC"
-                    : nextPatent.region}
                 </Typography>
               </Box>
             </Link>
@@ -380,17 +340,34 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                         backgroundColor: "#FFFFFF",
                         borderRadius: "20px",
                         border: "1px solid #EBE6DF",
-                        overflow: "hidden",
+                        p: { xs: 2.8, sm: 3.2 },
                         height: "100%",
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "space-between",
+                        position: "relative",
+                        overflow: "hidden",
                         transition: "all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)",
                         boxShadow: "0 6px 20px rgba(0, 0, 0, 0.03)",
+                        "&::before": {
+                          content: '""',
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          height: "4px",
+                          background:
+                            "linear-gradient(90deg, #846A4E 0%, #D4BFA8 50%, #846A4E 100%)",
+                          opacity: 0,
+                          transition: "opacity 0.4s ease",
+                        },
                         "&:hover": {
                           transform: "translateY(-6px)",
                           borderColor: "#846A4E",
                           boxShadow: "0 18px 40px rgba(132, 106, 78, 0.14)",
+                          "&::before": {
+                            opacity: 1,
+                          },
                           "& .slide-arrow": {
                             transform: "translateX(4px)",
                             color: "#6F573E",
@@ -398,176 +375,134 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                         },
                       }}
                     >
-                      {/* Image or Card Header */}
-                      {(() => {
-                        const cardImage = item.imageUrl || item.images?.[0]?.url;
-                        return (
+                      <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                        {/* Header Row: Patent ID Badge & Region Badge */}
+                        <Stack
+                          direction="row"
+                          spacing={1}
+                          sx={{
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            mb: 2,
+                            flexWrap: "wrap",
+                            gap: 1,
+                          }}
+                        >
                           <Box
                             sx={{
-                              position: "relative",
-                              width: "100%",
-                              height: "175px",
-                              backgroundColor: "#161616",
-                              flexShrink: 0,
-                              overflow: "hidden",
-                            }}
-                          >
-                            {cardImage ? (
-                              <Image
-                                src={cardImage}
-                                alt={item.title}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 33vw"
-                                style={{ objectFit: "cover" }}
-                              />
-                            ) : (
-                          <Box
-                            sx={{
-                              width: "100%",
-                              height: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              background:
-                                "radial-gradient(circle at 50% 50%, #2A2520 0%, #141414 70%)",
+                              backgroundColor: "rgba(132, 106, 78, 0.08)",
+                              px: 1.5,
+                              py: 0.6,
+                              borderRadius: "8px",
+                              border: "1px solid rgba(132, 106, 78, 0.18)",
                             }}
                           >
                             <Typography
                               sx={{
                                 fontFamily: outfit.style.fontFamily,
-                                fontSize: "14px",
+                                fontSize: "12px",
                                 fontWeight: 700,
-                                color: "#E5D1B8",
-                                letterSpacing: "1px",
+                                color: "#846A4E",
+                                letterSpacing: "0.4px",
                               }}
                             >
-                              {item.id}
+                              {item.patentNo || item.id}
                             </Typography>
                           </Box>
-                        )}
 
-                        {/* Country Flag Badge */}
-                        <Box
+                          <Box
+                            sx={{
+                              backgroundColor: "#FAF8F5",
+                              px: 1.2,
+                              py: 0.5,
+                              borderRadius: "6px",
+                              border: "1px solid #EBE4DA",
+                            }}
+                          >
+                            <Typography
+                              sx={{
+                                fontFamily: outfit.style.fontFamily,
+                                fontSize: "10.5px",
+                                fontWeight: 700,
+                                color: "#665C52",
+                              }}
+                            >
+                              {regionBadge}
+                            </Typography>
+                          </Box>
+                        </Stack>
+
+                        {/* Patent Title */}
+                        <Typography
                           sx={{
-                            position: "absolute",
-                            top: 12,
-                            left: 12,
-                            backgroundColor: "rgba(18, 18, 18, 0.85)",
-                            backdropFilter: "blur(8px)",
-                            px: 1.2,
-                            py: 0.4,
-                            borderRadius: "6px",
-                            border: "1px solid rgba(229, 209, 184, 0.35)",
+                            fontFamily: roboto.style.fontFamily,
+                            fontSize: "16px",
+                            fontWeight: 700,
+                            color: "#181818",
+                            lineHeight: 1.4,
+                            mb: 1.5,
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            height: "45px",
                           }}
                         >
-                          <Typography
-                            sx={{
-                              fontFamily: outfit.style.fontFamily,
-                              fontSize: "10px",
-                              fontWeight: 700,
-                              color: "#E5D1B8",
-                            }}
-                          >
-                            {regionBadge}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    );
-                  })()}
+                          {item.title}
+                        </Typography>
 
-                      {/* Card Body */}
-                      <Box
-                        sx={{
-                          p: 3,
-                          flex: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <Box>
-                          <Typography
-                            sx={{
-                              fontFamily: outfit.style.fontFamily,
-                              fontSize: "11px",
-                              fontWeight: 700,
-                              color: "#846A4E",
-                              letterSpacing: "0.5px",
-                              mb: 0.8,
-                            }}
-                          >
-                            {item.patentNo || item.id}
-                          </Typography>
-
+                        {/* Patent Description */}
+                        {item.description && (
                           <Typography
                             sx={{
                               fontFamily: roboto.style.fontFamily,
-                              fontSize: "15px",
-                              fontWeight: 700,
-                              color: "#181818",
-                              lineHeight: 1.35,
-                              mb: 1.2,
+                              fontSize: "13px",
+                              color: "#666666",
+                              lineHeight: 1.55,
                               display: "-webkit-box",
-                              WebkitLineClamp: 2,
+                              WebkitLineClamp: 3,
                               WebkitBoxOrient: "vertical",
                               overflow: "hidden",
-                              height: "40px",
+                              height: "60px",
+                              mb: 2,
                             }}
                           >
-                            {item.title}
+                            {item.description}
                           </Typography>
+                        )}
+                      </Box>
 
-                          {item.description && (
-                            <Typography
-                              sx={{
-                                fontFamily: roboto.style.fontFamily,
-                                fontSize: "12.5px",
-                                color: "#666666",
-                                lineHeight: 1.5,
-                                display: "-webkit-box",
-                                WebkitLineClamp: 2,
-                                WebkitBoxOrient: "vertical",
-                                overflow: "hidden",
-                                height: "38px",
-                              }}
-                            >
-                              {item.description}
-                            </Typography>
-                          )}
-                        </Box>
-
-                        <Stack
-                          direction="row"
-                          spacing={0.5}
+                      {/* Footer CTA */}
+                      <Stack
+                        direction="row"
+                        spacing={0.8}
+                        sx={{
+                          alignItems: "center",
+                          pt: 1.8,
+                          borderTop: "1px solid #F0EAE1",
+                        }}
+                      >
+                        <Typography
                           sx={{
-                            alignItems: "center",
-                            mt: 2.5,
-                            pt: 1.8,
-                            borderTop: "1px solid #F0EAE1",
+                            fontFamily: outfit.style.fontFamily,
+                            fontSize: "11.5px",
+                            fontWeight: 700,
+                            color: "#846A4E",
+                            letterSpacing: "0.4px",
+                            textTransform: "uppercase",
                           }}
                         >
-                          <Typography
-                            sx={{
-                              fontFamily: outfit.style.fontFamily,
-                              fontSize: "11.5px",
-                              fontWeight: 700,
-                              color: "#846A4E",
-                              letterSpacing: "0.4px",
-                              textTransform: "uppercase",
-                            }}
-                          >
-                            View Patent Details
-                          </Typography>
-                          <ArrowForwardIcon
-                            className="slide-arrow"
-                            sx={{
-                              fontSize: "14px",
-                              color: "#846A4E",
-                              transition: "all 0.3s ease",
-                            }}
-                          />
-                        </Stack>
-                      </Box>
+                          View Patent Details
+                        </Typography>
+                        <ArrowForwardIcon
+                          className="slide-arrow"
+                          sx={{
+                            fontSize: 15,
+                            color: "#846A4E",
+                            transition: "transform 0.3s ease, color 0.3s ease",
+                          }}
+                        />
+                      </Stack>
                     </Box>
                   </Link>
                 </SwiperSlide>

@@ -90,6 +90,7 @@ const PatentsHero = () => {
                     <Box
                       sx={{
                         position: "relative",
+                        overflow: "hidden",
                         p: { xs: 1.2, sm: 1.8, md: 2 },
                         backgroundColor: "rgba(255, 255, 255, 0.06)",
                         borderRadius: { xs: "14px", sm: "16px", md: "18px" },

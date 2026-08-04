@@ -98,7 +98,6 @@ export const ProjectCard: React.FC<{ project: ProjectItem }> = ({
             },
           }}
         >
-          {/* Dynamic Golden Spotlight Cursor Follow Glow */}
           <Box
             sx={{
               position: "absolute",
@@ -118,10 +117,11 @@ export const ProjectCard: React.FC<{ project: ProjectItem }> = ({
               sx={{
                 position: "relative",
                 width: "100%",
-                height: { xs: "190px", sm: "200px", md: "205px" },
+                height: { xs: "220px", sm: "240px", md: "260px" },
                 borderRadius: "24px 24px 0 0",
                 overflow: "hidden",
-                backgroundColor: "#1C1C1C",
+                backgroundColor: "#FAF9F6",
+                borderBottom: "1px solid #EBE6DF",
                 flexShrink: 0,
                 transformStyle: "preserve-3d",
                 transform: mousePos.isHovered
@@ -129,7 +129,7 @@ export const ProjectCard: React.FC<{ project: ProjectItem }> = ({
                   : "translateZ(0px)",
                 transition: "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
                 boxShadow: mousePos.isHovered
-                  ? "0 12px 30px rgba(0,0,0,0.25)"
+                  ? "0 12px 30px rgba(0,0,0,0.12)"
                   : "none",
               }}
             >
@@ -143,11 +143,11 @@ export const ProjectCard: React.FC<{ project: ProjectItem }> = ({
                 }}
               >
                 <Image
-                  src={project.image}
+                  src={project.image.src}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </Box>
 
