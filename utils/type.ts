@@ -34,7 +34,7 @@ export interface PatentItem {
   id: string;
   patentNo: string;
   title: string;
-  region: "US" | "South Africa" | "Pending";
+  region: "US" | "South Africa" | "Pending" | "International";
   status: "Granted" | "Pending";
   description?: string;
 }

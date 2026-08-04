@@ -97,17 +97,50 @@ const PatentGridSection = ({
                       justifyContent: "space-between",
                       position: "relative",
                       transition: "all 0.4s ease",
+                      "@keyframes shimmerLine": {
+                        "0%": { backgroundPosition: "200% 0" },
+                        "100%": { backgroundPosition: "-200% 0" },
+                      },
+                      "@keyframes pulseArrow": {
+                        "0%, 100%": { transform: "translateX(0)" },
+                        "50%": { transform: "translateX(3px)" },
+                      },
+                      "&::after": {
+                        content: '""',
+                        position: "absolute",
+                        bottom: -1,
+                        left: 0,
+                        width: "100%",
+                        height: "1.5px",
+                        background: "linear-gradient(90deg, transparent, rgba(132, 106, 78, 0.35), transparent)",
+                        backgroundSize: "200% 100%",
+                        animation: "shimmerLine 3.5s infinite linear",
+                        opacity: 0.7,
+                      },
+                      "& .card-arrow": {
+                        animation: "pulseArrow 2s infinite ease-in-out",
+                      },
                       "&:hover": {
+                        transform: "translateY(-6px)",
+                        backgroundColor: "#FFFFFF",
+                        boxShadow: "0 12px 30px rgba(132, 106, 78, 0.12)",
+                        borderRadius: "16px",
+                        borderColor: "transparent",
                         "& .patent-title": {
                           color: "#846A4E",
                         },
                         "& .card-arrow": {
+                          animation: "none",
                           transform: "translateX(6px)",
                           color: "#6F573E",
                         },
                         "& .patent-badge": {
                           color: "#846A4E",
                         },
+                        "&::after": {
+                          opacity: 1,
+                          background: "linear-gradient(90deg, transparent, rgba(132, 106, 78, 0.6), transparent)",
+                        }
                       },
                     }}
                   >
