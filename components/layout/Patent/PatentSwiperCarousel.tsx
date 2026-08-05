@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Box, Container, Typography, Stack, Grid, IconButton } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Stack,
+  Grid,
+  IconButton,
+} from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -42,7 +49,7 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
 
   // Find index of current patent
   const currentIndex = ALL_PATENTS.findIndex(
-    (p) => p.id === currentPatentId || p.patentNo?.includes(currentPatentId)
+    (p) => p.id === currentPatentId || p.patentNo?.includes(currentPatentId),
   );
 
   const safeIndex = currentIndex !== -1 ? currentIndex : 0;
@@ -55,10 +62,10 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
   return (
     <Box
       sx={{
-        pt: { xs: 8, md: 12 },
+        pt: { xs: 8, md: 5 },
         pb: { xs: 8, md: 12 },
-        backgroundColor: "#FAF8F5",
-        borderTop: "1px solid #EBE6DF",
+        // backgroundColor: "#FAF8F5",
+        // borderTop: "1px solid #EBE6DF",
         position: "relative",
         overflow: "hidden",
       }}
@@ -101,7 +108,8 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                     sx={{
                       fontSize: "18px",
                       color: "#846A4E",
-                      transition: "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                      transition:
+                        "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
                     }}
                   />
                   <Typography
@@ -168,7 +176,11 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                 <Stack
                   direction="row"
                   spacing={1.5}
-                  sx={{ alignItems: "center", justifyContent: "flex-end", mb: 1.5 }}
+                  sx={{
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                    mb: 1.5,
+                  }}
                 >
                   <Typography
                     sx={{
@@ -187,7 +199,8 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                     sx={{
                       fontSize: "18px",
                       color: "#846A4E",
-                      transition: "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                      transition:
+                        "transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
                     }}
                   />
                 </Stack>
@@ -222,6 +235,7 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
             alignItems: { xs: "flex-start", sm: "center" },
             mb: 4,
             gap: 2,
+            mt: 20,
           }}
         >
           <Box>
@@ -326,14 +340,18 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
               const regionBadge = isUS
                 ? "🇺🇸 US GRANTED"
                 : isZA
-                ? "🇿🇦 SOUTH AFRICA"
-                : "PATENT APP";
+                  ? "🇿🇦 SOUTH AFRICA"
+                  : "PATENT APP";
 
               return (
                 <SwiperSlide key={item.id} style={{ height: "auto" }}>
                   <Link
                     href={`/patent/${item.id}`}
-                    style={{ textDecoration: "none", height: "100%", display: "block" }}
+                    style={{
+                      textDecoration: "none",
+                      height: "100%",
+                      display: "block",
+                    }}
                   >
                     <Box
                       sx={{
@@ -347,7 +365,8 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                         justifyContent: "space-between",
                         position: "relative",
                         overflow: "hidden",
-                        transition: "all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                        transition:
+                          "all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)",
                         boxShadow: "0 6px 20px rgba(0, 0, 0, 0.03)",
                         "&::before": {
                           content: '""',
@@ -375,7 +394,13 @@ export const PatentSwiperCarousel: React.FC<PatentSwiperCarouselProps> = ({
                         },
                       }}
                     >
-                      <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                      <Box
+                        sx={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
                         {/* Header Row: Patent ID Badge & Region Badge */}
                         <Stack
                           direction="row"

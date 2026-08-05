@@ -37,6 +37,7 @@ export interface PatentItem {
   region: "US" | "South Africa" | "Pending" | "International";
   status: "Granted" | "Pending";
   description?: string;
+  image?: StaticImageData | string;
 }
 
 export interface PatentImage {

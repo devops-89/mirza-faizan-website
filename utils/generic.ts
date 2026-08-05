@@ -17,7 +17,31 @@ import relay from "@/images/patents/relay-based.png";
 import cleaning_Spilled_oil from "@/images/patents/oil_recovery.png";
 import wind_powered from "@/images/patents/windmill.png";
 import drug_abuse from "@/images/patents/drug_abuse.png";
-
+import wake_driver from "@/images/patents/wake_driver.png";
+import package_deliver from "@/images/patents/package_delivery_box.png";
+import biodegradable_cap from "@/images/patents/biodegradable-cap.png";
+import fluid_flow from "@/images/patents/fluid-control.png";
+import wearable_device from "@/images/patents/Managing_alcohol.png";
+import mental_state from "@/images/patents/mental_state_determination.png";
+import handheld from "@/images/patents/handheld-device.png";
+import propulsion from "@/images/patents/propulsion_system.png";
+import sunvisor_assembly from "@/images/patents/automatic_sunvior_assembly.png";
+import sanitising_products from "@/images/patents/US20230066405A1.png";
+import deep_sea from "@/images/patents/US20220099408A1.png";
+import shower_head from "@/images/patents/US20220389694A1.png";
+import refilling from "@/images/patents/US20230060737A1.png";
+import biodegradable_container from "@/images/patents/US20220388736A1.jpg";
+import IOT from "@/images/patents/US20240087440A1.jpg";
+import disabled from "@/images/patents/US20230324680A1.jpg";
+import friendly_fire from "@/images/patents/US20240085134A1.png";
+import biodegradable_cover from "@/images/patents/US20240080057A1.jpg";
+import whiteboard_cleaner from "@/images/patents/US20240094830A1.png";
+import perfume from "@/images/patents/US20240138541A1.jpg";
+import aircraft from "@/images/patents/US20220390615A1.jpg";
+import rescue from "@/images/patents/US20230069173A1.jpg";
+import humanBody from "@/images/patents/US20240144357A1.png";
+import doorHandle from "@/images/patents/US20220387639A1.png";
+import smart_ladder from "@/images/patents/US20230332468A1.png";
 export const COLUMN_1_PROJECTS: ProjectItem[] = [
   {
     id: "ground-reality",
@@ -160,7 +184,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
 
 export const WORLD_SAYS_HEADING = "What the World Says";
 export const WORLD_SAYS_DESCRIPTION =
-  "A legacy built on innovation. A reputation earned through impact. Discover what clients, collaborators, and industry leaders say about working with Mirza Faizan.";
+  "A legacy built on innovation. A reputation earned through impact. Discover what collaborators and industry leaders say about working with Mirza Faizan.";
 
 export const TESTIMONIALS: TestimonialItem[] = [
   {
@@ -276,6 +300,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An intelligent driver vigilance system that monitors physiological vitals and facial posture to generate multi-sensory awakening alerts.",
+    image: wake_driver,
   },
   {
     id: "US20230065017A1",
@@ -285,6 +310,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A package delivery box 100 with container 101, openable lid 102, pressure plate 103 closing mechanism, and flexible rod 104 slider 109 locking mechanism.",
+    image: package_deliver,
   },
   {
     id: "US20210086970A1",
@@ -295,6 +321,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A biodegradable bottle cap impregnated with Pestalotiopsis microspora fungus to accelerate plastic waste breakdown in natural environments.",
+    image: biodegradable_cap,
   },
   {
     id: "US20230034830A1",
@@ -304,6 +331,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A high-precision fluid flow control unit for regulating liquid dynamics and pressure in industrial and agricultural fluid distribution.",
+    image: fluid_flow,
   },
   {
     id: "US20230048142A1",
@@ -313,6 +341,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A bio-sensing wearable device that detects physiological indicators of intoxication and aggression to prevent alcohol-driven violence.",
+    image: wearable_device,
   },
   {
     id: "US20220386914A1",
@@ -322,6 +351,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A real-time physiological and neurological monitoring system that assesses cognitive load, stress, and mental states.",
+    image: mental_state,
   },
   {
     id: "US20210270793A1",
@@ -331,6 +361,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A portable handheld device using electrochemical sensors to instantly identify lead contamination and toxic heavy metal impurities in water.",
+    image: handheld,
   },
   {
     id: "US20220388788A1",
@@ -341,6 +372,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A high-speed pressure-based pneumatic propulsion network for transporting cargo and resources through low-friction pipeline tubes.",
+    image: propulsion,
   },
   {
     id: "US20230061443A1",
@@ -350,6 +382,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An automated vehicle sunvisor assembly that dynamically adjusts shade position based on real-time solar glare tracking and driver gaze.",
+    image: sunvisor_assembly,
   },
   {
     id: "US20230066405A1",
@@ -359,6 +392,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A sanitization device using multi-wavelength ultraviolet light and ultrasonic waves to decontaminate commercial products and personal items.",
+    image: sanitising_products,
   },
   {
     id: "US20220099408A1",
@@ -368,6 +402,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A deep-sea hydrostatic pressure-based projectile launching system utilizing ocean water head pressure for energy-efficient underwater propulsion.",
+    image: deep_sea,
   },
   {
     id: "US20220389694A1",
@@ -377,6 +412,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An eco-friendly smart shower head equipped with water flow metering, temperature feedback, and automated water-saving shutoff valves.",
+    image: shower_head,
   },
   {
     id: "US20230060737A1",
@@ -386,6 +422,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An automated marker ink refilling apparatus designed to recharge dry whiteboard markers cleanly and extend stationery lifespan.",
+    image: refilling,
   },
   {
     id: "US20220388736A1",
@@ -395,6 +432,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A sustainable biodegradable food and liquid container engineered from natural organic fibers to replace single-use plastics.",
+    image: biodegradable_container,
   },
   {
     id: "US20240087440A1",
@@ -405,6 +443,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An IoT-enabled aquatic safety monitoring system that tracks pool perimeter activity, water submersion time, and alerts lifeguards.",
+    image: IOT,
   },
   {
     id: "US20230324680A1",
@@ -415,6 +454,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An assistive communication apparatus that translates tactile micro-gestures into synthetic speech and text for speech-impaired users.",
+    image: disabled,
   },
   {
     id: "US20240085134A1",
@@ -424,6 +464,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A military tactical system utilizing directional RFID tagging and smart targeting optics to prevent friendly fire casualties.",
+    image: friendly_fire,
   },
   {
     id: "US20240080057A1",
@@ -433,6 +474,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A protective eco-friendly case for smartphones and electronic gadgets crafted from fully compostable organic materials.",
+    image: biodegradable_cover,
   },
   {
     id: "US20240094830A1",
@@ -442,6 +484,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An autonomous robotic whiteboard cleaning mechanism equipped with optical erasing sensors and uniform surface wiping.",
+    image: whiteboard_cleaner,
   },
   {
     id: "US20240138541A1",
@@ -451,6 +494,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A smart perfume dispersing apparatus featuring ambient air scent sensing, timed micro-diffusion, and personalized fragrance control.",
+    image: perfume,
   },
   {
     id: "US20220390615A1",
@@ -460,6 +504,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A real-time aircraft tracking system using ground-based sensor fusion (GRIPS) to prevent runway incursions and detect debris.",
+    image: aircraft,
   },
   {
     id: "US20230069173A1",
@@ -469,6 +514,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An emergency response coordination system pairing wearable SOS beacons with interactive mobile application dispatch networks.",
+    image: rescue,
   },
   {
     id: "US20240144357A1",
@@ -478,6 +524,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A smart retail apparel display system projecting 3D garment simulations and tailored outfits onto interactive dummy mannequins.",
+    image: humanBody,
   },
   {
     id: "US20220387639A1",
@@ -487,6 +534,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "A self-sanitizing architectural door handle featuring continuous antimicrobial surface coating and protective sanitary covers.",
+    image: doorHandle,
   },
   {
     id: "US20230332468A1",
@@ -496,6 +544,7 @@ export const US_PATENTS_GRANTED = [
     status: "Granted",
     description:
       "An intelligent telescopic ladder assembly featuring automatic level stabilization sensors, anti-slip locks, and safety indicators.",
+    image: smart_ladder,
   },
 ];
 
