@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Heading from "@/components/widgets/Heading";
-import { outfit, roboto } from "@/utils/fonts";
+import { outfit, roboto, dancingScript } from "@/utils/fonts";
 import {
   INVENTION_RESEARCH_DESCRIPTION,
   INVENTION_RESEARCH_HEADING,
@@ -65,7 +65,23 @@ export const InventionHeader: React.FC = () => {
       >
         <Grid size={{ xs: 12, md: 6 }}>
           <ScrollReveal direction="right" delay={0.15}>
-            <Heading label={INVENTION_RESEARCH_HEADING} width="400px" />
+            <Box sx={{ position: "relative", display: "inline-block" }}>
+              <Heading label={INVENTION_RESEARCH_HEADING} width="400px" />
+              <Typography
+                sx={{
+                  fontFamily: dancingScript.style.fontFamily,
+                  fontSize: { xs: "32px", md: "46px" },
+                  color: "#846A4E",
+                  position: "absolute",
+                  right: { xs: 20, md: "-40px" },
+                  bottom: { xs: "-25px", md: "-35px" },
+                  transform: "rotate(-5deg)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                by Mirza Faizan
+              </Typography>
+            </Box>
           </ScrollReveal>
         </Grid>
 

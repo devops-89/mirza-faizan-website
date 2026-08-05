@@ -3,7 +3,7 @@ import { roboto } from "@/utils/fonts";
 import { Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 
-const Heading = ({ label, width }: { label: string; width?: string }) => {
+const Heading = ({ label, width, lightText }: { label: string; width?: string; lightText?: boolean }) => {
   return (
     <Grid container>
       <Grid size={12}>
@@ -14,7 +14,7 @@ const Heading = ({ label, width }: { label: string; width?: string }) => {
             lineHeight: { xs: "33px", sm: "42px", md: "50px" },
             fontFamily: roboto.style.fontFamily,
             maxWidth: { xs: "100%", sm: width || "auto" },
-            color: "#1F1F1F",
+            color: lightText ? "#FFFFFF" : "#1F1F1F",
             whiteSpace: "pre-line",
           }}
         >

@@ -67,25 +67,29 @@ const PatentsList = () => {
   ];
 
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
-      <ScrollReveal direction="up" delay={0.1}>
-        <PatentFilterBar
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          activeTab={activeTab}
-          setActiveTab={(tab) => setActiveTab(tab as any)}
-          tabs={tabs}
-        />
-      </ScrollReveal>
+    <Box sx={{ pb: { xs: 6, md: 10 } }}>
+      <Container maxWidth="lg" sx={{ pt: { xs: 6, md: 10 }, pb: { xs: 2, md: 4 } }}>
+        <ScrollReveal direction="up" delay={0.1}>
+          <PatentFilterBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            activeTab={activeTab}
+            setActiveTab={(tab) => setActiveTab(tab as any)}
+            tabs={tabs}
+          />
+        </ScrollReveal>
+      </Container>
 
       {totalPatentsCount === 0 ? (
-        <PatentEmptyState
-          searchQuery={searchQuery}
-          onClear={() => {
-            setSearchQuery("");
-            setActiveTab("ALL");
-          }}
-        />
+        <Container maxWidth="lg">
+          <PatentEmptyState
+            searchQuery={searchQuery}
+            onClear={() => {
+              setSearchQuery("");
+              setActiveTab("ALL");
+            }}
+          />
+        </Container>
       ) : (
         <AnimatePresence mode="wait">
           <motion.div
@@ -95,21 +99,36 @@ const PatentsList = () => {
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35 }}
           >
-            {PATENT_SECTIONS_METADATA.map((section) => {
+            {PATENT_SECTIONS_METADATA.map((section, index) => {
               if (activeTab !== "ALL" && activeTab !== section.id) return null;
+              
+              const isAlternate = index % 2 !== 0;
+              
               return (
-                <PatentGridSection
+                <Box
                   key={section.id}
-                  title={section.title}
-                  subtitle={section.subtitle}
-                  patents={filteredPatentsDataMap[section.id]}
-                />
+                  sx={{
+                    width: "100%",
+                    backgroundColor: isAlternate ? "#FAF8F5" : "#FFFFFF",
+                    py: { xs: 6, md: 10 },
+                    borderTop: isAlternate ? "1px solid rgba(0,0,0,0.03)" : "none",
+                    borderBottom: isAlternate ? "1px solid rgba(0,0,0,0.03)" : "none",
+                  }}
+                >
+                  <Container maxWidth="lg">
+                    <PatentGridSection
+                      title={section.title}
+                      subtitle={section.subtitle}
+                      patents={filteredPatentsDataMap[section.id]}
+                    />
+                  </Container>
+                </Box>
               );
             })}
           </motion.div>
         </AnimatePresence>
       )}
-    </Container>
+    </Box>
   );
 };
 

@@ -8,9 +8,10 @@ import Image from "next/image";
 
 interface PatentCardProps {
   item: PatentItem;
+  isDarkTheme?: boolean;
 }
 
-export const PatentCard = ({ item }: PatentCardProps) => {
+export const PatentCard = ({ item, isDarkTheme = false }: PatentCardProps) => {
   return (
     <Link
       href={`/patent/${item.id}`}
@@ -26,9 +27,9 @@ export const PatentCard = ({ item }: PatentCardProps) => {
         sx={{
           p: { xs: 2, md: 2.5 },
           backgroundColor: "transparent",
-          borderRadius: "0px",
-          border: "none",
-          borderBottom: "1px solid rgba(0,0,0,0.06)",
+          borderRadius: isDarkTheme ? "16px" : "0px",
+          border: isDarkTheme ? "1px solid rgba(255,255,255,0.06)" : "none",
+          borderBottom: isDarkTheme ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(0,0,0,0.06)",
           height: "100%",
           flex: 1,
           display: "flex",
@@ -62,17 +63,17 @@ export const PatentCard = ({ item }: PatentCardProps) => {
           },
           "&:hover": {
             transform: "translateY(-6px)",
-            backgroundColor: "#FFFFFF",
-            boxShadow: "0 12px 30px rgba(132, 106, 78, 0.12)",
+            backgroundColor: isDarkTheme ? "#1E2022" : "#FFFFFF",
+            boxShadow: isDarkTheme ? "0 12px 30px rgba(0,0,0, 0.4)" : "0 12px 30px rgba(132, 106, 78, 0.12)",
             borderRadius: "16px",
-            borderColor: "transparent",
+            borderColor: isDarkTheme ? "rgba(132, 106, 78, 0.4)" : "transparent",
             "& .patent-title": {
-              color: "#846A4E",
+              color: isDarkTheme ? "#D4B895" : "#846A4E",
             },
             "& .card-arrow": {
               animation: "none",
               transform: "translateX(6px)",
-              color: "#6F573E",
+              color: isDarkTheme ? "#D4B895" : "#6F573E",
             },
             "& .patent-badge": {
               color: "#846A4E",
@@ -157,7 +158,7 @@ export const PatentCard = ({ item }: PatentCardProps) => {
               fontFamily: roboto.style.fontFamily,
               fontSize: { xs: "16px", md: "17.5px" },
               fontWeight: 700,
-              color: "#181818",
+              color: isDarkTheme ? "#FFFFFF" : "#181818",
               lineHeight: 1.38,
               letterSpacing: "-0.1px",
               mb: 1.5,
@@ -178,7 +179,7 @@ export const PatentCard = ({ item }: PatentCardProps) => {
                 fontFamily: roboto.style.fontFamily,
                 fontSize: { xs: "13px", md: "14px" },
                 fontWeight: 400,
-                color: "#555555",
+                color: isDarkTheme ? "#A0A0A0" : "#555555",
                 lineHeight: 1.6,
                 display: "-webkit-box",
                 WebkitLineClamp: 3,
@@ -207,7 +208,7 @@ export const PatentCard = ({ item }: PatentCardProps) => {
               fontFamily: outfit.style.fontFamily,
               fontSize: "11.5px",
               fontWeight: 700,
-              color: "#846A4E",
+              color: isDarkTheme ? "#D4B895" : "#846A4E",
               letterSpacing: "0.6px",
               textTransform: "uppercase",
             }}
@@ -218,7 +219,7 @@ export const PatentCard = ({ item }: PatentCardProps) => {
             className="card-arrow"
             sx={{
               fontSize: "15px",
-              color: "#846A4E",
+              color: isDarkTheme ? "#D4B895" : "#846A4E",
               transition: "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
             }}
           />

@@ -192,7 +192,7 @@ const Footer = () => {
                 textShadow: "0 10px 30px rgba(0,0,0,0.5)",
               }}
             >
-              “An idea becomes{" "}
+              “Innovation is not about complex machines; it's about{" "}
               <span
                 style={{
                   fontStyle: "italic",
@@ -202,19 +202,7 @@ const Footer = () => {
                   paddingRight: "4px",
                 }}
               >
-                powerful
-              </span>{" "}
-              only when it serves a purpose{" "}
-              <span
-                style={{
-                  fontStyle: "italic",
-                  background: "linear-gradient(to right, #F5E5C9 0%, #C5A059 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  paddingRight: "4px",
-                }}
-              >
-                greater than oneself
+                simplifying life and saving lives
               </span>
               .”
             </Typography>

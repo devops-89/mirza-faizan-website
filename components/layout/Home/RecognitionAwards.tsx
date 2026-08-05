@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Heading from "../../widgets/Heading";
-import { bella, roboto } from "@/utils/fonts";
+import { bella, roboto, outfit } from "@/utils/fonts";
 import { COLORS } from "@/utils/enum";
 import {
   RECOGNITION_AUTHOR,
@@ -111,6 +111,21 @@ const RecognitionAwards: React.FC = () => {
 
         {/* Brand Logos Swiper Carousel */}
         <ScrollReveal direction="up" delay={0.3}>
+          <Typography
+            sx={{
+              fontFamily: outfit.style.fontFamily,
+              fontSize: "14px",
+              fontWeight: 700,
+              color: "#846A4E",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              textAlign: "center",
+              mb: { xs: 3, md: 4 },
+              mt: { xs: 2, md: 0 }
+            }}
+          >
+            Recognized By
+          </Typography>
           <Box
             sx={{
               pt: { xs: 1, md: 2 },

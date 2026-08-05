@@ -128,9 +128,72 @@ const HeroSection = () => {
               </motion.div>
             </Container>
             <CounterCard />
+
           </Box>
         </Box>
       </Container>
+
+      {/* Scroll Down Indicator */}
+      <Box
+        sx={{
+          mt: { xs: 4, md: 6 },
+          mb: 0,
+          display: { xs: "flex", md: "none" },
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          opacity: 0.8,
+          transition: "opacity 0.3s ease, transform 0.3s ease",
+          "&:hover": {
+            opacity: 1,
+            transform: "translateY(2px)",
+          },
+        }}
+        onClick={() => {
+          window.scrollBy({ top: window.innerHeight * 0.8, behavior: "smooth" });
+        }}
+      >
+        <Box
+          sx={{
+            width: "26px",
+            height: "42px",
+            border: "2px solid #846A4E",
+            borderRadius: "20px",
+            display: "flex",
+            justifyContent: "center",
+            p: "4px",
+          }}
+        >
+          <motion.div
+            animate={{ y: [0, 14, 0], opacity: [1, 0.5, 1] }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{
+              width: "4px",
+              height: "8px",
+              backgroundColor: "#846A4E",
+              borderRadius: "4px",
+            }}
+          />
+        </Box>
+        <Typography
+          sx={{
+            fontFamily: signika.style.fontFamily,
+            color: "#846A4E",
+            fontSize: "11px",
+            letterSpacing: "3px",
+            textTransform: "uppercase",
+            mt: 1.5,
+            fontWeight: 600,
+          }}
+        >
+          Scroll Down
+        </Typography>
+      </Box>
     </Box>
   );
 };

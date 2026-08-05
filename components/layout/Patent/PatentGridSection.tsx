@@ -14,17 +14,19 @@ interface PatentGridSectionProps {
   title: string;
   subtitle: string;
   patents: PatentItem[];
+  isAlternate?: boolean;
 }
 
 export const PatentGridSection = ({
   title,
   subtitle,
   patents,
+  isAlternate = false,
 }: PatentGridSectionProps) => {
   if (patents.length === 0) return null;
 
   return (
-    <Box sx={{ mb: { xs: 7, md: 10 } }}>
+    <Box sx={{ mb: { xs: 0, md: 0 } }}>
       <ScrollReveal direction="up" delay={0.1}>
         <Grid container spacing={3} sx={{ mb: { xs: 3.5, md: 4.5 } }}>
           <Grid size={12}>

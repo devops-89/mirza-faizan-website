@@ -12,7 +12,8 @@ const About = () => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
+        pt: { xs: 4, md: 6 },
+        pb: { xs: 8, md: 12 },
         backgroundColor: "#FFFFFF",
         position: "relative",
       }}

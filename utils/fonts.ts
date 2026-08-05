@@ -1,5 +1,9 @@
-import { Roboto, Signika } from "next/font/google";
+import { Roboto, Signika, Dancing_Script } from "next/font/google";
 import localFont from "next/font/local";
+
+export const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+});
 
 export const bella = localFont({
   src: "../public/fonts/Bella-Script.otf",
