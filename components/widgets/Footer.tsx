@@ -5,7 +5,7 @@ import { Box, Container, Typography, IconButton, Tooltip } from "@mui/material";
 import Image from "next/image";
 import NorthIcon from "@mui/icons-material/North";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-import { outfit } from "@/utils/fonts";
+import { outfit, bella } from "@/utils/fonts";
 import { FOOTER_SUBTITLE } from "@/utils/generic";
 import { ScrollReveal } from "@/components/animation/ScrollReveal";
 import { motion } from "framer-motion";
@@ -101,7 +101,8 @@ const Footer = () => {
       component="footer"
       sx={{
         position: "relative",
-        background: "radial-gradient(circle at 50% 100%, #1a1613 0%, #080706 70%, #000000 100%)",
+        background:
+          "radial-gradient(circle at 50% 100%, #1a1613 0%, #080706 70%, #000000 100%)",
         color: "#ffffff",
         overflow: "hidden",
         pt: { xs: 8, md: 14 },
@@ -127,7 +128,8 @@ const Footer = () => {
           transform: "translateX(-50%)",
           width: "80vw",
           height: "800px",
-          background: "radial-gradient(ellipse at top, rgba(197, 160, 89, 0.08) 0%, rgba(0,0,0,0) 60%)",
+          background:
+            "radial-gradient(ellipse at top, rgba(197, 160, 89, 0.08) 0%, rgba(0,0,0,0) 60%)",
           pointerEvents: "none",
           zIndex: 0,
         }}
@@ -162,10 +164,17 @@ const Footer = () => {
       ))}
 
       {/* ==================== CONTENT CONTAINER ==================== */}
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
-        
-
-
+      <Container
+        maxWidth="lg"
+        sx={{
+          position: "relative",
+          zIndex: 1,
+          // minHeight: { xs: "70vh", md: "85vh" },
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         {/* Main Quote */}
         <ScrollReveal direction="up" delay={0.2}>
           <Box
@@ -181,7 +190,7 @@ const Footer = () => {
             <Typography
               sx={{
                 fontFamily: "Georgia, 'Times New Roman', Times, serif", // Classic elegant serif
-                fontSize: { xs: "28px", sm: "36px", md: "46px" },
+                fontSize: { xs: "28px", sm: "36px", md: "40px" },
                 fontWeight: 400,
                 color: "#EBEBEB",
                 textAlign: "center",
@@ -196,7 +205,8 @@ const Footer = () => {
               <span
                 style={{
                   fontStyle: "italic",
-                  background: "linear-gradient(to right, #F5E5C9 0%, #C5A059 100%)",
+                  background:
+                    "linear-gradient(to right, #F5E5C9 0%, #C5A059 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   paddingRight: "4px",
@@ -205,6 +215,20 @@ const Footer = () => {
                 simplifying life and saving lives
               </span>
               .”
+            </Typography>
+            <Typography
+              sx={{
+                fontFamily: bella.style.fontFamily,
+                fontSize: { xs: "32px", sm: "40px", md: "48px" },
+                color: "#C5A059",
+                textAlign: "center",
+                mt: 3,
+                py: 1,
+                lineHeight: 1.5,
+                textShadow: "0 5px 15px rgba(0,0,0,0.3)",
+              }}
+            >
+              - Mirza Faizan
             </Typography>
           </Box>
         </ScrollReveal>
@@ -273,26 +297,26 @@ const Footer = () => {
               "&:hover .scroll-line": {
                 height: "40px",
                 backgroundColor: "#E5C483",
-              }
+              },
             }}
             onClick={scrollToTop}
           >
-            <NorthIcon 
+            <NorthIcon
               className="scroll-arrow"
-              sx={{ 
-                fontSize: 18, 
-                color: "#888", 
-                mb: 1, 
-                transition: "all 0.3s ease" 
-              }} 
+              sx={{
+                fontSize: 18,
+                color: "#888",
+                mb: 1,
+                transition: "all 0.3s ease",
+              }}
             />
-            <Box 
+            <Box
               className="scroll-line"
               sx={{
                 width: "1px",
                 height: "24px",
                 backgroundColor: "#444",
-                transition: "all 0.3s ease"
+                transition: "all 0.3s ease",
               }}
             />
             <Typography
@@ -323,8 +347,10 @@ const Footer = () => {
           mt: -4,
           pointerEvents: "none",
           zIndex: 0,
-          maskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 90%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 90%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, black 20%, black 90%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, black 20%, black 90%, transparent 100%)",
           "& img": {
             objectFit: "cover",
             objectPosition: "top center",
@@ -340,12 +366,12 @@ const Footer = () => {
           sizes="(max-width: 1200px) 100vw, 1000px"
         />
         {/* Overlay gradient to fade it nicely into the bottom */}
-        <Box 
+        <Box
           sx={{
             position: "absolute",
             inset: 0,
             background: "linear-gradient(to top, #000000 0%, transparent 60%)",
-            zIndex: 1
+            zIndex: 1,
           }}
         />
       </Box>
