@@ -169,7 +169,7 @@ const Footer = () => {
         sx={{
           position: "relative",
           zIndex: 1,
-          // minHeight: { xs: "70vh", md: "85vh" },
+          minHeight: { xs: "70vh", md: "85vh" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

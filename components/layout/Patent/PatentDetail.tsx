@@ -1274,7 +1274,7 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
                     "& .icon-wrapper": {
                       backgroundColor: "#FFFFFF",
                       color: "#846A4E",
-                      transform: "scale(1.05)",
+                      transform: "scale(1.05) translateX(-4px)",
                     },
                   },
                 }}
@@ -1362,7 +1362,7 @@ const PatentDetail = ({ patent }: { patent: PatentDetailData }) => {
                     "& .icon-wrapper": {
                       backgroundColor: "#FFFFFF",
                       color: "#846A4E",
-                      transform: "scale(1.05)",
+                      transform: "scale(1.05) translateX(4px)",
                     },
                   },
                 }}

@@ -67,20 +67,6 @@ export const InventionHeader: React.FC = () => {
           <ScrollReveal direction="right" delay={0.15}>
             <Box sx={{ position: "relative", display: "inline-block" }}>
               <Heading label={INVENTION_RESEARCH_HEADING} width="400px" />
-              <Typography
-                sx={{
-                  fontFamily: dancingScript.style.fontFamily,
-                  fontSize: { xs: "32px", md: "46px" },
-                  color: "#846A4E",
-                  position: "absolute",
-                  right: { xs: 20, md: "-40px" },
-                  bottom: { xs: "-25px", md: "-35px" },
-                  transform: "rotate(-5deg)",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                by Mirza Faizan
-              </Typography>
             </Box>
           </ScrollReveal>
         </Grid>
@@ -121,7 +107,7 @@ export const InventionHeader: React.FC = () => {
                   textAlign: { xs: "left", md: "justify" },
                 }}
               >
-                {INVENTION_RESEARCH_DESCRIPTION}
+                {INVENTION_RESEARCH_DESCRIPTION} These patents granted by Mirza Faizan.
               </Typography>
             </Box>
           </ScrollReveal>

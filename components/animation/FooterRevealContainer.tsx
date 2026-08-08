@@ -11,22 +11,24 @@ export const FooterRevealContainer: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const footerRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [footerHeight, setFooterHeight] = useState<number>(450);
+  const [footerHeight, setFooterHeight] = useState<number>(0);
+  const [windowHeight, setWindowHeight] = useState<number>(0);
 
   useEffect(() => {
-    const updateHeight = () => {
+    const updateDimensions = () => {
+      setWindowHeight(window.innerHeight);
       if (footerRef.current) {
         setFooterHeight(footerRef.current.offsetHeight);
       }
     };
 
-    updateHeight();
-    const timer = setTimeout(updateHeight, 500); // Re-check after image load
+    updateDimensions();
+    const timer = setTimeout(updateDimensions, 500); // Re-check after image load
 
-    window.addEventListener("resize", updateHeight);
+    window.addEventListener("resize", updateDimensions);
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("resize", updateDimensions);
     };
   }, []);
 
@@ -41,39 +43,49 @@ export const FooterRevealContainer: React.FC<{ children: React.ReactNode }> = ({
   const y = useTransform(scrollYProgress, [0, 0.85], [-50, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.85], [0.96, 1]);
 
+  // Only enable reveal effect if we have measured the heights and the footer fits in the screen
+  const isReveal = windowHeight > 0 && footerHeight < windowHeight;
+
   return (
     <Box ref={containerRef} sx={{ position: "relative", minHeight: "100vh" }}>
       <Header />
 
-      {/* Main Content Body (Layered above footer with zIndex: 2) */}
+      {/* Main Content Body */}
       <Box
         component="main"
         sx={{
           position: "relative",
           zIndex: 2,
           backgroundColor: "#FFFFFF",
-          mb: `${footerHeight}px`,
-          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.15)",
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
+          mb: isReveal ? `${footerHeight}px` : 0,
+          boxShadow: isReveal ? "0 20px 50px rgba(0, 0, 0, 0.15)" : "none",
         }}
       >
         {children}
       </Box>
 
-      {/* Fixed Under-Page Reveal Footer (zIndex: 1) */}
+      {/* Footer Container */}
       <Box
         ref={footerRef}
         sx={{
-          position: "fixed",
-          bottom: 0,
+          position: isReveal ? "fixed" : "relative",
+          bottom: isReveal ? 0 : "auto",
           left: 0,
           right: 0,
           zIndex: 1,
           width: "100%",
         }}
       >
-        <motion.div style={{ opacity, y, scale, width: "100%" }}>
+        {isReveal ? (
+          <motion.div style={{ opacity, y, scale, width: "100%" }}>
+            <Footer />
+          </motion.div>
+        ) : (
           <Footer />
-        </motion.div>
+        )}
       </Box>
     </Box>
   );
